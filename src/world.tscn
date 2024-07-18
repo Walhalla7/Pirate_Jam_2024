@@ -1,14 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://dx1te2b8aasvv"]
+[gd_scene load_steps=5 format=3 uid="uid://dx1te2b8aasvv"]
 
-[ext_resource type="PackedScene" uid="uid://b1tqs2mt8aiii" path="res://test_field.tscn" id="1_t7k6m"]
-[ext_resource type="PackedScene" uid="uid://dqb6hflk04skq" path="res://protagonist.tscn" id="2_yjr5n"]
+[ext_resource type="Script" path="res://Script_Main.gd" id="1_cwe8n"]
+[ext_resource type="PackedScene" uid="uid://b1tqs2mt8aiii" path="res://Environment/static/test_field.tscn" id="1_t7k6m"]
+[ext_resource type="PackedScene" uid="uid://dqb6hflk04skq" path="res://Protagonist/protagonist.tscn" id="2_yjr5n"]
+[ext_resource type="PackedScene" uid="uid://krtuxl5g46p6" path="res://Environment/climbable/wall.tscn" id="3_vqvni"]
 
 [node name="World" type="Node"]
-
-[node name="Node3D" parent="." instance=ExtResource("1_t7k6m")]
-
-[node name="Node3D2" parent="." instance=ExtResource("2_yjr5n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.01849, 0)
+script = ExtResource("1_cwe8n")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.216354, 0.976315, 0, -0.976315, 0.216354, 0, 12.0784, 0)
+transform = Transform3D(0.888745, -0.099177, -0.447544, 0.458401, 0.192284, 0.867695, 0, -0.976315, 0.216354, -10.6491, 23.7602, 0)
+light_energy = 2.036
+
+[node name="Protagonist" parent="." instance=ExtResource("2_yjr5n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.56272, 0)
+
+[node name="Floor" parent="." instance=ExtResource("1_t7k6m")]
+
+[node name="Wall" parent="." instance=ExtResource("3_vqvni")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10.2472, 7.31138, -0.0159626)
