@@ -26,7 +26,7 @@ skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_fv6hu")
 
 [node name="SpringArmPivot" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.987932, 0.154882, 0, -0.154882, 0.987932, 0, 3.68162, 7.46476)
+transform = Transform3D(1, 0, 0, 0, 0.999579, 0.0289852, 0, -0.0289852, 0.999579, 0, 1.1488, 3.05133)
 
 [node name="SpringArm3D" type="SpringArm3D" parent="SpringArmPivot"]
 
