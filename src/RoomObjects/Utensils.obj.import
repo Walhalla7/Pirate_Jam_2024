@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://nt6by5x13pkk"
+path="res://.godot/imported/Utensils.obj-66638e08adc27e1c7c1a857946de5dbd.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Utensils.obj-66638e08adc27e1c7c1a857946de5dbd.mesh"]
+
+source_file="res://RoomObjects/Utensils.obj"
+dest_files=["res://.godot/imported/Utensils.obj-66638e08adc27e1c7c1a857946de5dbd.mesh", "res://.godot/imported/Utensils.obj-66638e08adc27e1c7c1a857946de5dbd.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

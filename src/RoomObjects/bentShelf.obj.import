@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://drq3hdx0ybu8c"
+path="res://.godot/imported/bentShelf.obj-c551611de3fd5bf212661ffa0cbe9369.mesh"
+
+[deps]
+
+files=["res://.godot/imported/bentShelf.obj-c551611de3fd5bf212661ffa0cbe9369.mesh"]
+
+source_file="res://RoomObjects/bentShelf.obj"
+dest_files=["res://.godot/imported/bentShelf.obj-c551611de3fd5bf212661ffa0cbe9369.mesh", "res://.godot/imported/bentShelf.obj-c551611de3fd5bf212661ffa0cbe9369.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

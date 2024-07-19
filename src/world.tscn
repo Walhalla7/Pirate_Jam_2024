@@ -1,9 +1,21 @@
-[gd_scene load_steps=5 format=3 uid="uid://dx1te2b8aasvv"]
+[gd_scene load_steps=17 format=3 uid="uid://dx1te2b8aasvv"]
 
 [ext_resource type="Script" path="res://Script_Main.gd" id="1_cwe8n"]
 [ext_resource type="PackedScene" uid="uid://b1tqs2mt8aiii" path="res://Environment/static/test_field.tscn" id="1_t7k6m"]
 [ext_resource type="PackedScene" uid="uid://dqb6hflk04skq" path="res://Protagonist/protagonist.tscn" id="2_yjr5n"]
 [ext_resource type="PackedScene" uid="uid://krtuxl5g46p6" path="res://Environment/climbable/wall.tscn" id="3_vqvni"]
+[ext_resource type="PackedScene" uid="uid://b81nkdg580ts7" path="res://RoomObjects/ObjectScenes/Door.tscn" id="5_60ev7"]
+[ext_resource type="PackedScene" uid="uid://bwmnetmn5eaxf" path="res://RoomObjects/ObjectScenes/Window.tscn" id="6_40guc"]
+[ext_resource type="PackedScene" uid="uid://dr50jmtnck0fq" path="res://RoomObjects/ObjectScenes/WoodStack.tscn" id="7_bs5vm"]
+[ext_resource type="PackedScene" uid="uid://hj7b0xhr7lwo" path="res://RoomObjects/ObjectScenes/StraightShelf.tscn" id="8_04icq"]
+[ext_resource type="PackedScene" uid="uid://du6mmw2us8pwg" path="res://RoomObjects/ObjectScenes/Broom.tscn" id="9_15f2d"]
+[ext_resource type="PackedScene" uid="uid://c8x6vtw3pu765" path="res://RoomObjects/ObjectScenes/Cauldron.tscn" id="10_qgcl4"]
+[ext_resource type="PackedScene" uid="uid://bdsvuh6jfamao" path="res://RoomObjects/ObjectScenes/Chest.tscn" id="11_g3p6o"]
+[ext_resource type="PackedScene" uid="uid://bi1lpd1nw5qge" path="res://RoomObjects/ObjectScenes/Bookshelf.tscn" id="12_4bcq8"]
+[ext_resource type="PackedScene" uid="uid://b4rm71ixmaqth" path="res://RoomObjects/ObjectScenes/Table.tscn" id="13_8655c"]
+[ext_resource type="PackedScene" uid="uid://chsuoo325n6yl" path="res://RoomObjects/ObjectScenes/BentShelf.tscn" id="14_q74ui"]
+[ext_resource type="PackedScene" uid="uid://dg1c871n2qek7" path="res://RoomObjects/ObjectScenes/Pot.tscn" id="15_xfg3n"]
+[ext_resource type="PackedScene" uid="uid://bnpn7fkfgkb3k" path="res://RoomObjects/ObjectScenes/Utensils.tscn" id="16_xqik0"]
 
 [node name="World" type="Node"]
 script = ExtResource("1_cwe8n")
@@ -13,9 +25,80 @@ transform = Transform3D(0.888745, -0.099177, -0.447544, 0.458401, 0.192284, 0.86
 light_energy = 2.036
 
 [node name="Protagonist" parent="." instance=ExtResource("2_yjr5n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.56272, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 14.9047, 10.9261)
 
 [node name="Floor" parent="." instance=ExtResource("1_t7k6m")]
+transform = Transform3D(4.96398, 0, 0, 0, 1.00445, 0, 0, 0, 7.05395, -1.36474, -0.974263, -1.51297)
 
-[node name="Wall" parent="." instance=ExtResource("3_vqvni")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10.2472, 7.31138, -0.0159626)
+[node name="Walls" type="Node" parent="."]
+
+[node name="Wall" parent="Walls" instance=ExtResource("3_vqvni")]
+transform = Transform3D(-7.81757e-08, 0, 1, 0, 2.39383, 0, -1.78845, 0, -4.37114e-08, 34.4827, 15.3722, -34.2817)
+
+[node name="Wall5" parent="Walls" instance=ExtResource("3_vqvni")]
+transform = Transform3D(-7.81757e-08, 0, 1, 0, 2.39383, 0, -1.78845, 0, -4.37114e-08, 34.4827, 15.3722, 26.829)
+
+[node name="Wall6" parent="Walls" instance=ExtResource("3_vqvni")]
+transform = Transform3D(-7.81757e-08, 0, 1, 0, 2.39383, 0, -1.78845, 0, -4.37114e-08, 39.5273, 15.3722, -2.30153)
+
+[node name="Wall2" parent="Walls" instance=ExtResource("3_vqvni")]
+transform = Transform3D(-1.79005e-07, 0, 1, 0, 2.21743, 0, -4.09516, 0, -4.37114e-08, -24.7994, 17.2699, -0.132154)
+
+[node name="Wall3" parent="Walls" instance=ExtResource("3_vqvni")]
+transform = Transform3D(-5.78902, 0, -8.74228e-08, 0, 2.46202, 0, 5.06092e-07, 0, -1, 1.6935, 14.7043, -37.1167)
+
+[node name="Wall7" parent="Walls" instance=ExtResource("3_vqvni")]
+transform = Transform3D(1.38382, 0, -8.74228e-08, 0, 2.46202, 0, -1.20977e-07, 0, -1, 47.9012, 15.932, -16.8698)
+
+[node name="Wall8" parent="Walls" instance=ExtResource("3_vqvni")]
+transform = Transform3D(1.38382, 0, -8.74228e-08, 0, 2.46202, 0, -1.20977e-07, 0, -1, 47.8591, 15.932, 9.17453)
+
+[node name="Wall4" parent="Walls" instance=ExtResource("3_vqvni")]
+transform = Transform3D(-5.96952, 0, -8.74228e-08, 0, 2.42463, 0, 5.21872e-07, 0, -1, 1.6935, 14.7932, 18.7552)
+
+[node name="Objects" type="Node" parent="."]
+
+[node name="Door" parent="Objects" instance=ExtResource("5_60ev7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0838284, -0.137032, -1.67129)
+skeleton = NodePath("../..")
+
+[node name="Window" parent="Objects" instance=ExtResource("6_40guc")]
+
+[node name="WoodStack" parent="Objects" instance=ExtResource("7_bs5vm")]
+
+[node name="StraightShelf" parent="Objects" instance=ExtResource("8_04icq")]
+
+[node name="StraightShelf2" parent="Objects" instance=ExtResource("8_04icq")]
+transform = Transform3D(-1.03179e-07, 0, 2.28921, 0, 1, 0, -2.36046, 0, -1.00065e-07, -2.24431, 7.53944, -38.4275)
+
+[node name="StraightShelf4" parent="Objects" instance=ExtResource("8_04icq")]
+transform = Transform3D(-2.36046, 0, -4.45593e-07, 0, 1, 0, 2.06358e-07, 0, -5.09699, -22.7452, 7.53944, -17.0564)
+
+[node name="StraightShelf3" parent="Objects" instance=ExtResource("8_04icq")]
+transform = Transform3D(-1.03179e-07, 0, 1.59656, 0, 1, 0, -2.36046, 0, -6.97878e-08, 4.13919, 1.20228, -38.4275)
+
+[node name="Broom" parent="Objects" instance=ExtResource("9_15f2d")]
+
+[node name="Cauldron" parent="Objects" instance=ExtResource("10_qgcl4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.22082, 0, 0)
+
+[node name="Chest" parent="Objects" instance=ExtResource("11_g3p6o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.367059, -3.92646, -2.25347)
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D" parent="Objects" instance=ExtResource("12_4bcq8")]
+
+[node name="Node3D" parent="Objects" instance=ExtResource("13_8655c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.733526)
+
+[node name="BentShelf" parent="Objects" instance=ExtResource("14_q74ui")]
+
+[node name="BentShelf2" parent="Objects" instance=ExtResource("14_q74ui")]
+transform = Transform3D(0.596726, 0, 0, 0, 1, 0, 0, 0, 0.823494, -10.5777, -2.81815, 3.24272)
+
+[node name="Pot" parent="Objects" instance=ExtResource("15_xfg3n")]
+
+[node name="Utensils" parent="Objects" instance=ExtResource("16_xqik0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.21561, 2.71114, 0, 0)
+
+[node name="Interactable" type="Node" parent="."]

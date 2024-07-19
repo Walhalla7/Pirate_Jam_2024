@@ -1,32 +1,24 @@
 [gd_scene load_steps=6 format=3 uid="uid://dqb6hflk04skq"]
 
 [ext_resource type="Script" path="res://Protagonist/Script_Protagonist.gd" id="1_7xj1q"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_h5p88"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_msl2t"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fv6hu"]
-albedo_color = Color(0.928807, 0.425133, 0.867941, 1)
+[ext_resource type="ArrayMesh" uid="uid://bkc7w3ttjxl5w" path="res://RoomObjects/Protagonist.obj" id="2_5x464"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_k2v2t"]
 size = Vector3(1.1, 1, 1.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fakw7"]
+albedo_color = Color(0.388387, 0.00010969, 0.391463, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_gpv27"]
+points = PackedVector3Array(-0.291599, 0.0226715, 0.00386099, -0.0277506, 0.855882, 0.0594111, -0.0277506, 0.855882, 0.00386099, 0.444357, 0.647516, 0.0594111, -0.444357, 0.0921268, 0.0594111, 0.263761, 0.0921268, 0.00386099, 0.166591, 0.0226715, 0.0594111, 0.444357, 0.703064, 0.00386099, -0.263761, 0.661424, 0.00386099, -0.166591, 0.828151, 0.0594111, -0.444357, 0.133766, 0.00386099, 0.0971706, -0.00514436, 0.00386099, -0.194341, -0.00514436, 0.0594111, 0.41652, 0.73088, 0.0594111, 0.263761, 0.0921268, 0.0594111, -0.263761, 0.661424, 0.0594111, -0.13884, 0.855882, 0.00386099, 0.444357, 0.647516, 0.00386099, 0.41652, 0.73088, 0.00386099, 0.0971706, -0.00514436, 0.0594111, -0.194341, -0.00514436, 0.00386099, -0.444357, 0.133766, 0.0594111, -0.444357, 0.0921268, 0.00386099, -0.13884, 0.855882, 0.0594111, -0.194341, 0.786427, 0.00386099, -0.291599, 0.0226715, 0.0594111, 0.166591, 0.0226715, 0.00386099, 0.444357, 0.703064, 0.0594111, -0.388769, 0.0643109, 0.00386099, -0.194341, 0.786427, 0.0594111, -0.166591, 0.828151, 0.00386099, -0.388769, 0.0643109, 0.0594111)
 
 [node name="Protagonist" type="CharacterBody3D"]
 collision_layer = 8
 collision_mask = 23
 script = ExtResource("1_7xj1q")
 
-[node name="Damage_Detector(wip)" type="CollisionShape3D" parent="."]
-shape = SubResource("BoxShape3D_h5p88")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Damage_Detector(wip)"]
-mesh = SubResource("BoxMesh_msl2t")
-skeleton = NodePath("../..")
-surface_material_override/0 = SubResource("StandardMaterial3D_fv6hu")
-
 [node name="SpringArmPivot" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.987932, 0.154882, 0, -0.154882, 0.987932, 0, 3.68162, 7.46476)
+transform = Transform3D(1, 0, 0, 0, 0.987932, 0.154882, 0, -0.154882, 0.987932, 0, 1.57784, 1.65091)
 
 [node name="SpringArm3D" type="SpringArm3D" parent="SpringArmPivot"]
 
@@ -34,10 +26,18 @@ transform = Transform3D(1, 0, 0, 0, 0.987932, 0.154882, 0, -0.154882, 0.987932, 
 transform = Transform3D(1, 0, 0, 0, 1, 2.98023e-08, 0, -2.98023e-08, 1, 0, -0.532108, 1.31226)
 
 [node name="Wall_Detector" type="Area3D" parent="."]
+transform = Transform3D(0.824723, 0, 0, 0, 1, 0, 0, 0, 0.187466, -0.0016731, 0.568482, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Wall_Detector"]
 shape = SubResource("BoxShape3D_k2v2t")
 
-[connection signal="tree_entered" from="Damage_Detector(wip)" to="." method="_on_collision_shape_3d_tree_entered"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.00345, 0, 0, 0, 1.00345, 0, 0, 0, 1.00345, 0, 0, 0)
+mesh = ExtResource("2_5x464")
+surface_material_override/0 = SubResource("StandardMaterial3D_fakw7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_gpv27")
+
 [connection signal="body_entered" from="Wall_Detector" to="." method="_on_wall_detector_body_entered"]
 [connection signal="body_exited" from="Wall_Detector" to="." method="_on_wall_detector_body_exited"]
