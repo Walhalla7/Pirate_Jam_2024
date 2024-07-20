@@ -58,7 +58,7 @@ func change_State(newState):
 #Movement variables
 const speed = 5.0
 var target_velocity = Vector3.ZERO
-const JUMP_VELOCITY = 10
+const JUMP_VELOCITY = 7
 #const LERP_VAL = .15
 var sprint_modifier = 1
 var double_jump = 0
@@ -94,8 +94,8 @@ func _ready():
 func _physics_process(delta):
 	
 	#Camera movement update:
-	camera_node.global_position.x = camera_target.global_position.x
-	camera_node.global_position.y = camera_target.global_position.y + 2
+	#camera_node.global_position.x = camera_target.global_position.x
+	#camera_node.global_position.y = camera_target.global_position.y + 2
 	
 	#base direction
 	var direction = Vector3.ZERO
