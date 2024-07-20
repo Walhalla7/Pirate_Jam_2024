@@ -1,8 +1,8 @@
 [gd_scene load_steps=18 format=3 uid="uid://dx1te2b8aasvv"]
 
-[ext_resource type="Script" path="res://Script_Main.gd" id="1_cwe8n"]
+[ext_resource type="Script" path="res://script_main.gd" id="1_cwe8n"]
 [ext_resource type="PackedScene" uid="uid://b1tqs2mt8aiii" path="res://Environment/static/test_field.tscn" id="1_t7k6m"]
-[ext_resource type="PackedScene" uid="uid://dqb6hflk04skq" path="res://Protagonist/protagonist.tscn" id="2_yjr5n"]
+[ext_resource type="PackedScene" uid="uid://dqb6hflk04skq" path="res://scenes/protagonist/protagonist_scene.tscn" id="2_yjr5n"]
 [ext_resource type="PackedScene" uid="uid://krtuxl5g46p6" path="res://Environment/climbable/wall.tscn" id="3_vqvni"]
 [ext_resource type="PackedScene" uid="uid://b81nkdg580ts7" path="res://RoomObjects/ObjectScenes/Door.tscn" id="5_60ev7"]
 [ext_resource type="PackedScene" uid="uid://bwmnetmn5eaxf" path="res://RoomObjects/ObjectScenes/Window.tscn" id="6_40guc"]
