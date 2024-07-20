@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3mto11dq37v5"]
+
+[ext_resource type="Script" path="res://BreakingObjects/Scenes/Fragment.gd" id="1_vtbrf"]
+
+[node name="RigidBody3D" type="RigidBody3D"]
+script = ExtResource("1_vtbrf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]

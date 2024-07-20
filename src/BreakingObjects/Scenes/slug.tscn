@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://00h81up2m6c5"]
+
+[ext_resource type="Script" path="res://BreakingObjects/Scenes/slug.gd" id="1_2qk5f"]
+[ext_resource type="PackedScene" uid="uid://58jhqhmvx3nf" path="res://BreakingObjects/slugBefore.glb" id="1_4etbs"]
+[ext_resource type="PackedScene" uid="uid://bkaog4m6b1fm" path="res://BreakingObjects/SlugAfter.glb" id="2_oxv5d"]
+
+[node name="Slug" type="Node3D"]
+script = ExtResource("1_2qk5f")
+fragment_collision_layer = 2
+fragment_collision_mask = 29
+explosion_speed = 15.0
+min_frag_lifetime = 5.0
+max_frag_lifetime = 10.0
+
+[node name="slug" parent="." instance=ExtResource("1_4etbs")]
+
+[node name="Slug_After" parent="." instance=ExtResource("2_oxv5d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0559395, 0, 0)
+visible = false
+
+[node name="ExplodeOrigin" type="Marker3D" parent="."]
+transform = Transform3D(0.192906, 0, 0, 0, -0.0375177, 0, 0, 0, -0.0634493, 0.119622, 0.329193, 0.0306758)
+gizmo_extents = 0.1
+
+[editable path="slug"]
+[editable path="Slug_After"]
