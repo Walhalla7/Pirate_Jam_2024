@@ -26,6 +26,13 @@ script = ExtResource("1_cwe8n")
 [node name="Protagonist" parent="." instance=ExtResource("2_yjr5n")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 14.9047, 10.9261)
 
+[node name="CameraController" type="Node3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, -2.30582e-08, 0.96459, 0.263755, 8.43271e-08, 0.263755, -0.96459, 0, 17.2631, -0.0346304)
+
+[node name="PlayerCamera" type="Camera3D" parent="CameraController"]
+transform = Transform3D(1, -9.01525e-09, 4.66081e-10, 9.01525e-09, 0.994669, -0.103122, 4.66081e-10, 0.103122, 0.994669, 0, 0, 0)
+fov = 60.0
+
 [node name="Floor" parent="." instance=ExtResource("1_t7k6m")]
 transform = Transform3D(6.345, 0, 0, 0, 6.345, 0, 0, 0, 6.345, -1.36474, -3.49589, -1.51297)
 
