@@ -3,7 +3,8 @@ extends CharacterBody3D
 #Camera managment
 @onready var armature = $CollisionShape3D
 @onready var spring_arm_pivot = $SpringArmPivot
-
+@onready var camera_node = $".."/CameraController
+@onready var camera_target = $CameraTarget
 
 #======================================== 	States 	==================================
 #current state of the player
@@ -93,6 +94,11 @@ func _ready():
 
 #======================================== 	Process 	==================================
 func _physics_process(delta):
+	
+	#Camera movement update:
+	camera_node.global_position.x = camera_target.global_position.x
+	camera_node.global_position.y = camera_target.global_position.y + 2
+	
 	#base direction
 	var direction = Vector3.ZERO
 	
@@ -101,7 +107,7 @@ func _physics_process(delta):
 		if curr_State != States.FLOOR:
 			change_State(States.FLOOR)
 	
-	# Add the gravit/falling
+	# Add the gravity/falling
 	if not is_on_floor():
 		target_velocity.y = target_velocity.y - (gravityStrength * delta)
 		if (curr_State != States.FALLING):
@@ -123,13 +129,13 @@ func _physics_process(delta):
 	#Basic movement -> Needs change
 	#TO-DO: apply states and actions so that the direction of the movement changes as the slug lands on different surfaces
 	if Input.is_action_pressed("move_right"):
-		direction.x += 1
-	if Input.is_action_pressed("move_left"):
 		direction.x -= 1
+	if Input.is_action_pressed("move_left"):
+		direction.x += 1
 	if Input.is_action_pressed("move_forward"):
-		direction.z += 1
-	if Input.is_action_pressed("move_back"):
 		direction.z -= 1
+	if Input.is_action_pressed("move_back"):
+		direction.z += 1
 		
 	if direction != Vector3.ZERO:
 		direction = direction.normalized()
