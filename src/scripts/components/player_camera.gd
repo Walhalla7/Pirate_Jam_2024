@@ -22,6 +22,12 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _physics_process(delta):
-	camera_3d.global_position.x = camera_target.global_position.x
-	camera_3d.global_position.y = camera_target.global_position.y + 2
+func _process(delta):
+	# Which direction we are facing, lock that angle and follow the player left to right
+	if lock_x:
+		camera_3d.global_position.z = camera_target.global_position.z
+	elif lock_z:
+		camera_3d.global_position.x = camera_target.global_position.x
+	
+	# Follow the player up and down
+	camera_3d.global_position.y = camera_target.global_position.y + 1
