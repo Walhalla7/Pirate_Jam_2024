@@ -65,9 +65,6 @@ const JUMP_VELOCITY = 10
 var sprint_modifier = 1
 var double_jump = 0
 
-#states 
-var on_the_wall = false
-
 # Gravity
 #var gravity = ProjectSettings.get_setting("physics/3d/default_gravity") #Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravityStrength = 9.8
@@ -113,6 +110,8 @@ func _physics_process(delta):
 	# Add the gravity/falling
 	if not is_on_floor():
 		target_velocity.y = target_velocity.y - (gravityStrength * delta)
+		if (curr_State != States.FALLING):
+			change_State(States.FALLING)
 		
 	#Double jump
 	if Input.is_action_just_pressed("jump"):
