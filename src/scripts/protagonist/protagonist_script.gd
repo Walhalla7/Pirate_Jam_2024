@@ -1,8 +1,6 @@
 extends CharacterBody3D
 
 #Camera managment
-@onready var armature = $CollisionShape3D
-@onready var spring_arm_pivot = $SpringArmPivot
 @onready var camera_node = $".."/CameraController
 @onready var camera_target = $CameraTarget
 
