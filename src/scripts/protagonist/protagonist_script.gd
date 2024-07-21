@@ -1,8 +1,6 @@
 extends CharacterBody3D
 
-#Camera managment
-@onready var camera_node = $".."/CameraController
-@onready var camera_target = $CameraTarget
+@onready var health_component = $HealthComponent
 
 #======================================== 	States 	==================================
 #current state of the player
@@ -85,6 +83,13 @@ func _on_wall_detector_body_exited(body):
 		else:
 			change_State(States.FALLING)
 
+#===================================== 	Hurt & Death Functions 	===============================
+
+func _on_health_component_death():
+	print("Player has died")
+
+func _on_health_component_hurt():
+	print("Player got hurt")
 
 #======================================== 	Initialize 	==================================
 func _ready():
@@ -145,3 +150,5 @@ func _physics_process(delta):
 	# Moving the Character
 	velocity = target_velocity
 	move_and_slide()
+
+
