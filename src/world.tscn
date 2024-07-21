@@ -1,8 +1,9 @@
-[gd_scene load_steps=18 format=3 uid="uid://dx1te2b8aasvv"]
+[gd_scene load_steps=19 format=3 uid="uid://dx1te2b8aasvv"]
 
 [ext_resource type="Script" path="res://script_main.gd" id="1_cwe8n"]
 [ext_resource type="PackedScene" uid="uid://b1tqs2mt8aiii" path="res://Environment/static/test_field.tscn" id="1_t7k6m"]
 [ext_resource type="PackedScene" uid="uid://dqb6hflk04skq" path="res://scenes/protagonist/protagonist_scene.tscn" id="2_yjr5n"]
+[ext_resource type="PackedScene" uid="uid://b7i2um4a17gt3" path="res://scenes/components/player_camera.tscn" id="3_beliv"]
 [ext_resource type="PackedScene" uid="uid://krtuxl5g46p6" path="res://Environment/climbable/wall.tscn" id="3_vqvni"]
 [ext_resource type="PackedScene" uid="uid://b81nkdg580ts7" path="res://RoomObjects/ObjectScenes/Door.tscn" id="5_60ev7"]
 [ext_resource type="PackedScene" uid="uid://bwmnetmn5eaxf" path="res://RoomObjects/ObjectScenes/Window.tscn" id="6_40guc"]
@@ -24,15 +25,13 @@ size = Vector3(76.386, 58.817, 2.604)
 script = ExtResource("1_cwe8n")
 
 [node name="Protagonist" parent="." instance=ExtResource("2_yjr5n")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -8.96426, 13.9157, 12.6254)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.90659, 14.1581, 11.8821)
 
-[node name="CameraController" type="Node3D" parent="."]
-transform = Transform3D(-1, 0, -8.74228e-08, -2.30582e-08, 0.96459, 0.263755, 8.43271e-08, 0.263755, -0.96459, 0, 17.2631, -0.0346304)
-
-[node name="PlayerCamera" type="Camera3D" parent="CameraController"]
-transform = Transform3D(1, -9.01525e-09, 4.66081e-10, 9.01525e-09, 0.994669, -0.103122, 4.66081e-10, 0.103122, 0.994669, 0, 0, 0)
-current = true
-fov = 60.0
+[node name="PlayerCamera" parent="." node_paths=PackedStringArray("camera_target") instance=ExtResource("3_beliv")]
+transform = Transform3D(-1, -2.26267e-08, 8.44439e-08, 0, 0.965926, 0.258819, -8.74228e-08, 0.258819, -0.965926, 0, 15.4084, 6.88445)
+camera_target = NodePath("../Protagonist")
+lock_x = false
+lock_z = true
 
 [node name="Floor" parent="." instance=ExtResource("1_t7k6m")]
 transform = Transform3D(6.345, 0, 0, 0, 6.345, 0, 0, 0, 6.345, -1.36474, -3.49589, -1.51297)
