@@ -94,13 +94,6 @@ func _ready():
 #======================================== 	Process 	==================================
 func _physics_process(delta):
 
-	# Animation Tree
-	if target_velocity.x != 0 || target_velocity.z != 0:
-		
-		animated_sprite_3d.play("walk")
-	else: 
-		animated_sprite_3d.play("idle")
-	
 	#base direction
 	var direction = Vector3.ZERO
 	
@@ -108,7 +101,7 @@ func _physics_process(delta):
 	if is_on_floor():
 		if curr_State != States.FLOOR:
 			change_State(States.FLOOR)
-	
+
 	# Add the gravity/falling
 	if not is_on_floor():
 		target_velocity.y = target_velocity.y - (gravityStrength * delta)
@@ -141,7 +134,19 @@ func _physics_process(delta):
 		
 	if direction != Vector3.ZERO:
 		direction = direction.normalized()
+
+	# Animation Tree
+	if direction.x == 0 && direction.z == 0: 
+		animated_sprite_3d.play("idle")
+	else:
+		animated_sprite_3d.play("walk")
 		
+	# Flip Sprite
+	if direction.x > 0 || direction.z > 0:
+		animated_sprite_3d.flip_h = true
+	elif direction.x < 0 || direction.z < 0:
+		animated_sprite_3d.flip_h = false
+
 	# Ground Velocity
 	target_velocity.x = direction.x * speed * sprint_modifier
 	target_velocity.z = direction.z * speed * sprint_modifier
