@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvwxt7xdfwcjc"
-path.s3tc="res://.godot/imported/leaf2-4.png-3919ae0aaa3038ba1ed80139932bc83e.s3tc.ctex"
+uid="uid://iy58cofwdx00"
+path.s3tc="res://.godot/imported/wood_texture1.png-d9df4a531bc21e909c9bec3c0e3e230b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/sprites/leaf2-4.png"
-dest_files=["res://.godot/imported/leaf2-4.png-3919ae0aaa3038ba1ed80139932bc83e.s3tc.ctex"]
+source_file="res://assets/sprites/wood_texture1.png"
+dest_files=["res://.godot/imported/wood_texture1.png-d9df4a531bc21e909c9bec3c0e3e230b.s3tc.ctex"]
 
 [params]
 

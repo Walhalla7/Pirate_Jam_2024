@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvwxt7xdfwcjc"
-path.s3tc="res://.godot/imported/leaf2-4.png-3919ae0aaa3038ba1ed80139932bc83e.s3tc.ctex"
+uid="uid://cgptlglvsg83n"
+path.s3tc="res://.godot/imported/stone_texture.png-40f3cc6bcb2e06ba6dd1b1f1dd1c345d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/sprites/leaf2-4.png"
-dest_files=["res://.godot/imported/leaf2-4.png-3919ae0aaa3038ba1ed80139932bc83e.s3tc.ctex"]
+source_file="res://assets/sprites/stone_texture.png"
+dest_files=["res://.godot/imported/stone_texture.png-40f3cc6bcb2e06ba6dd1b1f1dd1c345d.s3tc.ctex"]
 
 [params]
 

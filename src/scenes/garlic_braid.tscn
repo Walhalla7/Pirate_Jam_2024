@@ -1,6 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://ba8akxu0oxp3i"]
+[gd_scene load_steps=6 format=3 uid="uid://ba8akxu0oxp3i"]
 
 [ext_resource type="Texture2D" uid="uid://by461s23ld78m" path="res://assets/sprites/garlic-1000.png" id="1_ok1di"]
+[ext_resource type="Texture2D" uid="uid://bvwxt7xdfwcjc" path="res://assets/sprites/leaf2-4.png" id="1_s3hqw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gqc0d"]
+albedo_texture = ExtResource("1_s3hqw")
 
 [sub_resource type="ORMMaterial3D" id="ORMMaterial3D_m3um7"]
 albedo_texture = ExtResource("1_ok1di")
@@ -12,6 +16,7 @@ material = SubResource("ORMMaterial3D_m3um7")
 
 [node name="Braid" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25207, 0)
+material_override = SubResource("StandardMaterial3D_gqc0d")
 mesh = SubResource("CylinderMesh_m40fj")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]

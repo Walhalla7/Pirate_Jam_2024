@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dx1te2b8aasvv"]
+[gd_scene load_steps=21 format=3 uid="uid://dx1te2b8aasvv"]
 
 [ext_resource type="Script" path="res://script_main.gd" id="1_cwe8n"]
 [ext_resource type="PackedScene" uid="uid://b1tqs2mt8aiii" path="res://Environment/static/test_field.tscn" id="1_t7k6m"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://chsuoo325n6yl" path="res://RoomObjects/ObjectScenes/BentShelf.tscn" id="14_q74ui"]
 [ext_resource type="PackedScene" uid="uid://dg1c871n2qek7" path="res://RoomObjects/ObjectScenes/Pot.tscn" id="15_xfg3n"]
 [ext_resource type="PackedScene" uid="uid://bnpn7fkfgkb3k" path="res://RoomObjects/ObjectScenes/Utensils.tscn" id="16_xqik0"]
+[ext_resource type="PackedScene" uid="uid://dvcbj3533beha" path="res://book_1.tscn" id="18_1jb4a"]
 [ext_resource type="PackedScene" uid="uid://dmh6nsn2dxmqs" path="res://scenes/plant_leaves.tscn" id="18_cqddd"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_me04p"]
@@ -95,7 +96,7 @@ skeleton = NodePath("../..")
 
 [node name="MeshInstance3D" parent="Objects" instance=ExtResource("12_4bcq8")]
 
-[node name="Node3D" parent="Objects" instance=ExtResource("13_8655c")]
+[node name="Table" parent="Objects" instance=ExtResource("13_8655c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.733526)
 
 [node name="BentShelf" parent="Objects" instance=ExtResource("14_q74ui")]
@@ -107,6 +108,9 @@ transform = Transform3D(0.596726, 0, 0, 0, 1, 0, 0, 0, 0.823494, -10.5777, -2.81
 
 [node name="Utensils" parent="Objects" instance=ExtResource("16_xqik0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.21561, 2.71114, 0, 0)
+
+[node name="Book1" parent="Objects" instance=ExtResource("18_1jb4a")]
+transform = Transform3D(-1, -8.74228e-08, 3.82137e-15, 0, -4.37114e-08, -1, 8.74228e-08, -1, 4.37114e-08, 11.3974, 17.5055, 13.5067)
 
 [node name="Interactable" type="Node" parent="."]
 
