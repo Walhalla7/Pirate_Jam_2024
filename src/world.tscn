@@ -17,7 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://chsuoo325n6yl" path="res://RoomObjects/ObjectScenes/BentShelf.tscn" id="14_q74ui"]
 [ext_resource type="PackedScene" uid="uid://dg1c871n2qek7" path="res://RoomObjects/ObjectScenes/Pot.tscn" id="15_xfg3n"]
 [ext_resource type="PackedScene" uid="uid://bnpn7fkfgkb3k" path="res://RoomObjects/ObjectScenes/Utensils.tscn" id="16_xqik0"]
-[ext_resource type="PackedScene" uid="uid://dvcbj3533beha" path="res://book_1.tscn" id="18_1jb4a"]
+[ext_resource type="PackedScene" uid="uid://dvcbj3533beha" path="res://scenes/book_1.tscn" id="18_1jb4a"]
 [ext_resource type="PackedScene" uid="uid://dmh6nsn2dxmqs" path="res://scenes/plant_leaves.tscn" id="18_cqddd"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_me04p"]
