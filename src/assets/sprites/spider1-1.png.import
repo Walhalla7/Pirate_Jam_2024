@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfrssoea5k84y"
-path="res://.godot/imported/garlic2-3.png-5bd1ea76b124546283567d97ed54ef5f.ctex"
+uid="uid://onq037vlqss2"
+path="res://.godot/imported/spider1-1.png-408aba95bd7cf6a893f640f202cf13df.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/garlic2-3.png"
-dest_files=["res://.godot/imported/garlic2-3.png-5bd1ea76b124546283567d97ed54ef5f.ctex"]
+source_file="res://assets/sprites/spider1-1.png"
+dest_files=["res://.godot/imported/spider1-1.png-408aba95bd7cf6a893f640f202cf13df.ctex"]
 
 [params]
 

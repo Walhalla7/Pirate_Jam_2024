@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8x3jwb712y6y"
-path.s3tc="res://.godot/imported/book1_book1-1-large.png-f3583661d313f00bc7a40b2ef4f9ad18.s3tc.ctex"
+uid="uid://dibq5vjd6u1ih"
+path.s3tc="res://.godot/imported/book2_book2-1.png-15776c80eecadd9a857fb437502d8471.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://assets/sprites/book1_book1-1-large.png"
-dest_files=["res://.godot/imported/book1_book1-1-large.png-f3583661d313f00bc7a40b2ef4f9ad18.s3tc.ctex"]
+source_file="res://assets/book2_book2-1.png"
+dest_files=["res://.godot/imported/book2_book2-1.png-15776c80eecadd9a857fb437502d8471.s3tc.ctex"]
 
 [params]
 
