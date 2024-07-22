@@ -128,12 +128,16 @@ func _physics_process(delta):
 	#TO-DO: apply states and actions so that the direction of the movement changes as the slug lands on different surfaces
 	if Input.is_action_pressed("move_right"):
 		direction.x -= 1
+		$Sprite3D.rotation.y = 0
 	if Input.is_action_pressed("move_left"):
 		direction.x += 1
+		$Sprite3D.rotation.y = -PI
 	if Input.is_action_pressed("move_forward"):
 		direction.z -= 1
+		$Sprite3D.rotation.y = -0.5
 	if Input.is_action_pressed("move_back"):
 		direction.z += 1
+		$Sprite3D.rotation.y = 0.5
 		
 	if direction != Vector3.ZERO:
 		direction = direction.normalized()
