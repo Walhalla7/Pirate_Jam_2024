@@ -73,7 +73,7 @@ animations = [{
 }]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_k2v2t"]
-size = Vector3(1.1, 1.08984, 0.186237)
+size = Vector3(1.1, 1.08984, 0.363138)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fakw7"]
 albedo_color = Color(0.388387, 0.00010969, 0.391463, 1)
@@ -97,7 +97,7 @@ animation = &"walk"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0016731, 0.568482, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Wall_Detector"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0449219, 0.0239471)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0449219, -0.0645034)
 shape = SubResource("BoxShape3D_k2v2t")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
@@ -107,7 +107,7 @@ mesh = ExtResource("2_5x464")
 surface_material_override/0 = SubResource("StandardMaterial3D_fakw7")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.020409, 0)
+transform = Transform3D(1.64, 0, 0, 0, 1.64, 0, 0, 0, 1.64, 0, -0.436099, 0)
 shape = SubResource("ConvexPolygonShape3D_gpv27")
 
 [node name="CameraTarget" type="Node3D" parent="."]
@@ -116,7 +116,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.419266, 0)
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0.417122, 0)
 visible = false
-billboard = 2
+pixel_size = 0.02
 texture_filter = 0
 texture = ExtResource("3_u7x7g")
 
