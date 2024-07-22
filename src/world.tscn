@@ -79,6 +79,9 @@ skeleton = NodePath("../..")
 [node name="StraightShelf2" parent="Objects" instance=ExtResource("8_04icq")]
 transform = Transform3D(-1.03179e-07, 0, 2.28921, 0, 1, 0, -2.36046, 0, -1.00065e-07, -2.24431, 7.53944, -38.4275)
 
+[node name="StraightShelf5" parent="Objects" instance=ExtResource("8_04icq")]
+transform = Transform3D(-1.03179e-07, 0, 2.28921, 0, 1, 0, -2.36046, 0, -1.00065e-07, 43.7927, 17.5906, -38.4275)
+
 [node name="StraightShelf4" parent="Objects" instance=ExtResource("8_04icq")]
 transform = Transform3D(-2.36046, 0, -4.45593e-07, 0, 1, 0, 2.06358e-07, 0, -5.09699, 22.9222, 7.53944, -17.0564)
 
