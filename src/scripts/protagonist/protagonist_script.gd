@@ -142,9 +142,9 @@ func _physics_process(delta):
 		animated_sprite_3d.play("walk")
 		
 	# Flip Sprite
-	if direction.x > 0 || direction.z > 0:
+	if direction.x > 0:
 		animated_sprite_3d.flip_h = true
-	elif direction.x < 0 || direction.z < 0:
+	elif direction.x < 0:
 		animated_sprite_3d.flip_h = false
 
 	# Ground Velocity
