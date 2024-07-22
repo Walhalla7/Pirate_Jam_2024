@@ -3,6 +3,7 @@ extends CharacterBody3D
 #Camera managment
 @onready var camera_node = $".."/CameraController
 @onready var camera_target = $CameraTarget
+@onready var animated_sprite_3d = $AnimatedSprite3D
 
 #======================================== 	States 	==================================
 #current state of the player
@@ -92,10 +93,13 @@ func _ready():
 
 #======================================== 	Process 	==================================
 func _physics_process(delta):
-	
-	#Camera movement update:
-	#camera_node.global_position.x = camera_target.global_position.x
-	#camera_node.global_position.y = camera_target.global_position.y + 2
+
+	# Animation Tree
+	if target_velocity.x != 0 || target_velocity.z != 0:
+		
+		animated_sprite_3d.play("walk")
+	else: 
+		animated_sprite_3d.play("idle")
 	
 	#base direction
 	var direction = Vector3.ZERO
