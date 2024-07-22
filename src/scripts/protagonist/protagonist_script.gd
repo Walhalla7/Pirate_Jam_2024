@@ -4,6 +4,14 @@ extends CharacterBody3D
 @onready var camera_node = $".."/CameraController
 @onready var camera_target = $CameraTarget
 
+#clibable detectors
+@onready var floor_detector = $Floor_Detector
+@onready var righ_detector = $Right_Detector
+@onready var left_detector = $Left_Detector
+@onready var back_detector = $Back_Detector
+
+
+
 #======================================== 	States 	==================================
 #current state of the player
 var curr_State
@@ -13,7 +21,6 @@ var curr_State
 #TO DO: Implement camera changing and detection of wall to which player is attached
 enum States {
 	FLOOR,
-	WALL_FORWARD,
 	WALL_BACK,
 	WALL_LEFT,
 	WALL_RIGHT,
@@ -33,26 +40,28 @@ enum Actions {
 }
 
 #Call this function whenever the snail changes it's state along with the state you want to change it to
-func change_State(newState):
+func change_State(newState:States):
 	match newState:
 		States.FLOOR:
-			curr_State = States.FLOOR
-			print("Floor")	
-		States.WALL_FORWARD:
-			curr_State = States.WALL_FORWARD
-			print("WALL_FORWARD")	
+			if curr_State != States.FLOOR:
+				curr_State = States.FLOOR
+				print("Floor")	
 		States.WALL_BACK:
-			curr_State = States.WALL_BACK
-			print("WALL_BACK")	
+			if curr_State != States.WALL_BACK:
+				curr_State = States.WALL_BACK
+				print("WALL_BACK")	
 		States.WALL_LEFT:
-			curr_State = States.WALL_LEFT
-			print("WALL_LEFT")	
+			if curr_State != States.WALL_LEFT:
+				curr_State = States.WALL_LEFT
+				print("WALL_LEFT")	
 		States.WALL_RIGHT:
-			curr_State = States.WALL_RIGHT
-			print("WALL_RIGHT")	
+			if curr_State != States.WALL_RIGHT:
+				curr_State = States.WALL_RIGHT
+				print("WALL_RIGHT")	
 		States.FALLING:
-			curr_State = States.FALLING
-			print("FALLING")	
+			if curr_State != States.FALLING:
+				curr_State = States.FALLING
+				print("FALLING")	
 
 #======================================== 	Variables 	==================================
 #Movement variables
@@ -69,23 +78,6 @@ var gravityStrength = 9.8
 var GravityDirection = Vector3.DOWN #Base direction
 
 
-#======================================== 	Collision Functions 	==================================
-#slug touches the wall
-func _on_wall_detector_body_entered(body):
-	if body.is_in_group("Walls"):
-		change_State(States.WALL_FORWARD)
-
-#slug detaches from the wall 
-func _on_wall_detector_body_exited(body):
-	if body.is_in_group("Walls"):
-		if is_on_floor() && curr_State != States.FLOOR:
-			change_State(States.FLOOR)
-		elif is_on_ceiling():
-			change_State(States.CEILING)
-		else:
-			change_State(States.FALLING)
-
-
 #======================================== 	Initialize 	==================================
 func _ready():
 	pass
@@ -93,23 +85,25 @@ func _ready():
 #======================================== 	Process 	==================================
 func _physics_process(delta):
 	
-	#Camera movement update:
-	#camera_node.global_position.x = camera_target.global_position.x
-	#camera_node.global_position.y = camera_target.global_position.y + 2
+	if  left_detector.is_colliding():
+			change_State(States.WALL_LEFT)
+	elif  righ_detector.is_colliding():
+		change_State(States.WALL_RIGHT)
+	elif back_detector.is_colliding():
+		change_State(States.WALL_BACK)
+	elif floor_detector.is_colliding():
+		change_State(States.FLOOR)
+	else:
+		change_State(States.FALLING)
 	
 	#base direction
 	var direction = Vector3.ZERO
 	
-	# Detect if slug has landed
-	if is_on_floor():
-		if curr_State != States.FLOOR:
-			change_State(States.FLOOR)
 	
 	# Add the gravity/falling
 	if not is_on_floor():
 		target_velocity.y = target_velocity.y - (gravityStrength * delta)
-		if (curr_State != States.FALLING):
-			change_State(States.FALLING)
+
 		
 	#Double jump
 	if Input.is_action_just_pressed("jump"):
