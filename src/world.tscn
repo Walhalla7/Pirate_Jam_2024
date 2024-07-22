@@ -116,7 +116,10 @@ transform = Transform3D(0.596726, 0, 0, 0, 1, 0, 0, 0, 0.823494, -10.5777, -2.81
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.21561, 41.0088, 11.8538, 0)
 
 [node name="Book1" parent="Objects" instance=ExtResource("18_1jb4a")]
-transform = Transform3D(-1, -8.74228e-08, 3.82137e-15, 0, -4.37114e-08, -1, 8.74228e-08, -1, 4.37114e-08, 11.3974, 17.5055, 13.5067)
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 11.5491, 17.5055, 14.9158)
+
+[node name="PlantLeaves" parent="Objects" instance=ExtResource("18_cqddd")]
+transform = Transform3D(0.0324281, 0, 0.0156338, 0, 0.036, 0, -0.0156338, 0, 0.0324281, 2.71413, 25.9971, 14.0077)
 
 [node name="Interactable" type="Node" parent="."]
 
@@ -130,6 +133,3 @@ shape = SubResource("BoxShape3D_me04p")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-1, -3.13295e-08, 8.16162e-08, 0, 0.93358, 0.358368, -8.74228e-08, 0.358368, -0.93358, 0, 35.3301, -26.3495)
-
-[node name="PlantLeaves" parent="." instance=ExtResource("18_cqddd")]
-transform = Transform3D(0.0324281, 0, 0.0156338, 0, 0.036, 0, -0.0156338, 0, 0.0324281, 2.71413, 25.9971, 14.0077)
