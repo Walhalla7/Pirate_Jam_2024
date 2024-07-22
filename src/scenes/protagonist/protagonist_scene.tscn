@@ -1,8 +1,76 @@
-[gd_scene load_steps=7 format=3 uid="uid://dqb6hflk04skq"]
+[gd_scene load_steps=16 format=3 uid="uid://dqb6hflk04skq"]
 
 [ext_resource type="Script" path="res://scripts/protagonist/protagonist_script.gd" id="1_7xj1q"]
 [ext_resource type="ArrayMesh" uid="uid://bkc7w3ttjxl5w" path="res://RoomObjects/Protagonist.obj" id="2_5x464"]
+[ext_resource type="Texture2D" uid="uid://typ71ccn5qcm" path="res://assets/sprites/Walk anim.png" id="3_i0ier"]
 [ext_resource type="Texture2D" uid="uid://g4m2kriiymn2" path="res://assets/sprites/player slug.png" id="3_u7x7g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oydbq"]
+atlas = ExtResource("3_i0ier")
+region = Rect2(0, 0, 1984, 1984)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ra7u4"]
+atlas = ExtResource("3_i0ier")
+region = Rect2(0, 0, 1984, 1984)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j2ax7"]
+atlas = ExtResource("3_i0ier")
+region = Rect2(1984, 0, 1984, 1984)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t1mab"]
+atlas = ExtResource("3_i0ier")
+region = Rect2(3968, 0, 1984, 1984)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1luo8"]
+atlas = ExtResource("3_i0ier")
+region = Rect2(5952, 0, 1984, 1984)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8mup1"]
+atlas = ExtResource("3_i0ier")
+region = Rect2(7936, 0, 1984, 1984)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ysq3o"]
+atlas = ExtResource("3_i0ier")
+region = Rect2(9920, 0, 1984, 1984)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0hkjp"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oydbq")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ra7u4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j2ax7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t1mab")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1luo8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8mup1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ysq3o")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_k2v2t"]
 size = Vector3(1.1, 1.08984, 0.363138)
@@ -17,6 +85,13 @@ points = PackedVector3Array(-0.291599, 0.0226715, 0.00386099, -0.0277506, 0.8558
 collision_layer = 8
 collision_mask = 23
 script = ExtResource("1_7xj1q")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0.470279, 0)
+billboard = 2
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_0hkjp")
+animation = &"walk"
 
 [node name="Wall_Detector" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0016731, 0.568482, 0)
