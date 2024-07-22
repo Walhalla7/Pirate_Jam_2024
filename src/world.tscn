@@ -36,7 +36,7 @@ lock_x = false
 lock_z = true
 
 [node name="Floor" parent="." instance=ExtResource("1_t7k6m")]
-transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, -1.36474, -3.49589, -1.51297)
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, -1.29957, -3.21587, -1.41195)
 
 [node name="Walls" type="Node" parent="."]
 
@@ -83,7 +83,10 @@ transform = Transform3D(-1.03179e-07, 0, 2.28921, 0, 1, 0, -2.36046, 0, -1.00065
 transform = Transform3D(-1.03179e-07, 0, 2.28921, 0, 1, 0, -2.36046, 0, -1.00065e-07, 43.7927, 17.5906, -38.4275)
 
 [node name="StraightShelf4" parent="Objects" instance=ExtResource("8_04icq")]
-transform = Transform3D(-2.36046, 0, -4.45593e-07, 0, 1, 0, 2.06358e-07, 0, -5.09699, 22.9222, 7.53944, -17.0564)
+transform = Transform3D(-2.36046, 0, -4.45593e-07, 0, 1, 0, 2.06358e-07, 0, -5.09699, 22.9222, 18.7001, -17.0564)
+
+[node name="StraightShelf6" parent="Objects" instance=ExtResource("8_04icq")]
+transform = Transform3D(-2.36046, 0, -4.45593e-07, 0, 1, 0, 2.06358e-07, 0, -5.09699, 22.9222, -8.55685, -17.0564)
 
 [node name="StraightShelf3" parent="Objects" instance=ExtResource("8_04icq")]
 transform = Transform3D(-1.03179e-07, 0, 1.59656, 0, 1, 0, -2.36046, 0, -6.97878e-08, 4.13919, 1.20228, -38.4275)
@@ -91,7 +94,7 @@ transform = Transform3D(-1.03179e-07, 0, 1.59656, 0, 1, 0, -2.36046, 0, -6.97878
 [node name="Broom" parent="Objects" instance=ExtResource("9_15f2d")]
 
 [node name="Cauldron" parent="Objects" instance=ExtResource("10_qgcl4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.326, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.326, 12.0192, -2.26131)
 
 [node name="Chest" parent="Objects" instance=ExtResource("11_g3p6o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.367059, -3.92646, -2.25347)
@@ -110,7 +113,7 @@ transform = Transform3D(0.596726, 0, 0, 0, 1, 0, 0, 0, 0.823494, -10.5777, -2.81
 [node name="Pot" parent="Objects" instance=ExtResource("15_xfg3n")]
 
 [node name="Utensils" parent="Objects" instance=ExtResource("16_xqik0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.21561, 41.0088, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.21561, 41.0088, 11.8538, 0)
 
 [node name="Book1" parent="Objects" instance=ExtResource("18_1jb4a")]
 transform = Transform3D(-1, -8.74228e-08, 3.82137e-15, 0, -4.37114e-08, -1, 8.74228e-08, -1, 4.37114e-08, 11.3974, 17.5055, 13.5067)
@@ -129,4 +132,4 @@ shape = SubResource("BoxShape3D_me04p")
 transform = Transform3D(-1, -3.13295e-08, 8.16162e-08, 0, 0.93358, 0.358368, -8.74228e-08, 0.358368, -0.93358, 0, 35.3301, -26.3495)
 
 [node name="PlantLeaves" parent="." instance=ExtResource("18_cqddd")]
-transform = Transform3D(0.0324281, 0, 0.0156338, 0, 0.036, 0, -0.0156338, 0, 0.0324281, 2.71413, 25.6325, 14.4539)
+transform = Transform3D(0.0324281, 0, 0.0156338, 0, 0.036, 0, -0.0156338, 0, 0.0324281, 2.71413, 25.9971, 14.0077)
