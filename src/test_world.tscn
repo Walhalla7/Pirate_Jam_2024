@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://bi4h30shxghqv"]
+[gd_scene load_steps=10 format=3 uid="uid://bi4h30shxghqv"]
 
 [ext_resource type="PackedScene" uid="uid://b7i2um4a17gt3" path="res://scenes/components/player_camera.tscn" id="1_10wq6"]
 [ext_resource type="PackedScene" uid="uid://dqb6hflk04skq" path="res://scenes/protagonist/protagonist_scene.tscn" id="1_l74ou"]
+[ext_resource type="Script" path="res://Script_Main.gd" id="1_lkitu"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_tb6f8"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -24,6 +25,7 @@ albedo_color = Color(0.564706, 0.564706, 0.564706, 1)
 albedo_color = Color(1, 0.294118, 1, 1)
 
 [node name="TestWorld" type="Node3D"]
+script = ExtResource("1_lkitu")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_oqqj6")

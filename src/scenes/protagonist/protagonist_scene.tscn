@@ -48,3 +48,7 @@ collision_mask = 23
 [node name="Back_Detector" type="RayCast3D" parent="."]
 transform = Transform3D(-1.00614, 0.00836064, -1.14347e-09, 0, -1.39704e-08, -1, -0.0263291, -0.319494, 4.36964e-08, 0, 0.405529, 0)
 collision_mask = 23
+
+[node name="Crawl_Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Crawl_Timer" to="." method="_on_crawl_timer_timeout"]
