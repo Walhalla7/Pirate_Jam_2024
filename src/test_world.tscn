@@ -1,8 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://bi4h30shxghqv"]
+[gd_scene load_steps=9 format=3 uid="uid://bi4h30shxghqv"]
 
 [ext_resource type="PackedScene" uid="uid://b7i2um4a17gt3" path="res://scenes/components/player_camera.tscn" id="1_10wq6"]
 [ext_resource type="PackedScene" uid="uid://dqb6hflk04skq" path="res://scenes/protagonist/protagonist_scene.tscn" id="1_l74ou"]
-[ext_resource type="PackedScene" uid="uid://bb0v1xvbya84m" path="res://scenes/traps/test_trap.tscn" id="3_h170c"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_tb6f8"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -36,12 +35,12 @@ lock_x = false
 lock_z = true
 
 [node name="Protagonist" parent="." instance=ExtResource("1_l74ou")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4556, 0.731792, -0.0891062)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.225451, 0.731792, -0.0891062)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0137329, 0, -1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
 use_collision = true
-size = Vector3(30.0275, 1, 3)
+size = Vector3(30, 1, 3)
 material = SubResource("StandardMaterial3D_0qmsg")
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="."]
@@ -67,6 +66,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 1)
 use_collision = true
 size = Vector3(1, 10, 5)
 material = SubResource("ORMMaterial3D_vwvbf")
-
-[node name="TestTrap" parent="." instance=ExtResource("3_h170c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.2773, -4.77345, -0.846136)
