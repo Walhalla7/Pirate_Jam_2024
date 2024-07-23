@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dqb6hflk04skq"]
+[gd_scene load_steps=17 format=3 uid="uid://dqb6hflk04skq"]
 
 [ext_resource type="Script" path="res://scripts/protagonist/protagonist_script.gd" id="1_7xj1q"]
 [ext_resource type="ArrayMesh" uid="uid://bkc7w3ttjxl5w" path="res://RoomObjects/Protagonist.obj" id="2_5x464"]
@@ -81,6 +81,10 @@ albedo_color = Color(0.388387, 0.00010969, 0.391463, 1)
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_gpv27"]
 points = PackedVector3Array(-0.291599, 0.0226715, 0.00386099, -0.0277506, 0.855882, 0.0594111, -0.0277506, 0.855882, 0.00386099, 0.444357, 0.647516, 0.0594111, -0.444357, 0.0921268, 0.0594111, 0.263761, 0.0921268, 0.00386099, 0.166591, 0.0226715, 0.0594111, 0.444357, 0.703064, 0.00386099, -0.263761, 0.661424, 0.00386099, -0.166591, 0.828151, 0.0594111, -0.444357, 0.133766, 0.00386099, 0.0971706, -0.00514436, 0.00386099, -0.194341, -0.00514436, 0.0594111, 0.41652, 0.73088, 0.0594111, 0.263761, 0.0921268, 0.0594111, -0.263761, 0.661424, 0.0594111, -0.13884, 0.855882, 0.00386099, 0.444357, 0.647516, 0.00386099, 0.41652, 0.73088, 0.00386099, 0.0971706, -0.00514436, 0.0594111, -0.194341, -0.00514436, 0.00386099, -0.444357, 0.133766, 0.0594111, -0.444357, 0.0921268, 0.00386099, -0.13884, 0.855882, 0.0594111, -0.194341, 0.786427, 0.00386099, -0.291599, 0.0226715, 0.0594111, 0.166591, 0.0226715, 0.00386099, 0.444357, 0.703064, 0.0594111, -0.388769, 0.0643109, 0.00386099, -0.194341, 0.786427, 0.0594111, -0.166591, 0.828151, 0.00386099, -0.388769, 0.0643109, 0.0594111)
 
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_0x1q2"]
+radius = 0.222
+height = 0.804
+
 [node name="Protagonist" type="CharacterBody3D"]
 collision_layer = 8
 collision_mask = 23
@@ -117,6 +121,11 @@ visible = false
 pixel_size = 0.02
 texture_filter = 0
 texture = ExtResource("3_u7x7g")
+
+[node name="ShadowMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.793151, 0.609024, 0, -0.609024, 0.793151, 0, 0, 0, 1, 0.0624723, 0.431003, 0)
+cast_shadow = 3
+mesh = SubResource("CapsuleMesh_0x1q2")
 
 [connection signal="body_entered" from="Wall_Detector" to="." method="_on_wall_detector_body_entered"]
 [connection signal="body_exited" from="Wall_Detector" to="." method="_on_wall_detector_body_exited"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://dx1te2b8aasvv"]
+[gd_scene load_steps=24 format=3 uid="uid://dx1te2b8aasvv"]
 
 [ext_resource type="Script" path="res://script_main.gd" id="1_cwe8n"]
 [ext_resource type="PackedScene" uid="uid://b1tqs2mt8aiii" path="res://Environment/static/test_field.tscn" id="1_t7k6m"]
@@ -17,10 +17,11 @@
 [ext_resource type="PackedScene" uid="uid://dg1c871n2qek7" path="res://RoomObjects/ObjectScenes/Pot.tscn" id="15_xfg3n"]
 [ext_resource type="PackedScene" uid="uid://bnpn7fkfgkb3k" path="res://RoomObjects/ObjectScenes/Utensils.tscn" id="16_xqik0"]
 [ext_resource type="PackedScene" uid="uid://dvcbj3533beha" path="res://RoomObjects/ObjectScenes/book_1.tscn" id="18_1jb4a"]
-[ext_resource type="PackedScene" uid="uid://dmh6nsn2dxmqs" path="res://scenes/plant_leaves.tscn" id="18_cqddd"]
+[ext_resource type="PackedScene" uid="uid://dmh6nsn2dxmqs" path="res://RoomObjects/ObjectScenes/plant_leaves.tscn" id="18_cqddd"]
 [ext_resource type="PackedScene" uid="uid://q70kvg27ykq0" path="res://assets/book2.glb" id="20_iwijn"]
 [ext_resource type="PackedScene" uid="uid://dr43efvqq30qs" path="res://assets/book3.glb" id="21_1etbs"]
 [ext_resource type="PackedScene" uid="uid://cxk6mj283urcb" path="res://RoomObjects/ObjectScenes/shelf_1.tscn" id="22_3oviy"]
+[ext_resource type="PackedScene" uid="uid://o8u6ymlho8lk" path="res://RoomObjects/ObjectScenes/garlic_braid.tscn" id="22_dyea0"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_me04p"]
 size = Vector3(76.386, 58.817, 2.604)
@@ -38,7 +39,7 @@ lock_x = false
 lock_z = true
 
 [node name="Floor" parent="." instance=ExtResource("1_t7k6m")]
-transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, -1.29957, -3.21587, -1.41195)
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, -1.29957, -7.87024, -1.41195)
 
 [node name="Walls" type="Node" parent="."]
 
@@ -135,6 +136,9 @@ transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 78.326
 
 [node name="Shelf8" parent="Objects" instance=ExtResource("22_3oviy")]
 transform = Transform3D(-4.37114e-07, 0, 10, 0, 10, 0, -10, 0, -4.37114e-07, 74.9071, 6.33187, -4.25544)
+
+[node name="GarlicBraid" parent="Objects" instance=ExtResource("22_dyea0")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.08421, 30.3828, 14.804)
 
 [node name="Interactable" type="Node" parent="."]
 

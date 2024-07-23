@@ -2,17 +2,18 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://csh0sfivbklvo"
-path.s3tc="res://.godot/imported/garlic2-1.png-222137150182a85be8c8b10bc7ba236f.s3tc.ctex"
+uid="uid://b28jogee05wuo"
+path.s3tc="res://.godot/imported/garlic_braid_garlic-braid.png-9217eea3f5a1c0c6d2dd6e873365b373.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={}
 
 [deps]
 
-source_file="res://assets/sprites/garlic2-1.png"
-dest_files=["res://.godot/imported/garlic2-1.png-222137150182a85be8c8b10bc7ba236f.s3tc.ctex"]
+source_file="res://assets/garlic_braid_garlic-braid.png"
+dest_files=["res://.godot/imported/garlic_braid_garlic-braid.png-9217eea3f5a1c0c6d2dd6e873365b373.s3tc.ctex"]
 
 [params]
 
