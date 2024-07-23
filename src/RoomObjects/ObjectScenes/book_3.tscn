@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://b7b8fu2m4hh64"]
 
-[ext_resource type="Texture2D" uid="uid://c3lqqs56yh5s0" path="res://assets/book3_book_spines.png" id="1_874y0"]
+[ext_resource type="Texture2D" uid="uid://c3lqqs56yh5s0" path="res://assets/glbs/book3_book_spines.png" id="1_874y0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_shftx"]
 resource_name = "book_spines"

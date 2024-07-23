@@ -2,18 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dibq5vjd6u1ih"
-path.s3tc="res://.godot/imported/book2_book2-1.png-15776c80eecadd9a857fb437502d8471.s3tc.ctex"
+uid="uid://1cv786f2567p"
+path.s3tc="res://.godot/imported/dustbunny1-2.png-7bf413793ac89a7a2350e544ed8eccd5.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 
-source_file="res://assets/book2_book2-1.png"
-dest_files=["res://.godot/imported/book2_book2-1.png-15776c80eecadd9a857fb437502d8471.s3tc.ctex"]
+source_file="res://assets/sprites/dustbunny1-2.png"
+dest_files=["res://.godot/imported/dustbunny1-2.png-7bf413793ac89a7a2350e544ed8eccd5.s3tc.ctex"]
 
 [params]
 

@@ -2,17 +2,18 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://csh0sfivbklvo"
-path.s3tc="res://.godot/imported/garlic2-1.png-222137150182a85be8c8b10bc7ba236f.s3tc.ctex"
+uid="uid://br51wr47w50oa"
+path.s3tc="res://.godot/imported/book1_book1-1.png-4c78776b24c0715cf38be011dd8f40c2.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={}
 
 [deps]
 
-source_file="res://assets/sprites/garlic2-1.png"
-dest_files=["res://.godot/imported/garlic2-1.png-222137150182a85be8c8b10bc7ba236f.s3tc.ctex"]
+source_file="res://assets/glbs/book1_book1-1.png"
+dest_files=["res://.godot/imported/book1_book1-1.png-4c78776b24c0715cf38be011dd8f40c2.s3tc.ctex"]
 
 [params]
 

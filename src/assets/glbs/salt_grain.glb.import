@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://q70kvg27ykq0"
-path="res://.godot/imported/book2.glb-3e4804b18fd20a3496f8d0afbe3afebf.scn"
+uid="uid://qfx33kvjv7qe"
+path="res://.godot/imported/salt_grain.glb-1bfe3b6f6454c91bbbce0769db872898.scn"
 
 [deps]
 
-source_file="res://assets/book2.glb"
-dest_files=["res://.godot/imported/book2.glb-3e4804b18fd20a3496f8d0afbe3afebf.scn"]
+source_file="res://assets/glbs/salt_grain.glb"
+dest_files=["res://.godot/imported/salt_grain.glb-1bfe3b6f6454c91bbbce0769db872898.scn"]
 
 [params]
 

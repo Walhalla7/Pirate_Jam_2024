@@ -2,17 +2,18 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://csh0sfivbklvo"
-path.s3tc="res://.godot/imported/garlic2-1.png-222137150182a85be8c8b10bc7ba236f.s3tc.ctex"
+uid="uid://cuduvcq41ygm3"
+path.s3tc="res://.godot/imported/salt_grain_salt_grain1-1.png-a0eca7a4ad931368dbfcbcfae64cad36.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={}
 
 [deps]
 
-source_file="res://assets/sprites/garlic2-1.png"
-dest_files=["res://.godot/imported/garlic2-1.png-222137150182a85be8c8b10bc7ba236f.s3tc.ctex"]
+source_file="res://assets/glbs/salt_grain_salt_grain1-1.png"
+dest_files=["res://.godot/imported/salt_grain_salt_grain1-1.png-a0eca7a4ad931368dbfcbcfae64cad36.s3tc.ctex"]
 
 [params]
 
