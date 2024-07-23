@@ -1,7 +1,6 @@
 extends CharacterBody3D
 
 #Camera managment
-@onready var camera_node = $".."/CameraController
 @onready var camera_target = $CameraTarget
 @onready var animated_sprite_3d = $AnimatedSprite3D
 
@@ -85,6 +84,14 @@ func _on_wall_detector_body_exited(body):
 			change_State(States.CEILING)
 		else:
 			change_State(States.FALLING)
+			
+#======================================== 	Hurt & Death Functions 	==================================\
+
+func _on_health_component_death():
+	print("Player has died")
+
+func _on_health_component_hurt():
+	print("Player has been hurt")
 
 
 #======================================== 	Initialize 	==================================
