@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dx1te2b8aasvv"]
+[gd_scene load_steps=25 format=3 uid="uid://dx1te2b8aasvv"]
 
 [ext_resource type="Script" path="res://script_main.gd" id="1_cwe8n"]
 [ext_resource type="PackedScene" uid="uid://b1tqs2mt8aiii" path="res://Environment/static/test_field.tscn" id="1_t7k6m"]
@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://dr43efvqq30qs" path="res://assets/book3.glb" id="21_1etbs"]
 [ext_resource type="PackedScene" uid="uid://cxk6mj283urcb" path="res://RoomObjects/ObjectScenes/shelf_1.tscn" id="22_3oviy"]
 [ext_resource type="PackedScene" uid="uid://o8u6ymlho8lk" path="res://RoomObjects/ObjectScenes/garlic_braid.tscn" id="22_dyea0"]
+[ext_resource type="PackedScene" uid="uid://dmj4r00y1wboq" path="res://RoomObjects/ObjectScenes/unlit_candle.tscn" id="23_2bolv"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_me04p"]
 size = Vector3(76.386, 58.817, 2.604)
@@ -139,6 +140,15 @@ transform = Transform3D(-4.37114e-07, 0, 10, 0, 10, 0, -10, 0, -4.37114e-07, 74.
 
 [node name="GarlicBraid" parent="Objects" instance=ExtResource("22_dyea0")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.08421, 30.3828, 14.804)
+
+[node name="UnlitCandle" parent="Objects" instance=ExtResource("23_2bolv")]
+transform = Transform3D(-3, -2.62268e-07, 1.14641e-14, 0, -1.31134e-07, -3, 2.62268e-07, -3, 1.31134e-07, -10.3018, 14.9547, 15.5208)
+
+[node name="UnlitCandle2" parent="Objects" instance=ExtResource("23_2bolv")]
+transform = Transform3D(-3, -2.62268e-07, 1.14641e-14, 0, -1.31134e-07, -3, 2.62268e-07, -3, 1.31134e-07, -9.02528, 15.5203, 16.0498)
+
+[node name="UnlitCandle3" parent="Objects" instance=ExtResource("23_2bolv")]
+transform = Transform3D(-3, -2.62268e-07, 1.14641e-14, 0, -1.31134e-07, -3, 2.62268e-07, -3, 1.31134e-07, -8.41521, 14.9547, 14.7691)
 
 [node name="Interactable" type="Node" parent="."]
 
