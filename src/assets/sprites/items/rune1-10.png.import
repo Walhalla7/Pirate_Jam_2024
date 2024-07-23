@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://csh0sfivbklvo"
-path.s3tc="res://.godot/imported/garlic2-1.png-222137150182a85be8c8b10bc7ba236f.s3tc.ctex"
+uid="uid://cnb5adgqtu8fo"
+path.s3tc="res://.godot/imported/rune1-10.png-37e9831ae36bf5d2280e083db6a9f6e9.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/sprites/garlic2-1.png"
-dest_files=["res://.godot/imported/garlic2-1.png-222137150182a85be8c8b10bc7ba236f.s3tc.ctex"]
+source_file="res://assets/sprites/items/rune1-10.png"
+dest_files=["res://.godot/imported/rune1-10.png-37e9831ae36bf5d2280e083db6a9f6e9.s3tc.ctex"]
 
 [params]
 

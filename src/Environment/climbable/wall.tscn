@@ -6,7 +6,6 @@
 size = Vector3(20, 20, 1)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_q787i"]
-load_path = "res://.godot/imported/NormalMap.png-f5ffa72369ffc1559ed45d097b3ba522.s3tc.ctex"
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jmdmi"]
 albedo_texture = ExtResource("1_kytks")

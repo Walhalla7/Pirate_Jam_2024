@@ -2,17 +2,18 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://csh0sfivbklvo"
-path.s3tc="res://.godot/imported/garlic2-1.png-222137150182a85be8c8b10bc7ba236f.s3tc.ctex"
+uid="uid://px0ka7d141kd"
+path.s3tc="res://.godot/imported/candle_lit_candle1-2.png-9cd8c152ab6ad877cfc3397b20755dd7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={}
 
 [deps]
 
-source_file="res://assets/sprites/garlic2-1.png"
-dest_files=["res://.godot/imported/garlic2-1.png-222137150182a85be8c8b10bc7ba236f.s3tc.ctex"]
+source_file="res://assets/glbs/candle_lit_candle1-2.png"
+dest_files=["res://.godot/imported/candle_lit_candle1-2.png-9cd8c152ab6ad877cfc3397b20755dd7.s3tc.ctex"]
 
 [params]
 

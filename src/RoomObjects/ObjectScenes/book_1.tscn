@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dvcbj3533beha"]
 
-[ext_resource type="Texture2D" uid="uid://br51wr47w50oa" path="res://assets/book1_book1-1.png" id="1_we06v"]
+[ext_resource type="Texture2D" uid="uid://br51wr47w50oa" path="res://assets/glbs/book1_book1-1.png" id="1_we06v"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bcj2a"]
 resource_name = "book1-1"
