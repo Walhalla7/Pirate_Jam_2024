@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://b3pnn4kle7ouk"]
+
+[ext_resource type="Texture2D" uid="uid://1cv786f2567p" path="res://assets/sprites/dustbunny1-2.png" id="1_5n6cj"]
+[ext_resource type="Script" path="res://scripts/components/test_trap.gd" id="1_sikjv"]
+[ext_resource type="PackedScene" uid="uid://m8joypnaw43s" path="res://scenes/components/damage_value_component.tscn" id="2_uovn5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_60gsu"]
+size = Vector3(3, 3, 3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1yqnw"]
+albedo_color = Color(1, 0.254902, 0, 1)
+
+[node name="TestTrap" type="StaticBody3D"]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("1_sikjv")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+billboard = 2
+texture_filter = 0
+texture = ExtResource("1_5n6cj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_60gsu")
+
+[node name="DamageValueComponent" parent="." instance=ExtResource("2_uovn5")]
+damage_value = 5.0
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+size = Vector3(2, 2, 2)
+material = SubResource("StandardMaterial3D_1yqnw")

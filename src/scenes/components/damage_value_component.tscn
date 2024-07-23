@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://m8joypnaw43s"]
+
+[ext_resource type="Script" path="res://scripts/components/damage_value_component.gd" id="1_veby4"]
+
+[node name="DamageValueComponent" type="Node3D"]
+script = ExtResource("1_veby4")
