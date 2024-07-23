@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvwdepeddsmd0"]
+
+[ext_resource type="Texture2D" uid="uid://o57qqhbvgjoi" path="res://assets/sprites/skull1-1.png" id="1_y0exo"]
+
+[node name="SkullSprite" type="Node3D"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+texture = ExtResource("1_y0exo")

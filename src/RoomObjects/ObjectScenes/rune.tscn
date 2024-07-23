@@ -1,0 +1,45 @@
+[gd_scene load_steps=11 format=3 uid="uid://shrv5gqg5k4g"]
+
+[ext_resource type="Texture2D" uid="uid://dnve4ci8ogc4s" path="res://assets/sprites/rune1-1.png" id="1_1oy1v"]
+[ext_resource type="Texture2D" uid="uid://dvl4lhdb40f8j" path="res://assets/sprites/rune1-2.png" id="2_mo54v"]
+[ext_resource type="Texture2D" uid="uid://dfy54gbi4qyfg" path="res://assets/sprites/rune1-3.png" id="3_h6km2"]
+[ext_resource type="Texture2D" uid="uid://eas3n7uyw4gd" path="res://assets/sprites/rune1-4.png" id="4_g2sxt"]
+[ext_resource type="Texture2D" uid="uid://blg7lcey6l66x" path="res://assets/sprites/rune1-5.png" id="5_p3fwq"]
+[ext_resource type="Texture2D" uid="uid://og1jdw52vjpt" path="res://assets/sprites/rune1-6.png" id="6_ow2yj"]
+[ext_resource type="Texture2D" uid="uid://ci81i8v75mxcr" path="res://assets/sprites/rune1-7.png" id="7_ph4m8"]
+[ext_resource type="Texture2D" uid="uid://b623boa7nh3uj" path="res://assets/sprites/rune1-8.png" id="8_dniu6"]
+[ext_resource type="Texture2D" uid="uid://vs71sc83fqvw" path="res://assets/sprites/rune1-9.png" id="9_m5xg7"]
+[ext_resource type="Texture2D" uid="uid://cnb5adgqtu8fo" path="res://assets/sprites/rune1-10.png" id="10_7imj0"]
+
+[node name="Rune" type="Node3D"]
+
+[node name="Rune1-1" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0335426, 0)
+texture = ExtResource("1_1oy1v")
+
+[node name="Rune1-2" type="Sprite3D" parent="."]
+texture = ExtResource("2_mo54v")
+
+[node name="Rune1-3" type="Sprite3D" parent="."]
+texture = ExtResource("3_h6km2")
+
+[node name="Rune1-4" type="Sprite3D" parent="."]
+texture = ExtResource("4_g2sxt")
+
+[node name="Rune1-5" type="Sprite3D" parent="."]
+texture = ExtResource("5_p3fwq")
+
+[node name="Rune1-6" type="Sprite3D" parent="."]
+texture = ExtResource("6_ow2yj")
+
+[node name="Rune1-7" type="Sprite3D" parent="."]
+texture = ExtResource("7_ph4m8")
+
+[node name="Rune1-8" type="Sprite3D" parent="."]
+texture = ExtResource("8_dniu6")
+
+[node name="Rune1-9" type="Sprite3D" parent="."]
+texture = ExtResource("9_m5xg7")
+
+[node name="Rune1-10" type="Sprite3D" parent="."]
+texture = ExtResource("10_7imj0")

@@ -1,9 +1,10 @@
-[gd_scene load_steps=17 format=3 uid="uid://dqb6hflk04skq"]
+[gd_scene load_steps=18 format=3 uid="uid://dqb6hflk04skq"]
 
 [ext_resource type="Script" path="res://scripts/protagonist/protagonist_script.gd" id="1_7xj1q"]
 [ext_resource type="ArrayMesh" uid="uid://bkc7w3ttjxl5w" path="res://RoomObjects/Protagonist.obj" id="2_5x464"]
 [ext_resource type="Texture2D" uid="uid://typ71ccn5qcm" path="res://assets/sprites/Walk anim.png" id="3_i0ier"]
 [ext_resource type="Texture2D" uid="uid://g4m2kriiymn2" path="res://assets/sprites/player slug.png" id="3_u7x7g"]
+[ext_resource type="PackedScene" uid="uid://cvwdepeddsmd0" path="res://scenes/skull_sprite.tscn" id="5_1jgiy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oydbq"]
 atlas = ExtResource("3_i0ier")
@@ -126,6 +127,9 @@ texture = ExtResource("3_u7x7g")
 transform = Transform3D(0.793151, 0.609024, 0, -0.609024, 0.793151, 0, 0, 0, 1, 0.0624723, 0.431003, 0)
 cast_shadow = 3
 mesh = SubResource("CapsuleMesh_0x1q2")
+
+[node name="SkullSprite" parent="." instance=ExtResource("5_1jgiy")]
+transform = Transform3D(0.022, 0, 0, 0, 0.022, 0, 0, 0, 0.022, 0, 1.21592, 0)
 
 [connection signal="body_entered" from="Wall_Detector" to="." method="_on_wall_detector_body_entered"]
 [connection signal="body_exited" from="Wall_Detector" to="." method="_on_wall_detector_body_exited"]

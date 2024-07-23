@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://dx1te2b8aasvv"]
+[gd_scene load_steps=27 format=3 uid="uid://dx1te2b8aasvv"]
 
 [ext_resource type="Script" path="res://script_main.gd" id="1_cwe8n"]
 [ext_resource type="PackedScene" uid="uid://b1tqs2mt8aiii" path="res://Environment/static/test_field.tscn" id="1_t7k6m"]
@@ -23,6 +23,8 @@
 [ext_resource type="PackedScene" uid="uid://cxk6mj283urcb" path="res://RoomObjects/ObjectScenes/shelf_1.tscn" id="22_3oviy"]
 [ext_resource type="PackedScene" uid="uid://o8u6ymlho8lk" path="res://RoomObjects/ObjectScenes/garlic_braid.tscn" id="22_dyea0"]
 [ext_resource type="PackedScene" uid="uid://dmj4r00y1wboq" path="res://RoomObjects/ObjectScenes/unlit_candle.tscn" id="23_2bolv"]
+[ext_resource type="PackedScene" uid="uid://lmq4dwuxtoft" path="res://scenes/dust_bunny.tscn" id="24_1wpdf"]
+[ext_resource type="PackedScene" uid="uid://dtab70hcy0rke" path="res://RoomObjects/ObjectScenes/lit_candle.tscn" id="24_kcbwx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_me04p"]
 size = Vector3(76.386, 58.817, 2.604)
@@ -148,9 +150,18 @@ transform = Transform3D(-3, -2.62268e-07, 1.14641e-14, 0, -1.31134e-07, -3, 2.62
 transform = Transform3D(-3, -2.62268e-07, 1.14641e-14, 0, -1.31134e-07, -3, 2.62268e-07, -3, 1.31134e-07, -9.02528, 15.5203, 16.0498)
 
 [node name="UnlitCandle3" parent="Objects" instance=ExtResource("23_2bolv")]
-transform = Transform3D(-3, -2.62268e-07, 1.14641e-14, 0, -1.31134e-07, -3, 2.62268e-07, -3, 1.31134e-07, -8.41521, 14.9547, 14.7691)
+transform = Transform3D(-3, -2.62268e-07, 1.14641e-14, 0, -1.31134e-07, -3, 2.62268e-07, -3, 1.31134e-07, -7.97813, 14.9013, 15.0756)
+
+[node name="LitCandle" parent="Objects" instance=ExtResource("24_kcbwx")]
+transform = Transform3D(3, 0, 0, 0, -1.31134e-07, -3, 0, 3, -1.31134e-07, -8.90463, 21.9885, 16.5868)
+
+[node name="LitCandle2" parent="Objects" instance=ExtResource("24_kcbwx")]
+transform = Transform3D(3, 0, 0, 0, -1.31134e-07, -3, 0, 3, -1.31134e-07, -10.0843, 21.9885, 15.8064)
 
 [node name="Interactable" type="Node" parent="."]
+
+[node name="DustBunny" parent="Interactable" instance=ExtResource("24_1wpdf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.93093, 0.932425, 14.3201)
 
 [node name="PlayAreaLimiters" type="Node" parent="."]
 
