@@ -58,10 +58,14 @@ func change_State(newState:States):
 				print("WALL_BACK")	
 		States.WALL_LEFT:
 			if curr_State != States.WALL_LEFT:
+				if !_is_timer_active():
+					crawl_timer.start()
 				curr_State = States.WALL_LEFT
 				print("WALL_LEFT")	
 		States.WALL_RIGHT:
 			if curr_State != States.WALL_RIGHT:
+				if !_is_timer_active():
+					crawl_timer.start()
 				curr_State = States.WALL_RIGHT
 				print("WALL_RIGHT")	
 		States.FALLING:
@@ -131,7 +135,7 @@ func _physics_process(delta):
 			target_velocity.z = direction.z * speed * sprint_modifier
 				
 		States.WALL_RIGHT:
-			if Input.is_action_pressed("move_right"):
+			if Input.is_action_pressed("move_right") && can_crawl:
 				direction.y += 1
 			if Input.is_action_pressed("move_left"):
 				if floor_detector.is_colliding():
@@ -156,7 +160,7 @@ func _physics_process(delta):
 					target_velocity.x = direction.x * speed * sprint_modifier
 				else:
 					direction.y -= 1
-			if Input.is_action_pressed("move_left"):
+			if Input.is_action_pressed("move_left") && can_crawl:
 				direction.y += 1
 			if Input.is_action_pressed("move_forward"):
 				direction.z -= 1
@@ -178,7 +182,7 @@ func _physics_process(delta):
 					target_velocity.z = direction.z * speed * sprint_modifier
 				else:
 					direction.y -= 1
-			if Input.is_action_pressed("move_back"):
+			if Input.is_action_pressed("move_back") && can_crawl:
 				direction.y += 1
 			if Input.is_action_just_pressed("jump"):
 				target_velocity.z = -JUMP_VELOCITY
