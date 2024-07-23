@@ -2,17 +2,18 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnve4ci8ogc4s"
-path.s3tc="res://.godot/imported/rune1-1.png-21122b538ac8e6d107af94770a6c6ab8.s3tc.ctex"
+uid="uid://px0ka7d141kd"
+path.s3tc="res://.godot/imported/candle_lit_candle1-2.png-9cd8c152ab6ad877cfc3397b20755dd7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={}
 
 [deps]
 
-source_file="res://assets/sprites/rune1-1.png"
-dest_files=["res://.godot/imported/rune1-1.png-21122b538ac8e6d107af94770a6c6ab8.s3tc.ctex"]
+source_file="res://assets/glbs/candle_lit_candle1-2.png"
+dest_files=["res://.godot/imported/candle_lit_candle1-2.png-9cd8c152ab6ad877cfc3397b20755dd7.s3tc.ctex"]
 
 [params]
 

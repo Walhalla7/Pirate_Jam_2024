@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://d15d5g8hbigmg"
-path="res://.godot/imported/candle_unlit.glb-e35a23c96387558fa487a99f57835b35.scn"
+uid="uid://d07nrs6863a28"
+path="res://.godot/imported/candle_lit.glb-7da6851fe8acb337531800adc3064d96.scn"
 
 [deps]
 
-source_file="res://assets/candle_unlit.glb"
-dest_files=["res://.godot/imported/candle_unlit.glb-e35a23c96387558fa487a99f57835b35.scn"]
+source_file="res://assets/glbs/candle_lit.glb"
+dest_files=["res://.godot/imported/candle_lit.glb-7da6851fe8acb337531800adc3064d96.scn"]
 
 [params]
 

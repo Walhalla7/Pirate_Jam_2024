@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://ccvp8inuhqrrc"
-path="res://.godot/imported/garlic_braid.glb-584b0e53d5579d6234b2c87d06dfaad7.scn"
+uid="uid://d15d5g8hbigmg"
+path="res://.godot/imported/candle_unlit.glb-84d3ce05b18d4f4e883e50cd615fb314.scn"
 
 [deps]
 
-source_file="res://assets/garlic_braid.glb"
-dest_files=["res://.godot/imported/garlic_braid.glb-584b0e53d5579d6234b2c87d06dfaad7.scn"]
+source_file="res://assets/glbs/candle_unlit.glb"
+dest_files=["res://.godot/imported/candle_unlit.glb-84d3ce05b18d4f4e883e50cd615fb314.scn"]
 
 [params]
 

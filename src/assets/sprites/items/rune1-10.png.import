@@ -2,18 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cuduvcq41ygm3"
-path.s3tc="res://.godot/imported/salt_grain_salt_grain1-1.png-7bd9464cec790d08c9a5a37bce579f72.s3tc.ctex"
+uid="uid://cnb5adgqtu8fo"
+path.s3tc="res://.godot/imported/rune1-10.png-37e9831ae36bf5d2280e083db6a9f6e9.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 
-source_file="res://assets/salt_grain_salt_grain1-1.png"
-dest_files=["res://.godot/imported/salt_grain_salt_grain1-1.png-7bd9464cec790d08c9a5a37bce579f72.s3tc.ctex"]
+source_file="res://assets/sprites/items/rune1-10.png"
+dest_files=["res://.godot/imported/rune1-10.png-37e9831ae36bf5d2280e083db6a9f6e9.s3tc.ctex"]
 
 [params]
 

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b623boa7nh3uj"
-path.s3tc="res://.godot/imported/rune1-8.png-f43c6cd3bc61d0b8854d9d61c47c5788.s3tc.ctex"
+uid="uid://og1jdw52vjpt"
+path.s3tc="res://.godot/imported/rune1-6.png-0b35ca9040fb458ba90c031d406f7ff5.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/sprites/rune1-8.png"
-dest_files=["res://.godot/imported/rune1-8.png-f43c6cd3bc61d0b8854d9d61c47c5788.s3tc.ctex"]
+source_file="res://assets/sprites/items/rune1-6.png"
+dest_files=["res://.godot/imported/rune1-6.png-0b35ca9040fb458ba90c031d406f7ff5.s3tc.ctex"]
 
 [params]
 

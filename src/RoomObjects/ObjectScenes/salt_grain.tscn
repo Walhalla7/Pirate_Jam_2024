@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cxnbkj1epgh6j"]
 
-[ext_resource type="Texture2D" uid="uid://cuduvcq41ygm3" path="res://assets/salt_grain_salt_grain1-1.png" id="1_byef3"]
+[ext_resource type="Texture2D" uid="uid://cuduvcq41ygm3" path="res://assets/glbs/salt_grain_salt_grain1-1.png" id="1_byef3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tgh8d"]
 resource_name = "salt_grain1-1"

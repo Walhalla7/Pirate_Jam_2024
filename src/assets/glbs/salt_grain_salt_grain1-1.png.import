@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://px0ka7d141kd"
-path.s3tc="res://.godot/imported/candle_lit_candle1-2.png-28fd96ce64a56b139a4933a80e645ad0.s3tc.ctex"
+uid="uid://cuduvcq41ygm3"
+path.s3tc="res://.godot/imported/salt_grain_salt_grain1-1.png-a0eca7a4ad931368dbfcbcfae64cad36.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://assets/candle_lit_candle1-2.png"
-dest_files=["res://.godot/imported/candle_lit_candle1-2.png-28fd96ce64a56b139a4933a80e645ad0.s3tc.ctex"]
+source_file="res://assets/glbs/salt_grain_salt_grain1-1.png"
+dest_files=["res://.godot/imported/salt_grain_salt_grain1-1.png-a0eca7a4ad931368dbfcbcfae64cad36.s3tc.ctex"]
 
 [params]
 
