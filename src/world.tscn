@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://dx1te2b8aasvv"]
+[gd_scene load_steps=19 format=3 uid="uid://dx1te2b8aasvv"]
 
 [ext_resource type="Script" path="res://script_main.gd" id="1_cwe8n"]
 [ext_resource type="PackedScene" uid="uid://b1tqs2mt8aiii" path="res://Environment/static/test_field.tscn" id="1_t7k6m"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b81nkdg580ts7" path="res://RoomObjects/ObjectScenes/Door.tscn" id="5_60ev7"]
 [ext_resource type="PackedScene" uid="uid://bwmnetmn5eaxf" path="res://RoomObjects/ObjectScenes/Window.tscn" id="6_40guc"]
 [ext_resource type="PackedScene" uid="uid://dr50jmtnck0fq" path="res://RoomObjects/ObjectScenes/WoodStack.tscn" id="7_bs5vm"]
+[ext_resource type="PackedScene" uid="uid://hj7b0xhr7lwo" path="res://RoomObjects/ObjectScenes/StraightShelf.tscn" id="8_04icq"]
 [ext_resource type="PackedScene" uid="uid://du6mmw2us8pwg" path="res://RoomObjects/ObjectScenes/Broom.tscn" id="9_15f2d"]
 [ext_resource type="PackedScene" uid="uid://c8x6vtw3pu765" path="res://RoomObjects/ObjectScenes/Cauldron.tscn" id="10_qgcl4"]
 [ext_resource type="PackedScene" uid="uid://bdsvuh6jfamao" path="res://RoomObjects/ObjectScenes/Chest.tscn" id="11_g3p6o"]
@@ -16,16 +17,6 @@
 [ext_resource type="PackedScene" uid="uid://chsuoo325n6yl" path="res://RoomObjects/ObjectScenes/BentShelf.tscn" id="14_q74ui"]
 [ext_resource type="PackedScene" uid="uid://dg1c871n2qek7" path="res://RoomObjects/ObjectScenes/Pot.tscn" id="15_xfg3n"]
 [ext_resource type="PackedScene" uid="uid://bnpn7fkfgkb3k" path="res://RoomObjects/ObjectScenes/Utensils.tscn" id="16_xqik0"]
-[ext_resource type="PackedScene" uid="uid://dvcbj3533beha" path="res://RoomObjects/ObjectScenes/book_1.tscn" id="18_1jb4a"]
-[ext_resource type="PackedScene" uid="uid://dmh6nsn2dxmqs" path="res://RoomObjects/ObjectScenes/plant_leaves.tscn" id="18_cqddd"]
-[ext_resource type="PackedScene" uid="uid://q70kvg27ykq0" path="res://assets/glbs/book2.glb" id="20_iwijn"]
-[ext_resource type="PackedScene" uid="uid://dr43efvqq30qs" path="res://assets/glbs/book3.glb" id="21_1etbs"]
-[ext_resource type="PackedScene" uid="uid://cxk6mj283urcb" path="res://RoomObjects/ObjectScenes/shelf_1.tscn" id="22_3oviy"]
-[ext_resource type="PackedScene" uid="uid://o8u6ymlho8lk" path="res://RoomObjects/ObjectScenes/garlic_braid.tscn" id="22_dyea0"]
-[ext_resource type="PackedScene" uid="uid://dmj4r00y1wboq" path="res://RoomObjects/ObjectScenes/unlit_candle.tscn" id="23_2bolv"]
-[ext_resource type="PackedScene" uid="uid://lmq4dwuxtoft" path="res://scenes/dust_bunny.tscn" id="24_1wpdf"]
-[ext_resource type="PackedScene" uid="uid://dtab70hcy0rke" path="res://RoomObjects/ObjectScenes/lit_candle.tscn" id="24_kcbwx"]
-[ext_resource type="PackedScene" uid="uid://cxnbkj1epgh6j" path="res://RoomObjects/ObjectScenes/salt_grain.tscn" id="25_ac0ov"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_me04p"]
 size = Vector3(76.386, 58.817, 2.604)
@@ -43,33 +34,33 @@ lock_x = false
 lock_z = true
 
 [node name="Floor" parent="." instance=ExtResource("1_t7k6m")]
-transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, -1.29957, -7.87024, -1.41195)
+transform = Transform3D(6.345, 0, 0, 0, 6.345, 0, 0, 0, 6.345, -1.36474, -3.49589, -1.51297)
 
 [node name="Walls" type="Node" parent="."]
 
 [node name="Wall" parent="Walls" instance=ExtResource("3_vqvni")]
-transform = Transform3D(-2.18557e-07, 0, 5, 0, 5, 0, -5, 0, -2.18557e-07, 68.334, 15.3722, -64.9427)
+transform = Transform3D(-1.26982e-07, 0, 2.905, 0, 2.905, 0, -2.905, 0, -1.26982e-07, 34.4827, 15.3722, -45.0937)
 
 [node name="Wall5" parent="Walls" instance=ExtResource("3_vqvni")]
-transform = Transform3D(-2.18557e-07, 0, 5, 0, 5, 0, -5, 0, -2.18557e-07, 69.0963, 15.3722, 57.8213)
+transform = Transform3D(-1.28074e-07, 0, 2.93, 0, 2.93, 0, -2.93, 0, -1.28074e-07, 34.4827, 15.3722, 36.8387)
 
 [node name="Wall6" parent="Walls" instance=ExtResource("3_vqvni")]
-transform = Transform3D(-2.18557e-07, 0, 5, 0, 5, 0, -5, 0, -2.18557e-07, 82.2195, 15.3722, -2.30153)
+transform = Transform3D(-1.23703e-07, 0, 2.83, 0, 2.83, 0, -2.83, 0, -1.23703e-07, 39.5273, 15.3722, -2.30153)
 
 [node name="Wall2" parent="Walls" instance=ExtResource("3_vqvni")]
-transform = Transform3D(-1.95608e-07, 0, 4.475, 0, 4.475, 0, -4.475, 0, -1.95608e-07, -26.7347, 17.2699, -18.1634)
+transform = Transform3D(-1.44248e-07, 0, 3.3, 0, 3.3, 0, -3.3, 0, -1.44248e-07, -26.2983, 17.2699, -8.0258)
 
 [node name="Wall3" parent="Walls" instance=ExtResource("3_vqvni")]
-transform = Transform3D(-5, 0, -7.54979e-07, 0, 5, 0, 7.54979e-07, 0, -5, 21.0254, 14.7043, -59.3446)
+transform = Transform3D(-3.425, 0, -5.17161e-07, 0, 3.425, 0, 5.17161e-07, 0, -3.425, 1.6935, 14.7043, -38.3038)
 
 [node name="Wall7" parent="Walls" instance=ExtResource("3_vqvni")]
-transform = Transform3D(-5, -7.54979e-07, 4.37113e-07, 7.54979e-07, -5, 5.8924e-21, 4.37113e-07, 6.60022e-14, 5, 115.983, 15.932, -17.2818)
+transform = Transform3D(-2.875, -2.5134e-07, 2.5134e-07, 2.5134e-07, -2.875, 0, 2.5134e-07, 2.19728e-14, 2.875, 60.7606, 15.932, -16.8698)
 
 [node name="Wall8" parent="Walls" instance=ExtResource("3_vqvni")]
-transform = Transform3D(-5, -7.54979e-07, 4.37112e-07, 7.54979e-07, -5, -1.8054e-20, 4.37112e-07, 6.6002e-14, 5, 116.753, 15.932, 10.0103)
+transform = Transform3D(-2.815, -2.46095e-07, 2.46094e-07, 2.46095e-07, -2.815, 0, 2.46094e-07, 2.15142e-14, 2.815, 62.2154, 15.932, 9.17453)
 
 [node name="Wall4" parent="Walls" instance=ExtResource("3_vqvni")]
-transform = Transform3D(-5, 0, -7.54979e-07, 0, 5, 0, 7.54979e-07, 0, -5, 22.4444, 14.7932, 20.009)
+transform = Transform3D(-3.4, 0, -5.13386e-07, 0, 3.4, 0, 5.13386e-07, 0, -3.4, 1.6935, 14.7932, 19.1314)
 
 [node name="Objects" type="Node" parent="."]
 
@@ -81,10 +72,21 @@ skeleton = NodePath("../..")
 
 [node name="WoodStack" parent="Objects" instance=ExtResource("7_bs5vm")]
 
+[node name="StraightShelf" parent="Objects" instance=ExtResource("8_04icq")]
+
+[node name="StraightShelf2" parent="Objects" instance=ExtResource("8_04icq")]
+transform = Transform3D(-1.03179e-07, 0, 2.28921, 0, 1, 0, -2.36046, 0, -1.00065e-07, -2.24431, 7.53944, -38.4275)
+
+[node name="StraightShelf4" parent="Objects" instance=ExtResource("8_04icq")]
+transform = Transform3D(-2.36046, 0, -4.45593e-07, 0, 1, 0, 2.06358e-07, 0, -5.09699, -22.7452, 7.53944, -17.0564)
+
+[node name="StraightShelf3" parent="Objects" instance=ExtResource("8_04icq")]
+transform = Transform3D(-1.03179e-07, 0, 1.59656, 0, 1, 0, -2.36046, 0, -6.97878e-08, 4.13919, 1.20228, -38.4275)
+
 [node name="Broom" parent="Objects" instance=ExtResource("9_15f2d")]
 
 [node name="Cauldron" parent="Objects" instance=ExtResource("10_qgcl4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.326, 8.6147, -1.09688)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.22082, 0, 0)
 
 [node name="Chest" parent="Objects" instance=ExtResource("11_g3p6o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.367059, -3.92646, -2.25347)
@@ -92,7 +94,7 @@ skeleton = NodePath("../..")
 
 [node name="MeshInstance3D" parent="Objects" instance=ExtResource("12_4bcq8")]
 
-[node name="Table" parent="Objects" instance=ExtResource("13_8655c")]
+[node name="Node3D" parent="Objects" instance=ExtResource("13_8655c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.733526)
 
 [node name="BentShelf" parent="Objects" instance=ExtResource("14_q74ui")]
@@ -103,75 +105,9 @@ transform = Transform3D(0.596726, 0, 0, 0, 1, 0, 0, 0, 0.823494, -10.5777, -2.81
 [node name="Pot" parent="Objects" instance=ExtResource("15_xfg3n")]
 
 [node name="Utensils" parent="Objects" instance=ExtResource("16_xqik0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.21561, 41.0088, 11.8538, 0)
-
-[node name="Book1" parent="Objects" instance=ExtResource("18_1jb4a")]
-transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 11.5491, 17.5055, 14.9158)
-
-[node name="PlantLeaves" parent="Objects" instance=ExtResource("18_cqddd")]
-transform = Transform3D(0.0324281, 0, 0.0156338, 0, 0.036, 0, -0.0156338, 0, 0.0324281, 2.71413, 25.9971, 14.0077)
-
-[node name="book2" parent="Objects" instance=ExtResource("20_iwijn")]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 12.9034, 17.2791, 15.3037)
-
-[node name="book3" parent="Objects" instance=ExtResource("21_1etbs")]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 15.6027, 17.8663, 15.3367)
-
-[node name="Shelf1" parent="Objects" instance=ExtResource("22_3oviy")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -5.12529, 20.0854, 16.0741)
-
-[node name="Shelf2" parent="Objects" instance=ExtResource("22_3oviy")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -10.9175, 26.1324, 16.1612)
-
-[node name="Shelf3" parent="Objects" instance=ExtResource("22_3oviy")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 37.0615, 21.5476, 16.0741)
-
-[node name="Shelf4" parent="Objects" instance=ExtResource("22_3oviy")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 54.1712, 34.1815, 16.0741)
-
-[node name="Shelf5" parent="Objects" instance=ExtResource("22_3oviy")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 31.5074, 36.9858, 16.0741)
-
-[node name="Shelf6" parent="Objects" instance=ExtResource("22_3oviy")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 49.5837, 42.8624, 16.0741)
-
-[node name="Shelf7" parent="Objects" instance=ExtResource("22_3oviy")]
-transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 78.3268, 40.3877, -4.25544)
-
-[node name="Shelf8" parent="Objects" instance=ExtResource("22_3oviy")]
-transform = Transform3D(-4.37114e-07, 0, 10, 0, 10, 0, -10, 0, -4.37114e-07, 74.9071, 6.33187, -4.25544)
-
-[node name="GarlicBraid" parent="Objects" instance=ExtResource("22_dyea0")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.08421, 30.3828, 14.804)
-
-[node name="UnlitCandle" parent="Objects" instance=ExtResource("23_2bolv")]
-transform = Transform3D(-3, -2.62268e-07, 1.14641e-14, 0, -1.31134e-07, -3, 2.62268e-07, -3, 1.31134e-07, -10.3018, 14.9547, 15.5208)
-
-[node name="UnlitCandle2" parent="Objects" instance=ExtResource("23_2bolv")]
-transform = Transform3D(-3, -2.62268e-07, 1.14641e-14, 0, -1.31134e-07, -3, 2.62268e-07, -3, 1.31134e-07, -9.02528, 15.5203, 16.0498)
-
-[node name="UnlitCandle3" parent="Objects" instance=ExtResource("23_2bolv")]
-transform = Transform3D(-3, -2.62268e-07, 1.14641e-14, 0, -1.31134e-07, -3, 2.62268e-07, -3, 1.31134e-07, -7.97813, 14.9013, 15.0756)
-
-[node name="LitCandle" parent="Objects" instance=ExtResource("24_kcbwx")]
-transform = Transform3D(3, 0, 0, 0, -1.31134e-07, -3, 0, 3, -1.31134e-07, -8.90463, 21.9885, 16.5868)
-
-[node name="LitCandle2" parent="Objects" instance=ExtResource("24_kcbwx")]
-transform = Transform3D(3, 0, 0, 0, -1.31134e-07, -3, 0, 3, -1.31134e-07, -10.0843, 21.9885, 15.8064)
-
-[node name="SaltGrain" parent="Objects" instance=ExtResource("25_ac0ov")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.28035, 13.455, 9.34937)
-
-[node name="SaltGrain2" parent="Objects" instance=ExtResource("25_ac0ov")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.74954, 13.455, 10.15)
-
-[node name="SaltGrain3" parent="Objects" instance=ExtResource("25_ac0ov")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.55254, 13.7277, 9.93276)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.21561, 2.71114, 0, 0)
 
 [node name="Interactable" type="Node" parent="."]
-
-[node name="DustBunny" parent="Interactable" instance=ExtResource("24_1wpdf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.93093, 0.932425, 14.3201)
 
 [node name="PlayAreaLimiters" type="Node" parent="."]
 
