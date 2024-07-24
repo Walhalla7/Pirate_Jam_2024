@@ -14,6 +14,8 @@ points = PackedVector3Array(-0.291599, 0.0226715, 0.00386099, -0.0277506, 0.8558
 collision_layer = 8
 collision_mask = 23
 script = ExtResource("1_7xj1q")
+slideDownForce = 3
+slowDownOnWall = 2
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.00345, 0, 0, 0, 1.00345, 0, 0, 0, 1.00345, 0, 0, 0)
@@ -50,5 +52,6 @@ transform = Transform3D(-1.00614, 0.00836064, -1.14347e-09, 0, -1.39704e-08, -1,
 collision_mask = 23
 
 [node name="Crawl_Timer" type="Timer" parent="."]
+wait_time = 2.0
 
 [connection signal="timeout" from="Crawl_Timer" to="." method="_on_crawl_timer_timeout"]

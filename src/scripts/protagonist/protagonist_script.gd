@@ -11,6 +11,8 @@ extends CharacterBody3D
 @onready var back_detector = $Back_Detector
 @onready var crawl_timer = $Crawl_Timer
 
+@export var slideDownForce = 2
+@export var slowDownOnWall = 3
 
 
 #======================================== 	States 	==================================
@@ -106,9 +108,12 @@ func _physics_process(delta):
 	else:
 		change_State(States.FALLING)
 	
+	if curr_State != States.FLOOR:
+		target_velocity.y -= gravityStrength * delta
+	
 	match curr_State:
 		States.FALLING:
-			target_velocity.y = target_velocity.y - (gravityStrength * delta)
+			
 			if Input.is_action_pressed("move_right"):
 				direction.x -= 1
 			if Input.is_action_pressed("move_left"):
@@ -117,6 +122,7 @@ func _physics_process(delta):
 				direction.z -= 1
 			if Input.is_action_pressed("move_back"):
 				direction.z += 1
+				
 			target_velocity.x = direction.x * speed * sprint_modifier
 			target_velocity.z = direction.z * speed * sprint_modifier
 
@@ -137,7 +143,7 @@ func _physics_process(delta):
 		States.WALL_RIGHT:
 			if Input.is_action_pressed("move_right") && can_crawl:
 				direction.y += 1
-			if Input.is_action_pressed("move_left"):
+			if Input.is_action_pressed("move_left") or back_detector.is_colliding():
 				if floor_detector.is_colliding():
 					direction.x += 1
 					target_velocity.x = direction.x * speed * sprint_modifier
@@ -147,15 +153,20 @@ func _physics_process(delta):
 				direction.z -= 1
 			if Input.is_action_pressed("move_back"):
 				direction.z += 1
+				
 			if Input.is_action_just_pressed("jump"):
 				target_velocity.x = JUMP_VELOCITY
+				target_velocity.y = JUMP_VELOCITY 
 			
-			target_velocity.y = direction.y * speed/2 * sprint_modifier - (gravityStrength*3 * delta) 
-			target_velocity.z = direction.z * speed/2 * sprint_modifier
+			# Adjust gravity for climbing
+			target_velocity.y = direction.y * speed/slowDownOnWall * sprint_modifier - gravityStrength * slideDownForce * delta
+			target_velocity.z = direction.z * speed/slowDownOnWall * sprint_modifier
+			
+			
 		
 		States.WALL_LEFT:
 			if Input.is_action_pressed("move_right"):
-				if floor_detector.is_colliding():
+				if floor_detector.is_colliding() or back_detector.is_colliding():
 					direction.x -= 1
 					target_velocity.x = direction.x * speed * sprint_modifier
 				else:
@@ -168,8 +179,8 @@ func _physics_process(delta):
 				direction.z += 1
 			if Input.is_action_just_pressed("jump"):
 				target_velocity.x = -JUMP_VELOCITY
-			target_velocity.y = direction.y * speed * sprint_modifier
-			target_velocity.z = direction.z * speed * sprint_modifier
+			target_velocity.y = direction.y * speed/slowDownOnWall  * sprint_modifier - (gravityStrength*slideDownForce * delta) 
+			target_velocity.z = direction.z * speed/slowDownOnWall  * sprint_modifier
 		
 		States.WALL_BACK:
 			if Input.is_action_pressed("move_right"):
@@ -179,15 +190,15 @@ func _physics_process(delta):
 			if Input.is_action_pressed("move_forward"):
 				if floor_detector.is_colliding():
 					direction.z -= 1
-					target_velocity.z = direction.z * speed * sprint_modifier
+					target_velocity.z = direction.z * speed/2  * sprint_modifier
 				else:
 					direction.y -= 1
 			if Input.is_action_pressed("move_back") && can_crawl:
 				direction.y += 1
 			if Input.is_action_just_pressed("jump"):
 				target_velocity.z = -JUMP_VELOCITY
-			target_velocity.y = direction.y * speed * sprint_modifier
-			target_velocity.x = direction.x * speed * sprint_modifier
+			target_velocity.y = direction.y * speed/slowDownOnWall  * sprint_modifier - (gravityStrength*slideDownForce * delta) 
+			target_velocity.x = direction.x * speed/slowDownOnWall  * sprint_modifier
 
 
 	#Sprint Input / calculations
