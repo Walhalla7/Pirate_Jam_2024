@@ -25,7 +25,7 @@ func explode():
 			frag.collision_mask = fragment_collision_mask
 			parent.add_child(frag)
 			
-			var vel:Vector3 = (frag.global_transform.origin - $ExplodeOrigin.global_transform.origin) * explosion_speed
+			var vel:Vector3 = (frag.global_transform.origin - $ExplodeOrigin.global_transform.origin * randf()) * explosion_speed
 			frag.linear_velocity = vel
 			
 			frag.lifetime = randf_range(min_frag_lifetime, max_frag_lifetime)

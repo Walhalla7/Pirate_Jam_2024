@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://00h81up2m6c5"]
+[gd_scene load_steps=7 format=3 uid="uid://00h81up2m6c5"]
 
 [ext_resource type="Script" path="res://BreakingObjects/Scenes/slug.gd" id="1_2qk5f"]
 [ext_resource type="PackedScene" uid="uid://58jhqhmvx3nf" path="res://BreakingObjects/slugBefore.glb" id="1_4etbs"]
 [ext_resource type="PackedScene" uid="uid://bkaog4m6b1fm" path="res://BreakingObjects/SlugAfter.glb" id="2_oxv5d"]
+[ext_resource type="PackedScene" uid="uid://cad83bm5n5w3l" path="res://BreakingObjects/SkullCandle.glb" id="4_us37n"]
+[ext_resource type="PackedScene" uid="uid://ctjaib8rkes1j" path="res://BreakingObjects/SkullCandleAfter.glb" id="5_w666s"]
+[ext_resource type="PackedScene" uid="uid://dbsghahj2nmfw" path="res://BreakingObjects/SkullCandleAfter1.glb" id="6_dc24r"]
 
 [node name="Slug" type="Node3D"]
 script = ExtResource("1_2qk5f")
@@ -12,15 +15,3918 @@ explosion_speed = 15.0
 min_frag_lifetime = 5.0
 max_frag_lifetime = 10.0
 
-[node name="slug" parent="." instance=ExtResource("1_4etbs")]
+[node name="slug1" parent="." instance=ExtResource("1_4etbs")]
+visible = false
 
-[node name="Slug_After" parent="." instance=ExtResource("2_oxv5d")]
+[node name="Slug_After1" parent="." instance=ExtResource("2_oxv5d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0559395, 0, 0)
 visible = false
 
 [node name="ExplodeOrigin" type="Marker3D" parent="."]
-transform = Transform3D(0.192906, 0, 0, 0, -0.0375177, 0, 0, 0, -0.0634493, 0.119622, 0.329193, 0.0306758)
+transform = Transform3D(0.192906, 0, 0, 0, -0.0375177, 0, 0, 0, -0.0634493, -0.222797, 1.42018, 0.0306758)
 gizmo_extents = 0.1
 
+[node name="slug" parent="." instance=ExtResource("4_us37n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.40081, 0, -0.513824)
+
+[node name="skull" parent="slug" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.214938, 1.10273, 0.239686)
+
+[node name="Slug_After2" parent="." instance=ExtResource("5_w666s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01842, 0, -2.51706)
+visible = false
+
+[node name="skull_cell" parent="Slug_After2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00861478, 1.74981, 3.51199)
+
+[node name="skull_cell_001" parent="Slug_After2" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.40902, 1.15683, 3.24867)
+
+[node name="skull_cell_002" parent="Slug_After2" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.212346, 1.52998, 3.45016)
+
+[node name="skull_cell_003" parent="Slug_After2" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.976831, 1.67476, 2.17788)
+
+[node name="skull_cell_004" parent="Slug_After2" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.942674, 1.22438, 2.45446)
+
+[node name="skull_cell_005" parent="Slug_After2" index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.05382, 1.7584, 2.61857)
+
+[node name="skull_cell_006" parent="Slug_After2" index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.966912, 0.850739, 2.95028)
+
+[node name="skull_cell_007" parent="Slug_After2" index="7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.521643, 1.07067, 2.91484)
+
+[node name="skull_cell_008" parent="Slug_After2" index="8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.914209, 1.4881, 1.85568)
+
+[node name="skull_cell_009" parent="Slug_After2" index="9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.266949, 0.908666, 1.59408)
+
+[node name="skull_cell_010" parent="Slug_After2" index="10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.633159, 0.276593, 1.94078)
+
+[node name="skull_cell_011" parent="Slug_After2" index="11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.10017, 1.03736, 2.78982)
+
+[node name="skull_cell_012" parent="Slug_After2" index="12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.411519, 1.56724, 2.95445)
+
+[node name="skull_cell_013" parent="Slug_After2" index="13"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.599124, 1.62159, 1.75481)
+
+[node name="skull_cell_014" parent="Slug_After2" index="14"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.382229, 1.7828, 2.71247)
+
+[node name="skull_cell_015" parent="Slug_After2" index="15"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.169288, 0.255391, 2.06154)
+
+[node name="skull_cell_016" parent="Slug_After2" index="16"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.150688, 1.35427, 1.56958)
+
+[node name="skull_cell_017" parent="Slug_After2" index="17"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.896953, 0.832321, 2.70331)
+
+[node name="skull_cell_018" parent="Slug_After2" index="18"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.900133, 1.83643, 2.05096)
+
+[node name="skull_cell_019" parent="Slug_After2" index="19"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.395273, 0.425348, 1.68267)
+
+[node name="skull_cell_020" parent="Slug_After2" index="20"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0415914, 1.08648, 3.08303)
+
+[node name="skull_cell_021" parent="Slug_After2" index="21"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.707975, 0.775635, 1.79257)
+
+[node name="skull_cell_022" parent="Slug_After2" index="22"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.615096, 2.03726, 2.43978)
+
+[node name="skull_cell_023" parent="Slug_After2" index="23"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0277355, 1.1652, 2.70862)
+
+[node name="skull_cell_024" parent="Slug_After2" index="24"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.425348, 1.81699, 3.08753)
+
+[node name="skull_cell_025" parent="Slug_After2" index="25"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.792064, 1.20263, 1.97798)
+
+[node name="skull_cell_026" parent="Slug_After2" index="26"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.437294, 1.48495, 2.51601)
+
+[node name="skull_cell_027" parent="Slug_After2" index="27"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000183344, 1.37005, 1.92635)
+
+[node name="skull_cell_028" parent="Slug_After2" index="28"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.639774, 1.19749, 3.58576)
+
+[node name="skull_cell_029" parent="Slug_After2" index="29"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.899216, 1.23639, 3.31743)
+
+[node name="skull_cell_030" parent="Slug_After2" index="30"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.85363, 1.70945, 1.83393)
+
+[node name="skull_cell_031" parent="Slug_After2" index="31"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.43148, 1.95661, 2.80434)
+
+[node name="skull_cell_032" parent="Slug_After2" index="32"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.85183, 1.81131, 2.3363)
+
+[node name="skull_cell_033" parent="Slug_After2" index="33"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.361748, 0.873916, 2.66776)
+
+[node name="skull_cell_034" parent="Slug_After2" index="34"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.261509, 0.856819, 1.98807)
+
+[node name="skull_cell_035" parent="Slug_After2" index="35"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.786604, 0.843356, 3.24131)
+
+[node name="skull_cell_036" parent="Slug_After2" index="36"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.419767, 0.973722, 2.90452)
+
+[node name="skull_cell_037" parent="Slug_After2" index="37"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.493201, 1.88664, 3.21159)
+
+[node name="skull_cell_038" parent="Slug_After2" index="38"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.858939, 2.0189, 2.53751)
+
+[node name="skull_cell_039" parent="Slug_After2" index="39"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.374992, 1.48762, 1.604)
+
+[node name="skull_cell_040" parent="Slug_After2" index="40"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.290784, 1.16984, 1.59562)
+
+[node name="skull_cell_041" parent="Slug_After2" index="41"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0918467, 0.41958, 1.80428)
+
+[node name="skull_cell_042" parent="Slug_After2" index="42"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.199596, 1.68132, 3.46148)
+
+[node name="skull_cell_043" parent="Slug_After2" index="43"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.239431, 1.3791, 3.46818)
+
+[node name="skull_cell_044" parent="Slug_After2" index="44"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0602543, 0.820501, 2.3743)
+
+[node name="skull_cell_045" parent="Slug_After2" index="45"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.350515, 1.83637, 2.43741)
+
+[node name="skull_cell_046" parent="Slug_After2" index="46"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.399018, 1.14885, 2.0724)
+
+[node name="skull_cell_047" parent="Slug_After2" index="47"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.231816, 0.894806, 1.74853)
+
+[node name="skull_cell_048" parent="Slug_After2" index="48"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.719664, 1.03932, 3.3149)
+
+[node name="skull_cell_049" parent="Slug_After2" index="49"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.20883, 1.90593, 3.3354)
+
+[node name="skull_cell_050" parent="Slug_After2" index="50"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.163458, 0.869787, 2.4788)
+
+[node name="skull_cell_051" parent="Slug_After2" index="51"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.580034, 1.95252, 2.03324)
+
+[node name="skull_cell_052" parent="Slug_After2" index="52"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.105485, 1.81676, 2.99304)
+
+[node name="skull_cell_053" parent="Slug_After2" index="53"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.858235, 0.769563, 2.85369)
+
+[node name="skull_cell_054" parent="Slug_After2" index="54"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.69982, 0.829753, 2.43799)
+
+[node name="skull_cell_055" parent="Slug_After2" index="55"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.531842, 1.01552, 3.22475)
+
+[node name="skull_cell_056" parent="Slug_After2" index="56"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.264194, 2.01236, 3.00046)
+
+[node name="skull_cell_057" parent="Slug_After2" index="57"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.251213, 1.43966, 1.75858)
+
+[node name="skull_cell_058" parent="Slug_After2" index="58"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0596454, 1.35003, 3.69425)
+
+[node name="skull_cell_059" parent="Slug_After2" index="59"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.907554, 0.928786, 2.02552)
+
+[node name="skull_cell_060" parent="Slug_After2" index="60"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0148175, 1.97047, 2.77117)
+
+[node name="skull_cell_061" parent="Slug_After2" index="61"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.982165, 1.66838, 3.08792)
+
+[node name="skull_cell_062" parent="Slug_After2" index="62"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.856179, 1.54503, 3.387)
+
+[node name="skull_cell_063" parent="Slug_After2" index="63"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.548181, 1.39027, 3.11386)
+
+[node name="skull_cell_064" parent="Slug_After2" index="64"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.474379, 0.812857, 2.73713)
+
+[node name="skull_cell_065" parent="Slug_After2" index="65"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.550561, 0.929321, 3.48248)
+
+[node name="skull_cell_066" parent="Slug_After2" index="66"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9825, 1.09443, 3.0626)
+
+[node name="skull_cell_067" parent="Slug_After2" index="67"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.277292, 0.898006, 3.12675)
+
+[node name="skull_cell_068" parent="Slug_After2" index="68"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.994976, 1.43675, 2.2408)
+
+[node name="skull_cell_069" parent="Slug_After2" index="69"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.104839, 0.729914, 1.95099)
+
+[node name="skull_cell_070" parent="Slug_After2" index="70"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0415008, 1.60871, 1.67416)
+
+[node name="skull_cell_071" parent="Slug_After2" index="71"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.255042, 1.60936, 1.74244)
+
+[node name="skull_cell_072" parent="Slug_After2" index="72"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.488651, 1.20375, 2.53819)
+
+[node name="skull_cell_073" parent="Slug_After2" index="73"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.836329, 1.45239, 1.73728)
+
+[node name="skull_cell_074" parent="Slug_After2" index="74"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.365896, 0.795597, 2.44586)
+
+[node name="skull_cell_075" parent="Slug_After2" index="75"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.301333, 1.78587, 1.89806)
+
+[node name="skull_cell_076" parent="Slug_After2" index="76"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.579113, 1.38004, 2.16195)
+
+[node name="skull_cell_077" parent="Slug_After2" index="77"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.86522, 0.436249, 2.21534)
+
+[node name="skull_cell_078" parent="Slug_After2" index="78"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.310426, 0.126406, 1.72416)
+
+[node name="skull_cell_079" parent="Slug_After2" index="79"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.02772, 0.838865, 2.37049)
+
+[node name="skull_cell_080" parent="Slug_After2" index="80"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.733276, 1.84413, 2.91561)
+
+[node name="skull_cell_081" parent="Slug_After2" index="81"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.234525, 0.960027, 3.45478)
+
+[node name="skull_cell_082" parent="Slug_After2" index="82"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0839984, 0.577171, 1.64176)
+
+[node name="skull_cell_083" parent="Slug_After2" index="83"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.626817, 0.427886, 1.75009)
+
+[node name="skull_cell_084" parent="Slug_After2" index="84"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00335002, 1.96134, 2.26879)
+
+[node name="skull_cell_085" parent="Slug_After2" index="85"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.518864, 1.16291, 1.85001)
+
+[node name="skull_cell_086" parent="Slug_After2" index="86"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.368654, 1.49837, 1.86373)
+
+[node name="skull_cell_087" parent="Slug_After2" index="87"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.659274, 1.68146, 3.51655)
+
+[node name="skull_cell_088" parent="Slug_After2" index="88"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.235098, 1.24403, 2.10322)
+
+[node name="skull_cell_089" parent="Slug_After2" index="89"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.667638, 0.738288, 2.06569)
+
+[node name="skull_cell_090" parent="Slug_After2" index="90"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.340957, 1.18039, 3.52228)
+
+[node name="skull_cell_091" parent="Slug_After2" index="91"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.653051, 2.08166, 2.22363)
+
+[node name="skull_cell_092" parent="Slug_After2" index="92"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.406316, 0.903964, 3.27169)
+
+[node name="skull_cell_093" parent="Slug_After2" index="93"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.374613, 0.766585, 2.05687)
+
+[node name="skull_cell_094" parent="Slug_After2" index="94"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0522873, 1.9337, 1.85054)
+
+[node name="skull_cell_095" parent="Slug_After2" index="95"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.604686, 1.88151, 1.74556)
+
+[node name="skull_cell_096" parent="Slug_After2" index="96"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.260831, 1.86819, 1.74779)
+
+[node name="skull_cell_097" parent="Slug_After2" index="97"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.13786, 1.17951, 3.49628)
+
+[node name="skull_cell_098" parent="Slug_After2" index="98"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.37089, 1.59085, 2.1215)
+
+[node name="skull_cell_099" parent="Slug_After2" index="99"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.377581, 1.69849, 3.40498)
+
+[node name="skull_cell_100" parent="Slug_After2" index="100"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.190454, 1.24404, 1.82872)
+
+[node name="skull_cell_101" parent="Slug_After2" index="101"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.100183, 1.08333, 1.71355)
+
+[node name="skull_cell_102" parent="Slug_After2" index="102"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0528958, 0.490923, 1.92)
+
+[node name="skull_cell_103" parent="Slug_After2" index="103"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.812815, 1.11009, 1.75962)
+
+[node name="skull_cell_104" parent="Slug_After2" index="104"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.180843, 1.25769, 3.69041)
+
+[node name="Slug_After" parent="." instance=ExtResource("6_dc24r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24254, 0, -0.264655)
+visible = false
+
+[node name="BSurfaceMesh_003" parent="Slug_After" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 0.877729, -0.375)
+
+[node name="BSurfaceMesh_004" parent="Slug_After" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 0.877729, -0.225)
+
+[node name="BSurfaceMesh_005" parent="Slug_After" index="2"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 0.877729, -0.075)
+
+[node name="BSurfaceMesh_006" parent="Slug_After" index="3"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.02773, -0.375)
+
+[node name="BSurfaceMesh_007" parent="Slug_After" index="4"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.02773, -0.225)
+
+[node name="BSurfaceMesh_008" parent="Slug_After" index="5"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.02773, -0.075)
+
+[node name="BSurfaceMesh_009" parent="Slug_After" index="6"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 0.127729, -0.225)
+
+[node name="BSurfaceMesh_010" parent="Slug_After" index="7"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 0.277729, -0.225)
+
+[node name="BSurfaceMesh_011" parent="Slug_After" index="8"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 0.277729, -0.0749999)
+
+[node name="BSurfaceMesh_012" parent="Slug_After" index="9"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 0.427729, -0.225)
+
+[node name="BSurfaceMesh_013" parent="Slug_After" index="10"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 0.427729, -0.0749999)
+
+[node name="BSurfaceMesh_014" parent="Slug_After" index="11"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 0.577729, -0.225)
+
+[node name="BSurfaceMesh_015" parent="Slug_After" index="12"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 0.577729, -0.075)
+
+[node name="BSurfaceMesh_016" parent="Slug_After" index="13"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 0.727729, -0.375)
+
+[node name="BSurfaceMesh_017" parent="Slug_After" index="14"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 0.727729, -0.225)
+
+[node name="BSurfaceMesh_018" parent="Slug_After" index="15"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 0.727729, -0.075)
+
+[node name="BSurfaceMesh_019" parent="Slug_After" index="16"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 0.877729, -0.375)
+
+[node name="BSurfaceMesh_020" parent="Slug_After" index="17"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 0.877729, -0.225)
+
+[node name="BSurfaceMesh_021" parent="Slug_After" index="18"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 0.877729, -0.075)
+
+[node name="BSurfaceMesh_022" parent="Slug_After" index="19"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.02773, -0.525)
+
+[node name="BSurfaceMesh_023" parent="Slug_After" index="20"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.02773, -0.375)
+
+[node name="BSurfaceMesh_024" parent="Slug_After" index="21"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.02773, -0.225)
+
+[node name="BSurfaceMesh_025" parent="Slug_After" index="22"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.02773, -0.075)
+
+[node name="BSurfaceMesh_026" parent="Slug_After" index="23"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 0.127729, -0.375)
+
+[node name="BSurfaceMesh_027" parent="Slug_After" index="24"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 0.277729, -0.375)
+
+[node name="BSurfaceMesh_028" parent="Slug_After" index="25"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 0.277729, -0.225)
+
+[node name="BSurfaceMesh_029" parent="Slug_After" index="26"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 0.427729, -0.525)
+
+[node name="BSurfaceMesh_030" parent="Slug_After" index="27"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 0.427729, -0.375)
+
+[node name="BSurfaceMesh_031" parent="Slug_After" index="28"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 0.577729, -0.525)
+
+[node name="BSurfaceMesh_032" parent="Slug_After" index="29"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 0.727729, -0.525)
+
+[node name="BSurfaceMesh_033" parent="Slug_After" index="30"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 0.727729, -0.375)
+
+[node name="BSurfaceMesh_034" parent="Slug_After" index="31"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 0.727729, -0.225)
+
+[node name="BSurfaceMesh_035" parent="Slug_After" index="32"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 0.727729, -0.075)
+
+[node name="BSurfaceMesh_036" parent="Slug_After" index="33"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 0.877729, -0.525)
+
+[node name="BSurfaceMesh_037" parent="Slug_After" index="34"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 0.877729, -0.375)
+
+[node name="BSurfaceMesh_038" parent="Slug_After" index="35"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 0.877729, -0.225)
+
+[node name="BSurfaceMesh_039" parent="Slug_After" index="36"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 0.877729, -0.075)
+
+[node name="BSurfaceMesh_040" parent="Slug_After" index="37"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.02773, -0.525)
+
+[node name="BSurfaceMesh_041" parent="Slug_After" index="38"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.02773, -0.375)
+
+[node name="BSurfaceMesh_042" parent="Slug_After" index="39"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.02773, -0.225)
+
+[node name="BSurfaceMesh_043" parent="Slug_After" index="40"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.02773, -0.075)
+
+[node name="BSurfaceMesh_044" parent="Slug_After" index="41"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 0.127729, -0.525)
+
+[node name="BSurfaceMesh_045" parent="Slug_After" index="42"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 0.127729, -0.375)
+
+[node name="BSurfaceMesh_046" parent="Slug_After" index="43"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 0.277729, -0.525)
+
+[node name="BSurfaceMesh_047" parent="Slug_After" index="44"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 0.277729, -0.375)
+
+[node name="BSurfaceMesh_048" parent="Slug_After" index="45"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 0.427729, -0.675)
+
+[node name="BSurfaceMesh_049" parent="Slug_After" index="46"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 0.427729, -0.525)
+
+[node name="BSurfaceMesh_050" parent="Slug_After" index="47"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 0.577729, -0.675)
+
+[node name="BSurfaceMesh_051" parent="Slug_After" index="48"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 0.577729, -0.525)
+
+[node name="BSurfaceMesh_052" parent="Slug_After" index="49"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 0.727729, -0.675)
+
+[node name="BSurfaceMesh_053" parent="Slug_After" index="50"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 0.727729, -0.525)
+
+[node name="BSurfaceMesh_054" parent="Slug_After" index="51"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 0.727729, -0.375)
+
+[node name="BSurfaceMesh_055" parent="Slug_After" index="52"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 0.877729, -0.525)
+
+[node name="BSurfaceMesh_056" parent="Slug_After" index="53"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 0.877729, -0.375)
+
+[node name="BSurfaceMesh_057" parent="Slug_After" index="54"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 0.877729, -0.225)
+
+[node name="BSurfaceMesh_058" parent="Slug_After" index="55"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 0.877729, -0.075)
+
+[node name="BSurfaceMesh_059" parent="Slug_After" index="56"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.02773, -0.675)
+
+[node name="BSurfaceMesh_060" parent="Slug_After" index="57"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.02773, -0.525)
+
+[node name="BSurfaceMesh_061" parent="Slug_After" index="58"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.02773, -0.375)
+
+[node name="BSurfaceMesh_062" parent="Slug_After" index="59"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.02773, -0.225)
+
+[node name="BSurfaceMesh_063" parent="Slug_After" index="60"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.02773, -0.075)
+
+[node name="BSurfaceMesh_064" parent="Slug_After" index="61"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 0.127729, -0.675)
+
+[node name="BSurfaceMesh_065" parent="Slug_After" index="62"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 0.127729, -0.525)
+
+[node name="BSurfaceMesh_066" parent="Slug_After" index="63"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 0.277729, -0.675)
+
+[node name="BSurfaceMesh_067" parent="Slug_After" index="64"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 0.277729, -0.525)
+
+[node name="BSurfaceMesh_068" parent="Slug_After" index="65"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 0.427729, -0.675)
+
+[node name="BSurfaceMesh_069" parent="Slug_After" index="66"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 0.427729, -0.525)
+
+[node name="BSurfaceMesh_070" parent="Slug_After" index="67"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 0.577729, -0.675)
+
+[node name="BSurfaceMesh_071" parent="Slug_After" index="68"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 0.577729, -0.525)
+
+[node name="BSurfaceMesh_072" parent="Slug_After" index="69"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 0.727729, -0.675)
+
+[node name="BSurfaceMesh_073" parent="Slug_After" index="70"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 0.727729, -0.525)
+
+[node name="BSurfaceMesh_074" parent="Slug_After" index="71"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 0.727729, -0.375)
+
+[node name="BSurfaceMesh_075" parent="Slug_After" index="72"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 0.877729, -0.675)
+
+[node name="BSurfaceMesh_076" parent="Slug_After" index="73"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 0.877729, -0.525)
+
+[node name="BSurfaceMesh_077" parent="Slug_After" index="74"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 0.877729, -0.375)
+
+[node name="BSurfaceMesh_078" parent="Slug_After" index="75"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 0.877729, -0.225)
+
+[node name="BSurfaceMesh_079" parent="Slug_After" index="76"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 0.877729, -0.075)
+
+[node name="BSurfaceMesh_080" parent="Slug_After" index="77"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.02773, -0.675)
+
+[node name="BSurfaceMesh_081" parent="Slug_After" index="78"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.02773, -0.525)
+
+[node name="BSurfaceMesh_082" parent="Slug_After" index="79"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.02773, -0.375)
+
+[node name="BSurfaceMesh_083" parent="Slug_After" index="80"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.02773, -0.225)
+
+[node name="BSurfaceMesh_084" parent="Slug_After" index="81"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.02773, -0.075)
+
+[node name="BSurfaceMesh_085" parent="Slug_After" index="82"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.764572, 0.877729, 0.375)
+
+[node name="BSurfaceMesh_086" parent="Slug_After" index="83"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.764572, 0.877729, 0.525)
+
+[node name="BSurfaceMesh_087" parent="Slug_After" index="84"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.764572, 0.877729, 0.675)
+
+[node name="BSurfaceMesh_088" parent="Slug_After" index="85"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.764572, 1.02773, 0.225)
+
+[node name="BSurfaceMesh_089" parent="Slug_After" index="86"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.764572, 1.02773, 0.375)
+
+[node name="BSurfaceMesh_090" parent="Slug_After" index="87"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.764572, 1.02773, 0.525)
+
+[node name="BSurfaceMesh_091" parent="Slug_After" index="88"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.764572, 1.02773, 0.675)
+
+[node name="BSurfaceMesh_092" parent="Slug_After" index="89"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.764572, 1.02773, 0.825)
+
+[node name="BSurfaceMesh_093" parent="Slug_After" index="90"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 0.277729, 0.075)
+
+[node name="BSurfaceMesh_094" parent="Slug_After" index="91"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 0.727729, 0.075)
+
+[node name="BSurfaceMesh_095" parent="Slug_After" index="92"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 0.727729, 0.225)
+
+[node name="BSurfaceMesh_096" parent="Slug_After" index="93"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 0.727729, 0.525)
+
+[node name="BSurfaceMesh_097" parent="Slug_After" index="94"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 0.877729, 0.075)
+
+[node name="BSurfaceMesh_098" parent="Slug_After" index="95"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 0.877729, 0.225)
+
+[node name="BSurfaceMesh_099" parent="Slug_After" index="96"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 0.877729, 0.375)
+
+[node name="BSurfaceMesh_100" parent="Slug_After" index="97"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 0.877729, 0.525)
+
+[node name="BSurfaceMesh_101" parent="Slug_After" index="98"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 0.877729, 0.675)
+
+[node name="BSurfaceMesh_102" parent="Slug_After" index="99"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 0.877729, 0.825)
+
+[node name="BSurfaceMesh_103" parent="Slug_After" index="100"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 0.877729, 0.975)
+
+[node name="BSurfaceMesh_104" parent="Slug_After" index="101"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.02773, 0.075)
+
+[node name="BSurfaceMesh_105" parent="Slug_After" index="102"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.02773, 0.225)
+
+[node name="BSurfaceMesh_106" parent="Slug_After" index="103"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.02773, 0.375)
+
+[node name="BSurfaceMesh_107" parent="Slug_After" index="104"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.02773, 0.525)
+
+[node name="BSurfaceMesh_108" parent="Slug_After" index="105"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.02773, 0.675)
+
+[node name="BSurfaceMesh_109" parent="Slug_After" index="106"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.02773, 0.825)
+
+[node name="BSurfaceMesh_110" parent="Slug_After" index="107"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.02773, 0.975)
+
+[node name="BSurfaceMesh_111" parent="Slug_After" index="108"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.02773, 1.125)
+
+[node name="BSurfaceMesh_112" parent="Slug_After" index="109"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 0.277729, 0.075)
+
+[node name="BSurfaceMesh_113" parent="Slug_After" index="110"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 0.427729, 0.075)
+
+[node name="BSurfaceMesh_114" parent="Slug_After" index="111"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 0.577729, 0.075)
+
+[node name="BSurfaceMesh_115" parent="Slug_After" index="112"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 0.727729, 0.075)
+
+[node name="BSurfaceMesh_116" parent="Slug_After" index="113"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 0.727729, 0.225)
+
+[node name="BSurfaceMesh_117" parent="Slug_After" index="114"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 0.877729, 0.075)
+
+[node name="BSurfaceMesh_118" parent="Slug_After" index="115"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 0.877729, 0.225)
+
+[node name="BSurfaceMesh_119" parent="Slug_After" index="116"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 0.877729, 0.375)
+
+[node name="BSurfaceMesh_120" parent="Slug_After" index="117"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 0.877729, 0.525)
+
+[node name="BSurfaceMesh_121" parent="Slug_After" index="118"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 0.877729, 0.675)
+
+[node name="BSurfaceMesh_122" parent="Slug_After" index="119"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 0.877729, 0.825)
+
+[node name="BSurfaceMesh_123" parent="Slug_After" index="120"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 0.877729, 0.975)
+
+[node name="BSurfaceMesh_124" parent="Slug_After" index="121"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 0.877729, 1.125)
+
+[node name="BSurfaceMesh_125" parent="Slug_After" index="122"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.02773, 0.075)
+
+[node name="BSurfaceMesh_126" parent="Slug_After" index="123"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.02773, 0.225)
+
+[node name="BSurfaceMesh_127" parent="Slug_After" index="124"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.02773, 0.375)
+
+[node name="BSurfaceMesh_128" parent="Slug_After" index="125"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.02773, 0.525)
+
+[node name="BSurfaceMesh_129" parent="Slug_After" index="126"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.02773, 0.675)
+
+[node name="BSurfaceMesh_130" parent="Slug_After" index="127"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.02773, 0.825)
+
+[node name="BSurfaceMesh_131" parent="Slug_After" index="128"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.02773, 0.975)
+
+[node name="BSurfaceMesh_132" parent="Slug_After" index="129"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.02773, 1.125)
+
+[node name="BSurfaceMesh_133" parent="Slug_After" index="130"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 0.727729, 0.075)
+
+[node name="BSurfaceMesh_134" parent="Slug_After" index="131"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 0.727729, 0.225)
+
+[node name="BSurfaceMesh_135" parent="Slug_After" index="132"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 0.877729, 0.075)
+
+[node name="BSurfaceMesh_136" parent="Slug_After" index="133"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 0.877729, 0.225)
+
+[node name="BSurfaceMesh_137" parent="Slug_After" index="134"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 0.877729, 0.375)
+
+[node name="BSurfaceMesh_138" parent="Slug_After" index="135"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 0.877729, 0.525)
+
+[node name="BSurfaceMesh_139" parent="Slug_After" index="136"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 0.877729, 0.975)
+
+[node name="BSurfaceMesh_140" parent="Slug_After" index="137"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 0.877729, 1.125)
+
+[node name="BSurfaceMesh_141" parent="Slug_After" index="138"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.02773, 0.075)
+
+[node name="BSurfaceMesh_142" parent="Slug_After" index="139"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.02773, 0.225)
+
+[node name="BSurfaceMesh_143" parent="Slug_After" index="140"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.02773, 0.375)
+
+[node name="BSurfaceMesh_144" parent="Slug_After" index="141"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.02773, 0.525)
+
+[node name="BSurfaceMesh_145" parent="Slug_After" index="142"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.02773, 0.675)
+
+[node name="BSurfaceMesh_146" parent="Slug_After" index="143"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.02773, 0.825)
+
+[node name="BSurfaceMesh_147" parent="Slug_After" index="144"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.02773, 0.975)
+
+[node name="BSurfaceMesh_148" parent="Slug_After" index="145"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.02773, 1.125)
+
+[node name="BSurfaceMesh_149" parent="Slug_After" index="146"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 0.877729, 0.075)
+
+[node name="BSurfaceMesh_150" parent="Slug_After" index="147"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 0.877729, 0.225)
+
+[node name="BSurfaceMesh_151" parent="Slug_After" index="148"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164573, 0.877728, 0.375)
+
+[node name="BSurfaceMesh_152" parent="Slug_After" index="149"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 0.877729, 0.975)
+
+[node name="BSurfaceMesh_153" parent="Slug_After" index="150"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 0.877729, 1.125)
+
+[node name="BSurfaceMesh_154" parent="Slug_After" index="151"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.02773, 0.075)
+
+[node name="BSurfaceMesh_155" parent="Slug_After" index="152"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.02773, 0.225)
+
+[node name="BSurfaceMesh_156" parent="Slug_After" index="153"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.02773, 0.375)
+
+[node name="BSurfaceMesh_157" parent="Slug_After" index="154"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.02773, 0.525)
+
+[node name="BSurfaceMesh_158" parent="Slug_After" index="155"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.02773, 0.675)
+
+[node name="BSurfaceMesh_159" parent="Slug_After" index="156"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.02773, 0.825)
+
+[node name="BSurfaceMesh_160" parent="Slug_After" index="157"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.02773, 0.975)
+
+[node name="BSurfaceMesh_161" parent="Slug_After" index="158"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.02773, 1.125)
+
+[node name="BSurfaceMesh_162" parent="Slug_After" index="159"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 0.877729, 0.075)
+
+[node name="BSurfaceMesh_163" parent="Slug_After" index="160"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 0.877729, 0.225)
+
+[node name="BSurfaceMesh_164" parent="Slug_After" index="161"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 0.877729, 0.375)
+
+[node name="BSurfaceMesh_165" parent="Slug_After" index="162"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 0.877729, 0.525)
+
+[node name="BSurfaceMesh_166" parent="Slug_After" index="163"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 0.877729, 0.675)
+
+[node name="BSurfaceMesh_167" parent="Slug_After" index="164"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 0.877729, 0.825)
+
+[node name="BSurfaceMesh_168" parent="Slug_After" index="165"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 0.877729, 0.975)
+
+[node name="BSurfaceMesh_169" parent="Slug_After" index="166"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 0.877729, 1.125)
+
+[node name="BSurfaceMesh_170" parent="Slug_After" index="167"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.02773, 0.075)
+
+[node name="BSurfaceMesh_171" parent="Slug_After" index="168"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.02773, 0.225)
+
+[node name="BSurfaceMesh_172" parent="Slug_After" index="169"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.02773, 0.375)
+
+[node name="BSurfaceMesh_173" parent="Slug_After" index="170"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.02773, 0.525)
+
+[node name="BSurfaceMesh_174" parent="Slug_After" index="171"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.02773, 0.675)
+
+[node name="BSurfaceMesh_175" parent="Slug_After" index="172"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.02773, 0.825)
+
+[node name="BSurfaceMesh_176" parent="Slug_After" index="173"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.02773, 0.975)
+
+[node name="BSurfaceMesh_177" parent="Slug_After" index="174"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.02773, 1.125)
+
+[node name="BSurfaceMesh_178" parent="Slug_After" index="175"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.02773, 1.275)
+
+[node name="BSurfaceMesh_179" parent="Slug_After" index="176"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 0.877729, 1.275)
+
+[node name="BSurfaceMesh_180" parent="Slug_After" index="177"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.02773, 1.275)
+
+[node name="BSurfaceMesh_181" parent="Slug_After" index="178"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 0.877729, 1.275)
+
+[node name="BSurfaceMesh_182" parent="Slug_After" index="179"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.02773, 1.275)
+
+[node name="BSurfaceMesh_183" parent="Slug_After" index="180"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.02773, 1.275)
+
+[node name="BSurfaceMesh_184" parent="Slug_After" index="181"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.32773, -0.075)
+
+[node name="BSurfaceMesh_185" parent="Slug_After" index="182"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.47773, -0.375)
+
+[node name="BSurfaceMesh_186" parent="Slug_After" index="183"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.47773, -0.225)
+
+[node name="BSurfaceMesh_187" parent="Slug_After" index="184"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.47773, -0.075)
+
+[node name="BSurfaceMesh_188" parent="Slug_After" index="185"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.62773, -0.375)
+
+[node name="BSurfaceMesh_189" parent="Slug_After" index="186"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.62773, -0.225)
+
+[node name="BSurfaceMesh_190" parent="Slug_After" index="187"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.62773, -0.075)
+
+[node name="BSurfaceMesh_191" parent="Slug_After" index="188"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.77773, -0.075)
+
+[node name="BSurfaceMesh_192" parent="Slug_After" index="189"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.17773, -0.375)
+
+[node name="BSurfaceMesh_193" parent="Slug_After" index="190"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.17773, -0.225)
+
+[node name="BSurfaceMesh_194" parent="Slug_After" index="191"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.17773, -0.075)
+
+[node name="BSurfaceMesh_195" parent="Slug_After" index="192"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.32773, -0.225)
+
+[node name="BSurfaceMesh_196" parent="Slug_After" index="193"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.32773, -0.075)
+
+[node name="BSurfaceMesh_197" parent="Slug_After" index="194"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.47773, -0.525)
+
+[node name="BSurfaceMesh_198" parent="Slug_After" index="195"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.47773, -0.375)
+
+[node name="BSurfaceMesh_199" parent="Slug_After" index="196"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.47773, -0.225)
+
+[node name="BSurfaceMesh_200" parent="Slug_After" index="197"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.47773, -0.075)
+
+[node name="BSurfaceMesh_201" parent="Slug_After" index="198"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.62773, -0.525)
+
+[node name="BSurfaceMesh_202" parent="Slug_After" index="199"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.62773, -0.375)
+
+[node name="BSurfaceMesh_203" parent="Slug_After" index="200"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.62773, -0.225)
+
+[node name="BSurfaceMesh_204" parent="Slug_After" index="201"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.62773, -0.075)
+
+[node name="BSurfaceMesh_205" parent="Slug_After" index="202"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.77773, -0.375)
+
+[node name="BSurfaceMesh_206" parent="Slug_After" index="203"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.77773, -0.225)
+
+[node name="BSurfaceMesh_207" parent="Slug_After" index="204"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.77773, -0.075)
+
+[node name="BSurfaceMesh_208" parent="Slug_After" index="205"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.92773, -0.225)
+
+[node name="BSurfaceMesh_209" parent="Slug_After" index="206"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.92773, -0.075)
+
+[node name="BSurfaceMesh_210" parent="Slug_After" index="207"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.17773, -0.225)
+
+[node name="BSurfaceMesh_211" parent="Slug_After" index="208"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.17773, -0.075)
+
+[node name="BSurfaceMesh_212" parent="Slug_After" index="209"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.32773, -0.075)
+
+[node name="BSurfaceMesh_213" parent="Slug_After" index="210"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.47773, -0.225)
+
+[node name="BSurfaceMesh_214" parent="Slug_After" index="211"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.47773, -0.075)
+
+[node name="BSurfaceMesh_215" parent="Slug_After" index="212"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.62773, -0.525)
+
+[node name="BSurfaceMesh_216" parent="Slug_After" index="213"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.62773, -0.375)
+
+[node name="BSurfaceMesh_217" parent="Slug_After" index="214"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.62773, -0.225)
+
+[node name="BSurfaceMesh_218" parent="Slug_After" index="215"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.62773, -0.075)
+
+[node name="BSurfaceMesh_219" parent="Slug_After" index="216"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.77773, -0.525)
+
+[node name="BSurfaceMesh_220" parent="Slug_After" index="217"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.77773, -0.375)
+
+[node name="BSurfaceMesh_221" parent="Slug_After" index="218"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.77773, -0.225)
+
+[node name="BSurfaceMesh_222" parent="Slug_After" index="219"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.77773, -0.075)
+
+[node name="BSurfaceMesh_223" parent="Slug_After" index="220"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.92773, -0.375)
+
+[node name="BSurfaceMesh_224" parent="Slug_After" index="221"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.92773, -0.225)
+
+[node name="BSurfaceMesh_225" parent="Slug_After" index="222"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.92773, -0.075)
+
+[node name="BSurfaceMesh_226" parent="Slug_After" index="223"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 2.07773, -0.0750001)
+
+[node name="BSurfaceMesh_227" parent="Slug_After" index="224"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.17773, -0.375)
+
+[node name="BSurfaceMesh_228" parent="Slug_After" index="225"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.17773, -0.225)
+
+[node name="BSurfaceMesh_229" parent="Slug_After" index="226"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.17773, -0.075)
+
+[node name="BSurfaceMesh_230" parent="Slug_After" index="227"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.32773, -0.075)
+
+[node name="BSurfaceMesh_231" parent="Slug_After" index="228"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.47773, -0.525)
+
+[node name="BSurfaceMesh_232" parent="Slug_After" index="229"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.47773, -0.375)
+
+[node name="BSurfaceMesh_233" parent="Slug_After" index="230"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.47773, -0.225)
+
+[node name="BSurfaceMesh_234" parent="Slug_After" index="231"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.47773, -0.075)
+
+[node name="BSurfaceMesh_235" parent="Slug_After" index="232"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.62773, -0.675)
+
+[node name="BSurfaceMesh_236" parent="Slug_After" index="233"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.62773, -0.525)
+
+[node name="BSurfaceMesh_237" parent="Slug_After" index="234"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.62773, -0.375)
+
+[node name="BSurfaceMesh_238" parent="Slug_After" index="235"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.62773, -0.225)
+
+[node name="BSurfaceMesh_239" parent="Slug_After" index="236"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.62773, -0.075)
+
+[node name="BSurfaceMesh_240" parent="Slug_After" index="237"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.77773, -0.525)
+
+[node name="BSurfaceMesh_241" parent="Slug_After" index="238"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.77773, -0.375)
+
+[node name="BSurfaceMesh_242" parent="Slug_After" index="239"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.77773, -0.225)
+
+[node name="BSurfaceMesh_243" parent="Slug_After" index="240"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.77773, -0.075)
+
+[node name="BSurfaceMesh_244" parent="Slug_After" index="241"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.92773, -0.525)
+
+[node name="BSurfaceMesh_245" parent="Slug_After" index="242"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.92773, -0.375)
+
+[node name="BSurfaceMesh_246" parent="Slug_After" index="243"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.92773, -0.225)
+
+[node name="BSurfaceMesh_247" parent="Slug_After" index="244"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.92773, -0.075)
+
+[node name="BSurfaceMesh_248" parent="Slug_After" index="245"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 2.07773, -0.225)
+
+[node name="BSurfaceMesh_249" parent="Slug_After" index="246"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 2.07773, -0.0750001)
+
+[node name="BSurfaceMesh_250" parent="Slug_After" index="247"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.17773, -0.675)
+
+[node name="BSurfaceMesh_251" parent="Slug_After" index="248"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.17773, -0.525)
+
+[node name="BSurfaceMesh_252" parent="Slug_After" index="249"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.17773, -0.375)
+
+[node name="BSurfaceMesh_253" parent="Slug_After" index="250"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.17773, -0.225)
+
+[node name="BSurfaceMesh_254" parent="Slug_After" index="251"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.17773, -0.075)
+
+[node name="BSurfaceMesh_255" parent="Slug_After" index="252"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.32773, -0.525)
+
+[node name="BSurfaceMesh_256" parent="Slug_After" index="253"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.32773, -0.375)
+
+[node name="BSurfaceMesh_257" parent="Slug_After" index="254"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.32773, -0.225)
+
+[node name="BSurfaceMesh_258" parent="Slug_After" index="255"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.32773, -0.075)
+
+[node name="BSurfaceMesh_259" parent="Slug_After" index="256"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.47773, -0.675)
+
+[node name="BSurfaceMesh_260" parent="Slug_After" index="257"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.47773, -0.525)
+
+[node name="BSurfaceMesh_261" parent="Slug_After" index="258"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.47773, -0.375)
+
+[node name="BSurfaceMesh_262" parent="Slug_After" index="259"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.47773, -0.225)
+
+[node name="BSurfaceMesh_263" parent="Slug_After" index="260"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.47773, -0.075)
+
+[node name="BSurfaceMesh_264" parent="Slug_After" index="261"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.62773, -0.675)
+
+[node name="BSurfaceMesh_265" parent="Slug_After" index="262"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.62773, -0.525)
+
+[node name="BSurfaceMesh_266" parent="Slug_After" index="263"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.62773, -0.375)
+
+[node name="BSurfaceMesh_267" parent="Slug_After" index="264"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.62773, -0.225)
+
+[node name="BSurfaceMesh_268" parent="Slug_After" index="265"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.62773, -0.075)
+
+[node name="BSurfaceMesh_269" parent="Slug_After" index="266"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.77773, -0.525)
+
+[node name="BSurfaceMesh_270" parent="Slug_After" index="267"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.77773, -0.375)
+
+[node name="BSurfaceMesh_271" parent="Slug_After" index="268"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.77773, -0.225)
+
+[node name="BSurfaceMesh_272" parent="Slug_After" index="269"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.77773, -0.075)
+
+[node name="BSurfaceMesh_273" parent="Slug_After" index="270"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.92773, -0.525)
+
+[node name="BSurfaceMesh_274" parent="Slug_After" index="271"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.92773, -0.375)
+
+[node name="BSurfaceMesh_275" parent="Slug_After" index="272"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.92773, -0.225)
+
+[node name="BSurfaceMesh_276" parent="Slug_After" index="273"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.92773, -0.075)
+
+[node name="BSurfaceMesh_277" parent="Slug_After" index="274"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 2.07773, -0.375)
+
+[node name="BSurfaceMesh_278" parent="Slug_After" index="275"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 2.07773, -0.225)
+
+[node name="BSurfaceMesh_279" parent="Slug_After" index="276"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 2.07773, -0.0750001)
+
+[node name="BSurfaceMesh_280" parent="Slug_After" index="277"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.764572, 1.17773, 0.375)
+
+[node name="BSurfaceMesh_281" parent="Slug_After" index="278"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.764572, 1.17773, 0.525)
+
+[node name="BSurfaceMesh_282" parent="Slug_After" index="279"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.764572, 1.17773, 0.675)
+
+[node name="BSurfaceMesh_283" parent="Slug_After" index="280"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.764572, 1.17773, 0.825)
+
+[node name="BSurfaceMesh_284" parent="Slug_After" index="281"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.764572, 1.17773, 0.975)
+
+[node name="BSurfaceMesh_285" parent="Slug_After" index="282"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.764572, 1.32773, 0.225)
+
+[node name="BSurfaceMesh_286" parent="Slug_After" index="283"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.764572, 1.32773, 0.375)
+
+[node name="BSurfaceMesh_287" parent="Slug_After" index="284"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.764572, 1.32773, 0.525)
+
+[node name="BSurfaceMesh_288" parent="Slug_After" index="285"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.764572, 1.32773, 0.675)
+
+[node name="BSurfaceMesh_289" parent="Slug_After" index="286"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.764572, 1.32773, 0.825)
+
+[node name="BSurfaceMesh_290" parent="Slug_After" index="287"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.764572, 1.32773, 0.975)
+
+[node name="BSurfaceMesh_291" parent="Slug_After" index="288"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.764572, 1.47773, 0.225)
+
+[node name="BSurfaceMesh_292" parent="Slug_After" index="289"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.764572, 1.47773, 0.375)
+
+[node name="BSurfaceMesh_293" parent="Slug_After" index="290"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.764572, 1.47773, 0.525)
+
+[node name="BSurfaceMesh_294" parent="Slug_After" index="291"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.764572, 1.47773, 0.675)
+
+[node name="BSurfaceMesh_295" parent="Slug_After" index="292"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.764572, 1.47773, 0.825)
+
+[node name="BSurfaceMesh_296" parent="Slug_After" index="293"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.764572, 1.47773, 0.975)
+
+[node name="BSurfaceMesh_297" parent="Slug_After" index="294"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.764572, 1.62773, 0.225)
+
+[node name="BSurfaceMesh_298" parent="Slug_After" index="295"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.764572, 1.62773, 0.375)
+
+[node name="BSurfaceMesh_299" parent="Slug_After" index="296"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.764572, 1.62773, 0.525)
+
+[node name="BSurfaceMesh_300" parent="Slug_After" index="297"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.764572, 1.62773, 0.675)
+
+[node name="BSurfaceMesh_301" parent="Slug_After" index="298"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.764572, 1.62773, 0.825)
+
+[node name="BSurfaceMesh_302" parent="Slug_After" index="299"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.764572, 1.62773, 0.975)
+
+[node name="BSurfaceMesh_303" parent="Slug_After" index="300"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.764572, 1.77773, 0.225)
+
+[node name="BSurfaceMesh_304" parent="Slug_After" index="301"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.764572, 1.77773, 0.375)
+
+[node name="BSurfaceMesh_305" parent="Slug_After" index="302"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.764572, 1.77773, 0.525)
+
+[node name="BSurfaceMesh_306" parent="Slug_After" index="303"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.764572, 1.77773, 0.675)
+
+[node name="BSurfaceMesh_307" parent="Slug_After" index="304"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.17773, 0.075)
+
+[node name="BSurfaceMesh_308" parent="Slug_After" index="305"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.17773, 0.225)
+
+[node name="BSurfaceMesh_309" parent="Slug_After" index="306"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.17773, 0.375)
+
+[node name="BSurfaceMesh_310" parent="Slug_After" index="307"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.17773, 0.525)
+
+[node name="BSurfaceMesh_311" parent="Slug_After" index="308"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.17773, 0.675)
+
+[node name="BSurfaceMesh_312" parent="Slug_After" index="309"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.17773, 0.825)
+
+[node name="BSurfaceMesh_313" parent="Slug_After" index="310"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.17773, 0.975)
+
+[node name="BSurfaceMesh_314" parent="Slug_After" index="311"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.17773, 1.125)
+
+[node name="BSurfaceMesh_315" parent="Slug_After" index="312"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.32773, 0.075)
+
+[node name="BSurfaceMesh_316" parent="Slug_After" index="313"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.32773, 0.225)
+
+[node name="BSurfaceMesh_317" parent="Slug_After" index="314"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.32773, 0.375)
+
+[node name="BSurfaceMesh_318" parent="Slug_After" index="315"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.32773, 0.525)
+
+[node name="BSurfaceMesh_319" parent="Slug_After" index="316"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.32773, 0.675)
+
+[node name="BSurfaceMesh_320" parent="Slug_After" index="317"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.32773, 0.825)
+
+[node name="BSurfaceMesh_321" parent="Slug_After" index="318"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.32773, 0.975)
+
+[node name="BSurfaceMesh_322" parent="Slug_After" index="319"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.32773, 1.125)
+
+[node name="BSurfaceMesh_323" parent="Slug_After" index="320"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.47773, 0.075)
+
+[node name="BSurfaceMesh_324" parent="Slug_After" index="321"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.47773, 0.225)
+
+[node name="BSurfaceMesh_325" parent="Slug_After" index="322"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.47773, 0.375)
+
+[node name="BSurfaceMesh_326" parent="Slug_After" index="323"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.47773, 0.525)
+
+[node name="BSurfaceMesh_327" parent="Slug_After" index="324"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.47773, 0.675)
+
+[node name="BSurfaceMesh_328" parent="Slug_After" index="325"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.47773, 0.825)
+
+[node name="BSurfaceMesh_329" parent="Slug_After" index="326"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.47773, 0.975)
+
+[node name="BSurfaceMesh_330" parent="Slug_After" index="327"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.47773, 1.125)
+
+[node name="BSurfaceMesh_331" parent="Slug_After" index="328"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.62773, 0.075)
+
+[node name="BSurfaceMesh_332" parent="Slug_After" index="329"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.62773, 0.225)
+
+[node name="BSurfaceMesh_333" parent="Slug_After" index="330"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.62773, 0.375)
+
+[node name="BSurfaceMesh_334" parent="Slug_After" index="331"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.62773, 0.525)
+
+[node name="BSurfaceMesh_335" parent="Slug_After" index="332"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.62773, 0.675)
+
+[node name="BSurfaceMesh_336" parent="Slug_After" index="333"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.62773, 0.825)
+
+[node name="BSurfaceMesh_337" parent="Slug_After" index="334"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.62773, 0.975)
+
+[node name="BSurfaceMesh_338" parent="Slug_After" index="335"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.62773, 1.125)
+
+[node name="BSurfaceMesh_339" parent="Slug_After" index="336"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.77773, 0.0749999)
+
+[node name="BSurfaceMesh_340" parent="Slug_After" index="337"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.77773, 0.225)
+
+[node name="BSurfaceMesh_341" parent="Slug_After" index="338"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.77773, 0.375)
+
+[node name="BSurfaceMesh_342" parent="Slug_After" index="339"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.77773, 0.525)
+
+[node name="BSurfaceMesh_343" parent="Slug_After" index="340"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.77773, 0.675)
+
+[node name="BSurfaceMesh_344" parent="Slug_After" index="341"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.77773, 0.825)
+
+[node name="BSurfaceMesh_345" parent="Slug_After" index="342"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.77773, 0.975)
+
+[node name="BSurfaceMesh_346" parent="Slug_After" index="343"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.77773, 1.125)
+
+[node name="BSurfaceMesh_347" parent="Slug_After" index="344"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.92773, 0.0749999)
+
+[node name="BSurfaceMesh_348" parent="Slug_After" index="345"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.92773, 0.225)
+
+[node name="BSurfaceMesh_349" parent="Slug_After" index="346"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.92773, 0.375)
+
+[node name="BSurfaceMesh_350" parent="Slug_After" index="347"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.92773, 0.525)
+
+[node name="BSurfaceMesh_351" parent="Slug_After" index="348"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.92773, 0.675)
+
+[node name="BSurfaceMesh_352" parent="Slug_After" index="349"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.92773, 0.825)
+
+[node name="BSurfaceMesh_353" parent="Slug_After" index="350"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.17773, 0.075)
+
+[node name="BSurfaceMesh_354" parent="Slug_After" index="351"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.17773, 0.225)
+
+[node name="BSurfaceMesh_355" parent="Slug_After" index="352"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.17773, 0.375)
+
+[node name="BSurfaceMesh_356" parent="Slug_After" index="353"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.17773, 0.525)
+
+[node name="BSurfaceMesh_357" parent="Slug_After" index="354"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.17773, 0.675)
+
+[node name="BSurfaceMesh_358" parent="Slug_After" index="355"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.17773, 0.825)
+
+[node name="BSurfaceMesh_359" parent="Slug_After" index="356"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.17773, 0.975)
+
+[node name="BSurfaceMesh_360" parent="Slug_After" index="357"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.17773, 1.125)
+
+[node name="BSurfaceMesh_361" parent="Slug_After" index="358"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.32773, 0.075)
+
+[node name="BSurfaceMesh_362" parent="Slug_After" index="359"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.32773, 0.225)
+
+[node name="BSurfaceMesh_363" parent="Slug_After" index="360"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.32773, 0.375)
+
+[node name="BSurfaceMesh_364" parent="Slug_After" index="361"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.32773, 0.525)
+
+[node name="BSurfaceMesh_365" parent="Slug_After" index="362"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.32773, 0.675)
+
+[node name="BSurfaceMesh_366" parent="Slug_After" index="363"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.32773, 0.825)
+
+[node name="BSurfaceMesh_367" parent="Slug_After" index="364"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.32773, 0.975)
+
+[node name="BSurfaceMesh_368" parent="Slug_After" index="365"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.32773, 1.125)
+
+[node name="BSurfaceMesh_369" parent="Slug_After" index="366"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.47773, 0.075)
+
+[node name="BSurfaceMesh_370" parent="Slug_After" index="367"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.47773, 0.225)
+
+[node name="BSurfaceMesh_371" parent="Slug_After" index="368"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.47773, 0.375)
+
+[node name="BSurfaceMesh_372" parent="Slug_After" index="369"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.47773, 0.525)
+
+[node name="BSurfaceMesh_373" parent="Slug_After" index="370"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.47773, 0.675)
+
+[node name="BSurfaceMesh_374" parent="Slug_After" index="371"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.47773, 0.825)
+
+[node name="BSurfaceMesh_375" parent="Slug_After" index="372"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.47773, 0.975)
+
+[node name="BSurfaceMesh_376" parent="Slug_After" index="373"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.47773, 1.125)
+
+[node name="BSurfaceMesh_377" parent="Slug_After" index="374"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.62773, 0.075)
+
+[node name="BSurfaceMesh_378" parent="Slug_After" index="375"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.62773, 0.225)
+
+[node name="BSurfaceMesh_379" parent="Slug_After" index="376"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.62773, 0.375)
+
+[node name="BSurfaceMesh_380" parent="Slug_After" index="377"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.62773, 0.525)
+
+[node name="BSurfaceMesh_381" parent="Slug_After" index="378"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.62773, 0.675)
+
+[node name="BSurfaceMesh_382" parent="Slug_After" index="379"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.62773, 0.825)
+
+[node name="BSurfaceMesh_383" parent="Slug_After" index="380"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.62773, 0.975)
+
+[node name="BSurfaceMesh_384" parent="Slug_After" index="381"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.62773, 1.125)
+
+[node name="BSurfaceMesh_385" parent="Slug_After" index="382"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.77773, 0.0749999)
+
+[node name="BSurfaceMesh_386" parent="Slug_After" index="383"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.77773, 0.225)
+
+[node name="BSurfaceMesh_387" parent="Slug_After" index="384"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.77773, 0.375)
+
+[node name="BSurfaceMesh_388" parent="Slug_After" index="385"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.77773, 0.525)
+
+[node name="BSurfaceMesh_389" parent="Slug_After" index="386"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.77773, 0.675)
+
+[node name="BSurfaceMesh_390" parent="Slug_After" index="387"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.77773, 0.825)
+
+[node name="BSurfaceMesh_391" parent="Slug_After" index="388"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.77773, 0.975)
+
+[node name="BSurfaceMesh_392" parent="Slug_After" index="389"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.77773, 1.125)
+
+[node name="BSurfaceMesh_393" parent="Slug_After" index="390"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.92773, 0.0749999)
+
+[node name="BSurfaceMesh_394" parent="Slug_After" index="391"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.92773, 0.225)
+
+[node name="BSurfaceMesh_395" parent="Slug_After" index="392"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.92773, 0.375)
+
+[node name="BSurfaceMesh_396" parent="Slug_After" index="393"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.92773, 0.525)
+
+[node name="BSurfaceMesh_397" parent="Slug_After" index="394"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.92773, 0.675)
+
+[node name="BSurfaceMesh_398" parent="Slug_After" index="395"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.92773, 0.825)
+
+[node name="BSurfaceMesh_399" parent="Slug_After" index="396"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.92773, 0.975)
+
+[node name="BSurfaceMesh_400" parent="Slug_After" index="397"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.92773, 1.125)
+
+[node name="BSurfaceMesh_401" parent="Slug_After" index="398"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 2.07773, 0.0749999)
+
+[node name="BSurfaceMesh_402" parent="Slug_After" index="399"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 2.07773, 0.225)
+
+[node name="BSurfaceMesh_403" parent="Slug_After" index="400"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 2.07773, 0.375)
+
+[node name="BSurfaceMesh_404" parent="Slug_After" index="401"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 2.07773, 0.525)
+
+[node name="BSurfaceMesh_405" parent="Slug_After" index="402"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 2.07773, 0.675)
+
+[node name="BSurfaceMesh_406" parent="Slug_After" index="403"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.17773, 0.075)
+
+[node name="BSurfaceMesh_407" parent="Slug_After" index="404"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.17773, 0.225)
+
+[node name="BSurfaceMesh_408" parent="Slug_After" index="405"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.17773, 0.375)
+
+[node name="BSurfaceMesh_409" parent="Slug_After" index="406"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.17773, 0.525)
+
+[node name="BSurfaceMesh_410" parent="Slug_After" index="407"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.17773, 0.675)
+
+[node name="BSurfaceMesh_411" parent="Slug_After" index="408"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.17773, 0.825)
+
+[node name="BSurfaceMesh_412" parent="Slug_After" index="409"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.17773, 0.975)
+
+[node name="BSurfaceMesh_413" parent="Slug_After" index="410"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.17773, 1.125)
+
+[node name="BSurfaceMesh_414" parent="Slug_After" index="411"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.32773, 0.075)
+
+[node name="BSurfaceMesh_415" parent="Slug_After" index="412"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.32773, 0.225)
+
+[node name="BSurfaceMesh_416" parent="Slug_After" index="413"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.32773, 0.375)
+
+[node name="BSurfaceMesh_417" parent="Slug_After" index="414"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.32773, 0.525)
+
+[node name="BSurfaceMesh_418" parent="Slug_After" index="415"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.32773, 0.675)
+
+[node name="BSurfaceMesh_419" parent="Slug_After" index="416"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.32773, 0.825)
+
+[node name="BSurfaceMesh_420" parent="Slug_After" index="417"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.32773, 0.975)
+
+[node name="BSurfaceMesh_421" parent="Slug_After" index="418"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.32773, 1.125)
+
+[node name="BSurfaceMesh_422" parent="Slug_After" index="419"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.47773, 0.075)
+
+[node name="BSurfaceMesh_423" parent="Slug_After" index="420"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.47773, 0.225)
+
+[node name="BSurfaceMesh_424" parent="Slug_After" index="421"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.47773, 0.375)
+
+[node name="BSurfaceMesh_425" parent="Slug_After" index="422"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.47773, 0.525)
+
+[node name="BSurfaceMesh_426" parent="Slug_After" index="423"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.47773, 0.675)
+
+[node name="BSurfaceMesh_427" parent="Slug_After" index="424"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.47773, 0.825)
+
+[node name="BSurfaceMesh_428" parent="Slug_After" index="425"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.47773, 0.975)
+
+[node name="BSurfaceMesh_429" parent="Slug_After" index="426"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.47773, 1.125)
+
+[node name="BSurfaceMesh_430" parent="Slug_After" index="427"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.62773, 0.075)
+
+[node name="BSurfaceMesh_431" parent="Slug_After" index="428"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.62773, 0.225)
+
+[node name="BSurfaceMesh_432" parent="Slug_After" index="429"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.62773, 0.375)
+
+[node name="BSurfaceMesh_433" parent="Slug_After" index="430"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.62773, 0.525)
+
+[node name="BSurfaceMesh_434" parent="Slug_After" index="431"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.62773, 0.675)
+
+[node name="BSurfaceMesh_435" parent="Slug_After" index="432"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.62773, 0.825)
+
+[node name="BSurfaceMesh_436" parent="Slug_After" index="433"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.62773, 0.975)
+
+[node name="BSurfaceMesh_437" parent="Slug_After" index="434"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.62773, 1.125)
+
+[node name="BSurfaceMesh_438" parent="Slug_After" index="435"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.77773, 0.0749999)
+
+[node name="BSurfaceMesh_439" parent="Slug_After" index="436"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.77773, 0.225)
+
+[node name="BSurfaceMesh_440" parent="Slug_After" index="437"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.77773, 0.375)
+
+[node name="BSurfaceMesh_441" parent="Slug_After" index="438"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.77773, 0.525)
+
+[node name="BSurfaceMesh_442" parent="Slug_After" index="439"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.77773, 0.675)
+
+[node name="BSurfaceMesh_443" parent="Slug_After" index="440"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.77773, 0.825)
+
+[node name="BSurfaceMesh_444" parent="Slug_After" index="441"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.77773, 0.975)
+
+[node name="BSurfaceMesh_445" parent="Slug_After" index="442"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.77773, 1.125)
+
+[node name="BSurfaceMesh_446" parent="Slug_After" index="443"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.92773, 0.0749999)
+
+[node name="BSurfaceMesh_447" parent="Slug_After" index="444"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.92773, 0.225)
+
+[node name="BSurfaceMesh_448" parent="Slug_After" index="445"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.92773, 0.375)
+
+[node name="BSurfaceMesh_449" parent="Slug_After" index="446"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.92773, 0.525)
+
+[node name="BSurfaceMesh_450" parent="Slug_After" index="447"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.92773, 0.675)
+
+[node name="BSurfaceMesh_451" parent="Slug_After" index="448"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.92773, 0.825)
+
+[node name="BSurfaceMesh_452" parent="Slug_After" index="449"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.92773, 0.975)
+
+[node name="BSurfaceMesh_453" parent="Slug_After" index="450"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.92773, 1.125)
+
+[node name="BSurfaceMesh_454" parent="Slug_After" index="451"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 2.07773, 0.0749999)
+
+[node name="BSurfaceMesh_455" parent="Slug_After" index="452"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 2.07773, 0.225)
+
+[node name="BSurfaceMesh_456" parent="Slug_After" index="453"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 2.07773, 0.375)
+
+[node name="BSurfaceMesh_457" parent="Slug_After" index="454"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 2.07773, 0.525)
+
+[node name="BSurfaceMesh_458" parent="Slug_After" index="455"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 2.07773, 0.675)
+
+[node name="BSurfaceMesh_459" parent="Slug_After" index="456"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.17773, 0.075)
+
+[node name="BSurfaceMesh_460" parent="Slug_After" index="457"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.17773, 0.225)
+
+[node name="BSurfaceMesh_461" parent="Slug_After" index="458"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.17773, 0.375)
+
+[node name="BSurfaceMesh_462" parent="Slug_After" index="459"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.17773, 0.525)
+
+[node name="BSurfaceMesh_463" parent="Slug_After" index="460"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.17773, 0.675)
+
+[node name="BSurfaceMesh_464" parent="Slug_After" index="461"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.17773, 0.825)
+
+[node name="BSurfaceMesh_465" parent="Slug_After" index="462"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.17773, 0.975)
+
+[node name="BSurfaceMesh_466" parent="Slug_After" index="463"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.17773, 1.125)
+
+[node name="BSurfaceMesh_467" parent="Slug_After" index="464"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.32773, 0.075)
+
+[node name="BSurfaceMesh_468" parent="Slug_After" index="465"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.32773, 0.225)
+
+[node name="BSurfaceMesh_469" parent="Slug_After" index="466"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.32773, 0.375)
+
+[node name="BSurfaceMesh_470" parent="Slug_After" index="467"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.32773, 0.525)
+
+[node name="BSurfaceMesh_471" parent="Slug_After" index="468"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.32773, 0.675)
+
+[node name="BSurfaceMesh_472" parent="Slug_After" index="469"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.32773, 0.825)
+
+[node name="BSurfaceMesh_473" parent="Slug_After" index="470"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.32773, 0.975)
+
+[node name="BSurfaceMesh_474" parent="Slug_After" index="471"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.32773, 1.125)
+
+[node name="BSurfaceMesh_475" parent="Slug_After" index="472"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.47773, 0.075)
+
+[node name="BSurfaceMesh_476" parent="Slug_After" index="473"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.47773, 0.225)
+
+[node name="BSurfaceMesh_477" parent="Slug_After" index="474"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.47773, 0.375)
+
+[node name="BSurfaceMesh_478" parent="Slug_After" index="475"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.47773, 0.525)
+
+[node name="BSurfaceMesh_479" parent="Slug_After" index="476"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.47773, 0.675)
+
+[node name="BSurfaceMesh_480" parent="Slug_After" index="477"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.47773, 0.825)
+
+[node name="BSurfaceMesh_481" parent="Slug_After" index="478"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.47773, 0.975)
+
+[node name="BSurfaceMesh_482" parent="Slug_After" index="479"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.47773, 1.125)
+
+[node name="BSurfaceMesh_483" parent="Slug_After" index="480"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.62773, 0.075)
+
+[node name="BSurfaceMesh_484" parent="Slug_After" index="481"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.62773, 0.225)
+
+[node name="BSurfaceMesh_485" parent="Slug_After" index="482"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.62773, 0.375)
+
+[node name="BSurfaceMesh_486" parent="Slug_After" index="483"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.62773, 0.525)
+
+[node name="BSurfaceMesh_487" parent="Slug_After" index="484"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.62773, 0.675)
+
+[node name="BSurfaceMesh_488" parent="Slug_After" index="485"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.62773, 0.825)
+
+[node name="BSurfaceMesh_489" parent="Slug_After" index="486"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.62773, 0.975)
+
+[node name="BSurfaceMesh_490" parent="Slug_After" index="487"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.62773, 1.125)
+
+[node name="BSurfaceMesh_491" parent="Slug_After" index="488"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.77773, 0.0749999)
+
+[node name="BSurfaceMesh_492" parent="Slug_After" index="489"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.77773, 0.225)
+
+[node name="BSurfaceMesh_493" parent="Slug_After" index="490"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.77773, 0.375)
+
+[node name="BSurfaceMesh_494" parent="Slug_After" index="491"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.77773, 0.525)
+
+[node name="BSurfaceMesh_495" parent="Slug_After" index="492"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.77773, 0.675)
+
+[node name="BSurfaceMesh_496" parent="Slug_After" index="493"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.77773, 0.825)
+
+[node name="BSurfaceMesh_497" parent="Slug_After" index="494"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.77773, 0.975)
+
+[node name="BSurfaceMesh_498" parent="Slug_After" index="495"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.77773, 1.125)
+
+[node name="BSurfaceMesh_499" parent="Slug_After" index="496"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.92773, 0.0749999)
+
+[node name="BSurfaceMesh_500" parent="Slug_After" index="497"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.92773, 0.225)
+
+[node name="BSurfaceMesh_501" parent="Slug_After" index="498"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.92773, 0.375)
+
+[node name="BSurfaceMesh_502" parent="Slug_After" index="499"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.92773, 0.525)
+
+[node name="BSurfaceMesh_503" parent="Slug_After" index="500"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.92773, 0.675)
+
+[node name="BSurfaceMesh_504" parent="Slug_After" index="501"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.92773, 0.825)
+
+[node name="BSurfaceMesh_505" parent="Slug_After" index="502"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.92773, 0.975)
+
+[node name="BSurfaceMesh_506" parent="Slug_After" index="503"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.92773, 1.125)
+
+[node name="BSurfaceMesh_507" parent="Slug_After" index="504"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 2.07773, 0.0749999)
+
+[node name="BSurfaceMesh_508" parent="Slug_After" index="505"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 2.07773, 0.225)
+
+[node name="BSurfaceMesh_509" parent="Slug_After" index="506"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 2.07773, 0.375)
+
+[node name="BSurfaceMesh_510" parent="Slug_After" index="507"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 2.07773, 0.525)
+
+[node name="BSurfaceMesh_511" parent="Slug_After" index="508"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 2.07773, 0.675)
+
+[node name="BSurfaceMesh_512" parent="Slug_After" index="509"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.17773, 0.075)
+
+[node name="BSurfaceMesh_513" parent="Slug_After" index="510"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.17773, 0.225)
+
+[node name="BSurfaceMesh_514" parent="Slug_After" index="511"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.17773, 0.375)
+
+[node name="BSurfaceMesh_515" parent="Slug_After" index="512"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.17773, 0.525)
+
+[node name="BSurfaceMesh_516" parent="Slug_After" index="513"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.17773, 0.675)
+
+[node name="BSurfaceMesh_517" parent="Slug_After" index="514"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.17773, 0.825)
+
+[node name="BSurfaceMesh_518" parent="Slug_After" index="515"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.17773, 0.975)
+
+[node name="BSurfaceMesh_519" parent="Slug_After" index="516"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.17773, 1.125)
+
+[node name="BSurfaceMesh_520" parent="Slug_After" index="517"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.32773, 0.075)
+
+[node name="BSurfaceMesh_521" parent="Slug_After" index="518"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.32773, 0.225)
+
+[node name="BSurfaceMesh_522" parent="Slug_After" index="519"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.32773, 0.375)
+
+[node name="BSurfaceMesh_523" parent="Slug_After" index="520"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.32773, 0.525)
+
+[node name="BSurfaceMesh_524" parent="Slug_After" index="521"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.32773, 0.675)
+
+[node name="BSurfaceMesh_525" parent="Slug_After" index="522"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.32773, 0.825)
+
+[node name="BSurfaceMesh_526" parent="Slug_After" index="523"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.32773, 0.975)
+
+[node name="BSurfaceMesh_527" parent="Slug_After" index="524"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.32773, 1.125)
+
+[node name="BSurfaceMesh_528" parent="Slug_After" index="525"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.47773, 0.075)
+
+[node name="BSurfaceMesh_529" parent="Slug_After" index="526"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.47773, 0.225)
+
+[node name="BSurfaceMesh_530" parent="Slug_After" index="527"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.47773, 0.375)
+
+[node name="BSurfaceMesh_531" parent="Slug_After" index="528"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.47773, 0.525)
+
+[node name="BSurfaceMesh_532" parent="Slug_After" index="529"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.47773, 0.675)
+
+[node name="BSurfaceMesh_533" parent="Slug_After" index="530"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.47773, 0.825)
+
+[node name="BSurfaceMesh_534" parent="Slug_After" index="531"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.47773, 0.975)
+
+[node name="BSurfaceMesh_535" parent="Slug_After" index="532"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.47773, 1.125)
+
+[node name="BSurfaceMesh_536" parent="Slug_After" index="533"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.62773, 0.075)
+
+[node name="BSurfaceMesh_537" parent="Slug_After" index="534"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.62773, 0.225)
+
+[node name="BSurfaceMesh_538" parent="Slug_After" index="535"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.62773, 0.375)
+
+[node name="BSurfaceMesh_539" parent="Slug_After" index="536"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.62773, 0.525)
+
+[node name="BSurfaceMesh_540" parent="Slug_After" index="537"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.62773, 0.675)
+
+[node name="BSurfaceMesh_541" parent="Slug_After" index="538"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.62773, 0.825)
+
+[node name="BSurfaceMesh_542" parent="Slug_After" index="539"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.62773, 0.975)
+
+[node name="BSurfaceMesh_543" parent="Slug_After" index="540"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.62773, 1.125)
+
+[node name="BSurfaceMesh_544" parent="Slug_After" index="541"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.77773, 0.0749999)
+
+[node name="BSurfaceMesh_545" parent="Slug_After" index="542"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.77773, 0.225)
+
+[node name="BSurfaceMesh_546" parent="Slug_After" index="543"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.77773, 0.375)
+
+[node name="BSurfaceMesh_547" parent="Slug_After" index="544"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.77773, 0.525)
+
+[node name="BSurfaceMesh_548" parent="Slug_After" index="545"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.77773, 0.675)
+
+[node name="BSurfaceMesh_549" parent="Slug_After" index="546"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.77773, 0.825)
+
+[node name="BSurfaceMesh_550" parent="Slug_After" index="547"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.77773, 0.975)
+
+[node name="BSurfaceMesh_551" parent="Slug_After" index="548"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.77773, 1.125)
+
+[node name="BSurfaceMesh_552" parent="Slug_After" index="549"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.92773, 0.0749999)
+
+[node name="BSurfaceMesh_553" parent="Slug_After" index="550"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.92773, 0.225)
+
+[node name="BSurfaceMesh_554" parent="Slug_After" index="551"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.92773, 0.375)
+
+[node name="BSurfaceMesh_555" parent="Slug_After" index="552"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.92773, 0.525)
+
+[node name="BSurfaceMesh_556" parent="Slug_After" index="553"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.92773, 0.675)
+
+[node name="BSurfaceMesh_557" parent="Slug_After" index="554"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.92773, 0.825)
+
+[node name="BSurfaceMesh_558" parent="Slug_After" index="555"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.92773, 0.975)
+
+[node name="BSurfaceMesh_559" parent="Slug_After" index="556"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.92773, 1.125)
+
+[node name="BSurfaceMesh_560" parent="Slug_After" index="557"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 2.07773, 0.0749999)
+
+[node name="BSurfaceMesh_561" parent="Slug_After" index="558"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 2.07773, 0.225)
+
+[node name="BSurfaceMesh_562" parent="Slug_After" index="559"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 2.07773, 0.375)
+
+[node name="BSurfaceMesh_563" parent="Slug_After" index="560"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 2.07773, 0.525)
+
+[node name="BSurfaceMesh_564" parent="Slug_After" index="561"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 2.07773, 0.675)
+
+[node name="BSurfaceMesh_565" parent="Slug_After" index="562"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.17773, 1.275)
+
+[node name="BSurfaceMesh_566" parent="Slug_After" index="563"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 1.32773, 1.275)
+
+[node name="BSurfaceMesh_567" parent="Slug_After" index="564"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.17773, 1.275)
+
+[node name="BSurfaceMesh_568" parent="Slug_After" index="565"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.32773, 1.275)
+
+[node name="BSurfaceMesh_569" parent="Slug_After" index="566"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.47773, 1.275)
+
+[node name="BSurfaceMesh_570" parent="Slug_After" index="567"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.62773, 1.275)
+
+[node name="BSurfaceMesh_571" parent="Slug_After" index="568"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.464573, 1.77773, 1.275)
+
+[node name="BSurfaceMesh_572" parent="Slug_After" index="569"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.17773, 1.275)
+
+[node name="BSurfaceMesh_573" parent="Slug_After" index="570"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.17773, 1.425)
+
+[node name="BSurfaceMesh_574" parent="Slug_After" index="571"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.32773, 1.275)
+
+[node name="BSurfaceMesh_575" parent="Slug_After" index="572"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.32773, 1.425)
+
+[node name="BSurfaceMesh_576" parent="Slug_After" index="573"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.47773, 1.275)
+
+[node name="BSurfaceMesh_577" parent="Slug_After" index="574"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.47773, 1.425)
+
+[node name="BSurfaceMesh_578" parent="Slug_After" index="575"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.62773, 1.275)
+
+[node name="BSurfaceMesh_579" parent="Slug_After" index="576"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.314573, 1.77773, 1.275)
+
+[node name="BSurfaceMesh_580" parent="Slug_After" index="577"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.17773, 1.275)
+
+[node name="BSurfaceMesh_581" parent="Slug_After" index="578"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.17773, 1.425)
+
+[node name="BSurfaceMesh_582" parent="Slug_After" index="579"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.32773, 1.275)
+
+[node name="BSurfaceMesh_583" parent="Slug_After" index="580"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.32773, 1.425)
+
+[node name="BSurfaceMesh_584" parent="Slug_After" index="581"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.47773, 1.275)
+
+[node name="BSurfaceMesh_585" parent="Slug_After" index="582"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.47773, 1.425)
+
+[node name="BSurfaceMesh_586" parent="Slug_After" index="583"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.62773, 1.275)
+
+[node name="BSurfaceMesh_587" parent="Slug_After" index="584"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.62773, 1.425)
+
+[node name="BSurfaceMesh_588" parent="Slug_After" index="585"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.164574, 1.77773, 1.275)
+
+[node name="BSurfaceMesh_589" parent="Slug_After" index="586"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.17773, 1.275)
+
+[node name="BSurfaceMesh_590" parent="Slug_After" index="587"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.17773, 1.425)
+
+[node name="BSurfaceMesh_591" parent="Slug_After" index="588"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.32773, 1.275)
+
+[node name="BSurfaceMesh_592" parent="Slug_After" index="589"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.32773, 1.425)
+
+[node name="BSurfaceMesh_593" parent="Slug_After" index="590"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.47773, 1.275)
+
+[node name="BSurfaceMesh_594" parent="Slug_After" index="591"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.47773, 1.425)
+
+[node name="BSurfaceMesh_595" parent="Slug_After" index="592"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.62773, 1.275)
+
+[node name="BSurfaceMesh_596" parent="Slug_After" index="593"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.62773, 1.425)
+
+[node name="BSurfaceMesh_597" parent="Slug_After" index="594"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0145724, 1.77773, 1.275)
+
+[node name="BSurfaceMesh_598" parent="Slug_After" index="595"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 0.127729, -0.675)
+
+[node name="BSurfaceMesh_599" parent="Slug_After" index="596"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 0.127729, -0.525)
+
+[node name="BSurfaceMesh_600" parent="Slug_After" index="597"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 0.277729, -0.675)
+
+[node name="BSurfaceMesh_601" parent="Slug_After" index="598"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 0.277729, -0.525)
+
+[node name="BSurfaceMesh_602" parent="Slug_After" index="599"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 0.427729, -0.675)
+
+[node name="BSurfaceMesh_603" parent="Slug_After" index="600"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 0.427729, -0.525)
+
+[node name="BSurfaceMesh_604" parent="Slug_After" index="601"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 0.577729, -0.675)
+
+[node name="BSurfaceMesh_605" parent="Slug_After" index="602"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 0.577729, -0.525)
+
+[node name="BSurfaceMesh_606" parent="Slug_After" index="603"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 0.727729, -0.675)
+
+[node name="BSurfaceMesh_607" parent="Slug_After" index="604"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 0.727729, -0.525)
+
+[node name="BSurfaceMesh_608" parent="Slug_After" index="605"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 0.727729, -0.375)
+
+[node name="BSurfaceMesh_609" parent="Slug_After" index="606"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 0.877729, -0.675)
+
+[node name="BSurfaceMesh_610" parent="Slug_After" index="607"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 0.877729, -0.525)
+
+[node name="BSurfaceMesh_611" parent="Slug_After" index="608"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 0.877729, -0.375)
+
+[node name="BSurfaceMesh_612" parent="Slug_After" index="609"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 0.877729, -0.225)
+
+[node name="BSurfaceMesh_613" parent="Slug_After" index="610"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 0.877729, -0.075)
+
+[node name="BSurfaceMesh_614" parent="Slug_After" index="611"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.02773, -0.675)
+
+[node name="BSurfaceMesh_615" parent="Slug_After" index="612"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.02773, -0.525)
+
+[node name="BSurfaceMesh_616" parent="Slug_After" index="613"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.02773, -0.375)
+
+[node name="BSurfaceMesh_617" parent="Slug_After" index="614"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.02773, -0.225)
+
+[node name="BSurfaceMesh_618" parent="Slug_After" index="615"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.02773, -0.075)
+
+[node name="BSurfaceMesh_619" parent="Slug_After" index="616"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 0.127729, -0.525)
+
+[node name="BSurfaceMesh_620" parent="Slug_After" index="617"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 0.127729, -0.375)
+
+[node name="BSurfaceMesh_621" parent="Slug_After" index="618"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 0.277729, -0.525)
+
+[node name="BSurfaceMesh_622" parent="Slug_After" index="619"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 0.277729, -0.375)
+
+[node name="BSurfaceMesh_623" parent="Slug_After" index="620"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 0.427729, -0.675)
+
+[node name="BSurfaceMesh_624" parent="Slug_After" index="621"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 0.427729, -0.525)
+
+[node name="BSurfaceMesh_625" parent="Slug_After" index="622"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 0.577729, -0.675)
+
+[node name="BSurfaceMesh_626" parent="Slug_After" index="623"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 0.577729, -0.525)
+
+[node name="BSurfaceMesh_627" parent="Slug_After" index="624"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 0.727729, -0.675)
+
+[node name="BSurfaceMesh_628" parent="Slug_After" index="625"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 0.727729, -0.525)
+
+[node name="BSurfaceMesh_629" parent="Slug_After" index="626"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 0.727729, -0.375)
+
+[node name="BSurfaceMesh_630" parent="Slug_After" index="627"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 0.877729, -0.525)
+
+[node name="BSurfaceMesh_631" parent="Slug_After" index="628"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 0.877729, -0.375)
+
+[node name="BSurfaceMesh_632" parent="Slug_After" index="629"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 0.877729, -0.225)
+
+[node name="BSurfaceMesh_633" parent="Slug_After" index="630"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 0.877729, -0.075)
+
+[node name="BSurfaceMesh_634" parent="Slug_After" index="631"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.02773, -0.675)
+
+[node name="BSurfaceMesh_635" parent="Slug_After" index="632"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.02773, -0.525)
+
+[node name="BSurfaceMesh_636" parent="Slug_After" index="633"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.02773, -0.375)
+
+[node name="BSurfaceMesh_637" parent="Slug_After" index="634"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.02773, -0.225)
+
+[node name="BSurfaceMesh_638" parent="Slug_After" index="635"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.02773, -0.075)
+
+[node name="BSurfaceMesh_639" parent="Slug_After" index="636"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 0.127729, -0.375)
+
+[node name="BSurfaceMesh_640" parent="Slug_After" index="637"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 0.277729, -0.375)
+
+[node name="BSurfaceMesh_641" parent="Slug_After" index="638"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 0.277729, -0.225)
+
+[node name="BSurfaceMesh_642" parent="Slug_After" index="639"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 0.427729, -0.525)
+
+[node name="BSurfaceMesh_643" parent="Slug_After" index="640"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 0.427729, -0.375)
+
+[node name="BSurfaceMesh_644" parent="Slug_After" index="641"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 0.577729, -0.525)
+
+[node name="BSurfaceMesh_645" parent="Slug_After" index="642"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 0.727729, -0.525)
+
+[node name="BSurfaceMesh_646" parent="Slug_After" index="643"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 0.727729, -0.375)
+
+[node name="BSurfaceMesh_647" parent="Slug_After" index="644"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 0.727729, -0.225)
+
+[node name="BSurfaceMesh_648" parent="Slug_After" index="645"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 0.727729, -0.075)
+
+[node name="BSurfaceMesh_649" parent="Slug_After" index="646"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 0.877729, -0.525)
+
+[node name="BSurfaceMesh_650" parent="Slug_After" index="647"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 0.877729, -0.375)
+
+[node name="BSurfaceMesh_651" parent="Slug_After" index="648"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 0.877729, -0.225)
+
+[node name="BSurfaceMesh_652" parent="Slug_After" index="649"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 0.877729, -0.075)
+
+[node name="BSurfaceMesh_653" parent="Slug_After" index="650"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.02773, -0.525)
+
+[node name="BSurfaceMesh_654" parent="Slug_After" index="651"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.02773, -0.375)
+
+[node name="BSurfaceMesh_655" parent="Slug_After" index="652"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.02773, -0.225)
+
+[node name="BSurfaceMesh_656" parent="Slug_After" index="653"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.02773, -0.075)
+
+[node name="BSurfaceMesh_657" parent="Slug_After" index="654"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 0.127729, -0.225)
+
+[node name="BSurfaceMesh_658" parent="Slug_After" index="655"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 0.277729, -0.225)
+
+[node name="BSurfaceMesh_659" parent="Slug_After" index="656"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 0.277729, -0.0749999)
+
+[node name="BSurfaceMesh_660" parent="Slug_After" index="657"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 0.427729, -0.225)
+
+[node name="BSurfaceMesh_661" parent="Slug_After" index="658"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 0.427729, -0.0749999)
+
+[node name="BSurfaceMesh_662" parent="Slug_After" index="659"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 0.577729, -0.225)
+
+[node name="BSurfaceMesh_663" parent="Slug_After" index="660"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 0.577729, -0.075)
+
+[node name="BSurfaceMesh_664" parent="Slug_After" index="661"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 0.727729, -0.375)
+
+[node name="BSurfaceMesh_665" parent="Slug_After" index="662"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 0.727729, -0.225)
+
+[node name="BSurfaceMesh_666" parent="Slug_After" index="663"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 0.727729, -0.075)
+
+[node name="BSurfaceMesh_667" parent="Slug_After" index="664"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 0.877729, -0.375)
+
+[node name="BSurfaceMesh_668" parent="Slug_After" index="665"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 0.877729, -0.225)
+
+[node name="BSurfaceMesh_669" parent="Slug_After" index="666"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 0.877729, -0.075)
+
+[node name="BSurfaceMesh_670" parent="Slug_After" index="667"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.02773, -0.525)
+
+[node name="BSurfaceMesh_671" parent="Slug_After" index="668"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.02773, -0.375)
+
+[node name="BSurfaceMesh_672" parent="Slug_After" index="669"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.02773, -0.225)
+
+[node name="BSurfaceMesh_673" parent="Slug_After" index="670"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.02773, -0.075)
+
+[node name="BSurfaceMesh_674" parent="Slug_After" index="671"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 0.877729, -0.375)
+
+[node name="BSurfaceMesh_675" parent="Slug_After" index="672"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 0.877729, -0.225)
+
+[node name="BSurfaceMesh_676" parent="Slug_After" index="673"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 0.877729, -0.075)
+
+[node name="BSurfaceMesh_677" parent="Slug_After" index="674"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.02773, -0.375)
+
+[node name="BSurfaceMesh_678" parent="Slug_After" index="675"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.02773, -0.225)
+
+[node name="BSurfaceMesh_679" parent="Slug_After" index="676"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.02773, -0.075)
+
+[node name="BSurfaceMesh_680" parent="Slug_After" index="677"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 0.877729, 0.075)
+
+[node name="BSurfaceMesh_681" parent="Slug_After" index="678"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 0.877729, 0.225)
+
+[node name="BSurfaceMesh_682" parent="Slug_After" index="679"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 0.877729, 0.375)
+
+[node name="BSurfaceMesh_683" parent="Slug_After" index="680"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 0.877729, 0.525)
+
+[node name="BSurfaceMesh_684" parent="Slug_After" index="681"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 0.877729, 0.675)
+
+[node name="BSurfaceMesh_685" parent="Slug_After" index="682"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 0.877729, 0.825)
+
+[node name="BSurfaceMesh_686" parent="Slug_After" index="683"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 0.877729, 0.975)
+
+[node name="BSurfaceMesh_687" parent="Slug_After" index="684"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 0.877729, 1.125)
+
+[node name="BSurfaceMesh_688" parent="Slug_After" index="685"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.02773, 0.075)
+
+[node name="BSurfaceMesh_689" parent="Slug_After" index="686"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.02773, 0.225)
+
+[node name="BSurfaceMesh_690" parent="Slug_After" index="687"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.02773, 0.375)
+
+[node name="BSurfaceMesh_691" parent="Slug_After" index="688"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.02773, 0.525)
+
+[node name="BSurfaceMesh_692" parent="Slug_After" index="689"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.02773, 0.675)
+
+[node name="BSurfaceMesh_693" parent="Slug_After" index="690"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.02773, 0.825)
+
+[node name="BSurfaceMesh_694" parent="Slug_After" index="691"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.02773, 0.975)
+
+[node name="BSurfaceMesh_695" parent="Slug_After" index="692"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.02773, 1.125)
+
+[node name="BSurfaceMesh_696" parent="Slug_After" index="693"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 0.877729, 0.075)
+
+[node name="BSurfaceMesh_697" parent="Slug_After" index="694"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 0.877729, 0.225)
+
+[node name="BSurfaceMesh_698" parent="Slug_After" index="695"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 0.877729, 0.375)
+
+[node name="BSurfaceMesh_699" parent="Slug_After" index="696"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 0.877729, 0.975)
+
+[node name="BSurfaceMesh_700" parent="Slug_After" index="697"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 0.877729, 1.125)
+
+[node name="BSurfaceMesh_701" parent="Slug_After" index="698"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.02773, 0.075)
+
+[node name="BSurfaceMesh_702" parent="Slug_After" index="699"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.02773, 0.225)
+
+[node name="BSurfaceMesh_703" parent="Slug_After" index="700"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.02773, 0.375)
+
+[node name="BSurfaceMesh_704" parent="Slug_After" index="701"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.02773, 0.525)
+
+[node name="BSurfaceMesh_705" parent="Slug_After" index="702"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.02773, 0.675)
+
+[node name="BSurfaceMesh_706" parent="Slug_After" index="703"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.02773, 0.825)
+
+[node name="BSurfaceMesh_707" parent="Slug_After" index="704"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.02773, 0.975)
+
+[node name="BSurfaceMesh_708" parent="Slug_After" index="705"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.02773, 1.125)
+
+[node name="BSurfaceMesh_709" parent="Slug_After" index="706"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 0.727729, 0.075)
+
+[node name="BSurfaceMesh_710" parent="Slug_After" index="707"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 0.727729, 0.225)
+
+[node name="BSurfaceMesh_711" parent="Slug_After" index="708"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 0.877729, 0.075)
+
+[node name="BSurfaceMesh_712" parent="Slug_After" index="709"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 0.877729, 0.225)
+
+[node name="BSurfaceMesh_713" parent="Slug_After" index="710"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 0.877729, 0.375)
+
+[node name="BSurfaceMesh_714" parent="Slug_After" index="711"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 0.877729, 0.525)
+
+[node name="BSurfaceMesh_715" parent="Slug_After" index="712"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 0.877729, 0.975)
+
+[node name="BSurfaceMesh_716" parent="Slug_After" index="713"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 0.877729, 1.125)
+
+[node name="BSurfaceMesh_717" parent="Slug_After" index="714"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.02773, 0.075)
+
+[node name="BSurfaceMesh_718" parent="Slug_After" index="715"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.02773, 0.225)
+
+[node name="BSurfaceMesh_719" parent="Slug_After" index="716"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.02773, 0.375)
+
+[node name="BSurfaceMesh_720" parent="Slug_After" index="717"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.02773, 0.525)
+
+[node name="BSurfaceMesh_721" parent="Slug_After" index="718"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.02773, 0.675)
+
+[node name="BSurfaceMesh_722" parent="Slug_After" index="719"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.02773, 0.825)
+
+[node name="BSurfaceMesh_723" parent="Slug_After" index="720"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.02773, 0.975)
+
+[node name="BSurfaceMesh_724" parent="Slug_After" index="721"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.02773, 1.125)
+
+[node name="BSurfaceMesh_725" parent="Slug_After" index="722"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 0.277729, 0.075)
+
+[node name="BSurfaceMesh_726" parent="Slug_After" index="723"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 0.427729, 0.075)
+
+[node name="BSurfaceMesh_727" parent="Slug_After" index="724"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 0.577729, 0.075)
+
+[node name="BSurfaceMesh_728" parent="Slug_After" index="725"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 0.727729, 0.075)
+
+[node name="BSurfaceMesh_729" parent="Slug_After" index="726"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 0.727729, 0.225)
+
+[node name="BSurfaceMesh_730" parent="Slug_After" index="727"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 0.877729, 0.075)
+
+[node name="BSurfaceMesh_731" parent="Slug_After" index="728"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 0.877729, 0.225)
+
+[node name="BSurfaceMesh_732" parent="Slug_After" index="729"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 0.877729, 0.375)
+
+[node name="BSurfaceMesh_733" parent="Slug_After" index="730"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 0.877729, 0.525)
+
+[node name="BSurfaceMesh_734" parent="Slug_After" index="731"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 0.877729, 0.675)
+
+[node name="BSurfaceMesh_735" parent="Slug_After" index="732"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 0.877729, 0.825)
+
+[node name="BSurfaceMesh_736" parent="Slug_After" index="733"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 0.877729, 0.975)
+
+[node name="BSurfaceMesh_737" parent="Slug_After" index="734"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 0.877729, 1.125)
+
+[node name="BSurfaceMesh_738" parent="Slug_After" index="735"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.02773, 0.075)
+
+[node name="BSurfaceMesh_739" parent="Slug_After" index="736"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.02773, 0.225)
+
+[node name="BSurfaceMesh_740" parent="Slug_After" index="737"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.02773, 0.375)
+
+[node name="BSurfaceMesh_741" parent="Slug_After" index="738"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.02773, 0.525)
+
+[node name="BSurfaceMesh_742" parent="Slug_After" index="739"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.02773, 0.675)
+
+[node name="BSurfaceMesh_743" parent="Slug_After" index="740"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.02773, 0.825)
+
+[node name="BSurfaceMesh_744" parent="Slug_After" index="741"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.02773, 0.975)
+
+[node name="BSurfaceMesh_745" parent="Slug_After" index="742"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.02773, 1.125)
+
+[node name="BSurfaceMesh_746" parent="Slug_After" index="743"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 0.277729, 0.075)
+
+[node name="BSurfaceMesh_747" parent="Slug_After" index="744"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 0.727729, 0.075)
+
+[node name="BSurfaceMesh_748" parent="Slug_After" index="745"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 0.727729, 0.225)
+
+[node name="BSurfaceMesh_749" parent="Slug_After" index="746"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 0.727729, 0.525)
+
+[node name="BSurfaceMesh_750" parent="Slug_After" index="747"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 0.877729, 0.075)
+
+[node name="BSurfaceMesh_751" parent="Slug_After" index="748"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 0.877729, 0.225)
+
+[node name="BSurfaceMesh_752" parent="Slug_After" index="749"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 0.877729, 0.375)
+
+[node name="BSurfaceMesh_753" parent="Slug_After" index="750"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 0.877729, 0.525)
+
+[node name="BSurfaceMesh_754" parent="Slug_After" index="751"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 0.877729, 0.675)
+
+[node name="BSurfaceMesh_755" parent="Slug_After" index="752"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 0.877729, 0.825)
+
+[node name="BSurfaceMesh_756" parent="Slug_After" index="753"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 0.877729, 0.975)
+
+[node name="BSurfaceMesh_757" parent="Slug_After" index="754"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.02773, 0.075)
+
+[node name="BSurfaceMesh_758" parent="Slug_After" index="755"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.02773, 0.225)
+
+[node name="BSurfaceMesh_759" parent="Slug_After" index="756"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.02773, 0.375)
+
+[node name="BSurfaceMesh_760" parent="Slug_After" index="757"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.02773, 0.525)
+
+[node name="BSurfaceMesh_761" parent="Slug_After" index="758"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.02773, 0.675)
+
+[node name="BSurfaceMesh_762" parent="Slug_After" index="759"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.02773, 0.825)
+
+[node name="BSurfaceMesh_763" parent="Slug_After" index="760"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.02773, 0.975)
+
+[node name="BSurfaceMesh_764" parent="Slug_After" index="761"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.02773, 1.125)
+
+[node name="BSurfaceMesh_765" parent="Slug_After" index="762"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.885427, 0.877729, 0.375)
+
+[node name="BSurfaceMesh_766" parent="Slug_After" index="763"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.885427, 0.877729, 0.525)
+
+[node name="BSurfaceMesh_767" parent="Slug_After" index="764"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.885427, 0.877729, 0.675)
+
+[node name="BSurfaceMesh_768" parent="Slug_After" index="765"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.885427, 1.02773, 0.225)
+
+[node name="BSurfaceMesh_769" parent="Slug_After" index="766"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.885427, 1.02773, 0.375)
+
+[node name="BSurfaceMesh_770" parent="Slug_After" index="767"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.885427, 1.02773, 0.525)
+
+[node name="BSurfaceMesh_771" parent="Slug_After" index="768"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.885427, 1.02773, 0.675)
+
+[node name="BSurfaceMesh_772" parent="Slug_After" index="769"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.885427, 1.02773, 0.825)
+
+[node name="BSurfaceMesh_773" parent="Slug_After" index="770"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.02773, 1.275)
+
+[node name="BSurfaceMesh_774" parent="Slug_After" index="771"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 0.877729, 1.275)
+
+[node name="BSurfaceMesh_775" parent="Slug_After" index="772"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.02773, 1.275)
+
+[node name="BSurfaceMesh_776" parent="Slug_After" index="773"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 0.877729, 1.275)
+
+[node name="BSurfaceMesh_777" parent="Slug_After" index="774"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.02773, 1.275)
+
+[node name="BSurfaceMesh_778" parent="Slug_After" index="775"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.02773, 1.275)
+
+[node name="BSurfaceMesh_779" parent="Slug_After" index="776"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.17773, -0.675)
+
+[node name="BSurfaceMesh_780" parent="Slug_After" index="777"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.17773, -0.525)
+
+[node name="BSurfaceMesh_781" parent="Slug_After" index="778"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.17773, -0.375)
+
+[node name="BSurfaceMesh_782" parent="Slug_After" index="779"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.17773, -0.225)
+
+[node name="BSurfaceMesh_783" parent="Slug_After" index="780"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.17773, -0.075)
+
+[node name="BSurfaceMesh_784" parent="Slug_After" index="781"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.32773, -0.525)
+
+[node name="BSurfaceMesh_785" parent="Slug_After" index="782"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.32773, -0.375)
+
+[node name="BSurfaceMesh_786" parent="Slug_After" index="783"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.32773, -0.225)
+
+[node name="BSurfaceMesh_787" parent="Slug_After" index="784"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.32773, -0.075)
+
+[node name="BSurfaceMesh_788" parent="Slug_After" index="785"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.47773, -0.675)
+
+[node name="BSurfaceMesh_789" parent="Slug_After" index="786"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.47773, -0.525)
+
+[node name="BSurfaceMesh_790" parent="Slug_After" index="787"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.47773, -0.375)
+
+[node name="BSurfaceMesh_791" parent="Slug_After" index="788"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.47773, -0.225)
+
+[node name="BSurfaceMesh_792" parent="Slug_After" index="789"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.47773, -0.075)
+
+[node name="BSurfaceMesh_793" parent="Slug_After" index="790"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.62773, -0.675)
+
+[node name="BSurfaceMesh_794" parent="Slug_After" index="791"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.62773, -0.525)
+
+[node name="BSurfaceMesh_795" parent="Slug_After" index="792"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.62773, -0.375)
+
+[node name="BSurfaceMesh_796" parent="Slug_After" index="793"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.62773, -0.225)
+
+[node name="BSurfaceMesh_797" parent="Slug_After" index="794"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.62773, -0.075)
+
+[node name="BSurfaceMesh_798" parent="Slug_After" index="795"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.77773, -0.525)
+
+[node name="BSurfaceMesh_799" parent="Slug_After" index="796"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.77773, -0.375)
+
+[node name="BSurfaceMesh_800" parent="Slug_After" index="797"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.77773, -0.225)
+
+[node name="BSurfaceMesh_801" parent="Slug_After" index="798"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.77773, -0.075)
+
+[node name="BSurfaceMesh_802" parent="Slug_After" index="799"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.92773, -0.525)
+
+[node name="BSurfaceMesh_803" parent="Slug_After" index="800"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.92773, -0.375)
+
+[node name="BSurfaceMesh_804" parent="Slug_After" index="801"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.92773, -0.225)
+
+[node name="BSurfaceMesh_805" parent="Slug_After" index="802"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.92773, -0.075)
+
+[node name="BSurfaceMesh_806" parent="Slug_After" index="803"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 2.07773, -0.375)
+
+[node name="BSurfaceMesh_807" parent="Slug_After" index="804"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 2.07773, -0.225)
+
+[node name="BSurfaceMesh_808" parent="Slug_After" index="805"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 2.07773, -0.0750001)
+
+[node name="BSurfaceMesh_809" parent="Slug_After" index="806"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.17773, -0.375)
+
+[node name="BSurfaceMesh_810" parent="Slug_After" index="807"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.17773, -0.225)
+
+[node name="BSurfaceMesh_811" parent="Slug_After" index="808"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.17773, -0.075)
+
+[node name="BSurfaceMesh_812" parent="Slug_After" index="809"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.32773, -0.075)
+
+[node name="BSurfaceMesh_813" parent="Slug_After" index="810"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.47773, -0.525)
+
+[node name="BSurfaceMesh_814" parent="Slug_After" index="811"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.47773, -0.375)
+
+[node name="BSurfaceMesh_815" parent="Slug_After" index="812"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.47773, -0.225)
+
+[node name="BSurfaceMesh_816" parent="Slug_After" index="813"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.47773, -0.075)
+
+[node name="BSurfaceMesh_817" parent="Slug_After" index="814"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.62773, -0.675)
+
+[node name="BSurfaceMesh_818" parent="Slug_After" index="815"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.62773, -0.525)
+
+[node name="BSurfaceMesh_819" parent="Slug_After" index="816"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.62773, -0.375)
+
+[node name="BSurfaceMesh_820" parent="Slug_After" index="817"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.62773, -0.225)
+
+[node name="BSurfaceMesh_821" parent="Slug_After" index="818"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.62773, -0.075)
+
+[node name="BSurfaceMesh_822" parent="Slug_After" index="819"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.77773, -0.525)
+
+[node name="BSurfaceMesh_823" parent="Slug_After" index="820"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.77773, -0.375)
+
+[node name="BSurfaceMesh_824" parent="Slug_After" index="821"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.77773, -0.225)
+
+[node name="BSurfaceMesh_825" parent="Slug_After" index="822"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.77773, -0.075)
+
+[node name="BSurfaceMesh_826" parent="Slug_After" index="823"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.92773, -0.525)
+
+[node name="BSurfaceMesh_827" parent="Slug_After" index="824"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.92773, -0.375)
+
+[node name="BSurfaceMesh_828" parent="Slug_After" index="825"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.92773, -0.225)
+
+[node name="BSurfaceMesh_829" parent="Slug_After" index="826"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.92773, -0.075)
+
+[node name="BSurfaceMesh_830" parent="Slug_After" index="827"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 2.07773, -0.225)
+
+[node name="BSurfaceMesh_831" parent="Slug_After" index="828"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 2.07773, -0.0750001)
+
+[node name="BSurfaceMesh_832" parent="Slug_After" index="829"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.17773, -0.225)
+
+[node name="BSurfaceMesh_833" parent="Slug_After" index="830"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.17773, -0.075)
+
+[node name="BSurfaceMesh_834" parent="Slug_After" index="831"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.32773, -0.075)
+
+[node name="BSurfaceMesh_835" parent="Slug_After" index="832"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.47773, -0.225)
+
+[node name="BSurfaceMesh_836" parent="Slug_After" index="833"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.47773, -0.075)
+
+[node name="BSurfaceMesh_837" parent="Slug_After" index="834"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.62773, -0.525)
+
+[node name="BSurfaceMesh_838" parent="Slug_After" index="835"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.62773, -0.375)
+
+[node name="BSurfaceMesh_839" parent="Slug_After" index="836"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.62773, -0.225)
+
+[node name="BSurfaceMesh_840" parent="Slug_After" index="837"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.62773, -0.075)
+
+[node name="BSurfaceMesh_841" parent="Slug_After" index="838"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.77773, -0.525)
+
+[node name="BSurfaceMesh_842" parent="Slug_After" index="839"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.77773, -0.375)
+
+[node name="BSurfaceMesh_843" parent="Slug_After" index="840"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.77773, -0.225)
+
+[node name="BSurfaceMesh_844" parent="Slug_After" index="841"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.77773, -0.075)
+
+[node name="BSurfaceMesh_845" parent="Slug_After" index="842"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.92773, -0.375)
+
+[node name="BSurfaceMesh_846" parent="Slug_After" index="843"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.92773, -0.225)
+
+[node name="BSurfaceMesh_847" parent="Slug_After" index="844"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.92773, -0.075)
+
+[node name="BSurfaceMesh_848" parent="Slug_After" index="845"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 2.07773, -0.0750001)
+
+[node name="BSurfaceMesh_849" parent="Slug_After" index="846"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.17773, -0.375)
+
+[node name="BSurfaceMesh_850" parent="Slug_After" index="847"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.17773, -0.225)
+
+[node name="BSurfaceMesh_851" parent="Slug_After" index="848"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.17773, -0.075)
+
+[node name="BSurfaceMesh_852" parent="Slug_After" index="849"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.32773, -0.225)
+
+[node name="BSurfaceMesh_853" parent="Slug_After" index="850"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.32773, -0.075)
+
+[node name="BSurfaceMesh_854" parent="Slug_After" index="851"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.47773, -0.525)
+
+[node name="BSurfaceMesh_855" parent="Slug_After" index="852"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.47773, -0.375)
+
+[node name="BSurfaceMesh_856" parent="Slug_After" index="853"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.47773, -0.225)
+
+[node name="BSurfaceMesh_857" parent="Slug_After" index="854"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.47773, -0.075)
+
+[node name="BSurfaceMesh_858" parent="Slug_After" index="855"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.62773, -0.525)
+
+[node name="BSurfaceMesh_859" parent="Slug_After" index="856"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.62773, -0.375)
+
+[node name="BSurfaceMesh_860" parent="Slug_After" index="857"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.62773, -0.225)
+
+[node name="BSurfaceMesh_861" parent="Slug_After" index="858"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.62773, -0.075)
+
+[node name="BSurfaceMesh_862" parent="Slug_After" index="859"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.77773, -0.375)
+
+[node name="BSurfaceMesh_863" parent="Slug_After" index="860"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.77773, -0.225)
+
+[node name="BSurfaceMesh_864" parent="Slug_After" index="861"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.77773, -0.075)
+
+[node name="BSurfaceMesh_865" parent="Slug_After" index="862"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.92773, -0.225)
+
+[node name="BSurfaceMesh_866" parent="Slug_After" index="863"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.92773, -0.075)
+
+[node name="BSurfaceMesh_867" parent="Slug_After" index="864"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.32773, -0.075)
+
+[node name="BSurfaceMesh_868" parent="Slug_After" index="865"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.47773, -0.375)
+
+[node name="BSurfaceMesh_869" parent="Slug_After" index="866"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.47773, -0.225)
+
+[node name="BSurfaceMesh_870" parent="Slug_After" index="867"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.47773, -0.075)
+
+[node name="BSurfaceMesh_871" parent="Slug_After" index="868"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.62773, -0.375)
+
+[node name="BSurfaceMesh_872" parent="Slug_After" index="869"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.62773, -0.225)
+
+[node name="BSurfaceMesh_873" parent="Slug_After" index="870"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.62773, -0.075)
+
+[node name="BSurfaceMesh_874" parent="Slug_After" index="871"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.77773, -0.075)
+
+[node name="BSurfaceMesh_875" parent="Slug_After" index="872"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.17773, 0.075)
+
+[node name="BSurfaceMesh_876" parent="Slug_After" index="873"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.17773, 0.225)
+
+[node name="BSurfaceMesh_877" parent="Slug_After" index="874"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.17773, 0.375)
+
+[node name="BSurfaceMesh_878" parent="Slug_After" index="875"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.17773, 0.525)
+
+[node name="BSurfaceMesh_879" parent="Slug_After" index="876"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.17773, 0.675)
+
+[node name="BSurfaceMesh_880" parent="Slug_After" index="877"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.17773, 0.825)
+
+[node name="BSurfaceMesh_881" parent="Slug_After" index="878"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.17773, 0.975)
+
+[node name="BSurfaceMesh_882" parent="Slug_After" index="879"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.17773, 1.125)
+
+[node name="BSurfaceMesh_883" parent="Slug_After" index="880"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.32773, 0.075)
+
+[node name="BSurfaceMesh_884" parent="Slug_After" index="881"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.32773, 0.225)
+
+[node name="BSurfaceMesh_885" parent="Slug_After" index="882"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.32773, 0.375)
+
+[node name="BSurfaceMesh_886" parent="Slug_After" index="883"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.32773, 0.525)
+
+[node name="BSurfaceMesh_887" parent="Slug_After" index="884"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.32773, 0.675)
+
+[node name="BSurfaceMesh_888" parent="Slug_After" index="885"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.32773, 0.825)
+
+[node name="BSurfaceMesh_889" parent="Slug_After" index="886"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.32773, 0.975)
+
+[node name="BSurfaceMesh_890" parent="Slug_After" index="887"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.32773, 1.125)
+
+[node name="BSurfaceMesh_891" parent="Slug_After" index="888"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.47773, 0.075)
+
+[node name="BSurfaceMesh_892" parent="Slug_After" index="889"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.47773, 0.225)
+
+[node name="BSurfaceMesh_893" parent="Slug_After" index="890"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.47773, 0.375)
+
+[node name="BSurfaceMesh_894" parent="Slug_After" index="891"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.47773, 0.525)
+
+[node name="BSurfaceMesh_895" parent="Slug_After" index="892"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.47773, 0.675)
+
+[node name="BSurfaceMesh_896" parent="Slug_After" index="893"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.47773, 0.825)
+
+[node name="BSurfaceMesh_897" parent="Slug_After" index="894"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.47773, 0.975)
+
+[node name="BSurfaceMesh_898" parent="Slug_After" index="895"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.47773, 1.125)
+
+[node name="BSurfaceMesh_899" parent="Slug_After" index="896"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.62773, 0.075)
+
+[node name="BSurfaceMesh_900" parent="Slug_After" index="897"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.62773, 0.225)
+
+[node name="BSurfaceMesh_901" parent="Slug_After" index="898"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.62773, 0.375)
+
+[node name="BSurfaceMesh_902" parent="Slug_After" index="899"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.62773, 0.525)
+
+[node name="BSurfaceMesh_903" parent="Slug_After" index="900"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.62773, 0.675)
+
+[node name="BSurfaceMesh_904" parent="Slug_After" index="901"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.62773, 0.825)
+
+[node name="BSurfaceMesh_905" parent="Slug_After" index="902"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.62773, 0.975)
+
+[node name="BSurfaceMesh_906" parent="Slug_After" index="903"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.62773, 1.125)
+
+[node name="BSurfaceMesh_907" parent="Slug_After" index="904"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.77773, 0.0749999)
+
+[node name="BSurfaceMesh_908" parent="Slug_After" index="905"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.77773, 0.225)
+
+[node name="BSurfaceMesh_909" parent="Slug_After" index="906"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.77773, 0.375)
+
+[node name="BSurfaceMesh_910" parent="Slug_After" index="907"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.77773, 0.525)
+
+[node name="BSurfaceMesh_911" parent="Slug_After" index="908"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.77773, 0.675)
+
+[node name="BSurfaceMesh_912" parent="Slug_After" index="909"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.77773, 0.825)
+
+[node name="BSurfaceMesh_913" parent="Slug_After" index="910"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.77773, 0.975)
+
+[node name="BSurfaceMesh_914" parent="Slug_After" index="911"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.77773, 1.125)
+
+[node name="BSurfaceMesh_915" parent="Slug_After" index="912"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.92773, 0.0749999)
+
+[node name="BSurfaceMesh_916" parent="Slug_After" index="913"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.92773, 0.225)
+
+[node name="BSurfaceMesh_917" parent="Slug_After" index="914"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.92773, 0.375)
+
+[node name="BSurfaceMesh_918" parent="Slug_After" index="915"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.92773, 0.525)
+
+[node name="BSurfaceMesh_919" parent="Slug_After" index="916"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.92773, 0.675)
+
+[node name="BSurfaceMesh_920" parent="Slug_After" index="917"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.92773, 0.825)
+
+[node name="BSurfaceMesh_921" parent="Slug_After" index="918"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.92773, 0.975)
+
+[node name="BSurfaceMesh_922" parent="Slug_After" index="919"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.92773, 1.125)
+
+[node name="BSurfaceMesh_923" parent="Slug_After" index="920"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 2.07773, 0.0749999)
+
+[node name="BSurfaceMesh_924" parent="Slug_After" index="921"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 2.07773, 0.225)
+
+[node name="BSurfaceMesh_925" parent="Slug_After" index="922"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 2.07773, 0.375)
+
+[node name="BSurfaceMesh_926" parent="Slug_After" index="923"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 2.07773, 0.525)
+
+[node name="BSurfaceMesh_927" parent="Slug_After" index="924"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 2.07773, 0.675)
+
+[node name="BSurfaceMesh_928" parent="Slug_After" index="925"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.17773, 0.075)
+
+[node name="BSurfaceMesh_929" parent="Slug_After" index="926"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.17773, 0.225)
+
+[node name="BSurfaceMesh_930" parent="Slug_After" index="927"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.17773, 0.375)
+
+[node name="BSurfaceMesh_931" parent="Slug_After" index="928"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.17773, 0.525)
+
+[node name="BSurfaceMesh_932" parent="Slug_After" index="929"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.17773, 0.675)
+
+[node name="BSurfaceMesh_933" parent="Slug_After" index="930"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.17773, 0.825)
+
+[node name="BSurfaceMesh_934" parent="Slug_After" index="931"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.17773, 0.975)
+
+[node name="BSurfaceMesh_935" parent="Slug_After" index="932"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.17773, 1.125)
+
+[node name="BSurfaceMesh_936" parent="Slug_After" index="933"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.32773, 0.075)
+
+[node name="BSurfaceMesh_937" parent="Slug_After" index="934"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.32773, 0.225)
+
+[node name="BSurfaceMesh_938" parent="Slug_After" index="935"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.32773, 0.375)
+
+[node name="BSurfaceMesh_939" parent="Slug_After" index="936"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.32773, 0.525)
+
+[node name="BSurfaceMesh_940" parent="Slug_After" index="937"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.32773, 0.675)
+
+[node name="BSurfaceMesh_941" parent="Slug_After" index="938"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.32773, 0.825)
+
+[node name="BSurfaceMesh_942" parent="Slug_After" index="939"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.32773, 0.975)
+
+[node name="BSurfaceMesh_943" parent="Slug_After" index="940"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.32773, 1.125)
+
+[node name="BSurfaceMesh_944" parent="Slug_After" index="941"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.47773, 0.075)
+
+[node name="BSurfaceMesh_945" parent="Slug_After" index="942"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.47773, 0.225)
+
+[node name="BSurfaceMesh_946" parent="Slug_After" index="943"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.47773, 0.375)
+
+[node name="BSurfaceMesh_947" parent="Slug_After" index="944"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.47773, 0.525)
+
+[node name="BSurfaceMesh_948" parent="Slug_After" index="945"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.47773, 0.675)
+
+[node name="BSurfaceMesh_949" parent="Slug_After" index="946"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.47773, 0.825)
+
+[node name="BSurfaceMesh_950" parent="Slug_After" index="947"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.47773, 0.975)
+
+[node name="BSurfaceMesh_951" parent="Slug_After" index="948"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.47773, 1.125)
+
+[node name="BSurfaceMesh_952" parent="Slug_After" index="949"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.62773, 0.075)
+
+[node name="BSurfaceMesh_953" parent="Slug_After" index="950"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.62773, 0.225)
+
+[node name="BSurfaceMesh_954" parent="Slug_After" index="951"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.62773, 0.375)
+
+[node name="BSurfaceMesh_955" parent="Slug_After" index="952"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.62773, 0.525)
+
+[node name="BSurfaceMesh_956" parent="Slug_After" index="953"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.62773, 0.675)
+
+[node name="BSurfaceMesh_957" parent="Slug_After" index="954"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.62773, 0.825)
+
+[node name="BSurfaceMesh_958" parent="Slug_After" index="955"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.62773, 0.975)
+
+[node name="BSurfaceMesh_959" parent="Slug_After" index="956"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.62773, 1.125)
+
+[node name="BSurfaceMesh_960" parent="Slug_After" index="957"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.77773, 0.0749999)
+
+[node name="BSurfaceMesh_961" parent="Slug_After" index="958"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.77773, 0.225)
+
+[node name="BSurfaceMesh_962" parent="Slug_After" index="959"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.77773, 0.375)
+
+[node name="BSurfaceMesh_963" parent="Slug_After" index="960"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.77773, 0.525)
+
+[node name="BSurfaceMesh_964" parent="Slug_After" index="961"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.77773, 0.675)
+
+[node name="BSurfaceMesh_965" parent="Slug_After" index="962"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.77773, 0.825)
+
+[node name="BSurfaceMesh_966" parent="Slug_After" index="963"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.77773, 0.975)
+
+[node name="BSurfaceMesh_967" parent="Slug_After" index="964"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.77773, 1.125)
+
+[node name="BSurfaceMesh_968" parent="Slug_After" index="965"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.92773, 0.0749999)
+
+[node name="BSurfaceMesh_969" parent="Slug_After" index="966"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.92773, 0.225)
+
+[node name="BSurfaceMesh_970" parent="Slug_After" index="967"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.92773, 0.375)
+
+[node name="BSurfaceMesh_971" parent="Slug_After" index="968"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.92773, 0.525)
+
+[node name="BSurfaceMesh_972" parent="Slug_After" index="969"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.92773, 0.675)
+
+[node name="BSurfaceMesh_973" parent="Slug_After" index="970"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.92773, 0.825)
+
+[node name="BSurfaceMesh_974" parent="Slug_After" index="971"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.92773, 0.975)
+
+[node name="BSurfaceMesh_975" parent="Slug_After" index="972"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.92773, 1.125)
+
+[node name="BSurfaceMesh_976" parent="Slug_After" index="973"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 2.07773, 0.0749999)
+
+[node name="BSurfaceMesh_977" parent="Slug_After" index="974"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 2.07773, 0.225)
+
+[node name="BSurfaceMesh_978" parent="Slug_After" index="975"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 2.07773, 0.375)
+
+[node name="BSurfaceMesh_979" parent="Slug_After" index="976"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 2.07773, 0.525)
+
+[node name="BSurfaceMesh_980" parent="Slug_After" index="977"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 2.07773, 0.675)
+
+[node name="BSurfaceMesh_981" parent="Slug_After" index="978"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.17773, 0.075)
+
+[node name="BSurfaceMesh_982" parent="Slug_After" index="979"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.17773, 0.225)
+
+[node name="BSurfaceMesh_983" parent="Slug_After" index="980"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.17773, 0.375)
+
+[node name="BSurfaceMesh_984" parent="Slug_After" index="981"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.17773, 0.525)
+
+[node name="BSurfaceMesh_985" parent="Slug_After" index="982"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.17773, 0.675)
+
+[node name="BSurfaceMesh_986" parent="Slug_After" index="983"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.17773, 0.825)
+
+[node name="BSurfaceMesh_987" parent="Slug_After" index="984"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.17773, 0.975)
+
+[node name="BSurfaceMesh_988" parent="Slug_After" index="985"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.17773, 1.125)
+
+[node name="BSurfaceMesh_989" parent="Slug_After" index="986"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.32773, 0.075)
+
+[node name="BSurfaceMesh_990" parent="Slug_After" index="987"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.32773, 0.225)
+
+[node name="BSurfaceMesh_991" parent="Slug_After" index="988"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.32773, 0.375)
+
+[node name="BSurfaceMesh_992" parent="Slug_After" index="989"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.32773, 0.525)
+
+[node name="BSurfaceMesh_993" parent="Slug_After" index="990"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.32773, 0.675)
+
+[node name="BSurfaceMesh_994" parent="Slug_After" index="991"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.32773, 0.825)
+
+[node name="BSurfaceMesh_995" parent="Slug_After" index="992"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.32773, 0.975)
+
+[node name="BSurfaceMesh_996" parent="Slug_After" index="993"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.32773, 1.125)
+
+[node name="BSurfaceMesh_997" parent="Slug_After" index="994"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.47773, 0.075)
+
+[node name="BSurfaceMesh_998" parent="Slug_After" index="995"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.47773, 0.225)
+
+[node name="BSurfaceMesh_999" parent="Slug_After" index="996"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.47773, 0.375)
+
+[node name="BSurfaceMesh_1000" parent="Slug_After" index="997"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.47773, 0.525)
+
+[node name="BSurfaceMesh_1001" parent="Slug_After" index="998"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.47773, 0.675)
+
+[node name="BSurfaceMesh_1002" parent="Slug_After" index="999"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.47773, 0.825)
+
+[node name="BSurfaceMesh_1003" parent="Slug_After" index="1000"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.47773, 0.975)
+
+[node name="BSurfaceMesh_1004" parent="Slug_After" index="1001"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.47773, 1.125)
+
+[node name="BSurfaceMesh_1005" parent="Slug_After" index="1002"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.62773, 0.075)
+
+[node name="BSurfaceMesh_1006" parent="Slug_After" index="1003"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.62773, 0.225)
+
+[node name="BSurfaceMesh_1007" parent="Slug_After" index="1004"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.62773, 0.375)
+
+[node name="BSurfaceMesh_1008" parent="Slug_After" index="1005"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.62773, 0.525)
+
+[node name="BSurfaceMesh_1009" parent="Slug_After" index="1006"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.62773, 0.675)
+
+[node name="BSurfaceMesh_1010" parent="Slug_After" index="1007"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.62773, 0.825)
+
+[node name="BSurfaceMesh_1011" parent="Slug_After" index="1008"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.62773, 0.975)
+
+[node name="BSurfaceMesh_1012" parent="Slug_After" index="1009"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.62773, 1.125)
+
+[node name="BSurfaceMesh_1013" parent="Slug_After" index="1010"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.77773, 0.0749999)
+
+[node name="BSurfaceMesh_1014" parent="Slug_After" index="1011"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.77773, 0.225)
+
+[node name="BSurfaceMesh_1015" parent="Slug_After" index="1012"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.77773, 0.375)
+
+[node name="BSurfaceMesh_1016" parent="Slug_After" index="1013"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.77773, 0.525)
+
+[node name="BSurfaceMesh_1017" parent="Slug_After" index="1014"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.77773, 0.675)
+
+[node name="BSurfaceMesh_1018" parent="Slug_After" index="1015"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.77773, 0.825)
+
+[node name="BSurfaceMesh_1019" parent="Slug_After" index="1016"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.77773, 0.975)
+
+[node name="BSurfaceMesh_1020" parent="Slug_After" index="1017"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.77773, 1.125)
+
+[node name="BSurfaceMesh_1021" parent="Slug_After" index="1018"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.92773, 0.0749999)
+
+[node name="BSurfaceMesh_1022" parent="Slug_After" index="1019"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.92773, 0.225)
+
+[node name="BSurfaceMesh_1023" parent="Slug_After" index="1020"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.92773, 0.375)
+
+[node name="BSurfaceMesh_1024" parent="Slug_After" index="1021"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.92773, 0.525)
+
+[node name="BSurfaceMesh_1025" parent="Slug_After" index="1022"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.92773, 0.675)
+
+[node name="BSurfaceMesh_1026" parent="Slug_After" index="1023"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.92773, 0.825)
+
+[node name="BSurfaceMesh_1027" parent="Slug_After" index="1024"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.92773, 0.975)
+
+[node name="BSurfaceMesh_1028" parent="Slug_After" index="1025"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.92773, 1.125)
+
+[node name="BSurfaceMesh_1029" parent="Slug_After" index="1026"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 2.07773, 0.0749999)
+
+[node name="BSurfaceMesh_1030" parent="Slug_After" index="1027"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 2.07773, 0.225)
+
+[node name="BSurfaceMesh_1031" parent="Slug_After" index="1028"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 2.07773, 0.375)
+
+[node name="BSurfaceMesh_1032" parent="Slug_After" index="1029"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 2.07773, 0.525)
+
+[node name="BSurfaceMesh_1033" parent="Slug_After" index="1030"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 2.07773, 0.675)
+
+[node name="BSurfaceMesh_1034" parent="Slug_After" index="1031"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.17773, 0.075)
+
+[node name="BSurfaceMesh_1035" parent="Slug_After" index="1032"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.17773, 0.225)
+
+[node name="BSurfaceMesh_1036" parent="Slug_After" index="1033"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.17773, 0.375)
+
+[node name="BSurfaceMesh_1037" parent="Slug_After" index="1034"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.17773, 0.525)
+
+[node name="BSurfaceMesh_1038" parent="Slug_After" index="1035"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.17773, 0.675)
+
+[node name="BSurfaceMesh_1039" parent="Slug_After" index="1036"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.17773, 0.825)
+
+[node name="BSurfaceMesh_1040" parent="Slug_After" index="1037"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.17773, 0.975)
+
+[node name="BSurfaceMesh_1041" parent="Slug_After" index="1038"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.17773, 1.125)
+
+[node name="BSurfaceMesh_1042" parent="Slug_After" index="1039"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.32773, 0.075)
+
+[node name="BSurfaceMesh_1043" parent="Slug_After" index="1040"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.32773, 0.225)
+
+[node name="BSurfaceMesh_1044" parent="Slug_After" index="1041"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.32773, 0.375)
+
+[node name="BSurfaceMesh_1045" parent="Slug_After" index="1042"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.32773, 0.525)
+
+[node name="BSurfaceMesh_1046" parent="Slug_After" index="1043"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.32773, 0.675)
+
+[node name="BSurfaceMesh_1047" parent="Slug_After" index="1044"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.32773, 0.825)
+
+[node name="BSurfaceMesh_1048" parent="Slug_After" index="1045"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.32773, 0.975)
+
+[node name="BSurfaceMesh_1049" parent="Slug_After" index="1046"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.32773, 1.125)
+
+[node name="BSurfaceMesh_1050" parent="Slug_After" index="1047"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.47773, 0.075)
+
+[node name="BSurfaceMesh_1051" parent="Slug_After" index="1048"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.47773, 0.225)
+
+[node name="BSurfaceMesh_1052" parent="Slug_After" index="1049"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.47773, 0.375)
+
+[node name="BSurfaceMesh_1053" parent="Slug_After" index="1050"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.47773, 0.525)
+
+[node name="BSurfaceMesh_1054" parent="Slug_After" index="1051"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.47773, 0.675)
+
+[node name="BSurfaceMesh_1055" parent="Slug_After" index="1052"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.47773, 0.825)
+
+[node name="BSurfaceMesh_1056" parent="Slug_After" index="1053"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.47773, 0.975)
+
+[node name="BSurfaceMesh_1057" parent="Slug_After" index="1054"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.47773, 1.125)
+
+[node name="BSurfaceMesh_1058" parent="Slug_After" index="1055"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.62773, 0.075)
+
+[node name="BSurfaceMesh_1059" parent="Slug_After" index="1056"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.62773, 0.225)
+
+[node name="BSurfaceMesh_1060" parent="Slug_After" index="1057"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.62773, 0.375)
+
+[node name="BSurfaceMesh_1061" parent="Slug_After" index="1058"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.62773, 0.525)
+
+[node name="BSurfaceMesh_1062" parent="Slug_After" index="1059"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.62773, 0.675)
+
+[node name="BSurfaceMesh_1063" parent="Slug_After" index="1060"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.62773, 0.825)
+
+[node name="BSurfaceMesh_1064" parent="Slug_After" index="1061"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.62773, 0.975)
+
+[node name="BSurfaceMesh_1065" parent="Slug_After" index="1062"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.62773, 1.125)
+
+[node name="BSurfaceMesh_1066" parent="Slug_After" index="1063"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.77773, 0.0749999)
+
+[node name="BSurfaceMesh_1067" parent="Slug_After" index="1064"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.77773, 0.225)
+
+[node name="BSurfaceMesh_1068" parent="Slug_After" index="1065"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.77773, 0.375)
+
+[node name="BSurfaceMesh_1069" parent="Slug_After" index="1066"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.77773, 0.525)
+
+[node name="BSurfaceMesh_1070" parent="Slug_After" index="1067"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.77773, 0.675)
+
+[node name="BSurfaceMesh_1071" parent="Slug_After" index="1068"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.77773, 0.825)
+
+[node name="BSurfaceMesh_1072" parent="Slug_After" index="1069"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.77773, 0.975)
+
+[node name="BSurfaceMesh_1073" parent="Slug_After" index="1070"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.77773, 1.125)
+
+[node name="BSurfaceMesh_1074" parent="Slug_After" index="1071"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.92773, 0.0749999)
+
+[node name="BSurfaceMesh_1075" parent="Slug_After" index="1072"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.92773, 0.225)
+
+[node name="BSurfaceMesh_1076" parent="Slug_After" index="1073"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.92773, 0.375)
+
+[node name="BSurfaceMesh_1077" parent="Slug_After" index="1074"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.92773, 0.525)
+
+[node name="BSurfaceMesh_1078" parent="Slug_After" index="1075"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.92773, 0.675)
+
+[node name="BSurfaceMesh_1079" parent="Slug_After" index="1076"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.92773, 0.825)
+
+[node name="BSurfaceMesh_1080" parent="Slug_After" index="1077"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.92773, 0.975)
+
+[node name="BSurfaceMesh_1081" parent="Slug_After" index="1078"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.92773, 1.125)
+
+[node name="BSurfaceMesh_1082" parent="Slug_After" index="1079"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 2.07773, 0.0749999)
+
+[node name="BSurfaceMesh_1083" parent="Slug_After" index="1080"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 2.07773, 0.225)
+
+[node name="BSurfaceMesh_1084" parent="Slug_After" index="1081"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 2.07773, 0.375)
+
+[node name="BSurfaceMesh_1085" parent="Slug_After" index="1082"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 2.07773, 0.525)
+
+[node name="BSurfaceMesh_1086" parent="Slug_After" index="1083"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 2.07773, 0.675)
+
+[node name="BSurfaceMesh_1087" parent="Slug_After" index="1084"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.17773, 0.075)
+
+[node name="BSurfaceMesh_1088" parent="Slug_After" index="1085"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.17773, 0.225)
+
+[node name="BSurfaceMesh_1089" parent="Slug_After" index="1086"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.17773, 0.375)
+
+[node name="BSurfaceMesh_1090" parent="Slug_After" index="1087"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.17773, 0.525)
+
+[node name="BSurfaceMesh_1091" parent="Slug_After" index="1088"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.17773, 0.675)
+
+[node name="BSurfaceMesh_1092" parent="Slug_After" index="1089"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.17773, 0.825)
+
+[node name="BSurfaceMesh_1093" parent="Slug_After" index="1090"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.17773, 0.975)
+
+[node name="BSurfaceMesh_1094" parent="Slug_After" index="1091"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.17773, 1.125)
+
+[node name="BSurfaceMesh_1095" parent="Slug_After" index="1092"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.32773, 0.075)
+
+[node name="BSurfaceMesh_1096" parent="Slug_After" index="1093"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.32773, 0.225)
+
+[node name="BSurfaceMesh_1097" parent="Slug_After" index="1094"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.32773, 0.375)
+
+[node name="BSurfaceMesh_1098" parent="Slug_After" index="1095"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.32773, 0.525)
+
+[node name="BSurfaceMesh_1099" parent="Slug_After" index="1096"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.32773, 0.675)
+
+[node name="BSurfaceMesh_1100" parent="Slug_After" index="1097"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.32773, 0.825)
+
+[node name="BSurfaceMesh_1101" parent="Slug_After" index="1098"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.32773, 0.975)
+
+[node name="BSurfaceMesh_1102" parent="Slug_After" index="1099"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.32773, 1.125)
+
+[node name="BSurfaceMesh_1103" parent="Slug_After" index="1100"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.47773, 0.075)
+
+[node name="BSurfaceMesh_1104" parent="Slug_After" index="1101"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.47773, 0.225)
+
+[node name="BSurfaceMesh_1105" parent="Slug_After" index="1102"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.47773, 0.375)
+
+[node name="BSurfaceMesh_1106" parent="Slug_After" index="1103"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.47773, 0.525)
+
+[node name="BSurfaceMesh_1107" parent="Slug_After" index="1104"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.47773, 0.675)
+
+[node name="BSurfaceMesh_1108" parent="Slug_After" index="1105"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.47773, 0.825)
+
+[node name="BSurfaceMesh_1109" parent="Slug_After" index="1106"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.47773, 0.975)
+
+[node name="BSurfaceMesh_1110" parent="Slug_After" index="1107"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.47773, 1.125)
+
+[node name="BSurfaceMesh_1111" parent="Slug_After" index="1108"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.62773, 0.075)
+
+[node name="BSurfaceMesh_1112" parent="Slug_After" index="1109"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.62773, 0.225)
+
+[node name="BSurfaceMesh_1113" parent="Slug_After" index="1110"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.62773, 0.375)
+
+[node name="BSurfaceMesh_1114" parent="Slug_After" index="1111"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.62773, 0.525)
+
+[node name="BSurfaceMesh_1115" parent="Slug_After" index="1112"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.62773, 0.675)
+
+[node name="BSurfaceMesh_1116" parent="Slug_After" index="1113"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.62773, 0.825)
+
+[node name="BSurfaceMesh_1117" parent="Slug_After" index="1114"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.62773, 0.975)
+
+[node name="BSurfaceMesh_1118" parent="Slug_After" index="1115"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.62773, 1.125)
+
+[node name="BSurfaceMesh_1119" parent="Slug_After" index="1116"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.77773, 0.0749999)
+
+[node name="BSurfaceMesh_1120" parent="Slug_After" index="1117"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.77773, 0.225)
+
+[node name="BSurfaceMesh_1121" parent="Slug_After" index="1118"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.77773, 0.375)
+
+[node name="BSurfaceMesh_1122" parent="Slug_After" index="1119"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.77773, 0.525)
+
+[node name="BSurfaceMesh_1123" parent="Slug_After" index="1120"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.77773, 0.675)
+
+[node name="BSurfaceMesh_1124" parent="Slug_After" index="1121"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.77773, 0.825)
+
+[node name="BSurfaceMesh_1125" parent="Slug_After" index="1122"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.77773, 0.975)
+
+[node name="BSurfaceMesh_1126" parent="Slug_After" index="1123"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.77773, 1.125)
+
+[node name="BSurfaceMesh_1127" parent="Slug_After" index="1124"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.92773, 0.0749999)
+
+[node name="BSurfaceMesh_1128" parent="Slug_After" index="1125"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.92773, 0.225)
+
+[node name="BSurfaceMesh_1129" parent="Slug_After" index="1126"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.92773, 0.375)
+
+[node name="BSurfaceMesh_1130" parent="Slug_After" index="1127"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.92773, 0.525)
+
+[node name="BSurfaceMesh_1131" parent="Slug_After" index="1128"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.92773, 0.675)
+
+[node name="BSurfaceMesh_1132" parent="Slug_After" index="1129"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.92773, 0.825)
+
+[node name="BSurfaceMesh_1133" parent="Slug_After" index="1130"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.885427, 1.17773, 0.375)
+
+[node name="BSurfaceMesh_1134" parent="Slug_After" index="1131"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.885427, 1.17773, 0.525)
+
+[node name="BSurfaceMesh_1135" parent="Slug_After" index="1132"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.885427, 1.17773, 0.675)
+
+[node name="BSurfaceMesh_1136" parent="Slug_After" index="1133"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.885427, 1.17773, 0.825)
+
+[node name="BSurfaceMesh_1137" parent="Slug_After" index="1134"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.885427, 1.17773, 0.975)
+
+[node name="BSurfaceMesh_1138" parent="Slug_After" index="1135"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.885427, 1.32773, 0.225)
+
+[node name="BSurfaceMesh_1139" parent="Slug_After" index="1136"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.885427, 1.32773, 0.375)
+
+[node name="BSurfaceMesh_1140" parent="Slug_After" index="1137"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.885427, 1.32773, 0.525)
+
+[node name="BSurfaceMesh_1141" parent="Slug_After" index="1138"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.885427, 1.32773, 0.675)
+
+[node name="BSurfaceMesh_1142" parent="Slug_After" index="1139"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.885427, 1.32773, 0.825)
+
+[node name="BSurfaceMesh_1143" parent="Slug_After" index="1140"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.885427, 1.32773, 0.975)
+
+[node name="BSurfaceMesh_1144" parent="Slug_After" index="1141"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.885427, 1.47773, 0.225)
+
+[node name="BSurfaceMesh_1145" parent="Slug_After" index="1142"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.885427, 1.47773, 0.375)
+
+[node name="BSurfaceMesh_1146" parent="Slug_After" index="1143"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.885427, 1.47773, 0.525)
+
+[node name="BSurfaceMesh_1147" parent="Slug_After" index="1144"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.885427, 1.47773, 0.675)
+
+[node name="BSurfaceMesh_1148" parent="Slug_After" index="1145"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.885427, 1.47773, 0.825)
+
+[node name="BSurfaceMesh_1149" parent="Slug_After" index="1146"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.885427, 1.47773, 0.975)
+
+[node name="BSurfaceMesh_1150" parent="Slug_After" index="1147"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.885427, 1.62773, 0.225)
+
+[node name="BSurfaceMesh_1151" parent="Slug_After" index="1148"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.885427, 1.62773, 0.375)
+
+[node name="BSurfaceMesh_1152" parent="Slug_After" index="1149"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.885427, 1.62773, 0.525)
+
+[node name="BSurfaceMesh_1153" parent="Slug_After" index="1150"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.885427, 1.62773, 0.675)
+
+[node name="BSurfaceMesh_1154" parent="Slug_After" index="1151"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.885427, 1.62773, 0.825)
+
+[node name="BSurfaceMesh_1155" parent="Slug_After" index="1152"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.885427, 1.62773, 0.975)
+
+[node name="BSurfaceMesh_1156" parent="Slug_After" index="1153"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.885427, 1.77773, 0.225)
+
+[node name="BSurfaceMesh_1157" parent="Slug_After" index="1154"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.885427, 1.77773, 0.375)
+
+[node name="BSurfaceMesh_1158" parent="Slug_After" index="1155"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.885427, 1.77773, 0.525)
+
+[node name="BSurfaceMesh_1159" parent="Slug_After" index="1156"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.885427, 1.77773, 0.675)
+
+[node name="BSurfaceMesh_1160" parent="Slug_After" index="1157"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.17773, 1.275)
+
+[node name="BSurfaceMesh_1161" parent="Slug_After" index="1158"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.17773, 1.425)
+
+[node name="BSurfaceMesh_1162" parent="Slug_After" index="1159"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.32773, 1.275)
+
+[node name="BSurfaceMesh_1163" parent="Slug_After" index="1160"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.32773, 1.425)
+
+[node name="BSurfaceMesh_1164" parent="Slug_After" index="1161"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.47773, 1.275)
+
+[node name="BSurfaceMesh_1165" parent="Slug_After" index="1162"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.47773, 1.425)
+
+[node name="BSurfaceMesh_1166" parent="Slug_After" index="1163"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.62773, 1.275)
+
+[node name="BSurfaceMesh_1167" parent="Slug_After" index="1164"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.62773, 1.425)
+
+[node name="BSurfaceMesh_1168" parent="Slug_After" index="1165"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.135427, 1.77773, 1.275)
+
+[node name="BSurfaceMesh_1169" parent="Slug_After" index="1166"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.17773, 1.275)
+
+[node name="BSurfaceMesh_1170" parent="Slug_After" index="1167"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.17773, 1.425)
+
+[node name="BSurfaceMesh_1171" parent="Slug_After" index="1168"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.32773, 1.275)
+
+[node name="BSurfaceMesh_1172" parent="Slug_After" index="1169"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.32773, 1.425)
+
+[node name="BSurfaceMesh_1173" parent="Slug_After" index="1170"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.47773, 1.275)
+
+[node name="BSurfaceMesh_1174" parent="Slug_After" index="1171"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.47773, 1.425)
+
+[node name="BSurfaceMesh_1175" parent="Slug_After" index="1172"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.62773, 1.275)
+
+[node name="BSurfaceMesh_1176" parent="Slug_After" index="1173"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.62773, 1.425)
+
+[node name="BSurfaceMesh_1177" parent="Slug_After" index="1174"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.285428, 1.77773, 1.275)
+
+[node name="BSurfaceMesh_1178" parent="Slug_After" index="1175"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.17773, 1.275)
+
+[node name="BSurfaceMesh_1179" parent="Slug_After" index="1176"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.17773, 1.425)
+
+[node name="BSurfaceMesh_1180" parent="Slug_After" index="1177"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.32773, 1.275)
+
+[node name="BSurfaceMesh_1181" parent="Slug_After" index="1178"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.32773, 1.425)
+
+[node name="BSurfaceMesh_1182" parent="Slug_After" index="1179"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.47773, 1.275)
+
+[node name="BSurfaceMesh_1183" parent="Slug_After" index="1180"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.47773, 1.425)
+
+[node name="BSurfaceMesh_1184" parent="Slug_After" index="1181"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.62773, 1.275)
+
+[node name="BSurfaceMesh_1185" parent="Slug_After" index="1182"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.435427, 1.77773, 1.275)
+
+[node name="BSurfaceMesh_1186" parent="Slug_After" index="1183"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.17773, 1.275)
+
+[node name="BSurfaceMesh_1187" parent="Slug_After" index="1184"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.32773, 1.275)
+
+[node name="BSurfaceMesh_1188" parent="Slug_After" index="1185"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.47773, 1.275)
+
+[node name="BSurfaceMesh_1189" parent="Slug_After" index="1186"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.62773, 1.275)
+
+[node name="BSurfaceMesh_1190" parent="Slug_After" index="1187"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.585427, 1.77773, 1.275)
+
+[node name="BSurfaceMesh_1191" parent="Slug_After" index="1188"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.17773, 1.275)
+
+[node name="BSurfaceMesh_1192" parent="Slug_After" index="1189"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.32773, 1.275)
+
+[editable path="slug1"]
+[editable path="Slug_After1"]
 [editable path="slug"]
+[editable path="Slug_After2"]
 [editable path="Slug_After"]

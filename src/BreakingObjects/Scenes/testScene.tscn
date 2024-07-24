@@ -8,16 +8,18 @@
 [node name="Node3D" type="Node3D"]
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.976657, 0.214804, 0, -0.214804, 0.976657, 0, 0.468344, 1.77155)
+transform = Transform3D(1, 0, 0, 0, 0.976657, 0.214804, 0, -0.214804, 0.976657, 0, 1.71997, 3.82846)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_go18o")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.661574, 0.74988, 0, -0.74988, 0.661574, 0, 1.90714, 1.60571)
+transform = Transform3D(1, 0, 0, 0, 0.661574, 0.74988, 0, -0.74988, 0.661574, 0, 3.15877, 3.66262)
 
 [node name="Slug" parent="." instance=ExtResource("1_rpavj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0420816, 0, -0.0119083)
+transform = Transform3D(-0.994674, 0, -0.10307, 0, 1, 0, 0.10307, 0, -0.994674, 0.0420816, 0, -0.0119083)
+fragment_collision_mask = 31
+explosion_speed = 5.0
 
 [node name="Floor" parent="." instance=ExtResource("2_86uch")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.262842, -0.531689, 0.0520456)
