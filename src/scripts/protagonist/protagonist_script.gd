@@ -1,8 +1,8 @@
 extends CharacterBody3D
 
 #Camera managment
-@onready var camera_node = $".."/CameraController
 @onready var camera_target = $CameraTarget
+@onready var animated_sprite_3d = $AnimatedSprite3D
 
 #clibable detectors
 @onready var floor_detector = $Floor_Detector
@@ -86,7 +86,15 @@ var can_crawl = true
 # Gravity
 #var gravity = ProjectSettings.get_setting("physics/3d/default_gravity") #Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravityStrength = 9.8
+			
+#======================================== 	Hurt & Death Functions 	==================================\
 
+func _on_health_component_death():
+	print("Player has died")
+
+func _on_health_component_hurt():
+	print("Player has been hurt")
+	
 #======================================== 	Initialize 	==================================
 func _ready():
 	pass
@@ -116,12 +124,16 @@ func _physics_process(delta):
 			
 			if Input.is_action_pressed("move_right"):
 				direction.x -= 1
+				$Sprite3D.rotation.y = 0
 			if Input.is_action_pressed("move_left"):
 				direction.x += 1
+				$Sprite3D.rotation.y = -PI
 			if Input.is_action_pressed("move_forward"):
 				direction.z -= 1
+				$Sprite3D.rotation.y = -0.5
 			if Input.is_action_pressed("move_back"):
 				direction.z += 1
+				$Sprite3D.rotation.y = 0.5
 				
 			target_velocity.x = direction.x * speed * sprint_modifier
 			target_velocity.z = direction.z * speed * sprint_modifier
@@ -129,12 +141,16 @@ func _physics_process(delta):
 		States.FLOOR:
 			if Input.is_action_pressed("move_right"):
 				direction.x -= 1
+				$Sprite3D.rotation.y = 0
 			if Input.is_action_pressed("move_left"):
 				direction.x += 1
+				$Sprite3D.rotation.y = -PI
 			if Input.is_action_pressed("move_forward"):
 				direction.z -= 1
+				$Sprite3D.rotation.y = -0.5
 			if Input.is_action_pressed("move_back"):
 				direction.z += 1
+				$Sprite3D.rotation.y = 0.5
 			if Input.is_action_just_pressed("jump"):
 				target_velocity.y = JUMP_VELOCITY
 			target_velocity.x = direction.x * speed * sprint_modifier
@@ -143,16 +159,21 @@ func _physics_process(delta):
 		States.WALL_RIGHT:
 			if Input.is_action_pressed("move_right") && can_crawl:
 				direction.y += 1
+				$Sprite3D.rotation.y = 0
 			if Input.is_action_pressed("move_left") or back_detector.is_colliding():
 				if floor_detector.is_colliding():
 					direction.x += 1
+					$Sprite3D.rotation.y = -PI
 					target_velocity.x = direction.x * speed * sprint_modifier
 				else:
 					direction.y -= 1
+					$Sprite3D.rotation.y = -PI
 			if Input.is_action_pressed("move_forward"):
 				direction.z -= 1
+				$Sprite3D.rotation.y = -0.5
 			if Input.is_action_pressed("move_back"):
 				direction.z += 1
+				$Sprite3D.rotation.y = 0.5
 				
 			if Input.is_action_just_pressed("jump"):
 				target_velocity.x = JUMP_VELOCITY
@@ -168,15 +189,20 @@ func _physics_process(delta):
 			if Input.is_action_pressed("move_right"):
 				if floor_detector.is_colliding() or back_detector.is_colliding():
 					direction.x -= 1
+					$Sprite3D.rotation.y = 0
 					target_velocity.x = direction.x * speed * sprint_modifier
 				else:
 					direction.y -= 1
+					$Sprite3D.rotation.y = 0
 			if Input.is_action_pressed("move_left") && can_crawl:
 				direction.y += 1
+				$Sprite3D.rotation.y = -PI
 			if Input.is_action_pressed("move_forward"):
 				direction.z -= 1
+				$Sprite3D.rotation.y = -0.5
 			if Input.is_action_pressed("move_back"):
 				direction.z += 1
+				$Sprite3D.rotation.y = 0.5
 			if Input.is_action_just_pressed("jump"):
 				target_velocity.x = -JUMP_VELOCITY
 			target_velocity.y = direction.y * speed/slowDownOnWall  * sprint_modifier - (gravityStrength*slideDownForce * delta) 
@@ -207,7 +233,19 @@ func _physics_process(delta):
 		
 	if direction != Vector3.ZERO:
 		direction = direction.normalized()
+
+	# Animation Tree
+	if direction.x == 0 && direction.z == 0: 
+		animated_sprite_3d.play("idle")
+	else:
+		animated_sprite_3d.play("walk")
 		
+	# Flip Sprite
+	if direction.x > 0:
+		animated_sprite_3d.flip_h = true
+	elif direction.x < 0:
+		animated_sprite_3d.flip_h = false
+
 	# Ground Velocity
 	
 	
