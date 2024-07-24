@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ikb5mvfjtryx"
-path.s3tc="res://.godot/imported/bottle1-5.png-d11acc25bb418b46dbd3fb06e1843889.s3tc.ctex"
+uid="uid://dkchx743vs01l"
+path.s3tc="res://.godot/imported/wasp1-1.png-824e1ac11d9d90064419eb892bef7b3c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/sprites/items/bottle1-5.png"
-dest_files=["res://.godot/imported/bottle1-5.png-d11acc25bb418b46dbd3fb06e1843889.s3tc.ctex"]
+source_file="res://assets/sprites/wasp1-1.png"
+dest_files=["res://.godot/imported/wasp1-1.png-824e1ac11d9d90064419eb892bef7b3c.s3tc.ctex"]
 
 [params]
 
