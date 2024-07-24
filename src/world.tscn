@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://dx1te2b8aasvv"]
+[gd_scene load_steps=45 format=3 uid="uid://dx1te2b8aasvv"]
 
 [ext_resource type="Script" path="res://script_main.gd" id="1_cwe8n"]
 [ext_resource type="PackedScene" uid="uid://b1tqs2mt8aiii" path="res://Environment/static/test_field.tscn" id="1_t7k6m"]
@@ -31,6 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://c8lf0ch8cxych" path="res://assets/sprites/ink_quill1-1.png" id="28_ymv78"]
 [ext_resource type="Texture2D" uid="uid://ikb5mvfjtryx" path="res://assets/sprites/items/bottle1-5.png" id="29_4w8af"]
 [ext_resource type="Texture2D" uid="uid://f6cuwanx3yog" path="res://assets/sprites/items/poison1-3.png" id="29_fdfnd"]
+[ext_resource type="Texture2D" uid="uid://dkchx743vs01l" path="res://assets/sprites/wasp1-1.png" id="29_typtx"]
 [ext_resource type="Texture2D" uid="uid://dnmakqqndvtvm" path="res://assets/sprites/items/apple1-1.png" id="30_el5w0"]
 [ext_resource type="Texture2D" uid="uid://dnve4ci8ogc4s" path="res://assets/sprites/items/rune1-1.png" id="30_to8kw"]
 [ext_resource type="Texture2D" uid="uid://dvl4lhdb40f8j" path="res://assets/sprites/items/rune1-2.png" id="31_indlw"]
@@ -200,6 +201,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.6121, 4.45306, 17.685)
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -3.60351, 15.2443, 14.9762)
 billboard = 2
 texture = ExtResource("28_ymv78")
+
+[node name="Wasp1" type="Sprite3D" parent="Objects"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -22.7085, 29.9725, 16.5427)
+billboard = 2
+texture = ExtResource("29_typtx")
 
 [node name="Potion1" type="Sprite3D" parent="Objects"]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 1.42673, 15.2443, 14.9762)
