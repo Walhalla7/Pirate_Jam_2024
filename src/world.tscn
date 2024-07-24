@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://dx1te2b8aasvv"]
+[gd_scene load_steps=44 format=3 uid="uid://dx1te2b8aasvv"]
 
 [ext_resource type="Script" path="res://script_main.gd" id="1_cwe8n"]
 [ext_resource type="PackedScene" uid="uid://b1tqs2mt8aiii" path="res://Environment/static/test_field.tscn" id="1_t7k6m"]
@@ -28,9 +28,20 @@
 [ext_resource type="PackedScene" uid="uid://cxnbkj1epgh6j" path="res://RoomObjects/ObjectScenes/salt_grain.tscn" id="25_ac0ov"]
 [ext_resource type="PackedScene" uid="uid://b3yf85wyrhfp4" path="res://RoomObjects/ObjectScenes/sack_1.tscn" id="26_0ypc4"]
 [ext_resource type="PackedScene" uid="uid://cxvjeiqh3j2jr" path="res://RoomObjects/ObjectScenes/pumpkin_1.tscn" id="27_vtixk"]
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ouwf4"]
-height = 4.0
+[ext_resource type="Texture2D" uid="uid://c8lf0ch8cxych" path="res://assets/sprites/ink_quill1-1.png" id="28_ymv78"]
+[ext_resource type="Texture2D" uid="uid://ikb5mvfjtryx" path="res://assets/sprites/items/bottle1-5.png" id="29_4w8af"]
+[ext_resource type="Texture2D" uid="uid://f6cuwanx3yog" path="res://assets/sprites/items/poison1-3.png" id="29_fdfnd"]
+[ext_resource type="Texture2D" uid="uid://dnmakqqndvtvm" path="res://assets/sprites/items/apple1-1.png" id="30_el5w0"]
+[ext_resource type="Texture2D" uid="uid://dnve4ci8ogc4s" path="res://assets/sprites/items/rune1-1.png" id="30_to8kw"]
+[ext_resource type="Texture2D" uid="uid://dvl4lhdb40f8j" path="res://assets/sprites/items/rune1-2.png" id="31_indlw"]
+[ext_resource type="Texture2D" uid="uid://dfy54gbi4qyfg" path="res://assets/sprites/items/rune1-3.png" id="32_lr8ey"]
+[ext_resource type="Texture2D" uid="uid://eas3n7uyw4gd" path="res://assets/sprites/items/rune1-4.png" id="33_fib52"]
+[ext_resource type="Texture2D" uid="uid://blg7lcey6l66x" path="res://assets/sprites/items/rune1-5.png" id="34_jj753"]
+[ext_resource type="Texture2D" uid="uid://og1jdw52vjpt" path="res://assets/sprites/items/rune1-6.png" id="35_cwxpv"]
+[ext_resource type="Texture2D" uid="uid://ci81i8v75mxcr" path="res://assets/sprites/items/rune1-7.png" id="36_m5bgt"]
+[ext_resource type="Texture2D" uid="uid://b623boa7nh3uj" path="res://assets/sprites/items/rune1-8.png" id="37_ws4f3"]
+[ext_resource type="Texture2D" uid="uid://vs71sc83fqvw" path="res://assets/sprites/items/rune1-9.png" id="38_nsa2v"]
+[ext_resource type="Texture2D" uid="uid://cnb5adgqtu8fo" path="res://assets/sprites/items/rune1-10.png" id="39_0v1fb"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_me04p"]
 size = Vector3(76.386, 58.817, 2.604)
@@ -49,13 +60,6 @@ lock_z = true
 
 [node name="Floor" parent="." instance=ExtResource("1_t7k6m")]
 transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, -1.29957, -7.87024, -1.41195)
-
-[node name="Area3D" type="Area3D" parent="Floor"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.33333, 1.53333, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/Area3D"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.666667, 0, 0.4)
-shape = SubResource("CapsuleShape3D_ouwf4")
 
 [node name="Walls" type="Node" parent="."]
 
@@ -191,6 +195,92 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.6514, 3.97436, 17.355)
 
 [node name="Pumpkin1" parent="Objects" instance=ExtResource("27_vtixk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.6121, 4.45306, 17.685)
+
+[node name="InkQuill1" type="Sprite3D" parent="Objects"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -3.60351, 15.2443, 14.9762)
+billboard = 2
+texture = ExtResource("28_ymv78")
+
+[node name="Potion1" type="Sprite3D" parent="Objects"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 1.42673, 15.2443, 14.9762)
+billboard = 2
+texture = ExtResource("29_4w8af")
+
+[node name="Apple1" type="Sprite3D" parent="Objects"]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 12.1884, 24.1623, 11.6255)
+billboard = 2
+alpha_cut = 1
+texture = ExtResource("30_el5w0")
+
+[node name="Apple2" type="Sprite3D" parent="Objects"]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 13.7677, 24.148, 12.3134)
+billboard = 2
+alpha_cut = 1
+texture = ExtResource("30_el5w0")
+
+[node name="Poison1" type="Sprite3D" parent="Objects"]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 36.7865, 38.9316, 14.9762)
+texture = ExtResource("29_fdfnd")
+
+[node name="Rune1" type="Sprite3D" parent="Objects"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 24.53, 23.9707, 13.3515)
+billboard = 2
+alpha_cut = 1
+texture = ExtResource("30_to8kw")
+
+[node name="Rune2" type="Sprite3D" parent="Objects"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 23.8675, 23.9011, 12.2483)
+billboard = 2
+alpha_cut = 1
+texture = ExtResource("31_indlw")
+
+[node name="Rune3" type="Sprite3D" parent="Objects"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 22.911, 23.9707, 11.9428)
+billboard = 2
+alpha_cut = 1
+texture = ExtResource("32_lr8ey")
+
+[node name="Rune4" type="Sprite3D" parent="Objects"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 22.1702, 23.9707, 12.7079)
+billboard = 2
+alpha_cut = 1
+texture = ExtResource("33_fib52")
+
+[node name="Rune5" type="Sprite3D" parent="Objects"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 21.8437, 23.9707, 11.9428)
+billboard = 2
+alpha_cut = 1
+texture = ExtResource("34_jj753")
+
+[node name="Rune6" type="Sprite3D" parent="Objects"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 24.7154, 23.9707, 14.6688)
+billboard = 2
+alpha_cut = 1
+texture = ExtResource("35_cwxpv")
+
+[node name="Rune7" type="Sprite3D" parent="Objects"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 23.8263, 23.9707, 14.1149)
+billboard = 2
+alpha_cut = 1
+texture = ExtResource("36_m5bgt")
+
+[node name="Rune8" type="Sprite3D" parent="Objects"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 22.9621, 23.9707, 14.6688)
+billboard = 2
+alpha_cut = 1
+texture = ExtResource("37_ws4f3")
+
+[node name="Rune9" type="Sprite3D" parent="Objects"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 23.1375, 23.9707, 12.9953)
+billboard = 2
+alpha_cut = 1
+texture = ExtResource("38_nsa2v")
+
+[node name="Rune10" type="Sprite3D" parent="Objects"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 22.2771, 23.9707, 13.716)
+billboard = 2
+alpha_cut = 1
+texture = ExtResource("39_0v1fb")
 
 [node name="Interactable" type="Node" parent="."]
 
