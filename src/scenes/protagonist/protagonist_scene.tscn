@@ -1,10 +1,12 @@
-[gd_scene load_steps=18 format=3 uid="uid://dqb6hflk04skq"]
+[gd_scene load_steps=20 format=3 uid="uid://dqb6hflk04skq"]
 
 [ext_resource type="Script" path="res://scripts/protagonist/protagonist_script.gd" id="1_7xj1q"]
 [ext_resource type="ArrayMesh" uid="uid://bkc7w3ttjxl5w" path="res://RoomObjects/Protagonist.obj" id="2_5x464"]
 [ext_resource type="Texture2D" uid="uid://typ71ccn5qcm" path="res://assets/sprites/Walk anim.png" id="3_i0ier"]
 [ext_resource type="Texture2D" uid="uid://g4m2kriiymn2" path="res://assets/sprites/player slug.png" id="3_u7x7g"]
-[ext_resource type="PackedScene" uid="uid://cvwdepeddsmd0" path="res://scenes/skull_sprite.tscn" id="5_1jgiy"]
+[ext_resource type="PackedScene" path="res://scenes/skull_sprite.tscn" id="5_1jgiy"]
+[ext_resource type="PackedScene" uid="uid://bk1cv3vgmy13p" path="res://scenes/components/health_component.tscn" id="6_iodel"]
+[ext_resource type="PackedScene" uid="uid://dnsrdyx8nphea" path="res://scenes/components/hitbox_component.tscn" id="7_scdkf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oydbq"]
 atlas = ExtResource("3_i0ier")
@@ -73,14 +75,14 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_gpv27"]
+points = PackedVector3Array(-0.291599, 0.0226715, 0.00386099, -0.0277506, 0.855882, 0.0594111, -0.0277506, 0.855882, 0.00386099, 0.444357, 0.647516, 0.0594111, -0.444357, 0.0921268, 0.0594111, 0.263761, 0.0921268, 0.00386099, 0.166591, 0.0226715, 0.0594111, 0.444357, 0.703064, 0.00386099, -0.263761, 0.661424, 0.00386099, -0.166591, 0.828151, 0.0594111, -0.444357, 0.133766, 0.00386099, 0.0971706, -0.00514436, 0.00386099, -0.194341, -0.00514436, 0.0594111, 0.41652, 0.73088, 0.0594111, 0.263761, 0.0921268, 0.0594111, -0.263761, 0.661424, 0.0594111, -0.13884, 0.855882, 0.00386099, 0.444357, 0.647516, 0.00386099, 0.41652, 0.73088, 0.00386099, 0.0971706, -0.00514436, 0.0594111, -0.194341, -0.00514436, 0.00386099, -0.444357, 0.133766, 0.0594111, -0.444357, 0.0921268, 0.00386099, -0.13884, 0.855882, 0.0594111, -0.194341, 0.786427, 0.00386099, -0.291599, 0.0226715, 0.0594111, 0.166591, 0.0226715, 0.00386099, 0.444357, 0.703064, 0.0594111, -0.388769, 0.0643109, 0.00386099, -0.194341, 0.786427, 0.0594111, -0.166591, 0.828151, 0.00386099, -0.388769, 0.0643109, 0.0594111)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_k2v2t"]
 size = Vector3(1.1, 1.08984, 0.363138)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fakw7"]
 albedo_color = Color(0.388387, 0.00010969, 0.391463, 1)
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_gpv27"]
-points = PackedVector3Array(-0.291599, 0.0226715, 0.00386099, -0.0277506, 0.855882, 0.0594111, -0.0277506, 0.855882, 0.00386099, 0.444357, 0.647516, 0.0594111, -0.444357, 0.0921268, 0.0594111, 0.263761, 0.0921268, 0.00386099, 0.166591, 0.0226715, 0.0594111, 0.444357, 0.703064, 0.00386099, -0.263761, 0.661424, 0.00386099, -0.166591, 0.828151, 0.0594111, -0.444357, 0.133766, 0.00386099, 0.0971706, -0.00514436, 0.00386099, -0.194341, -0.00514436, 0.0594111, 0.41652, 0.73088, 0.0594111, 0.263761, 0.0921268, 0.0594111, -0.263761, 0.661424, 0.0594111, -0.13884, 0.855882, 0.00386099, 0.444357, 0.647516, 0.00386099, 0.41652, 0.73088, 0.00386099, 0.0971706, -0.00514436, 0.0594111, -0.194341, -0.00514436, 0.00386099, -0.444357, 0.133766, 0.0594111, -0.444357, 0.0921268, 0.00386099, -0.13884, 0.855882, 0.0594111, -0.194341, 0.786427, 0.00386099, -0.291599, 0.0226715, 0.0594111, 0.166591, 0.0226715, 0.00386099, 0.444357, 0.703064, 0.0594111, -0.388769, 0.0643109, 0.00386099, -0.194341, 0.786427, 0.0594111, -0.166591, 0.828151, 0.00386099, -0.388769, 0.0643109, 0.0594111)
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_0x1q2"]
 radius = 0.222
@@ -88,7 +90,7 @@ height = 0.804
 
 [node name="Protagonist" type="CharacterBody3D"]
 collision_layer = 8
-collision_mask = 23
+collision_mask = 19
 script = ExtResource("1_7xj1q")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
@@ -97,24 +99,25 @@ texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_0hkjp")
 animation = &"walk"
 
+[node name="World Collision" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_gpv27")
+
+[node name="CameraTarget" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.419266, 0)
+
 [node name="Wall_Detector" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0016731, 0.568482, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Wall_Detector"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0449219, -0.0645034)
 shape = SubResource("BoxShape3D_k2v2t")
+disabled = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.00345, 0, 0, 0, 1.00345, 0, 0, 0, 1.00345, 0, 0, 0)
 visible = false
 mesh = ExtResource("2_5x464")
 surface_material_override/0 = SubResource("StandardMaterial3D_fakw7")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("ConvexPolygonShape3D_gpv27")
-
-[node name="CameraTarget" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.419266, 0)
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0.417122, 0)
@@ -130,6 +133,19 @@ mesh = SubResource("CapsuleMesh_0x1q2")
 
 [node name="SkullSprite" parent="." instance=ExtResource("5_1jgiy")]
 transform = Transform3D(0.022, 0, 0, 0, 0.022, 0, 0, 0, 0.022, 0, 1.21592, 0)
+visible = false
+
+[node name="HealthComponent" parent="." instance=ExtResource("6_iodel")]
+
+[node name="HitboxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("7_scdkf")]
+collision_layer = 8
+collision_mask = 4
+health_component = NodePath("../HealthComponent")
+
+[node name="Hitbox Collision" type="CollisionShape3D" parent="HitboxComponent"]
+shape = SubResource("ConvexPolygonShape3D_gpv27")
 
 [connection signal="body_entered" from="Wall_Detector" to="." method="_on_wall_detector_body_entered"]
 [connection signal="body_exited" from="Wall_Detector" to="." method="_on_wall_detector_body_exited"]
+[connection signal="death" from="HealthComponent" to="." method="_on_health_component_death"]
+[connection signal="hurt" from="HealthComponent" to="." method="_on_health_component_hurt"]
