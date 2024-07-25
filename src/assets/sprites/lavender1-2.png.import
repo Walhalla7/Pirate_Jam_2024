@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8dfkoiae8j11"
-path.s3tc="res://.godot/imported/leaf5-1.png-034f3b1db74abc5fc84beca41823f20e.s3tc.ctex"
+uid="uid://b6ri5r38dxlum"
+path.s3tc="res://.godot/imported/lavender1-2.png-cc207832cc68921de2c286e34a333214.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/sprites/leaf5-1.png"
-dest_files=["res://.godot/imported/leaf5-1.png-034f3b1db74abc5fc84beca41823f20e.s3tc.ctex"]
+source_file="res://assets/sprites/lavender1-2.png"
+dest_files=["res://.godot/imported/lavender1-2.png-cc207832cc68921de2c286e34a333214.s3tc.ctex"]
 
 [params]
 
