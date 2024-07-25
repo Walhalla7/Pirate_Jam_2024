@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://be5rsh5c5do18"
-path="res://.godot/imported/lantern.glb-85afd5464db84df76c76ff4f4bef048f.scn"
+uid="uid://dnp1x7wfn0l3m"
+path="res://.godot/imported/Pot1.glb-7e9d13971657a67894e9168c307c900d.scn"
 
 [deps]
 
-source_file="res://assets/glbs/lantern.glb"
-dest_files=["res://.godot/imported/lantern.glb-85afd5464db84df76c76ff4f4bef048f.scn"]
+source_file="res://assets/glbs/Pot1.glb"
+dest_files=["res://.godot/imported/Pot1.glb-7e9d13971657a67894e9168c307c900d.scn"]
 
 [params]
 

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dlenrhhgicbqm"
-path="res://.godot/imported/skull.glb-2df1cecd88c908fcd78b47e3b458c975.scn"
+uid="uid://cvtsljrcqwuay"
+path="res://.godot/imported/PlanterPixelated.glb-d6104f542df5af6e93930ab13dcae300.scn"
 
 [deps]
 
-source_file="res://assets/glbs/skull.glb"
-dest_files=["res://.godot/imported/skull.glb-2df1cecd88c908fcd78b47e3b458c975.scn"]
+source_file="res://assets/glbs/PlanterPixelated.glb"
+dest_files=["res://.godot/imported/PlanterPixelated.glb-d6104f542df5af6e93930ab13dcae300.scn"]
 
 [params]
 

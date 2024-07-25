@@ -1,10 +1,10 @@
 [gd_scene load_steps=5 format=3 uid="uid://b4rm71ixmaqth"]
 
 [ext_resource type="ArrayMesh" uid="uid://c1duq5ll6ias7" path="res://RoomObjects/Table.obj" id="1_2tmwd"]
-[ext_resource type="Texture2D" uid="uid://iy58cofwdx00" path="res://assets/sprites/wood_texture1.png" id="2_vmii2"]
+[ext_resource type="Texture2D" uid="uid://iy58cofwdx00" path="res://assets/textures/wood_texture1.png" id="2_06w8f"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yb15i"]
-albedo_texture = ExtResource("2_vmii2")
+albedo_texture = ExtResource("2_06w8f")
 uv1_scale = Vector3(20, 20, 20)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_kqyvl"]
