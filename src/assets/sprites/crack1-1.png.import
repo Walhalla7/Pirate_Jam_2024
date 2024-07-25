@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7f00rgcgvk2g"
-path.s3tc="res://.godot/imported/bottle1-7.png-6dbec0e72a76e9bbaf4664833efabc83.s3tc.ctex"
+uid="uid://6qdpqu6xodps"
+path.s3tc="res://.godot/imported/crack1-1.png-a9c929ceff7cdb50c0fbc305c65fe760.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/sprites/items/bottle1-7.png"
-dest_files=["res://.godot/imported/bottle1-7.png-6dbec0e72a76e9bbaf4664833efabc83.s3tc.ctex"]
+source_file="res://assets/sprites/crack1-1.png"
+dest_files=["res://.godot/imported/crack1-1.png-a9c929ceff7cdb50c0fbc305c65fe760.s3tc.ctex"]
 
 [params]
 
