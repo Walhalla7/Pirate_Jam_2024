@@ -20,7 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://dmh6nsn2dxmqs" path="res://RoomObjects/ObjectScenes/plant_leaves.tscn" id="18_cqddd"]
 [ext_resource type="PackedScene" uid="uid://q70kvg27ykq0" path="res://assets/glbs/book2.glb" id="20_iwijn"]
 [ext_resource type="PackedScene" uid="uid://dr43efvqq30qs" path="res://assets/glbs/book3.glb" id="21_1etbs"]
-[ext_resource type="PackedScene" uid="uid://cxk6mj283urcb" path="res://RoomObjects/ObjectScenes/shelf_1.tscn" id="22_3oviy"]
+[ext_resource type="PackedScene" path="res://RoomObjects/ObjectScenes/shelf_1.tscn" id="22_3oviy"]
 [ext_resource type="PackedScene" uid="uid://o8u6ymlho8lk" path="res://RoomObjects/ObjectScenes/garlic_braid.tscn" id="22_dyea0"]
 [ext_resource type="PackedScene" uid="uid://dmj4r00y1wboq" path="res://RoomObjects/ObjectScenes/unlit_candle.tscn" id="23_2bolv"]
 [ext_resource type="PackedScene" uid="uid://lmq4dwuxtoft" path="res://scenes/dust_bunny.tscn" id="24_1wpdf"]
