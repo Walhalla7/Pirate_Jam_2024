@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cm3xif4e6yccv"]
 
-[ext_resource type="Texture2D" uid="uid://iy58cofwdx00" path="res://assets/sprites/wood_texture1.png" id="1_mc0s3"]
+[ext_resource type="Texture2D" uid="uid://iy58cofwdx00" path="res://assets/textures/wood_texture1.png" id="1_cqcpc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_twm05"]
 resource_name = "1721267220329"
@@ -40,7 +40,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_5dqd8")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gob4f"]
-albedo_texture = ExtResource("1_mc0s3")
+albedo_texture = ExtResource("1_cqcpc")
 uv1_scale = Vector3(-0.8, -0.8, -0.8)
 uv1_triplanar = true
 

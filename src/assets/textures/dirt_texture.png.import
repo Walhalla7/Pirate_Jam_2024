@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clrpoa76lanqm"
-path.s3tc="res://.godot/imported/leaf3-1.png-c655603c2c5e441f0ec1a87477ea41a9.s3tc.ctex"
+uid="uid://co8aryga2psxj"
+path.s3tc="res://.godot/imported/dirt_texture.png-5940a2ce737d508fae886afc04391a73.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/sprites/leaf3-1.png"
-dest_files=["res://.godot/imported/leaf3-1.png-c655603c2c5e441f0ec1a87477ea41a9.s3tc.ctex"]
+source_file="res://assets/textures/dirt_texture.png"
+dest_files=["res://.godot/imported/dirt_texture.png-5940a2ce737d508fae886afc04391a73.s3tc.ctex"]
 
 [params]
 
