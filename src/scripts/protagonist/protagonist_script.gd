@@ -3,6 +3,7 @@ extends CharacterBody3D
 #Camera managment
 @onready var camera_target = $CameraTarget
 @onready var animated_sprite_3d = $AnimatedSprite3D
+@onready var sprite_3d = $Sprite3D
 
 #======================================== 	Detectors 	==================================
 @onready var floorDetectors = $Raycasts/Floor_detectors
@@ -13,6 +14,10 @@ func _check_is_grounded():
 		if raycast.is_colliding():
 			return true
 	return false
+
+@onready var rightDetector = $Raycasts/Right_detector
+@onready var leftDetector = $Raycasts/Left_detector
+@onready var backDetector = $Raycasts/Back_detector
 
 #======================================== 	Variables 	==================================
 #Movement variables
@@ -37,13 +42,20 @@ func _on_health_component_hurt():
 func _apply_gravity(delta):
 	velocity.y -= gravityStrength * delta
 
-#function to handle jump input
-func _input(event):
-	if event.is_action("jump") && is_Grounded:
-		velocity.y = JUMP_VELOCITY
+func _apply_movement():
+	is_Grounded = _check_is_grounded()
+	
+	# Flip Sprite
+	if velocity.x > 0:
+		animated_sprite_3d.flip_h = true
+	elif velocity.x < 0:
+		animated_sprite_3d.flip_h = false
+		
+	move_and_slide()
+
 
 #function to calulcate directional inputs and movements 
-func _get_input():
+func _handle_move_input():
 	#we calculate movement direction based on inputs 
 	var move_direction_x = int(Input.is_action_pressed("move_left")) - int(Input.is_action_pressed("move_right"))
 	var move_direction_z = int(Input.is_action_pressed("move_back")) - int(Input.is_action_pressed("move_forward"))
@@ -80,15 +92,6 @@ func _ready():
 
 #======================================== 	Process 	==================================
 func _physics_process(delta):
-	_get_input()
-	_apply_gravity(delta)
-	
-	is_Grounded = _check_is_grounded()
-	
-	# Flip Sprite
-	if velocity.x > 0:
-		animated_sprite_3d.flip_h = true
-	elif velocity.x < 0:
-		animated_sprite_3d.flip_h = false
-		
-	move_and_slide()
+	pass
+
+

@@ -1,11 +1,8 @@
 extends Node
 class_name StateMachine
 
-var state = null:
-	set (value):
-		state = set_state(value)
-	get: 
-		return state
+var state = null
+
 var previous_state = null
 var states = {}
 
