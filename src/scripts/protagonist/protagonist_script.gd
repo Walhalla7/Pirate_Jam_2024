@@ -4,6 +4,7 @@ extends CharacterBody3D
 @onready var camera_target = $CameraTarget
 @onready var animated_sprite_3d = $AnimatedSprite3D
 @onready var sprite_3d = $Sprite3D
+@onready var climbTimer = $ClimbTimer
 
 #======================================== 	Detectors 	==================================
 @onready var floorDetectors = $Raycasts/Floor_detectors
@@ -25,6 +26,7 @@ const move_speed = 5.0
 const JUMP_VELOCITY = 7
 var sprint_modifier = 1
 const WALL_JUMP_VELOCITY = Vector3(0,9,0)
+var can_crawl = true
 
 # Gravity
 #var gravity = ProjectSettings.get_setting("physics/3d/default_gravity") #Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -42,6 +44,17 @@ func _on_health_component_hurt():
 #Gravity applied universally
 func _apply_gravity(delta):
 	velocity.y -= gravityStrength * delta
+
+#called when snail been on the wall too long
+func _on_climb_timer_timeout():
+	can_crawl = false
+
+#checking if snail is currently climbing
+func _is_timer_active():
+	if (climbTimer.time_left > 0):
+		return true
+	else:
+		return false
 
 func _apply_movement():
 	is_Grounded = _check_is_grounded()
@@ -100,11 +113,14 @@ func _handle_move_Left_input():
 	var move_direction_x
 	var move_direction_z
 	
-	if is_Grounded:
+	if is_Grounded or backDetector.is_colliding():
 		move_direction_y = int(Input.is_action_pressed("move_left"))
 		move_direction_x = -int(Input.is_action_pressed("move_right"))
 	else:
-		move_direction_y = int(Input.is_action_pressed("move_left")) - int(Input.is_action_pressed("move_right"))
+		if can_crawl:
+			move_direction_y = int(Input.is_action_pressed("move_left")) - int(Input.is_action_pressed("move_right"))
+		else:
+			move_direction_y = - int(Input.is_action_pressed("move_right"))
 	move_direction_z = int(Input.is_action_pressed("move_back")) - int(Input.is_action_pressed("move_forward"))
 	
 	#Sprint Input / calculations
@@ -123,11 +139,14 @@ func _handle_move_Right_input():
 	var move_direction_z
 	
 	#we calculate movement direction based on inputs 
-	if is_Grounded:
+	if is_Grounded or backDetector.is_colliding():
 		move_direction_x = int(Input.is_action_pressed("move_left"))
 		move_direction_y = int(Input.is_action_pressed("move_right"))
 	else:
-		move_direction_y = -int(Input.is_action_pressed("move_left")) + int(Input.is_action_pressed("move_right"))
+		if can_crawl:
+			move_direction_y = -int(Input.is_action_pressed("move_left")) + int(Input.is_action_pressed("move_right"))
+		else:
+			move_direction_y = -int(Input.is_action_pressed("move_left"))
 	move_direction_z = int(Input.is_action_pressed("move_back")) - int(Input.is_action_pressed("move_forward"))
 	
 	#Sprint Input / calculations
@@ -146,11 +165,14 @@ func _handle_move_Back_input():
 	var move_direction_z
 	
 	#we calculate movement direction based on inputs 
-	if is_Grounded:
+	if is_Grounded or leftDetector.is_colliding() or rightDetector.is_colliding():
 		move_direction_z = -int(Input.is_action_pressed("move_forward"))
 		move_direction_y = int(Input.is_action_pressed("move_back"))
 	else:
-		move_direction_y = int(Input.is_action_pressed("move_back")) - int(Input.is_action_pressed("move_forward"))
+		if can_crawl:
+			move_direction_y = int(Input.is_action_pressed("move_back")) - int(Input.is_action_pressed("move_forward"))
+		else:
+			move_direction_y = - int(Input.is_action_pressed("move_forward"))
 	move_direction_x = int(Input.is_action_pressed("move_left")) - int(Input.is_action_pressed("move_right"))
 	
 	#Sprint Input / calculations
@@ -173,5 +195,4 @@ func _ready():
 #======================================== 	Process 	==================================
 func _physics_process(delta):
 	pass
-
 

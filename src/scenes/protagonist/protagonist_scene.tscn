@@ -160,5 +160,9 @@ transform = Transform3D(-4.37114e-08, 0.500717, 0, -1, -2.1887e-08, 0, 0, 0, 1, 
 [node name="Back_detector" type="RayCast3D" parent="Raycasts"]
 transform = Transform3D(1, 0, 0, 0, -1.97372e-08, -1, 0, 0.451532, -4.37114e-08, 0, 0.194743, 0)
 
+[node name="ClimbTimer" type="Timer" parent="."]
+wait_time = 2.0
+
 [connection signal="death" from="HealthComponent" to="." method="_on_health_component_death"]
 [connection signal="hurt" from="HealthComponent" to="." method="_on_health_component_hurt"]
+[connection signal="timeout" from="ClimbTimer" to="." method="_on_climb_timer_timeout"]

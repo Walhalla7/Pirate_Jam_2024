@@ -102,11 +102,11 @@ func _get_transition(delta):
 				
 		#Leaving Jump state
 		states.JUMPING:
-			if parent.rightDetector.is_colliding() && parent.velocity.x < 0:
+			if parent.rightDetector.is_colliding() && parent.velocity.x < 0 && parent.can_crawl:
 				return states.WALL_RIGHT
-			elif parent.leftDetector.is_colliding() && parent.velocity.x > 0:
+			elif parent.leftDetector.is_colliding() && parent.velocity.x > 0 && parent.can_crawl:
 				return states.WALL_LEFT
-			elif parent.backDetector.is_colliding() && parent.velocity.z > 0:
+			elif parent.backDetector.is_colliding() && parent.velocity.z > 0 && parent.can_crawl:
 				return states.WALL_BACK
 			elif parent.is_Grounded:
 				return states.IDLE
@@ -115,11 +115,11 @@ func _get_transition(delta):
 				
 		#Leaving fall state
 		states.FALLING:
-			if parent.rightDetector.is_colliding() && parent.velocity.x < 0:
+			if parent.rightDetector.is_colliding() && parent.velocity.x < 0 && parent.can_crawl:
 				return states.WALL_RIGHT
-			elif parent.leftDetector.is_colliding() && parent.velocity.x > 0:
+			elif parent.leftDetector.is_colliding() && parent.velocity.x > 0 && parent.can_crawl:
 				return states.WALL_LEFT
-			elif parent.backDetector.is_colliding() && parent.velocity.z > 0:
+			elif parent.backDetector.is_colliding() && parent.velocity.z > 0 && parent.can_crawl:
 				return states.WALL_BACK
 			elif parent.is_Grounded:
 				return states.IDLE
@@ -128,8 +128,33 @@ func _get_transition(delta):
 				
 	return null
 
+#define behaviors while enetering into specific state
 func _enter_state(new_state, old_state):
-	pass
+	match state:
+		states.IDLE:
+			parent.can_crawl = true
+			parent.climbTimer.stop()
+			
+		states.WALKING:
+			parent.can_crawl = true
+			parent.climbTimer.stop()
+		
+		states.WALKING:
+			parent.can_crawl = true
+			parent.climbTimer.stop()
+		
+		states.WALL_LEFT:
+			if !parent._is_timer_active():
+				parent.climbTimer.start()
+				
+		states.WALL_RIGHT:
+			if !parent._is_timer_active():
+				parent.climbTimer.start()
+				
+		states.WALL_BACK:
+			if !parent._is_timer_active():
+				parent.climbTimer.start()
 
+#define behaviors while exiting out of specific state
 func _exit_state(old_state, new_state):
 	pass
