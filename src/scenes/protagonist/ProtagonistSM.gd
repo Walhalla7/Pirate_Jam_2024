@@ -17,7 +17,15 @@ func _ready():
 	call_deferred("set_state", states.IDLE)
 
 func _state_logic(delta):
-	parent._handle_move_input()
+	match state:
+		states.WALL_LEFT:
+			parent._handle_move_Left_input()
+		states.WALL_RIGHT:
+			parent._handle_move_Right_input()
+		states.WALL_BACK:
+			parent._handle_move_Back_input()
+		_:
+			parent._handle_move_input()
 	parent._apply_movement()
 	parent._apply_gravity(delta)
 	print(states.keys()[state])
@@ -98,7 +106,7 @@ func _get_transition(delta):
 			elif parent.backDetector.is_colliding() && parent.velocity.z > 0:
 				return states.WALL_BACK
 			elif parent.is_Grounded:
-				return states.idle
+				return states.IDLE
 			elif parent.velocity.y <= 0:
 				return states.FALLING
 				

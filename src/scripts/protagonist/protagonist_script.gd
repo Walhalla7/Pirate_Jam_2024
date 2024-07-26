@@ -82,6 +82,75 @@ func _handle_move_input():
 	else:
 		animated_sprite_3d.play("idle")
 
+#function to calulcate directional inputs and movements on left wall
+func _handle_move_Left_input():
+	#we calculate movement direction based on inputs 
+	var move_direction_y
+	var move_direction_x
+	var move_direction_z
+	
+	if is_Grounded:
+		move_direction_y = int(Input.is_action_pressed("move_left"))
+		move_direction_x = -int(Input.is_action_pressed("move_right"))
+	else:
+		move_direction_y = int(Input.is_action_pressed("move_left")) - int(Input.is_action_pressed("move_right"))
+	move_direction_z = int(Input.is_action_pressed("move_back")) - int(Input.is_action_pressed("move_forward"))
+	
+	#Sprint Input / calculations
+	sprint_modifier = 2 if Input.is_action_pressed("sprint") else 1
+	
+	#we apply the direction to velocity 
+	if is_Grounded:
+		velocity.x = lerp(velocity.x, move_direction_x * move_speed * sprint_modifier, _get_h_weight())
+	velocity.y = lerp(velocity.y, move_direction_y * move_speed * sprint_modifier, _get_h_weight())
+	velocity.z = lerp(velocity.z, move_direction_z * move_speed * sprint_modifier, _get_h_weight())
+
+#function to calulcate directional inputs and movements on right wall
+func _handle_move_Right_input():
+	var move_direction_y
+	var move_direction_x
+	var move_direction_z
+	
+	#we calculate movement direction based on inputs 
+	if is_Grounded:
+		move_direction_x = int(Input.is_action_pressed("move_left"))
+		move_direction_y = int(Input.is_action_pressed("move_right"))
+	else:
+		move_direction_y = -int(Input.is_action_pressed("move_left")) + int(Input.is_action_pressed("move_right"))
+	move_direction_z = int(Input.is_action_pressed("move_back")) - int(Input.is_action_pressed("move_forward"))
+	
+	#Sprint Input / calculations
+	sprint_modifier = 2 if Input.is_action_pressed("sprint") else 1
+	
+	#we apply the direction to velocity 
+	if is_Grounded:
+		velocity.x = lerp(velocity.x, move_direction_x * move_speed * sprint_modifier, _get_h_weight())
+	velocity.y = lerp(velocity.y, move_direction_y * move_speed * sprint_modifier, _get_h_weight())
+	velocity.z = lerp(velocity.z, move_direction_z * move_speed * sprint_modifier, _get_h_weight())
+
+#function to calulcate directional inputs and movements on right wall
+func _handle_move_Back_input():
+	var move_direction_y
+	var move_direction_x
+	var move_direction_z
+	
+	#we calculate movement direction based on inputs 
+	if is_Grounded:
+		move_direction_z = -int(Input.is_action_pressed("move_forward"))
+		move_direction_y = int(Input.is_action_pressed("move_back"))
+	else:
+		move_direction_y = int(Input.is_action_pressed("move_back")) - int(Input.is_action_pressed("move_forward"))
+	move_direction_x = int(Input.is_action_pressed("move_left")) - int(Input.is_action_pressed("move_right"))
+	
+	#Sprint Input / calculations
+	sprint_modifier = 2 if Input.is_action_pressed("sprint") else 1
+	
+	#we apply the direction to velocity 
+	if is_Grounded:
+		velocity.z = lerp(velocity.z, move_direction_z * move_speed * sprint_modifier, _get_h_weight())
+	velocity.y = lerp(velocity.y, move_direction_y * move_speed * sprint_modifier, _get_h_weight())
+	velocity.x = lerp(velocity.x, move_direction_x * move_speed * sprint_modifier, _get_h_weight())
+
 #turning strength based on being on the floor
 func _get_h_weight():
 	return 0.2 if is_Grounded else 0.1
