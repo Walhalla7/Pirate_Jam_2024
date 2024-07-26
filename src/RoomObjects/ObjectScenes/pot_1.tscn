@@ -41,7 +41,7 @@ shadow_mesh = SubResource("ArrayMesh_5dqd8")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gob4f"]
 albedo_texture = ExtResource("1_cqcpc")
-uv1_scale = Vector3(-0.8, -0.8, -0.8)
+uv1_scale = Vector3(-0.32, -0.32, -0.32)
 uv1_triplanar = true
 
 [node name="Pot1" type="Node3D"]
