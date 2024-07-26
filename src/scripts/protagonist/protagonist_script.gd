@@ -10,23 +10,29 @@ extends CharacterBody3D
 @onready var floorDetectors = $Raycasts/Floor_detectors
 var is_Grounded
 
+#detecting if player is on the floor 
 func _check_is_grounded():
 	for raycast in floorDetectors.get_children():
 		if raycast.is_colliding():
 			return true
 	return false
 
+#detecting if player is on wall
 @onready var rightDetector = $Raycasts/Right_detector
 @onready var leftDetector = $Raycasts/Left_detector
 @onready var backDetector = $Raycasts/Back_detector
 
 #======================================== 	Variables 	==================================
 #Movement variables
-const move_speed = 5.0
-const JUMP_VELOCITY = 7
+@export var move_speed = 5.0
+@export var JUMP_VELOCITY = 7
 var sprint_modifier = 1
-const WALL_JUMP_VELOCITY = Vector3(0,9,0)
+@export var max_sprint_modifier = 2
 var can_crawl = true
+@export var wall_slowdown = 2
+@export var jump_vertical_strength = 9
+@export var jump_horizontal_strength = 7
+var WALL_JUMP_VELOCITY = Vector3(0,jump_vertical_strength,0)
 
 # Gravity
 #var gravity = ProjectSettings.get_setting("physics/3d/default_gravity") #Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -56,6 +62,7 @@ func _is_timer_active():
 	else:
 		return false
 
+#smooth out movement and perform checks on whether the player is grounded or not
 func _apply_movement():
 	is_Grounded = _check_is_grounded()
 	
@@ -67,14 +74,15 @@ func _apply_movement():
 		
 	move_and_slide()
 
+#wall jump calulculations function
 func wall_jump():
 	var wall_jump_velocity = WALL_JUMP_VELOCITY
 	if rightDetector.is_colliding():
-		wall_jump_velocity.x = 7
+		wall_jump_velocity.x = jump_horizontal_strength
 	elif leftDetector.is_colliding():
-		wall_jump_velocity.x = -7
+		wall_jump_velocity.x = -jump_horizontal_strength
 	elif backDetector.is_colliding():
-		wall_jump_velocity.z = -7
+		wall_jump_velocity.z = -jump_horizontal_strength
 		
 	velocity = wall_jump_velocity
 
@@ -85,7 +93,7 @@ func _handle_move_input():
 	var move_direction_z = int(Input.is_action_pressed("move_back")) - int(Input.is_action_pressed("move_forward"))
 	
 	#Sprint Input / calculations
-	sprint_modifier = 2 if Input.is_action_pressed("sprint") else 1
+	sprint_modifier = max_sprint_modifier if Input.is_action_pressed("sprint") else 1
 	
 	#we apply the direction to velocity 
 	velocity.x = lerp(velocity.x, move_direction_x * move_speed * sprint_modifier, _get_h_weight())
@@ -124,12 +132,12 @@ func _handle_move_Left_input():
 	move_direction_z = int(Input.is_action_pressed("move_back")) - int(Input.is_action_pressed("move_forward"))
 	
 	#Sprint Input / calculations
-	sprint_modifier = 2 if Input.is_action_pressed("sprint") else 1
+	sprint_modifier = max_sprint_modifier if Input.is_action_pressed("sprint") else 1
 	
 	#we apply the direction to velocity 
 	if is_Grounded:
 		velocity.x = lerp(velocity.x, move_direction_x * move_speed * sprint_modifier, _get_h_weight())
-	velocity.y = lerp(velocity.y, move_direction_y * move_speed * sprint_modifier, _get_h_weight())
+	velocity.y = lerp(velocity.y, move_direction_y * (move_speed-wall_slowdown) * sprint_modifier, _get_h_weight())
 	velocity.z = lerp(velocity.z, move_direction_z * move_speed * sprint_modifier, _get_h_weight())
 
 #function to calulcate directional inputs and movements on right wall
@@ -150,12 +158,12 @@ func _handle_move_Right_input():
 	move_direction_z = int(Input.is_action_pressed("move_back")) - int(Input.is_action_pressed("move_forward"))
 	
 	#Sprint Input / calculations
-	sprint_modifier = 2 if Input.is_action_pressed("sprint") else 1
+	sprint_modifier = max_sprint_modifier if Input.is_action_pressed("sprint") else 1
 	
 	#we apply the direction to velocity 
 	if is_Grounded:
 		velocity.x = lerp(velocity.x, move_direction_x * move_speed * sprint_modifier, _get_h_weight())
-	velocity.y = lerp(velocity.y, move_direction_y * move_speed * sprint_modifier, _get_h_weight())
+	velocity.y = lerp(velocity.y, move_direction_y * (move_speed-wall_slowdown) * sprint_modifier, _get_h_weight())
 	velocity.z = lerp(velocity.z, move_direction_z * move_speed * sprint_modifier, _get_h_weight())
 
 #function to calulcate directional inputs and movements on right wall
@@ -176,12 +184,12 @@ func _handle_move_Back_input():
 	move_direction_x = int(Input.is_action_pressed("move_left")) - int(Input.is_action_pressed("move_right"))
 	
 	#Sprint Input / calculations
-	sprint_modifier = 2 if Input.is_action_pressed("sprint") else 1
+	sprint_modifier = max_sprint_modifier if Input.is_action_pressed("sprint") else 1
 	
 	#we apply the direction to velocity 
 	if is_Grounded:
 		velocity.z = lerp(velocity.z, move_direction_z * move_speed * sprint_modifier, _get_h_weight())
-	velocity.y = lerp(velocity.y, move_direction_y * move_speed * sprint_modifier, _get_h_weight())
+	velocity.y = lerp(velocity.y, move_direction_y * (move_speed-wall_slowdown) * sprint_modifier, _get_h_weight())
 	velocity.x = lerp(velocity.x, move_direction_x * move_speed * sprint_modifier, _get_h_weight())
 
 #turning strength based on being on the floor

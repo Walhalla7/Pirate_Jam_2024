@@ -10,6 +10,7 @@ func _input(event):
 			parent.wall_jump()
 
 func _ready():
+	#we add all the posible states to the list 
 	add_state("IDLE")
 	add_state("WALKING")
 	add_state("WALL_BACK")
@@ -19,6 +20,7 @@ func _ready():
 	add_state("JUMPING")
 	call_deferred("set_state", states.IDLE)
 
+#equivelent to process function
 func _state_logic(delta):
 	match state:
 		states.WALL_LEFT:
@@ -31,7 +33,8 @@ func _state_logic(delta):
 			parent._handle_move_input()
 	parent._apply_movement()
 	parent._apply_gravity(delta)
-	print(states.keys()[state])
+	#uncomment below for testing
+	#print(states.keys()[state])
 
 #conditions for transitioning between states
 func _get_transition(delta):
