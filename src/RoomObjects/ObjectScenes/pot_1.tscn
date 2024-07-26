@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://cm3xif4e6yccv"]
+[gd_scene load_steps=7 format=3 uid="uid://cm3xif4e6yccv"]
 
 [ext_resource type="Texture2D" uid="uid://iy58cofwdx00" path="res://assets/textures/wood_texture1.png" id="1_cqcpc"]
+[ext_resource type="Texture2D" uid="uid://dnmakqqndvtvm" path="res://assets/sprites/items/apple1-1.png" id="2_hoa1j"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_twm05"]
 resource_name = "1721267220329"
@@ -47,7 +48,82 @@ uv1_triplanar = true
 [node name="Pot1" type="Node3D"]
 
 [node name="Basket" type="MeshInstance3D" parent="."]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+transform = Transform3D(3.375, 0, 0, 0, 1.688, 0, 0, 0, 3.375, 0, 0, 0)
 mesh = SubResource("ArrayMesh_trarf")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_gob4f")
+
+[node name="Apple1" type="Sprite3D" parent="."]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, -3.06327, 2.60095, 1.06893)
+billboard = 2
+texture = ExtResource("2_hoa1j")
+
+[node name="Apple5" type="Sprite3D" parent="."]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0.439787, 2.60095, 2.12962)
+billboard = 2
+texture = ExtResource("2_hoa1j")
+
+[node name="Apple6" type="Sprite3D" parent="."]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, -1.71135, 2.60095, 2.24468)
+billboard = 2
+texture = ExtResource("2_hoa1j")
+
+[node name="Apple7" type="Sprite3D" parent="."]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0.00264812, 2.32005, 3.29282)
+billboard = 2
+texture = ExtResource("2_hoa1j")
+
+[node name="Apple2" type="Sprite3D" parent="."]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, -1.12162, 2.60095, 0.954559)
+billboard = 2
+texture = ExtResource("2_hoa1j")
+
+[node name="Apple15" type="Sprite3D" parent="."]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0.845069, 2.60095, 0.683949)
+billboard = 2
+texture = ExtResource("2_hoa1j")
+
+[node name="Apple14" type="Sprite3D" parent="."]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, -0.664593, 2.60095, -0.433668)
+billboard = 2
+texture = ExtResource("2_hoa1j")
+
+[node name="Apple8" type="Sprite3D" parent="."]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, -2.63699, 2.93228, -0.144364)
+billboard = 2
+texture = ExtResource("2_hoa1j")
+
+[node name="Apple13" type="Sprite3D" parent="."]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, -1.87362, 2.93228, -1.69354)
+billboard = 2
+texture = ExtResource("2_hoa1j")
+
+[node name="Apple4" type="Sprite3D" parent="."]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 2.98556, 2.60095, 0.99885)
+billboard = 2
+texture = ExtResource("2_hoa1j")
+
+[node name="Apple9" type="Sprite3D" parent="."]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0.453779, 2.60095, -1.22767)
+billboard = 2
+texture = ExtResource("2_hoa1j")
+
+[node name="Apple10" type="Sprite3D" parent="."]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 2.7603, 2.60095, -0.767751)
+billboard = 2
+texture = ExtResource("2_hoa1j")
+
+[node name="Apple11" type="Sprite3D" parent="."]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0.485364, 2.60095, -2.83982)
+billboard = 2
+texture = ExtResource("2_hoa1j")
+
+[node name="Apple12" type="Sprite3D" parent="."]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 2.23295, 2.60095, -2.3799)
+billboard = 2
+texture = ExtResource("2_hoa1j")
+
+[node name="Apple3" type="Sprite3D" parent="."]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 2.21032, 2.60095, 2.61493)
+billboard = 2
+texture = ExtResource("2_hoa1j")
