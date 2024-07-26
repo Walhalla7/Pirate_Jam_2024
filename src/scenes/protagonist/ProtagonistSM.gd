@@ -2,9 +2,12 @@ extends StateMachine
 
 #function to handle jump input
 func _input(event):
-	if [states.IDLE, states.WALKING, states.WALL_BACK, states.WALL_LEFT, states.WALL_RIGHT].has(state):
+	if [states.IDLE, states.WALKING].has(state):
 		if event.is_action("jump") && parent.is_Grounded:
 			parent.velocity.y = parent.JUMP_VELOCITY
+	elif [states.WALL_BACK, states.WALL_LEFT, states.WALL_RIGHT].has(state):
+		if event.is_action("jump"):
+			parent.wall_jump()
 
 func _ready():
 	add_state("IDLE")

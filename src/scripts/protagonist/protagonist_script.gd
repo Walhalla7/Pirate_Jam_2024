@@ -24,6 +24,7 @@ func _check_is_grounded():
 const move_speed = 5.0
 const JUMP_VELOCITY = 7
 var sprint_modifier = 1
+const WALL_JUMP_VELOCITY = Vector3(0,9,0)
 
 # Gravity
 #var gravity = ProjectSettings.get_setting("physics/3d/default_gravity") #Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -53,6 +54,16 @@ func _apply_movement():
 		
 	move_and_slide()
 
+func wall_jump():
+	var wall_jump_velocity = WALL_JUMP_VELOCITY
+	if rightDetector.is_colliding():
+		wall_jump_velocity.x = 7
+	elif leftDetector.is_colliding():
+		wall_jump_velocity.x = -7
+	elif backDetector.is_colliding():
+		wall_jump_velocity.z = -7
+		
+	velocity = wall_jump_velocity
 
 #function to calulcate directional inputs and movements 
 func _handle_move_input():
