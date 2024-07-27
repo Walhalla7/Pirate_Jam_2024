@@ -18,7 +18,6 @@
 [ext_resource type="PackedScene" uid="uid://b3yf85wyrhfp4" path="res://RoomObjects/ObjectScenes/sack_1.tscn" id="26_0ypc4"]
 [ext_resource type="PackedScene" uid="uid://cxvjeiqh3j2jr" path="res://RoomObjects/ObjectScenes/pumpkin_1.tscn" id="27_vtixk"]
 [ext_resource type="Texture2D" uid="uid://c8lf0ch8cxych" path="res://assets/sprites/ink_quill1-1.png" id="28_ymv78"]
-[ext_resource type="Texture2D" uid="uid://f6cuwanx3yog" path="res://assets/sprites/items/poison1-3.png" id="29_fdfnd"]
 [ext_resource type="Texture2D" uid="uid://dkchx743vs01l" path="res://assets/sprites/wasp1-1.png" id="29_typtx"]
 [ext_resource type="Texture2D" uid="uid://dnmakqqndvtvm" path="res://assets/sprites/items/apple1-1.png" id="30_el5w0"]
 [ext_resource type="Texture2D" uid="uid://dnve4ci8ogc4s" path="res://assets/sprites/items/rune1-1.png" id="30_to8kw"]
@@ -43,6 +42,7 @@
 [ext_resource type="PackedScene" uid="uid://owkksck3k0yh" path="res://RoomObjects/ObjectScenes/book_4.tscn" id="48_45p8h"]
 [ext_resource type="PackedScene" uid="uid://0w5ww6ubbmqb" path="res://RoomObjects/wood_pile.tscn" id="49_23on2"]
 [ext_resource type="PackedScene" uid="uid://c66i63xdpgkm4" path="res://RoomObjects/ObjectScenes/book_5.tscn" id="49_eguuj"]
+[ext_resource type="PackedScene" uid="uid://d0nsyb30ncao7" path="res://RoomObjects/ObjectScenes/poison_1.tscn" id="49_ja6r4"]
 [ext_resource type="PackedScene" uid="uid://bxn08bp8rct4y" path="res://RoomObjects/ObjectScenes/cobweb_1.tscn" id="49_q85rh"]
 [ext_resource type="PackedScene" uid="uid://bao4w8y48mhfi" path="res://RoomObjects/ObjectScenes/window.tscn" id="49_w536i"]
 [ext_resource type="PackedScene" uid="uid://dxn1gd1dxai4b" path="res://RoomObjects/ObjectScenes/lavender_1.tscn" id="50_mriqt"]
@@ -208,10 +208,6 @@ billboard = 2
 alpha_cut = 1
 texture = ExtResource("30_el5w0")
 
-[node name="Poison1" type="Sprite3D" parent="Objects"]
-transform = Transform3D(-6.55671e-09, 0, 0.15, 0, 0.15, 0, -0.15, 0, -6.55671e-09, 71.4338, 42.6182, -3.02706)
-texture = ExtResource("29_fdfnd")
-
 [node name="Rune1" type="Sprite3D" parent="Objects"]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 24.53, 22.6822, 13.3515)
 billboard = 2
@@ -363,6 +359,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.1971, 3.09026, 12.1338)
 
 [node name="book5" parent="Objects" instance=ExtResource("49_eguuj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.0032, 3.11091, 13)
+
+[node name="poison1" parent="Objects" instance=ExtResource("49_ja6r4")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 70.3225, 42.4364, -3.79145)
 
 [node name="Interactable" type="Node" parent="."]
 
