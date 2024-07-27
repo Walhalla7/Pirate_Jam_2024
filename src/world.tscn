@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://dx1te2b8aasvv"]
+[gd_scene load_steps=53 format=3 uid="uid://dx1te2b8aasvv"]
 
 [ext_resource type="Script" path="res://script_main.gd" id="1_cwe8n"]
 [ext_resource type="PackedScene" uid="uid://b1tqs2mt8aiii" path="res://Environment/static/test_field.tscn" id="1_t7k6m"]
@@ -20,11 +20,8 @@
 [ext_resource type="PackedScene" uid="uid://b3yf85wyrhfp4" path="res://RoomObjects/ObjectScenes/sack_1.tscn" id="26_0ypc4"]
 [ext_resource type="PackedScene" uid="uid://cxvjeiqh3j2jr" path="res://RoomObjects/ObjectScenes/pumpkin_1.tscn" id="27_vtixk"]
 [ext_resource type="Texture2D" uid="uid://c8lf0ch8cxych" path="res://assets/sprites/ink_quill1-1.png" id="28_ymv78"]
-[ext_resource type="Texture2D" uid="uid://by3pymka0alu8" path="res://assets/sprites/items/bottle1-6.png" id="29_3jwux"]
-[ext_resource type="Texture2D" uid="uid://ikb5mvfjtryx" path="res://assets/sprites/items/bottle1-5.png" id="29_4w8af"]
 [ext_resource type="Texture2D" uid="uid://f6cuwanx3yog" path="res://assets/sprites/items/poison1-3.png" id="29_fdfnd"]
 [ext_resource type="Texture2D" uid="uid://dkchx743vs01l" path="res://assets/sprites/wasp1-1.png" id="29_typtx"]
-[ext_resource type="Texture2D" uid="uid://c7f00rgcgvk2g" path="res://assets/sprites/items/bottle1-7.png" id="30_6q1ct"]
 [ext_resource type="Texture2D" uid="uid://dnmakqqndvtvm" path="res://assets/sprites/items/apple1-1.png" id="30_el5w0"]
 [ext_resource type="Texture2D" uid="uid://dnve4ci8ogc4s" path="res://assets/sprites/items/rune1-1.png" id="30_to8kw"]
 [ext_resource type="Texture2D" uid="uid://dvl4lhdb40f8j" path="res://assets/sprites/items/rune1-2.png" id="31_indlw"]
@@ -41,6 +38,7 @@
 [ext_resource type="PackedScene" uid="uid://bnaqv7gn2ya0j" path="res://RoomObjects/ObjectScenes/bookshelf_1.tscn" id="43_rywdm"]
 [ext_resource type="PackedScene" uid="uid://cm3xif4e6yccv" path="res://RoomObjects/ObjectScenes/pot_1.tscn" id="44_qlga4"]
 [ext_resource type="PackedScene" uid="uid://cl47ep50md2hp" path="res://RoomObjects/ObjectScenes/vine_1.tscn" id="47_4s8sk"]
+[ext_resource type="PackedScene" uid="uid://bfiw2crbcotw1" path="res://RoomObjects/ObjectScenes/potion_1.tscn" id="47_mnpfp"]
 [ext_resource type="PackedScene" uid="uid://bxx1n3p44c68f" path="res://RoomObjects/ObjectScenes/crystal_1.tscn" id="48_5p0j8"]
 [ext_resource type="PackedScene" uid="uid://0w5ww6ubbmqb" path="res://RoomObjects/wood_pile.tscn" id="49_23on2"]
 [ext_resource type="PackedScene" uid="uid://bxn08bp8rct4y" path="res://RoomObjects/ObjectScenes/cobweb_1.tscn" id="49_q85rh"]
@@ -61,7 +59,7 @@ size = Vector3(97.1499, 73.1899, 2.604)
 script = ExtResource("1_cwe8n")
 
 [node name="Protagonist" parent="." instance=ExtResource("2_yjr5n")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 63.7442, 7.92233, 13.673)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 29.4705, 4.61998, 13.673)
 
 [node name="PlayerCamera" parent="." node_paths=PackedStringArray("camera_target") instance=ExtResource("3_beliv")]
 transform = Transform3D(-1, -9.89654e-09, 8.68608e-08, 0, 0.993572, 0.113203, -8.74228e-08, 0.113203, -0.993572, 62.8567, 4.64496, 8.4452)
@@ -115,7 +113,7 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 11.987
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 14.6863, 16.8378, 16.2425)
 
 [node name="Book2" parent="Objects" instance=ExtResource("18_1jb4a")]
-transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 10.6327, 2.40539, 15.8216)
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 10.6327, 2.40539, 13.6517)
 
 [node name="book4" parent="Objects" instance=ExtResource("20_iwijn")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 11.987, 2.17899, 16.2095)
@@ -228,21 +226,6 @@ texture = ExtResource("28_ymv78")
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -22.7085, 29.9725, 16.5427)
 billboard = 2
 texture = ExtResource("29_typtx")
-
-[node name="Potion1" type="Sprite3D" parent="Objects"]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 23.5955, 2.72127, 13.6142)
-billboard = 2
-texture = ExtResource("29_4w8af")
-
-[node name="Potion2" type="Sprite3D" parent="Objects"]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 21.8372, 2.72127, 12.8218)
-billboard = 2
-texture = ExtResource("29_3jwux")
-
-[node name="Potion3" type="Sprite3D" parent="Objects"]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 20.5216, 2.72127, 13.7225)
-billboard = 2
-texture = ExtResource("30_6q1ct")
 
 [node name="Apple1" type="Sprite3D" parent="Objects"]
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 12.1884, 23.0222, 13.3595)
@@ -385,6 +368,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.5886, 21.8888, 4.53412)
 
 [node name="WoodPile" parent="Objects" instance=ExtResource("49_23on2")]
 
+[node name="Potion1" parent="Objects" instance=ExtResource("47_mnpfp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.3852, 2.40137, 11.9059)
+
+[node name="Potion5" parent="Objects" instance=ExtResource("47_mnpfp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.5002, 2.40137, 12.7234)
+
+[node name="Potion4" parent="Objects" instance=ExtResource("47_mnpfp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.1204, 2.34796, 16.0815)
+
+[node name="Potion2" parent="Objects" instance=ExtResource("47_mnpfp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 2.34796, 16.7143)
+
+[node name="Potion3" parent="Objects" instance=ExtResource("47_mnpfp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.2008, 2.34796, 16.7143)
+
 [node name="Interactable" type="Node" parent="."]
 
 [node name="DustBunny1" parent="Interactable" instance=ExtResource("24_1wpdf")]
@@ -418,7 +416,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, -1.401)
 cell_size = Vector3(2, 2, 2.1)
 
 [node name="LaneGuidelines" parent="DevTools" instance=ExtResource("51_qwm2i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.326, -0.261, 14.322)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.326, 1.34998, 14.322)
 
 [node name="ForegroundSprites" type="Node" parent="."]
 
