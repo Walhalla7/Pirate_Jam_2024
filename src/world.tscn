@@ -320,7 +320,7 @@ transform = Transform3D(-0.913787, 0.406195, 0, -0.406195, -0.913787, 0, 0, 0, 1
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.6319, 20.8664, -3.05459)
 
 [node name="Table1" parent="Objects" instance=ExtResource("53_dgj73")]
-transform = Transform3D(0.999929, 0.0276166, 0, -0.0119552, 2.30983, 0, 0, 0, 1, -5.82688, -1.93078, 12.6041)
+transform = Transform3D(0.999929, 0.0119552, 0, -0.0119552, 0.999929, 0, 0, 0, 1, -5.82688, -0.84731, 12.6101)
 
 [node name="Cauldron1" parent="Objects" instance=ExtResource("51_4fvl8")]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 71.6319, 11.3851, -3.05459)
