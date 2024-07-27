@@ -77,6 +77,7 @@ Escape={
 3d_navigation/layer_4="Protagonist"
 3d_physics/layer_5="Walls"
 3d_navigation/layer_5="Walls"
+3d_physics/layer_6="Can_Hide_Behind"
 
 [rendering]
 

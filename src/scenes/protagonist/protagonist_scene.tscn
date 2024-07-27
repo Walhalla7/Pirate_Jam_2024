@@ -4,7 +4,7 @@
 [ext_resource type="ArrayMesh" uid="uid://bkc7w3ttjxl5w" path="res://RoomObjects/Protagonist.obj" id="2_5x464"]
 [ext_resource type="Texture2D" uid="uid://typ71ccn5qcm" path="res://assets/SpriteSheets/Walk anim.png" id="3_i0ier"]
 [ext_resource type="Texture2D" uid="uid://g4m2kriiymn2" path="res://assets/sprites/player slug.png" id="3_u7x7g"]
-[ext_resource type="PackedScene" uid="uid://cvwdepeddsmd0" path="res://scenes/skull_sprite.tscn" id="5_1jgiy"]
+[ext_resource type="PackedScene" path="res://scenes/skull_sprite.tscn" id="5_1jgiy"]
 [ext_resource type="PackedScene" uid="uid://bk1cv3vgmy13p" path="res://scenes/components/health_component.tscn" id="6_iodel"]
 [ext_resource type="PackedScene" uid="uid://dnsrdyx8nphea" path="res://scenes/components/hitbox_component.tscn" id="7_scdkf"]
 [ext_resource type="Script" path="res://scenes/protagonist/ProtagonistSM.gd" id="8_8y8tt"]
@@ -100,9 +100,6 @@ animation = &"walk"
 [node name="World Collision" type="CollisionShape3D" parent="."]
 shape = SubResource("ConvexPolygonShape3D_gpv27")
 
-[node name="CameraTarget" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.419266, 0)
-
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.00345, 0, 0, 0, 1.00345, 0, 0, 0, 1.00345, 0, 0, 0)
 visible = false
@@ -127,10 +124,9 @@ visible = false
 
 [node name="HealthComponent" parent="." instance=ExtResource("6_iodel")]
 
-[node name="HitboxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("7_scdkf")]
+[node name="HitboxComponent" parent="." instance=ExtResource("7_scdkf")]
 collision_layer = 8
 collision_mask = 4
-health_component = NodePath("../HealthComponent")
 
 [node name="Hitbox Collision" type="CollisionShape3D" parent="HitboxComponent"]
 shape = SubResource("ConvexPolygonShape3D_gpv27")
