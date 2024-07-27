@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://cxk6mj283urcb"]
 
-[ext_resource type="Texture2D" uid="uid://iy58cofwdx00" path="res://assets/sprites/wood_texture1.png" id="1_drsv1"]
+[ext_resource type="Texture2D" uid="uid://iy58cofwdx00" path="res://assets/textures/wood_texture1.png" id="1_do0wy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bamad"]
-albedo_texture = ExtResource("1_drsv1")
+albedo_texture = ExtResource("1_do0wy")
 uv1_scale = Vector3(2.715, 2.715, 2.715)
 
 [sub_resource type="BoxMesh" id="BoxMesh_jexbg"]
