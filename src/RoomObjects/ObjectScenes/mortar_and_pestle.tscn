@@ -95,11 +95,12 @@ skeleton = NodePath("")
 shape = SubResource("ConcavePolygonShape3D_ch61y")
 
 [node name="pestle2" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.649848, 0.472541, 0, -0.472541, 0.649848, 0, 0, 0, 0.803491, 0.407483, 1.04497, 0)
+transform = Transform3D(0.649848, 0.472541, 0, -0.472541, 0.649848, 0, 0, 0, 0.803491, 0.407483, 1.09675, 0)
 mesh = SubResource("ArrayMesh_w6jvc")
 skeleton = NodePath("")
 
 [node name="RigidBody3D" type="RigidBody3D" parent="pestle2"]
+angular_velocity = Vector3(0.00907571, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="pestle2/RigidBody3D"]
 transform = Transform3D(1, -2.98023e-08, 0, 2.98023e-08, 1, 0, 0, 0, 1, 0, 0.0872326, 0)
