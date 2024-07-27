@@ -9,6 +9,7 @@ class_name WitchDetector
 @onready var ray_cast_3d = $RayCast3D
 @onready var timer = $Timer
 
+# TO USE: Set the player to collision mask 1 and anything they can hide behind on collision layer 6
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
