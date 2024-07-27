@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cm3xif4e6yccv"]
+[gd_scene load_steps=8 format=3 uid="uid://cm3xif4e6yccv"]
 
 [ext_resource type="Texture2D" uid="uid://iy58cofwdx00" path="res://assets/textures/wood_texture1.png" id="1_cqcpc"]
 [ext_resource type="Texture2D" uid="uid://dnmakqqndvtvm" path="res://assets/sprites/items/apple1-1.png" id="2_hoa1j"]
@@ -44,6 +44,10 @@ shadow_mesh = SubResource("ArrayMesh_5dqd8")
 albedo_texture = ExtResource("1_cqcpc")
 uv1_scale = Vector3(-0.32, -0.32, -0.32)
 uv1_triplanar = true
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_n8jpw"]
+height = 4.97838
+radius = 4.83594
 
 [node name="Pot1" type="Node3D"]
 
@@ -127,3 +131,9 @@ texture = ExtResource("2_hoa1j")
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 2.21032, 2.60095, 2.61493)
 billboard = 2
 texture = ExtResource("2_hoa1j")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="OutsideBasket" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.247526, 0)
+shape = SubResource("CylinderShape3D_n8jpw")
