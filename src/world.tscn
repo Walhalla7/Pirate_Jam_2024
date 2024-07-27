@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://dx1te2b8aasvv"]
+[gd_scene load_steps=55 format=3 uid="uid://dx1te2b8aasvv"]
 
 [ext_resource type="Script" path="res://script_main.gd" id="1_cwe8n"]
 [ext_resource type="PackedScene" uid="uid://b1tqs2mt8aiii" path="res://Environment/static/test_field.tscn" id="1_t7k6m"]
@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://bnpn7fkfgkb3k" path="res://RoomObjects/ObjectScenes/Utensils.tscn" id="16_xqik0"]
 [ext_resource type="PackedScene" uid="uid://dvcbj3533beha" path="res://RoomObjects/ObjectScenes/book_1.tscn" id="18_1jb4a"]
 [ext_resource type="PackedScene" uid="uid://dmh6nsn2dxmqs" path="res://RoomObjects/ObjectScenes/plant_leaves.tscn" id="18_cqddd"]
-[ext_resource type="PackedScene" uid="uid://dr43efvqq30qs" path="res://assets/glbs/book3.glb" id="21_1etbs"]
 [ext_resource type="PackedScene" uid="uid://cxk6mj283urcb" path="res://RoomObjects/ObjectScenes/shelf_1.tscn" id="22_3oviy"]
 [ext_resource type="PackedScene" uid="uid://o8u6ymlho8lk" path="res://RoomObjects/ObjectScenes/garlic_braid.tscn" id="22_dyea0"]
 [ext_resource type="PackedScene" uid="uid://dmj4r00y1wboq" path="res://RoomObjects/ObjectScenes/unlit_candle.tscn" id="23_2bolv"]
@@ -37,10 +36,13 @@
 [ext_resource type="PackedScene" uid="uid://bnaqv7gn2ya0j" path="res://RoomObjects/ObjectScenes/bookshelf_1.tscn" id="43_rywdm"]
 [ext_resource type="PackedScene" uid="uid://cm3xif4e6yccv" path="res://RoomObjects/ObjectScenes/pot_1.tscn" id="44_qlga4"]
 [ext_resource type="PackedScene" uid="uid://cl47ep50md2hp" path="res://RoomObjects/ObjectScenes/vine_1.tscn" id="47_4s8sk"]
+[ext_resource type="PackedScene" uid="uid://b7b8fu2m4hh64" path="res://RoomObjects/ObjectScenes/book_3.tscn" id="47_ict7s"]
 [ext_resource type="PackedScene" uid="uid://bfiw2crbcotw1" path="res://RoomObjects/ObjectScenes/potion_1.tscn" id="47_mnpfp"]
 [ext_resource type="PackedScene" uid="uid://cnjremmhh6e6g" path="res://RoomObjects/ObjectScenes/book_2.tscn" id="47_vgie6"]
 [ext_resource type="PackedScene" uid="uid://bxx1n3p44c68f" path="res://RoomObjects/ObjectScenes/crystal_1.tscn" id="48_5p0j8"]
+[ext_resource type="PackedScene" uid="uid://owkksck3k0yh" path="res://RoomObjects/ObjectScenes/book_4.tscn" id="48_45p8h"]
 [ext_resource type="PackedScene" uid="uid://0w5ww6ubbmqb" path="res://RoomObjects/wood_pile.tscn" id="49_23on2"]
+[ext_resource type="PackedScene" uid="uid://c66i63xdpgkm4" path="res://RoomObjects/ObjectScenes/book_5.tscn" id="49_eguuj"]
 [ext_resource type="PackedScene" uid="uid://bxn08bp8rct4y" path="res://RoomObjects/ObjectScenes/cobweb_1.tscn" id="49_q85rh"]
 [ext_resource type="PackedScene" uid="uid://bao4w8y48mhfi" path="res://RoomObjects/ObjectScenes/window.tscn" id="49_w536i"]
 [ext_resource type="PackedScene" uid="uid://dxn1gd1dxai4b" path="res://RoomObjects/ObjectScenes/lavender_1.tscn" id="50_mriqt"]
@@ -104,10 +106,7 @@ transform = Transform3D(-4.37114e-08, 0, 1.21561, 0, 1, 0, -1, 0, -5.3136e-08, 5
 transform = Transform3D(0.0324281, 0, 0.0156338, 0, 0.036, 0, -0.0156338, 0, 0.0324281, 2.71413, 25.9971, 14.0077)
 
 [node name="Book2" parent="Objects" instance=ExtResource("18_1jb4a")]
-transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 10.6327, 2.40539, 13.6517)
-
-[node name="book5" parent="Objects" instance=ExtResource("21_1etbs")]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 16.5838, 2.76619, 16.2425)
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 12.1039, 2.40539, 10.7957)
 
 [node name="Shelf1" parent="Objects" instance=ExtResource("22_3oviy")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -5.12529, 20.0854, 16.0741)
@@ -354,7 +353,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 2.34796, 16.7143)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.2008, 2.34796, 16.7143)
 
 [node name="book2" parent="Objects" instance=ExtResource("47_vgie6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.405, 12.0273, 2.86, 13.9785)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.405, 13.5353, 2.86, 11.4325)
+
+[node name="book3" parent="Objects" instance=ExtResource("47_ict7s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.2978, 3.13142, 11.2708)
+
+[node name="book4" parent="Objects" instance=ExtResource("48_45p8h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.1971, 3.09026, 12.1338)
+
+[node name="book5" parent="Objects" instance=ExtResource("49_eguuj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.0032, 3.11091, 13)
 
 [node name="Interactable" type="Node" parent="."]
 
@@ -389,7 +397,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, -1.401)
 cell_size = Vector3(2, 2, 2.1)
 
 [node name="LaneGuidelines" parent="DevTools" instance=ExtResource("51_qwm2i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.326, 1.34998, 14.322)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.326, 1.59603, 14.322)
 
 [node name="ForegroundSprites" type="Node" parent="."]
 
