@@ -1,0 +1,78 @@
+[gd_scene load_steps=4 format=3 uid="uid://cb7wd2oq7jwgh"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ixkqv"]
+font_size = 78
+font_color = Color(0.901961, 0.701961, 0.333333, 1)
+outline_color = Color(0.40008, 0.834969, 0.983399, 1)
+
+[sub_resource type="Texture2DRD" id="Texture2DRD_pand6"]
+
+[sub_resource type="GDScript" id="GDScript_x4k4e"]
+resource_name = "res://StartButton.gd"
+script/source = "extends Button
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+	get_tree().change_scene_to_file(\"res://test_world.tscn\")
+	
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.107
+anchor_top = 0.105
+anchor_right = 0.107
+anchor_bottom = 0.105
+offset_left = -0.264008
+offset_top = -0.0400009
+offset_right = 680.736
+offset_bottom = 604.96
+color = Color(0.501307, 0.00329272, 0.990163, 1)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 138.0
+offset_top = 157.0
+offset_right = 557.0
+offset_bottom = 357.0
+text = "Game over"
+label_settings = SubResource("LabelSettings_ixkqv")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.109
+anchor_top = 0.103
+anchor_right = 0.109
+anchor_bottom = 0.103
+offset_left = 49.432
+offset_top = 523.256
+offset_right = 89.432
+offset_bottom = 563.256
+texture = SubResource("Texture2DRD_pand6")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 361.0
+offset_top = 470.0
+offset_right = 660.0
+offset_bottom = 610.0
+theme_override_font_sizes/font_size = 32
+text = "Start"
+script = SubResource("GDScript_x4k4e")
