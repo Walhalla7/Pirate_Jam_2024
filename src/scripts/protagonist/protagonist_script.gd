@@ -3,88 +3,41 @@ extends CharacterBody3D
 #Camera managment
 @onready var camera_target = $CameraTarget
 @onready var animated_sprite_3d = $AnimatedSprite3D
+@onready var sprite_3d = $Sprite3D
+@onready var climbTimer = $ClimbTimer
 
-#======================================== 	States 	==================================
-#current state of the player
-var curr_State
+#======================================== 	Detectors 	==================================
+@onready var floorDetectors = $Raycasts/Floor_detectors
+var is_Grounded
 
-#States player can be in 
-#WORK IN PROGRESS
-#TO DO: Implement camera changing and detection of wall to which player is attached
-enum States {
-	FLOOR,
-	WALL_FORWARD,
-	WALL_BACK,
-	WALL_LEFT,
-	WALL_RIGHT,
-	CEILING,
-	FALLING
-}
+#detecting if player is on the floor 
+func _check_is_grounded():
+	for raycast in floorDetectors.get_children():
+		if raycast.is_colliding():
+			return true
+	return false
 
-#Actions player cam take in each state
-enum Actions {
-	MOVE_LEFT,
-	MOVE_RIGHT,
-	MOVE_FORWARD,
-	MOVE_BACK,
-	DASH,
-	JUMP,
-	IDLE
-}
-
-#Call this function whenever the snail changes it's state along with the state you want to change it to
-func change_State(newState):
-	match newState:
-		States.FLOOR:
-			curr_State = States.FLOOR
-			print("Floor")	
-		States.WALL_FORWARD:
-			curr_State = States.WALL_FORWARD
-			print("WALL_FORWARD")	
-		States.WALL_BACK:
-			curr_State = States.WALL_BACK
-			print("WALL_BACK")	
-		States.WALL_LEFT:
-			curr_State = States.WALL_LEFT
-			print("WALL_LEFT")	
-		States.WALL_RIGHT:
-			curr_State = States.WALL_RIGHT
-			print("WALL_RIGHT")	
-		States.FALLING:
-			curr_State = States.FALLING
-			print("FALLING")	
+#detecting if player is on wall
+@onready var rightDetector = $Raycasts/Right_detector
+@onready var leftDetector = $Raycasts/Left_detector
+@onready var backDetector = $Raycasts/Back_detector
 
 #======================================== 	Variables 	==================================
 #Movement variables
-const speed = 5.0
-var target_velocity = Vector3.ZERO
-const JUMP_VELOCITY = 7
-#const LERP_VAL = .15
+@export var move_speed = 5.0
+@export var JUMP_VELOCITY = 7
 var sprint_modifier = 1
-var double_jump = 0
+@export var max_sprint_modifier = 2
+var can_crawl = true
+@export var wall_slowdown = 2
+@export var jump_vertical_strength = 9
+@export var jump_horizontal_strength = 7
+var WALL_JUMP_VELOCITY = Vector3(0,jump_vertical_strength,0)
 
 # Gravity
 #var gravity = ProjectSettings.get_setting("physics/3d/default_gravity") #Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravityStrength = 9.8
-var GravityDirection = Vector3.DOWN #Base direction
 
-
-#======================================== 	Collision Functions 	==================================
-#slug touches the wall
-func _on_wall_detector_body_entered(body):
-	if body.is_in_group("Walls"):
-		change_State(States.WALL_FORWARD)
-
-#slug detaches from the wall 
-func _on_wall_detector_body_exited(body):
-	if body.is_in_group("Walls"):
-		if is_on_floor() && curr_State != States.FLOOR:
-			change_State(States.FLOOR)
-		elif is_on_ceiling():
-			change_State(States.CEILING)
-		else:
-			change_State(States.FALLING)
-			
 #======================================== 	Hurt & Death Functions 	==================================\
 
 func _on_health_component_death():
@@ -93,6 +46,155 @@ func _on_health_component_death():
 func _on_health_component_hurt():
 	print("Player has been hurt")
 
+#======================================== 	Movement 	==================================
+#Gravity applied universally
+func _apply_gravity(delta):
+	velocity.y -= gravityStrength * delta
+
+#called when snail been on the wall too long
+func _on_climb_timer_timeout():
+	can_crawl = false
+
+#checking if snail is currently climbing
+func _is_timer_active():
+	if (climbTimer.time_left > 0):
+		return true
+	else:
+		return false
+
+#smooth out movement and perform checks on whether the player is grounded or not
+func _apply_movement():
+	is_Grounded = _check_is_grounded()
+	
+	# Flip Sprite
+	if velocity.x > 0:
+		animated_sprite_3d.flip_h = true
+	elif velocity.x < 0:
+		animated_sprite_3d.flip_h = false
+		
+	move_and_slide()
+
+#wall jump calulculations function
+func wall_jump():
+	var wall_jump_velocity = WALL_JUMP_VELOCITY
+	if rightDetector.is_colliding():
+		wall_jump_velocity.x = jump_horizontal_strength
+	elif leftDetector.is_colliding():
+		wall_jump_velocity.x = -jump_horizontal_strength
+	elif backDetector.is_colliding():
+		wall_jump_velocity.z = -jump_horizontal_strength
+		
+	velocity = wall_jump_velocity
+
+#function to calulcate directional inputs and movements 
+func _handle_move_input():
+	#we calculate movement direction based on inputs 
+	var move_direction_x = int(Input.is_action_pressed("move_left")) - int(Input.is_action_pressed("move_right"))
+	var move_direction_z = int(Input.is_action_pressed("move_back")) - int(Input.is_action_pressed("move_forward"))
+	
+	#Sprint Input / calculations
+	sprint_modifier = max_sprint_modifier if Input.is_action_pressed("sprint") else 1
+	
+	#we apply the direction to velocity 
+	velocity.x = lerp(velocity.x, move_direction_x * move_speed * sprint_modifier, _get_h_weight())
+	velocity.z = lerp(velocity.z, move_direction_z * move_speed * sprint_modifier, _get_h_weight())
+	
+	#we apply animations/rotate sprite
+	if move_direction_x != 0 or move_direction_z != 0:
+		animated_sprite_3d.play("walk")	
+		if velocity.x < 0:
+			$Sprite3D.rotation.y = -PI
+		else: 
+			$Sprite3D.rotation.y = 0
+		
+		if velocity.z < 0:
+			$Sprite3D.rotation.y = -0.5
+		else:
+			$Sprite3D.rotation.y = 0.5
+	else:
+		animated_sprite_3d.play("idle")
+
+#function to calulcate directional inputs and movements on left wall
+func _handle_move_Left_input():
+	#we calculate movement direction based on inputs 
+	var move_direction_y
+	var move_direction_x
+	var move_direction_z
+	
+	if is_Grounded or backDetector.is_colliding():
+		move_direction_y = int(Input.is_action_pressed("move_left"))
+		move_direction_x = -int(Input.is_action_pressed("move_right"))
+	else:
+		if can_crawl:
+			move_direction_y = int(Input.is_action_pressed("move_left")) - int(Input.is_action_pressed("move_right"))
+		else:
+			move_direction_y = - int(Input.is_action_pressed("move_right"))
+	move_direction_z = int(Input.is_action_pressed("move_back")) - int(Input.is_action_pressed("move_forward"))
+	
+	#Sprint Input / calculations
+	sprint_modifier = max_sprint_modifier if Input.is_action_pressed("sprint") else 1
+	
+	#we apply the direction to velocity 
+	if is_Grounded:
+		velocity.x = lerp(velocity.x, move_direction_x * move_speed * sprint_modifier, _get_h_weight())
+	velocity.y = lerp(velocity.y, move_direction_y * (move_speed-wall_slowdown) * sprint_modifier, _get_h_weight())
+	velocity.z = lerp(velocity.z, move_direction_z * move_speed * sprint_modifier, _get_h_weight())
+
+#function to calulcate directional inputs and movements on right wall
+func _handle_move_Right_input():
+	var move_direction_y
+	var move_direction_x
+	var move_direction_z
+	
+	#we calculate movement direction based on inputs 
+	if is_Grounded or backDetector.is_colliding():
+		move_direction_x = int(Input.is_action_pressed("move_left"))
+		move_direction_y = int(Input.is_action_pressed("move_right"))
+	else:
+		if can_crawl:
+			move_direction_y = -int(Input.is_action_pressed("move_left")) + int(Input.is_action_pressed("move_right"))
+		else:
+			move_direction_y = -int(Input.is_action_pressed("move_left"))
+	move_direction_z = int(Input.is_action_pressed("move_back")) - int(Input.is_action_pressed("move_forward"))
+	
+	#Sprint Input / calculations
+	sprint_modifier = max_sprint_modifier if Input.is_action_pressed("sprint") else 1
+	
+	#we apply the direction to velocity 
+	if is_Grounded:
+		velocity.x = lerp(velocity.x, move_direction_x * move_speed * sprint_modifier, _get_h_weight())
+	velocity.y = lerp(velocity.y, move_direction_y * (move_speed-wall_slowdown) * sprint_modifier, _get_h_weight())
+	velocity.z = lerp(velocity.z, move_direction_z * move_speed * sprint_modifier, _get_h_weight())
+
+#function to calulcate directional inputs and movements on right wall
+func _handle_move_Back_input():
+	var move_direction_y
+	var move_direction_x
+	var move_direction_z
+	
+	#we calculate movement direction based on inputs 
+	if is_Grounded or leftDetector.is_colliding() or rightDetector.is_colliding():
+		move_direction_z = -int(Input.is_action_pressed("move_forward"))
+		move_direction_y = int(Input.is_action_pressed("move_back"))
+	else:
+		if can_crawl:
+			move_direction_y = int(Input.is_action_pressed("move_back")) - int(Input.is_action_pressed("move_forward"))
+		else:
+			move_direction_y = - int(Input.is_action_pressed("move_forward"))
+	move_direction_x = int(Input.is_action_pressed("move_left")) - int(Input.is_action_pressed("move_right"))
+	
+	#Sprint Input / calculations
+	sprint_modifier = max_sprint_modifier if Input.is_action_pressed("sprint") else 1
+	
+	#we apply the direction to velocity 
+	if is_Grounded:
+		velocity.z = lerp(velocity.z, move_direction_z * move_speed * sprint_modifier, _get_h_weight())
+	velocity.y = lerp(velocity.y, move_direction_y * (move_speed-wall_slowdown) * sprint_modifier, _get_h_weight())
+	velocity.x = lerp(velocity.x, move_direction_x * move_speed * sprint_modifier, _get_h_weight())
+
+#turning strength based on being on the floor
+func _get_h_weight():
+	return 0.2 if is_Grounded else 0.1
 
 #======================================== 	Initialize 	==================================
 func _ready():
@@ -100,68 +202,5 @@ func _ready():
 
 #======================================== 	Process 	==================================
 func _physics_process(delta):
+	pass
 
-	#base direction
-	var direction = Vector3.ZERO
-	
-	# Detect if slug has landed
-	if is_on_floor():
-		if curr_State != States.FLOOR:
-			change_State(States.FLOOR)
-
-	# Add the gravity/falling
-	if not is_on_floor():
-		target_velocity.y = target_velocity.y - (gravityStrength * delta)
-		if (curr_State != States.FALLING):
-			change_State(States.FALLING)
-		
-	#Double jump
-	if Input.is_action_just_pressed("jump"):
-		if is_on_floor():
-			target_velocity.y = JUMP_VELOCITY
-			double_jump = 1
-		elif !is_on_floor() && double_jump != 0:
-			target_velocity.y += JUMP_VELOCITY
-			double_jump = 0
-	
-	#Sprint Input / calculations
-	sprint_modifier = 2 if Input.is_action_pressed("sprint") else 1
-	
-	#Calculating movemnt
-	#Basic movement -> Needs change
-	#TO-DO: apply states and actions so that the direction of the movement changes as the slug lands on different surfaces
-	if Input.is_action_pressed("move_right"):
-		direction.x -= 1
-		$Sprite3D.rotation.y = 0
-	if Input.is_action_pressed("move_left"):
-		direction.x += 1
-		$Sprite3D.rotation.y = -PI
-	if Input.is_action_pressed("move_forward"):
-		direction.z -= 1
-		$Sprite3D.rotation.y = -0.5
-	if Input.is_action_pressed("move_back"):
-		direction.z += 1
-		$Sprite3D.rotation.y = 0.5
-		
-	if direction != Vector3.ZERO:
-		direction = direction.normalized()
-
-	# Animation Tree
-	if direction.x == 0 && direction.z == 0: 
-		animated_sprite_3d.play("idle")
-	else:
-		animated_sprite_3d.play("walk")
-		
-	# Flip Sprite
-	if direction.x > 0:
-		animated_sprite_3d.flip_h = true
-	elif direction.x < 0:
-		animated_sprite_3d.flip_h = false
-
-	# Ground Velocity
-	target_velocity.x = direction.x * speed * sprint_modifier
-	target_velocity.z = direction.z * speed * sprint_modifier
-	
-	# Moving the Character
-	velocity = target_velocity
-	move_and_slide()
