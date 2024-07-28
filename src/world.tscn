@@ -287,13 +287,13 @@ transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 73.9426, 10.8898, 7.389
 transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 66.5883, 7.49478, 14.0594)
 
 [node name="Planter1" parent="Objects" instance=ExtResource("43_86faq")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 24.8168, 28.7775, 12.518)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 64.3209, 15.2818, 15.1741)
 
 [node name="Bookshelf1" parent="Objects" instance=ExtResource("43_rywdm")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 17.973, 8.41153, 15.0105)
 
 [node name="Pot1" parent="Objects" instance=ExtResource("44_qlga4")]
-transform = Transform3D(-0.8, 0, -1.20797e-07, 0, 0.8, 0, 1.20797e-07, 0, -0.8, -10.8595, 1.3633, 14.7501)
+transform = Transform3D(-0.8, 0, -1.20797e-07, 0, 0.8, 0, 1.20797e-07, 0, -0.8, -10.8595, 0.716293, 14.7501)
 
 [node name="Vine1" parent="Objects" instance=ExtResource("47_4s8sk")]
 transform = Transform3D(-0.816138, -0.577858, 0, 0.577858, -0.816138, 0, 0, 0, 1, 51.9949, 47.2731, 16.5189)
