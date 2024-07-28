@@ -1,0 +1,54 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmh6nsn2dxmqs"]
+
+[ext_resource type="Texture2D" uid="uid://curyygxcaw8mi" path="res://assets/sprites/leaf1-1.png" id="1_3j5wq"]
+
+[node name="PlantLeaves" type="Node3D"]
+
+[node name="Leaf" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.3905, 16.9983, -8.94298)
+pixel_size = 0.03
+billboard = 2
+alpha_cut = 1
+texture = ExtResource("1_3j5wq")
+
+[node name="Leaf2" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.6012, 16.9983, -18.8874)
+pixel_size = 0.03
+billboard = 2
+alpha_cut = 1
+texture = ExtResource("1_3j5wq")
+
+[node name="Leaf3" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.3905, -25.0123, -9.29148)
+pixel_size = 0.03
+billboard = 2
+alpha_cut = 1
+texture = ExtResource("1_3j5wq")
+
+[node name="Leaf4" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.8222, 0.411146, -1.48313)
+pixel_size = 0.03
+billboard = 2
+alpha_cut = 1
+texture = ExtResource("1_3j5wq")
+
+[node name="Leaf5" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.3424, -29.4238, -12.1694)
+pixel_size = 0.03
+billboard = 2
+alpha_cut = 1
+texture = ExtResource("1_3j5wq")
+
+[node name="Leaf6" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.3905, -59.1276, -1.48313)
+pixel_size = 0.03
+billboard = 2
+alpha_cut = 1
+texture = ExtResource("1_3j5wq")
+
+[node name="Leaf7" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.5721, -73.4997, -1.48313)
+pixel_size = 0.03
+billboard = 2
+alpha_cut = 1
+texture = ExtResource("1_3j5wq")
