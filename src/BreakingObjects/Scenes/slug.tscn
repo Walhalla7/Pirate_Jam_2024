@@ -1,22 +1,18 @@
 [gd_scene load_steps=7 format=3 uid="uid://00h81up2m6c5"]
 
-[ext_resource type="Script" path="res://BreakingObjects/Scenes/slug.gd" id="1_2qk5f"]
 [ext_resource type="PackedScene" uid="uid://58jhqhmvx3nf" path="res://BreakingObjects/slugBefore.glb" id="1_4etbs"]
 [ext_resource type="PackedScene" uid="uid://bkaog4m6b1fm" path="res://BreakingObjects/SlugAfter.glb" id="2_oxv5d"]
 [ext_resource type="PackedScene" uid="uid://cad83bm5n5w3l" path="res://BreakingObjects/SkullCandle.glb" id="4_us37n"]
 [ext_resource type="PackedScene" uid="uid://ctjaib8rkes1j" path="res://BreakingObjects/SkullCandleAfter.glb" id="5_w666s"]
 [ext_resource type="PackedScene" uid="uid://dbsghahj2nmfw" path="res://BreakingObjects/SkullCandleAfter1.glb" id="6_dc24r"]
+[ext_resource type="PackedScene" uid="uid://cv4o4r5okiuoy" path="res://scenes/components/explosion_component.tscn" id="6_j7taa"]
 
 [node name="Slug" type="Node3D"]
-script = ExtResource("1_2qk5f")
-fragment_collision_layer = 2
-fragment_collision_mask = 29
-explosion_speed = 15.0
-min_frag_lifetime = 5.0
-max_frag_lifetime = 10.0
 
 [node name="slug1" parent="." instance=ExtResource("1_4etbs")]
-visible = false
+
+[node name="CollisionShape3D" parent="slug1/slug/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.877418, 0.848787, 0)
 
 [node name="Slug_After1" parent="." instance=ExtResource("2_oxv5d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0559395, 0, 0)
@@ -24,10 +20,12 @@ visible = false
 
 [node name="ExplodeOrigin" type="Marker3D" parent="."]
 transform = Transform3D(0.192906, 0, 0, 0, -0.0375177, 0, 0, 0, -0.0634493, -0.222797, 1.42018, 0.0306758)
+visible = false
 gizmo_extents = 0.1
 
 [node name="slug" parent="." instance=ExtResource("4_us37n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.40081, 0, -0.513824)
+visible = false
 
 [node name="skull" parent="slug" index="0"]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.214938, 1.10273, 0.239686)
@@ -359,7 +357,7 @@ visible = false
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 0.877729, -0.375)
 
 [node name="BSurfaceMesh_004" parent="Slug_After" index="1"]
-transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 0.877729, -0.225)
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.305408, 0.928793, -0.299893)
 
 [node name="BSurfaceMesh_005" parent="Slug_After" index="2"]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.614573, 0.877729, -0.075)
@@ -3924,6 +3922,11 @@ transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.17773, 1.275)
 
 [node name="BSurfaceMesh_1192" parent="Slug_After" index="1189"]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.735428, 1.32773, 1.275)
+
+[node name="ExplosionComponent" parent="." node_paths=PackedStringArray("Before", "After", "ExplosionSource") instance=ExtResource("6_j7taa")]
+Before = NodePath("../slug1")
+After = NodePath("../Slug_After2")
+ExplosionSource = NodePath("../ExplodeOrigin")
 
 [editable path="slug1"]
 [editable path="Slug_After1"]

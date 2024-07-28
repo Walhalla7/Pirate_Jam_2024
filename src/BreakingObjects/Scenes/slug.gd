@@ -17,7 +17,7 @@ func explode():
 	var parent = get_parent()
 	queue_free()
 	
-	for child in $Slug_After.get_children():
+	for child in get_parent().find_child("Slug_After").get_children():
 		if child is MeshInstance3D:
 			var frag:Fragment = preload("res://BreakingObjects/Scenes/Fragment.tscn").instantiate()
 			frag.init_from_mesh(child)

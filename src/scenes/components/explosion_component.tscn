@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cv4o4r5okiuoy"]
+
+[ext_resource type="Script" path="res://BreakingObjects/Scenes/Node.gd" id="1_t1u0r"]
+
+[node name="ExplosionComponent" type="Node"]
+script = ExtResource("1_t1u0r")
+
+[node name="DeletionTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="DeletionTimer" to="." method="_on_deletion_timer_timeout"]
