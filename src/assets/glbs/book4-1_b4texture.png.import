@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpbxrqagfi0y0"
-path.s3tc="res://.godot/imported/book4_book4_texture.png-84620dfa32a5c825ffbd406a36e5f3af.s3tc.ctex"
+uid="uid://bwlj4vmpvmxgu"
+path.s3tc="res://.godot/imported/book4-1_b4texture.png-f2de0a8735edfc1c0d9dca632ca1fc0d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://assets/glbs/book4_book4_texture.png"
-dest_files=["res://.godot/imported/book4_book4_texture.png-84620dfa32a5c825ffbd406a36e5f3af.s3tc.ctex"]
+source_file="res://assets/glbs/book4-1_b4texture.png"
+dest_files=["res://.godot/imported/book4-1_b4texture.png-f2de0a8735edfc1c0d9dca632ca1fc0d.s3tc.ctex"]
 
 [params]
 
