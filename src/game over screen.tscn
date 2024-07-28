@@ -1,5 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cb7wd2oq7jwgh"]
 
+[ext_resource type="Script" path="res://Start Button.gd" id="1_vlfyd"]
+
 [sub_resource type="LabelSettings" id="LabelSettings_ixkqv"]
 font_size = 78
 font_color = Color(0.901961, 0.701961, 0.333333, 1)
@@ -7,30 +9,18 @@ outline_color = Color(0.40008, 0.834969, 0.983399, 1)
 
 [sub_resource type="Texture2DRD" id="Texture2DRD_pand6"]
 
-[sub_resource type="GDScript" id="GDScript_x4k4e"]
-resource_name = "res://StartButton.gd"
-script/source = "extends Button
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-	get_tree().change_scene_to_file(\"res://test_world.tscn\")
-	
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-"
-
 [node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -138.0
+offset_top = 4.0
+offset_right = -138.0
+offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_vlfyd")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -39,18 +29,18 @@ anchor_left = 0.107
 anchor_top = 0.105
 anchor_right = 0.107
 anchor_bottom = 0.105
-offset_left = -0.264008
-offset_top = -0.0400009
-offset_right = 680.736
-offset_bottom = 604.96
+offset_left = -129.264
+offset_top = -74.04
+offset_right = 1629.74
+offset_bottom = 716.96
 color = Color(0.501307, 0.00329272, 0.990163, 1)
 
-[node name="Label" type="Label" parent="ColorRect"]
+[node name="Title" type="Label" parent="ColorRect"]
 layout_mode = 0
-offset_left = 138.0
-offset_top = 157.0
-offset_right = 557.0
-offset_bottom = 357.0
+offset_left = 659.0
+offset_top = 26.0
+offset_right = 1078.0
+offset_bottom = 226.0
 text = "Game over"
 label_settings = SubResource("LabelSettings_ixkqv")
 
@@ -67,12 +57,27 @@ offset_right = 89.432
 offset_bottom = 563.256
 texture = SubResource("Texture2DRD_pand6")
 
-[node name="Button" type="Button" parent="."]
-layout_mode = 0
-offset_left = 361.0
-offset_top = 470.0
-offset_right = 660.0
-offset_bottom = 610.0
+[node name="Restart" type="Button" parent="."]
+offset_left = 693.0
+offset_top = 293.0
+offset_right = 992.0
+offset_bottom = 433.0
 theme_override_font_sizes/font_size = 32
-text = "Start"
-script = SubResource("GDScript_x4k4e")
+text = "Restart"
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.116
+anchor_top = 1.0
+anchor_right = 0.116
+anchor_bottom = 1.0
+offset_left = 611.368
+offset_top = -151.0
+offset_right = 803.368
+offset_bottom = -56.0
+text = "Quit"
+
+[connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="Restart" to="Restart" method="_on_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

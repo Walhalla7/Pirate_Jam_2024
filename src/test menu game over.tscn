@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://wu1fu6gbcew6"]
+
+[ext_resource type="PackedScene" uid="uid://cb7wd2oq7jwgh" path="res://game over screen.tscn" id="1_288yu"]
+[ext_resource type="PackedScene" uid="uid://bi4h30shxghqv" path="res://test_world.tscn" id="2_7l3kt"]
+
+[node name="Node" type="Node"]
+
+[node name="TestWorld" parent="." instance=ExtResource("2_7l3kt")]
+
+[node name="Control" parent="." instance=ExtResource("1_288yu")]

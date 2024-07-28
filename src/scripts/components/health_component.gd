@@ -24,6 +24,7 @@ func decrement_health(damage: DamageComponent):
 	
 	if health <= 0:
 		death.emit()
+		SignalBus.emit_signal("game_over")
 	if health == 1: 
 		skull_icon.visible = true
 	else:

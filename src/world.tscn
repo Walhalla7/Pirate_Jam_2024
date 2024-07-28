@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://dx1te2b8aasvv"]
+[gd_scene load_steps=53 format=3 uid="uid://dx1te2b8aasvv"]
 
 [ext_resource type="Script" path="res://script_main.gd" id="1_cwe8n"]
 [ext_resource type="PackedScene" uid="uid://b1tqs2mt8aiii" path="res://Environment/static/test_field.tscn" id="1_t7k6m"]
@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dmh6nsn2dxmqs" path="res://RoomObjects/ObjectScenes/plant_leaves.tscn" id="18_cqddd"]
 [ext_resource type="PackedScene" uid="uid://q70kvg27ykq0" path="res://assets/glbs/book2.glb" id="20_iwijn"]
 [ext_resource type="PackedScene" uid="uid://dr43efvqq30qs" path="res://assets/glbs/book3.glb" id="21_1etbs"]
-[ext_resource type="PackedScene" path="res://RoomObjects/ObjectScenes/shelf_1.tscn" id="22_3oviy"]
+[ext_resource type="PackedScene" uid="uid://cxk6mj283urcb" path="res://RoomObjects/ObjectScenes/shelf_1.tscn" id="22_3oviy"]
 [ext_resource type="PackedScene" uid="uid://o8u6ymlho8lk" path="res://RoomObjects/ObjectScenes/garlic_braid.tscn" id="22_dyea0"]
 [ext_resource type="PackedScene" uid="uid://dmj4r00y1wboq" path="res://RoomObjects/ObjectScenes/unlit_candle.tscn" id="23_2bolv"]
 [ext_resource type="PackedScene" uid="uid://lmq4dwuxtoft" path="res://scenes/dust_bunny.tscn" id="24_1wpdf"]
@@ -48,7 +48,6 @@
 [ext_resource type="PackedScene" uid="uid://bbh4akqdqpu2d" path="res://RoomObjects/ObjectScenes/cauldron_1.tscn" id="51_4fvl8"]
 [ext_resource type="PackedScene" uid="uid://dc0f0sib8k7gs" path="res://scenes/bubbles.tscn" id="51_vlysd"]
 [ext_resource type="PackedScene" uid="uid://dnycnew3n6m4v" path="res://RoomObjects/ObjectScenes/chain_1.tscn" id="52_atg3i"]
-[ext_resource type="PackedScene" uid="uid://jjtlqyfxulwo" path="res://assets/glbs/wood1.glb" id="52_dejtw"]
 [ext_resource type="PackedScene" uid="uid://c5gl7nn0at8c" path="res://RoomObjects/ObjectScenes/table_1.tscn" id="53_dgj73"]
 [ext_resource type="PackedScene" uid="uid://jjtlqyfxulwo" path="res://assets/glbs/wood2.glb" id="53_ktada"]
 
@@ -371,16 +370,16 @@ transform = Transform3D(-0.913787, 0.406195, 0, -0.406195, -0.913787, 0, 0, 0, 1
 [node name="Bubbles" parent="Objects" instance=ExtResource("51_vlysd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.224, 20.8248, 15.7961)
 
-[node name="wood1" parent="Objects" instance=ExtResource("52_dejtw")]
+[node name="wood1" parent="Objects" instance=ExtResource("53_ktada")]
 transform = Transform3D(1.14564e-11, 0.000262104, 3, 3, -1.31134e-07, -6.04717e-17, 1.31134e-07, 3, -0.000262104, 59.2952, 1.33357, 12.3751)
 
-[node name="wood2" parent="Objects" instance=ExtResource("52_dejtw")]
+[node name="wood2" parent="Objects" instance=ExtResource("53_ktada")]
 transform = Transform3D(1.14564e-11, 0.000262104, 3, 3, -1.31134e-07, -6.04717e-17, 1.31134e-07, 3, -0.000262104, 61.9996, 1.33357, 12.3748)
 
-[node name="wood4" parent="Objects" instance=ExtResource("52_dejtw")]
+[node name="wood4" parent="Objects" instance=ExtResource("53_ktada")]
 transform = Transform3D(1.18766, 2.61768, 0.858625, 2.52242, -1.40921, 0.807176, 1.10764, 0.402386, -2.75885, 61.6446, 4.07342, 13.7678)
 
-[node name="wood5" parent="Objects" instance=ExtResource("52_dejtw")]
+[node name="wood5" parent="Objects" instance=ExtResource("53_ktada")]
 transform = Transform3D(9.8241e-08, 2.24749, 1.98715, 3, -1.31134e-07, -6.20261e-17, 8.68613e-08, 1.98715, -2.24749, 59.6979, 4.07342, 14.8655)
 
 [node name="wood6" parent="Objects" instance=ExtResource("53_ktada")]
