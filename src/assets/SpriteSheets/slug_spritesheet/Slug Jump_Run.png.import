@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cr8pgj0ed6lu1"
-path.s3tc="res://.godot/imported/Slug Climb.png-d3df8e05b257a687b4bbba3733eda424.s3tc.ctex"
+uid="uid://qyugpnneibka"
+path.s3tc="res://.godot/imported/Slug Jump_Run.png-eab5433f2b30e4a07879da27edbc3584.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/SpriteSheets/Slug Climb.png"
-dest_files=["res://.godot/imported/Slug Climb.png-d3df8e05b257a687b4bbba3733eda424.s3tc.ctex"]
+source_file="res://assets/SpriteSheets/slug_spritesheet/Slug Jump_Run.png"
+dest_files=["res://.godot/imported/Slug Jump_Run.png-eab5433f2b30e4a07879da27edbc3584.s3tc.ctex"]
 
 [params]
 

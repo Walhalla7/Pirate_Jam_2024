@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dtm4uwwsbd6lw"
-path.s3tc="res://.godot/imported/Slug Walk.png-756181baa3fdbf162393f76eebc2cd77.s3tc.ctex"
+uid="uid://btdylpq2id0y7"
+path.s3tc="res://.godot/imported/Slug Walk.png-1d8ba455e2d32f6dd6704fdffbd50ba7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/SpriteSheets/Slug Walk.png"
-dest_files=["res://.godot/imported/Slug Walk.png-756181baa3fdbf162393f76eebc2cd77.s3tc.ctex"]
+source_file="res://assets/SpriteSheets/slug_spritesheet/Slug Walk.png"
+dest_files=["res://.godot/imported/Slug Walk.png-1d8ba455e2d32f6dd6704fdffbd50ba7.s3tc.ctex"]
 
 [params]
 

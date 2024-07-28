@@ -137,26 +137,37 @@ func _enter_state(new_state, old_state):
 		states.IDLE:
 			parent.can_crawl = true
 			parent.climbTimer.stop()
+			parent.animation_player.pause()
+			parent.animation_player.play("idle")
 			
 		states.WALKING:
 			parent.can_crawl = true
 			parent.climbTimer.stop()
+			parent.animation_player.pause()
+			parent.animation_player.play("walk")
 		
-		states.WALKING:
-			parent.can_crawl = true
-			parent.climbTimer.stop()
-		
+		states.JUMPING:
+			parent.animation_player.pause()
+			parent.animation_player.play("jump")
+			
+		states.FALLING:
+			parent.animation_player.pause()
+			parent.animation_player.play("fall")
+			
 		states.WALL_LEFT:
 			if !parent._is_timer_active():
 				parent.climbTimer.start()
+			#parent.animation_player.play("idle")
 				
 		states.WALL_RIGHT:
 			if !parent._is_timer_active():
 				parent.climbTimer.start()
+			#parent.animation_player.play("idle")
 				
 		states.WALL_BACK:
 			if !parent._is_timer_active():
 				parent.climbTimer.start()
+			#parent.animation_player.play("w")
 
 #define behaviors while exiting out of specific state
 func _exit_state(old_state, new_state):
