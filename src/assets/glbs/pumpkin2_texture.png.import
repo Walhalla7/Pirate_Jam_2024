@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8rr7qffmgqf3"
-path.s3tc="res://.godot/imported/pumpkin1_pumpkin1-1.png-f8d7b447bf0adc468350aead91225ec1.s3tc.ctex"
+uid="uid://cia8bxhalyw7p"
+path.s3tc="res://.godot/imported/pumpkin2_texture.png-92701908f096a70db05cf5d71ce08992.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://assets/glbs/pumpkin1_pumpkin1-1.png"
-dest_files=["res://.godot/imported/pumpkin1_pumpkin1-1.png-f8d7b447bf0adc468350aead91225ec1.s3tc.ctex"]
+source_file="res://assets/glbs/pumpkin2_texture.png"
+dest_files=["res://.godot/imported/pumpkin2_texture.png-92701908f096a70db05cf5d71ce08992.s3tc.ctex"]
 
 [params]
 

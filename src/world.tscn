@@ -183,10 +183,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.7686, -0.460972, -8.4545)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.5716, -0.188272, -8.6717)
 
 [node name="Sack1" parent="Objects" instance=ExtResource("26_0ypc4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.6902, 1.98391, 16.7288)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.6902, 1.6886, 16.7288)
 
 [node name="Sack2" parent="Objects" instance=ExtResource("26_0ypc4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.9934, 1.6584, 16.006)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.9934, 1.36309, 16.006)
 
 [node name="Sack3" parent="Objects" instance=ExtResource("26_0ypc4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.3469, 1.87176, 17.6215)
