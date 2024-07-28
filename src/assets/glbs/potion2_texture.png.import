@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjjxasixkro2a"
-path.s3tc="res://.godot/imported/potion1_LeanBottle.png-386bb34225acc344de23a266aac73d34.s3tc.ctex"
+uid="uid://bq63nuhidm426"
+path.s3tc="res://.godot/imported/potion2_texture.png-4aaabaed67a146cc25812cd306934d43.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://assets/glbs/potion1_LeanBottle.png"
-dest_files=["res://.godot/imported/potion1_LeanBottle.png-386bb34225acc344de23a266aac73d34.s3tc.ctex"]
+source_file="res://assets/glbs/potion2_texture.png"
+dest_files=["res://.godot/imported/potion2_texture.png-4aaabaed67a146cc25812cd306934d43.s3tc.ctex"]
 
 [params]
 
