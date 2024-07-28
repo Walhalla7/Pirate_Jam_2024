@@ -137,21 +137,17 @@ func _enter_state(new_state, old_state):
 		states.IDLE:
 			parent.can_crawl = true
 			parent.climbTimer.stop()
-			parent.animation_player.pause()
 			parent.animation_player.play("idle")
 			
 		states.WALKING:
 			parent.can_crawl = true
 			parent.climbTimer.stop()
-			parent.animation_player.pause()
 			parent.animation_player.play("walk")
 		
 		states.JUMPING:
-			parent.animation_player.pause()
 			parent.animation_player.play("jump")
 			
 		states.FALLING:
-			parent.animation_player.pause()
 			parent.animation_player.play("fall")
 			
 		states.WALL_LEFT:

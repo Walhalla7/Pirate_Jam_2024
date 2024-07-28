@@ -97,8 +97,8 @@ func _handle_move_input():
 	sprint_modifier = max_sprint_modifier if Input.is_action_pressed("sprint") else 1
 	
 	#we apply the direction to velocity 
-	velocity.x = lerp(velocity.x, move_direction_x * move_speed * sprint_modifier, _get_h_weight())
-	velocity.z = lerp(velocity.z, move_direction_z * move_speed * sprint_modifier, _get_h_weight())
+	velocity.x = move_direction_x * move_speed * sprint_modifier
+	velocity.z = move_direction_z * move_speed * sprint_modifier
 	
 	##we apply animations/rotate sprite
 	#if move_direction_x != 0 or move_direction_z != 0:
