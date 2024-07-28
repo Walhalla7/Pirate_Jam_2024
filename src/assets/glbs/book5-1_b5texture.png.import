@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1sbd3uwnkgc5"
-path.s3tc="res://.godot/imported/book5_book5_texture.png-a77fa0ac6566735bd2d7b2e21eef439d.s3tc.ctex"
+uid="uid://csiqr2y338k3a"
+path.s3tc="res://.godot/imported/book5-1_b5texture.png-99fc1030a3f91f2caa1691bb88e03314.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://assets/glbs/book5_book5_texture.png"
-dest_files=["res://.godot/imported/book5_book5_texture.png-a77fa0ac6566735bd2d7b2e21eef439d.s3tc.ctex"]
+source_file="res://assets/glbs/book5-1_b5texture.png"
+dest_files=["res://.godot/imported/book5-1_b5texture.png-99fc1030a3f91f2caa1691bb88e03314.s3tc.ctex"]
 
 [params]
 
