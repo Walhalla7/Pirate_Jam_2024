@@ -37,7 +37,7 @@ lock_x = false
 lock_z = true
 
 [node name="Protagonist" parent="." instance=ExtResource("1_l74ou")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.225451, 0.731792, -0.0891062)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.225451, 0.731792, -0.0891062)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
