@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=3 uid="uid://0w5ww6ubbmqb"]
+
+[ext_resource type="PackedScene" uid="uid://jjtlqyfxulwo" path="res://assets/glbs/wood2.glb" id="1_3ykgs"]
+[ext_resource type="PackedScene" uid="uid://glxaheyld7l2" path="res://RoomObjects/ObjectScenes/wood_1.tscn" id="2_ca80q"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_oe6h3"]
+height = 5.57682
+radius = 3.49372
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_fh1dk"]
+height = 9.02881
+radius = 2.40665
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7md3t"]
+size = Vector3(2.40527, 4.65619, 2.42993)
+
+[node name="WoodPile" type="Node3D"]
+
+[node name="wood1" parent="." instance=ExtResource("1_3ykgs")]
+transform = Transform3D(2.99767, -1.25863e-07, -0.11825, 0.11825, -1.36201e-07, 2.99767, -1.31134e-07, -3, -1.31134e-07, 62.0037, 3.67493, 15.9473)
+
+[node name="wood4" parent="." instance=ExtResource("1_3ykgs")]
+transform = Transform3D(2.95714, -1.51349e-07, 0.505313, -0.505313, -1.07173e-07, 2.95714, -1.31134e-07, -3, -1.31134e-07, 63.6089, 4.81321, 16.5251)
+
+[node name="wood3" parent="." instance=ExtResource("1_3ykgs")]
+transform = Transform3D(0.88082, -1.63856e-07, 2.86778, -2.86778, 8.68527e-08, 0.88082, -1.31134e-07, -3, -1.31134e-07, 65.1576, 4.44341, 17.0276)
+
+[node name="wood2" parent="." instance=ExtResource("1_3ykgs")]
+transform = Transform3D(-1.31163, -1.64497, -2.13862, 2.2949, -1.93065, 0.0775215, -1.41881, -1.60208, 2.10245, 57.1333, 3.56484, 16.534)
+
+[node name="Wood1" parent="." instance=ExtResource("2_ca80q")]
+transform = Transform3D(5, 0, 0, 0, -2.18557e-07, -5, 0, 5, -2.18557e-07, 64.2402, 1.68399, 8.99223)
+
+[node name="Wood2" parent="." instance=ExtResource("2_ca80q")]
+transform = Transform3D(5, 0, 0, 0, -2.18557e-07, -5, 0, 5, -2.18557e-07, 59.5064, 1.68399, 11.2528)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 63.8726, 2.64969, 14.8309)
+shape = SubResource("CylinderShape3D_oe6h3")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 64.2805, 1.6766, 13.2937)
+shape = SubResource("CylinderShape3D_fh1dk")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 59.4803, 1.6766, 15.6313)
+shape = SubResource("CylinderShape3D_fh1dk")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(-0.00551922, -0.548324, -0.836248, 0.641356, -0.643549, 0.417739, -0.767223, -0.534027, 0.355223, 55.6097, 2.01466, 15.7433)
+shape = SubResource("BoxShape3D_7md3t")
