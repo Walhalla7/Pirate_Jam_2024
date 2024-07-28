@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgerfaeqkbtpo"
-path.s3tc="res://.godot/imported/wood2_wood1-2.png-b1aa22991394d7803ca3ebdf421eba13.s3tc.ctex"
+uid="uid://cjgkr1bique8q"
+path.s3tc="res://.godot/imported/wood_chopped_wood_chopped_texture.png-e270ed3e22f184c8044cd97406230d04.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://assets/glbs/wood2_wood1-2.png"
-dest_files=["res://.godot/imported/wood2_wood1-2.png-b1aa22991394d7803ca3ebdf421eba13.s3tc.ctex"]
+source_file="res://assets/glbs/wood_chopped_wood_chopped_texture.png"
+dest_files=["res://.godot/imported/wood_chopped_wood_chopped_texture.png-e270ed3e22f184c8044cd97406230d04.s3tc.ctex"]
 
 [params]
 

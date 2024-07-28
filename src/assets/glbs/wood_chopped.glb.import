@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://ck472fygwrrab"
-path="res://.godot/imported/wood1.glb-33bc40c997712c99de51202a43f020ef.scn"
+uid="uid://cpla14i17ja6v"
+path="res://.godot/imported/wood_chopped.glb-a6f441780a8801a19e27635aebee5df7.scn"
 
 [deps]
 
-source_file="res://assets/glbs/wood1.glb"
-dest_files=["res://.godot/imported/wood1.glb-33bc40c997712c99de51202a43f020ef.scn"]
+source_file="res://assets/glbs/wood_chopped.glb"
+dest_files=["res://.godot/imported/wood_chopped.glb-a6f441780a8801a19e27635aebee5df7.scn"]
 
 [params]
 

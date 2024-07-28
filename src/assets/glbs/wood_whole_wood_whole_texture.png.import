@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctn6xgne2y2wd"
-path.s3tc="res://.godot/imported/wood1_wood1-1.png-e49576b9c463024f77453e0dc6be301b.s3tc.ctex"
+uid="uid://bnnuyspu0od6k"
+path.s3tc="res://.godot/imported/wood_whole_wood_whole_texture.png-249b2835ceb278a32f317972db48f603.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://assets/glbs/wood1_wood1-1.png"
-dest_files=["res://.godot/imported/wood1_wood1-1.png-e49576b9c463024f77453e0dc6be301b.s3tc.ctex"]
+source_file="res://assets/glbs/wood_whole_wood_whole_texture.png"
+dest_files=["res://.godot/imported/wood_whole_wood_whole_texture.png-249b2835ceb278a32f317972db48f603.s3tc.ctex"]
 
 [params]
 
