@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://dx1te2b8aasvv"]
+[gd_scene load_steps=51 format=3 uid="uid://dx1te2b8aasvv"]
 
 [ext_resource type="Script" path="res://script_main.gd" id="1_cwe8n"]
 [ext_resource type="PackedScene" uid="uid://b1tqs2mt8aiii" path="res://Environment/static/test_field.tscn" id="1_t7k6m"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://dln4xcy6foeuu" path="res://RoomObjects/ObjectScenes/coin.tscn" id="42_kpron"]
 [ext_resource type="PackedScene" uid="uid://chw0hbaafilr2" path="res://RoomObjects/ObjectScenes/planter_1.tscn" id="43_86faq"]
 [ext_resource type="PackedScene" uid="uid://bnaqv7gn2ya0j" path="res://RoomObjects/ObjectScenes/bookshelf_1.tscn" id="43_rywdm"]
+[ext_resource type="PackedScene" uid="uid://cppn31u3h3r7m" path="res://RoomObjects/ObjectScenes/rune.tscn" id="43_yku4g"]
 [ext_resource type="PackedScene" uid="uid://cm3xif4e6yccv" path="res://RoomObjects/ObjectScenes/pot_1.tscn" id="44_qlga4"]
 [ext_resource type="PackedScene" uid="uid://cl47ep50md2hp" path="res://RoomObjects/ObjectScenes/vine_1.tscn" id="47_4s8sk"]
 [ext_resource type="PackedScene" uid="uid://b7b8fu2m4hh64" path="res://RoomObjects/ObjectScenes/book_3.tscn" id="47_ict7s"]
@@ -333,13 +334,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.58425, -2.29526, -0.289856
 shape = SubResource("BoxShape3D_vopib")
 
 [node name="Apple" parent="Objects" instance=ExtResource("51_bschn")]
-transform = Transform3D(3, 0, 0, 0, -1.31134e-07, -3, 0, 3, -1.31134e-07, 14.2785, 22.8216, 13.6863)
+transform = Transform3D(3, 0, 0, 0, -1.31134e-07, -3, 0, 3, -1.31134e-07, 45.1325, 23.4731, 15.1781)
 
 [node name="Apple2" parent="Objects" instance=ExtResource("51_bschn")]
-transform = Transform3D(3, 0, 0, 0, -1.31134e-07, -3, 0, 3, -1.31134e-07, 15.9064, 22.8216, 12.8522)
+transform = Transform3D(3, 0, 0, 0, -1.31134e-07, -3, 0, 3, -1.31134e-07, 46.7603, 23.4731, 14.3441)
 
 [node name="Apple3" parent="Objects" instance=ExtResource("51_bschn")]
-transform = Transform3D(3, 0, 0, 0, -1.31134e-07, -3, 0, 3, -1.31134e-07, 16.6766, 22.8216, 13.9476)
+transform = Transform3D(3, 0, 0, 0, -1.31134e-07, -3, 0, 3, -1.31134e-07, 47.5306, 23.4731, 15.4395)
 
 [node name="Coin" parent="Objects" instance=ExtResource("42_kpron")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12.1167, 13.1241)
@@ -349,6 +350,18 @@ transform = Transform3D(0.871008, -0.0826299, 0.48427, 4.51699e-09, 0.985754, 0.
 
 [node name="Coin2" parent="Objects" instance=ExtResource("42_kpron")]
 transform = Transform3D(0.992386, 0.123169, 0, -0.123169, 0.992386, 0, 0, 0, 1, 0.850621, 12.259, 13.1241)
+
+[node name="rune" parent="Objects" instance=ExtResource("43_yku4g")]
+transform = Transform3D(-0.934447, 0, 0.356102, 0, 1, 0, -0.356102, 0, -0.934447, 16.6198, 22.0983, 14.9218)
+
+[node name="rune2" parent="Objects" instance=ExtResource("43_yku4g")]
+transform = Transform3D(-0.884809, 0, -0.465954, 0, 1, 0, 0.465954, 0, -0.884809, 14.3443, 22.0983, 13.8943)
+
+[node name="rune3" parent="Objects" instance=ExtResource("43_yku4g")]
+transform = Transform3D(-0.995357, -0.0899991, -0.0341362, -0.0777611, 0.960861, -0.265893, 0.0567303, -0.262004, -0.963398, 15.7376, 22.4795, 14.172)
+
+[node name="rune4" parent="Objects" instance=ExtResource("43_yku4g")]
+transform = Transform3D(-0.529481, 0.186178, 0.82764, -0.0777611, 0.960861, -0.265893, -0.844751, -0.205143, -0.49428, 17.5832, 22.3327, 14.3428)
 
 [node name="Interactable" type="Node" parent="."]
 
