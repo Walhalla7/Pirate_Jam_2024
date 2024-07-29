@@ -14,17 +14,18 @@ debug_shape_thickness = 4
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 5.0
+one_shot = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(1700, 315)
+position = Vector2(2469, 330)
 rotation = -1.5708
 scale = Vector2(0.325426, 0.279426)
 texture = ExtResource("2_76di1")
 
 [node name="PointA" type="Marker2D" parent="CanvasLayer"]
-position = Vector2(1700, 330)
+position = Vector2(2500, 330)
 
 [node name="PointB" type="Marker2D" parent="CanvasLayer"]
 position = Vector2(650, 330)
