@@ -1,7 +1,9 @@
-[gd_scene load_steps=20 format=3 uid="uid://cl47ep50md2hp"]
+[gd_scene load_steps=22 format=3 uid="uid://cl47ep50md2hp"]
 
 [ext_resource type="Texture2D" uid="uid://co8aryga2psxj" path="res://assets/textures/dirt_texture.png" id="1_acqgg"]
 [ext_resource type="Texture2D" uid="uid://dkpx5mx1pwr14" path="res://assets/textures/darkwood1_texture.png" id="2_cx0b4"]
+[ext_resource type="Texture2D" uid="uid://cj2pd05wv47n4" path="res://assets/sprites/leaf6-4.png" id="3_wnf85"]
+[ext_resource type="Texture2D" uid="uid://b3lfd6gwsnm63" path="res://assets/sprites/leaf6-5.png" id="4_h8l7k"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ei72n"]
 albedo_texture = ExtResource("1_acqgg")
@@ -167,7 +169,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.4354, 0)
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
 [node name="ivy_Vine" type="MeshInstance3D" parent="StaticBody3D"]
-transform = Transform3D(-3.47806, -1.24823, -1.50996e-07, -3.22771, 1.34504, 1.87627e-08, 4.64611e-07, 2.13714e-07, -1, -4.76296, -4.63988, -0.0388434)
+transform = Transform3D(-3.47806, -1.24823, -1.50996e-07, -3.22771, 1.34504, 1.87627e-08, 4.64611e-07, 2.13714e-07, -1, -4.76296, -4.79111, -0.0388434)
 mesh = SubResource("ArrayMesh_tii5e")
 skeleton = NodePath("")
 
@@ -186,7 +188,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.12465, 0)
 shape = SubResource("CylinderShape3D_6ihjj")
 
 [node name="ivy_Vine2" type="MeshInstance3D" parent="StaticBody3D"]
-transform = Transform3D(2.65202, 1.42032, -1.50996e-07, 2.19098, -1.71919, 1.03545e-07, -1.7358e-07, -3.92474e-07, -1, -5.17549, -6.19769, -1.05105e-07)
+transform = Transform3D(2.65202, 1.42032, -1.50996e-07, 2.19098, -1.71919, 1.03545e-07, -1.7358e-07, -3.92474e-07, -1, -5.17549, -6.42779, -1.05105e-07)
 mesh = SubResource("ArrayMesh_y3n4b")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_h0d3d")
@@ -199,4 +201,299 @@ surface_material_override/0 = SubResource("StandardMaterial3D_sad0n")
 
 [node name="Leaves" type="Node3D" parent="."]
 
-[node name="Sprite3D" type="Sprite3D" parent="Leaves"]
+[node name="LeafMiddle2" type="Sprite3D" parent="Leaves"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.15693, -2.9996, -0.939535)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 0
+texture = ExtResource("3_wnf85")
+
+[node name="LeafMiddle3" type="Sprite3D" parent="Leaves"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.60098, -4.42939, -1.86252)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 0
+texture = ExtResource("3_wnf85")
+
+[node name="LeafMiddle5" type="Sprite3D" parent="Leaves"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6964, -8.28403, -1.86252)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 0
+texture = ExtResource("3_wnf85")
+
+[node name="LeafMiddle9" type="Sprite3D" parent="Leaves"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.8524, -11.2145, -1.44106)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 0
+texture = ExtResource("3_wnf85")
+
+[node name="LeafMiddle10" type="Sprite3D" parent="Leaves"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.8285, -10.3358, -1.86252)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 0
+texture = ExtResource("3_wnf85")
+
+[node name="LeafMiddle11" type="Sprite3D" parent="Leaves"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.99732, -7.49137, -0.6936)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 0
+texture = ExtResource("3_wnf85")
+
+[node name="LeafMiddle12" type="Sprite3D" parent="Leaves"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.81749, -5.87301, -0.608462)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 0
+texture = ExtResource("3_wnf85")
+
+[node name="LeafMiddle13" type="Sprite3D" parent="Leaves"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.58077, -4.91521, -3.3284)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 0
+texture = ExtResource("3_wnf85")
+
+[node name="LeafMiddle14" type="Sprite3D" parent="Leaves"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.731222, -7.59045, -2.70134)
+flip_h = true
+pixel_size = 0.1
+billboard = 2
+texture_filter = 0
+texture = ExtResource("3_wnf85")
+
+[node name="LeafMiddle15" type="Sprite3D" parent="Leaves"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.03191, -7.81741, -2.57183)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 0
+texture = ExtResource("3_wnf85")
+
+[node name="LeafMiddle16" type="Sprite3D" parent="Leaves"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.58077, -9.30686, -3.51109)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 0
+texture = ExtResource("3_wnf85")
+
+[node name="LeafMiddle6" type="Sprite3D" parent="Leaves"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.5368, -9.11785, -1.86252)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 0
+texture = ExtResource("3_wnf85")
+
+[node name="LeafMiddle7" type="Sprite3D" parent="Leaves"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.4341, -13.0256, -1.86252)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 0
+texture = ExtResource("3_wnf85")
+
+[node name="LeafMiddle18" type="Sprite3D" parent="Leaves"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.3072, -14.3027, -1.75963)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 0
+texture = ExtResource("3_wnf85")
+
+[node name="LeafMiddle8" type="Sprite3D" parent="Leaves"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.4524, -11.2896, -1.86252)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 0
+texture = ExtResource("3_wnf85")
+
+[node name="LeafMiddle4" type="Sprite3D" parent="Leaves"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.2002, -6.04489, -1.86252)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 0
+texture = ExtResource("3_wnf85")
+
+[node name="LeafShadow2" type="Sprite3D" parent="Leaves"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.33925, -3.29685, 1.072)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 0
+texture = ExtResource("4_h8l7k")
+
+[node name="LeafShadow3" type="Sprite3D" parent="Leaves"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.39974, -4.94108, 0.641793)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 0
+texture = ExtResource("4_h8l7k")
+
+[node name="LeafShadow4" type="Sprite3D" parent="Leaves"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5846, -6.39766, 0.744791)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 0
+texture = ExtResource("4_h8l7k")
+
+[node name="LeafShadow18" type="Sprite3D" parent="Leaves"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5846, -6.39766, 0.744791)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 0
+texture = ExtResource("4_h8l7k")
+
+[node name="LeafShadow5" type="Sprite3D" parent="Leaves"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.91513, -8.24266, 0.966229)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 0
+texture = ExtResource("4_h8l7k")
+
+[node name="LeafShadow6" type="Sprite3D" parent="Leaves"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.9011, -10.3547, 0.324603)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 0
+texture = ExtResource("4_h8l7k")
+
+[node name="LeafShadow7" type="Sprite3D" parent="Leaves"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.3773, -11.8598, 1.2875)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 0
+texture = ExtResource("4_h8l7k")
+
+[node name="LeafShadow13" type="Sprite3D" parent="Leaves"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.7476, -13.3919, -1.06783)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 0
+texture = ExtResource("4_h8l7k")
+
+[node name="LeafShadow14" type="Sprite3D" parent="Leaves"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.4068, -11.9567, -1.06783)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 0
+texture = ExtResource("4_h8l7k")
+
+[node name="LeafShadow24" type="Sprite3D" parent="Leaves"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.4194, -10.4722, -0.66263)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 0
+texture = ExtResource("4_h8l7k")
+
+[node name="LeafShadow27" type="Sprite3D" parent="Leaves"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.0775, -8.11839, 1.57104)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 0
+texture = ExtResource("4_h8l7k")
+
+[node name="LeafShadow28" type="Sprite3D" parent="Leaves"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.3795, -6.04025, 2.11472)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 0
+texture = ExtResource("4_h8l7k")
+
+[node name="LeafShadow8" type="Sprite3D" parent="Leaves"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3577, -8.92239, 0.775714)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 0
+texture = ExtResource("4_h8l7k")
+
+[node name="LeafShadow20" type="Sprite3D" parent="Leaves"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3577, -10.629, -0.502552)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 0
+texture = ExtResource("4_h8l7k")
+
+[node name="LeafShadow9" type="Sprite3D" parent="Leaves"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.7116, -8.12229, -0.126778)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 0
+texture = ExtResource("4_h8l7k")
+
+[node name="LeafShadow21" type="Sprite3D" parent="Leaves"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.7116, -6.98029, 0.781062)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 0
+texture = ExtResource("4_h8l7k")
+
+[node name="LeafShadow29" type="Sprite3D" parent="Leaves"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.52781, -9.05834, -1.30725)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 0
+texture = ExtResource("4_h8l7k")
+
+[node name="LeafShadow10" type="Sprite3D" parent="Leaves"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.62381, -5.34914, -0.0787446)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 0
+texture = ExtResource("4_h8l7k")
+
+[node name="LeafShadow22" type="Sprite3D" parent="Leaves"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.62381, -4.79542, 1.15503)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 0
+texture = ExtResource("4_h8l7k")
+
+[node name="LeafShadow11" type="Sprite3D" parent="Leaves"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.53539, -3.29029, 0.77376)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 0
+texture = ExtResource("4_h8l7k")
+
+[node name="LeafShadow23" type="Sprite3D" parent="Leaves"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.44536, -3.69694, 1.43654)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 0
+texture = ExtResource("4_h8l7k")
+
+[node name="LeafShadow12" type="Sprite3D" parent="Leaves"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.84138, -2.36779, 0.907909)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 0
+texture = ExtResource("4_h8l7k")
+
+[node name="LeafShadow15" type="Sprite3D" parent="Leaves"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.86225, -3.49897, -1.52844)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 0
+texture = ExtResource("4_h8l7k")
+
+[node name="LeafShadow16" type="Sprite3D" parent="Leaves"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.12953, -6.09769, -1.52844)
+flip_h = true
+pixel_size = 0.1
+billboard = 2
+texture_filter = 0
+texture = ExtResource("4_h8l7k")
+
+[node name="LeafShadow17" type="Sprite3D" parent="Leaves"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.05425, -9.46208, -1.52844)
+flip_h = true
+pixel_size = 0.1
+billboard = 2
+texture_filter = 0
+texture = ExtResource("4_h8l7k")
+
+[node name="LeafShadow19" type="Sprite3D" parent="Leaves"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.80472, -8.07492, -1.52844)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 0
+texture = ExtResource("4_h8l7k")

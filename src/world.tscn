@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://dx1te2b8aasvv"]
+[gd_scene load_steps=58 format=3 uid="uid://dx1te2b8aasvv"]
 
 [ext_resource type="Script" path="res://script_main.gd" id="1_cwe8n"]
 [ext_resource type="PackedScene" uid="uid://b1tqs2mt8aiii" path="res://Environment/static/test_field.tscn" id="1_t7k6m"]
@@ -15,7 +15,6 @@
 [ext_resource type="PackedScene" uid="uid://b3yf85wyrhfp4" path="res://RoomObjects/ObjectScenes/sack_1.tscn" id="26_0ypc4"]
 [ext_resource type="PackedScene" uid="uid://cxvjeiqh3j2jr" path="res://RoomObjects/ObjectScenes/pumpkin_1.tscn" id="27_vtixk"]
 [ext_resource type="Texture2D" uid="uid://dkchx743vs01l" path="res://assets/sprites/wasp1-1.png" id="29_typtx"]
-[ext_resource type="Texture2D" uid="uid://dnmakqqndvtvm" path="res://assets/sprites/items/apple1-1.png" id="30_el5w0"]
 [ext_resource type="Texture2D" uid="uid://dnve4ci8ogc4s" path="res://assets/sprites/items/rune1-1.png" id="30_to8kw"]
 [ext_resource type="Texture2D" uid="uid://dvl4lhdb40f8j" path="res://assets/sprites/items/rune1-2.png" id="31_indlw"]
 [ext_resource type="Texture2D" uid="uid://dfy54gbi4qyfg" path="res://assets/sprites/items/rune1-3.png" id="32_lr8ey"]
@@ -56,6 +55,12 @@
 [ext_resource type="PackedScene" uid="uid://c5gl7nn0at8c" path="res://RoomObjects/ObjectScenes/table_1.tscn" id="53_dgj73"]
 [ext_resource type="Texture2D" uid="uid://cfxldnic32kmj" path="res://assets/sprites/sack1-5.png" id="53_uljdp"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_xry6l"]
+size = Vector3(1, 18.3418, 6.33426)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vopib"]
+size = Vector3(3.93943, 1, 5.58313)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_me04p"]
 size = Vector3(97.1499, 73.1899, 2.604)
 
@@ -63,7 +68,7 @@ size = Vector3(97.1499, 73.1899, 2.604)
 script = ExtResource("1_cwe8n")
 
 [node name="Protagonist" parent="." instance=ExtResource("2_yjr5n")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 18.9848, 16.1966, 14.2058)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 18.9848, 30.0638, 14.2058)
 
 [node name="PlayerCamera" parent="." node_paths=PackedStringArray("camera_target") instance=ExtResource("3_beliv")]
 transform = Transform3D(-1, -9.89654e-09, 8.68608e-08, 0, 0.993572, 0.113203, -8.74228e-08, 0.113203, -0.993572, 62.8567, 4.64496, 8.4452)
@@ -196,18 +201,6 @@ transform = Transform3D(-0.470591, 0, -0.16895, 0, 0.5, 0, 0.16895, 0, -0.470591
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -22.7085, 29.9725, 16.5427)
 billboard = 2
 texture = ExtResource("29_typtx")
-
-[node name="Apple1" type="Sprite3D" parent="Objects"]
-transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 12.1884, 23.0222, 13.3595)
-billboard = 2
-alpha_cut = 1
-texture = ExtResource("30_el5w0")
-
-[node name="Apple2" type="Sprite3D" parent="Objects"]
-transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 13.7677, 23.0079, 14.0474)
-billboard = 2
-alpha_cut = 1
-texture = ExtResource("30_el5w0")
 
 [node name="Rune1" type="Sprite3D" parent="Objects"]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 24.53, 22.6822, 13.3515)
@@ -375,6 +368,16 @@ transform = Transform3D(2.79481, 0, 1.09044, 0, 3, 0, -1.09044, 0, 2.79481, 26.4
 
 [node name="Vine1" parent="Objects" instance=ExtResource("47_4s8sk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.5861, 52.3538, 15.15)
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="Objects/Vine1"]
+
+[node name="VinePlatform" type="CollisionShape3D" parent="Objects/Vine1/StaticBody3D2"]
+transform = Transform3D(0.576974, 0.816762, 0, -0.816762, 0.576974, 0, 0, 0, 1, -11.764, -7.4964, -0.14357)
+shape = SubResource("BoxShape3D_xry6l")
+
+[node name="VinePlatform2" type="CollisionShape3D" parent="Objects/Vine1/StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.58425, -2.29526, -0.289856)
+shape = SubResource("BoxShape3D_vopib")
 
 [node name="Interactable" type="Node" parent="."]
 
