@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6kvwb74b0o33"
-path.s3tc="res://.godot/imported/sack3_sack_texture.png-2a4884e74949a6043bf09b8d2b6f0c7d.s3tc.ctex"
+uid="uid://bwquyir22c73x"
+path.s3tc="res://.godot/imported/shard_shard1.png-2a31bb8b0ae5351973b551eac811f2e0.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://assets/glbs/sack3_sack_texture.png"
-dest_files=["res://.godot/imported/sack3_sack_texture.png-2a4884e74949a6043bf09b8d2b6f0c7d.s3tc.ctex"]
+source_file="res://assets/glbs/shard_shard1.png"
+dest_files=["res://.godot/imported/shard_shard1.png-2a31bb8b0ae5351973b551eac811f2e0.s3tc.ctex"]
 
 [params]
 

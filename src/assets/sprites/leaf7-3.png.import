@@ -2,18 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6kvwb74b0o33"
-path.s3tc="res://.godot/imported/sack3_sack_texture.png-2a4884e74949a6043bf09b8d2b6f0c7d.s3tc.ctex"
+uid="uid://80sm5q26tv61"
+path.s3tc="res://.godot/imported/leaf7-3.png-61598092f245893a2b29f367c672d51e.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 
-source_file="res://assets/glbs/sack3_sack_texture.png"
-dest_files=["res://.godot/imported/sack3_sack_texture.png-2a4884e74949a6043bf09b8d2b6f0c7d.s3tc.ctex"]
+source_file="res://assets/sprites/leaf7-3.png"
+dest_files=["res://.godot/imported/leaf7-3.png-61598092f245893a2b29f367c672d51e.s3tc.ctex"]
 
 [params]
 

@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://bckxkvjqrl3an"]
+
+[ext_resource type="PackedScene" uid="uid://bxx1n3p44c68f" path="res://RoomObjects/ObjectScenes/crystal_1.tscn" id="1_16xbi"]
+
+[node name="CrystalCluster1" type="Node3D"]
+
+[node name="Crystal1" parent="." instance=ExtResource("1_16xbi")]
+transform = Transform3D(1.91193, 0.359345, -0.464126, -0.181068, 1.86535, 0.698337, 0.558352, -0.625565, 1.81574, -0.00156789, 0.00235909, 0.00613385)
+
+[node name="Crystal2" parent="." instance=ExtResource("1_16xbi")]
+transform = Transform3D(1.66627, -1.10614, 0, 1.10614, 1.66627, 0, 0, 0, 2, -0.701642, 0.233719, 0)
+
+[node name="Crystal3" parent="." instance=ExtResource("1_16xbi")]
+transform = Transform3D(2, 0, 0, 0, 1.86579, -0.720287, 0, 0.720287, 1.86579, 0, 0.377875, 0.583608)
