@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://px0ka7d141kd"
-path.s3tc="res://.godot/imported/candle_lit_candle1-2.png-9cd8c152ab6ad877cfc3397b20755dd7.s3tc.ctex"
+uid="uid://bcowm3jogxec0"
+path.s3tc="res://.godot/imported/candle_lit1_texture.png-f78d2efae3dafae75b9ae8bb8b9dc9fe.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://assets/glbs/candle_lit_candle1-2.png"
-dest_files=["res://.godot/imported/candle_lit_candle1-2.png-9cd8c152ab6ad877cfc3397b20755dd7.s3tc.ctex"]
+source_file="res://assets/glbs/candle_lit1_texture.png"
+dest_files=["res://.godot/imported/candle_lit1_texture.png-f78d2efae3dafae75b9ae8bb8b9dc9fe.s3tc.ctex"]
 
 [params]
 

@@ -165,10 +165,10 @@ transform = Transform3D(-3, -2.62268e-07, 1.14641e-14, 0, -1.31134e-07, -3, 2.62
 transform = Transform3D(-3, -2.62268e-07, 1.14641e-14, 0, -1.31134e-07, -3, 2.62268e-07, -3, 1.31134e-07, -7.97813, 13.8105, 15.0756)
 
 [node name="LitCandle" parent="Objects" instance=ExtResource("24_kcbwx")]
-transform = Transform3D(3, 0, 0, 0, -1.31134e-07, -3, 0, 3, -1.31134e-07, -8.90463, 21.0352, 16.5868)
+transform = Transform3D(3, 0, 0, 0, -1.31134e-07, -3, 0, 3, -1.31134e-07, -9.13813, 13.3695, 13.4945)
 
 [node name="LitCandle2" parent="Objects" instance=ExtResource("24_kcbwx")]
-transform = Transform3D(3, 0, 0, 0, -1.31134e-07, -3, 0, 3, -1.31134e-07, -10.0843, 21.9885, 15.8064)
+transform = Transform3D(3, 0, 0, 0, -1.31134e-07, -3, 0, 3, -1.31134e-07, -6.33597, 13.1576, 15.8064)
 
 [node name="SaltGrain" parent="Objects" instance=ExtResource("25_ac0ov")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.8383, -0.460972, 15.9365)
