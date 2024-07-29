@@ -1,0 +1,96 @@
+[gd_scene load_steps=7 format=3 uid="uid://e0p2tplxdide"]
+
+[ext_resource type="Script" path="res://scenes/death_screen.gd" id="1_wpl87"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_os44p"]
+bg_color = Color(0.235294, 0.235294, 0.235294, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_06tb2"]
+bg_color = Color(0.368627, 0.164706, 0.435294, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7tyhd"]
+
+[sub_resource type="Theme" id="Theme_gpkcb"]
+Button/colors/font_color = Color(0.74902, 0.164706, 0.164706, 1)
+Button/font_sizes/font_size = 50
+Button/styles/hover = SubResource("StyleBoxFlat_os44p")
+Button/styles/normal = SubResource("StyleBoxFlat_06tb2")
+Panel/styles/panel = SubResource("StyleBoxEmpty_7tyhd")
+
+[sub_resource type="LabelSettings" id="LabelSettings_j4ecl"]
+font_size = 90
+font_color = Color(0.941176, 0.917647, 0.839216, 1)
+
+[node name="DeathScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1163.0
+offset_bottom = 662.0
+script = ExtResource("1_wpl87")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -38.0
+offset_top = -23.0
+offset_right = 1200.0
+offset_bottom = 690.0
+color = Color(0.172549, 0.172549, 0.329412, 1)
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -262.0
+offset_top = 10.0
+offset_right = 262.0
+offset_bottom = 238.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_gpkcb")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -338.0
+offset_top = -76.5
+offset_right = 338.0
+offset_bottom = 76.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="ResetButton" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = "Keep on slugging"
+
+[node name="QuitButton" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = "Accept Your Fate"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -325.5
+offset_top = -158.0
+offset_right = 325.5
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "You Got Slugged "
+label_settings = SubResource("LabelSettings_j4ecl")
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Panel/VBoxContainer/ResetButton" to="." method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

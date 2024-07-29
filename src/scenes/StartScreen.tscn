@@ -1,0 +1,76 @@
+[gd_scene load_steps=7 format=3 uid="uid://ccufyimfedffk"]
+
+[ext_resource type="Script" path="res://scenes/StartScreen.gd" id="1_b4w2j"]
+[ext_resource type="Texture2D" uid="uid://do1refmhyquic" path="res://assets/Images/titleScreen.png" id="1_nm2uq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_os44p"]
+bg_color = Color(0.235294, 0.635294, 0.439216, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_06tb2"]
+bg_color = Color(0.447059, 0.203922, 0.305882, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7tyhd"]
+
+[sub_resource type="Theme" id="Theme_gpkcb"]
+Button/colors/font_color = Color(0.235294, 0.635294, 0.439216, 1)
+Button/font_sizes/font_size = 50
+Button/styles/hover = SubResource("StyleBoxFlat_os44p")
+Button/styles/normal = SubResource("StyleBoxFlat_06tb2")
+Panel/styles/panel = SubResource("StyleBoxEmpty_7tyhd")
+
+[node name="StartScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1163.0
+offset_bottom = 662.0
+script = ExtResource("1_b4w2j")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -38.0
+offset_top = -23.0
+offset_right = 1200.0
+offset_bottom = 690.0
+color = Color(1, 0.701961, 0.439216, 1)
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -262.0
+offset_top = 10.0
+offset_right = 262.0
+offset_bottom = 238.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_gpkcb")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -338.0
+offset_top = -76.5
+offset_right = 338.0
+offset_bottom = 76.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="StartButton" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = "Slugs away"
+
+[node name="TitleScreen" type="Sprite2D" parent="."]
+position = Vector2(571, 212)
+scale = Vector2(0.37, 0.37)
+texture = ExtResource("1_nm2uq")
+
+[connection signal="pressed" from="Panel/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
