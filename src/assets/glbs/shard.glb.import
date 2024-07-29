@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://1p10xl13rh0j"
-path="res://.godot/imported/mortar.glb-92d284218b7da4386f6958c399b6a0b1.scn"
+uid="uid://q2f3tyw0imf0"
+path="res://.godot/imported/shard.glb-334e0e550b980834254a8c1eb04b566b.scn"
 
 [deps]
 
-source_file="res://assets/glbs/mortar.glb"
-dest_files=["res://.godot/imported/mortar.glb-92d284218b7da4386f6958c399b6a0b1.scn"]
+source_file="res://assets/glbs/shard.glb"
+dest_files=["res://.godot/imported/shard.glb-334e0e550b980834254a8c1eb04b566b.scn"]
 
 [params]
 

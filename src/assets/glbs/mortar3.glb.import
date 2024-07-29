@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b6psndqg3ub5y"
-path="res://.godot/imported/mortar2.glb-07790e4c1d605b0f55d5422e63df6075.scn"
+uid="uid://ckefx8pe4ulvv"
+path="res://.godot/imported/mortar3.glb-7c050f95a364e11a9dfd5bf7cdaa883c.scn"
 
 [deps]
 
-source_file="res://assets/glbs/mortar2.glb"
-dest_files=["res://.godot/imported/mortar2.glb-07790e4c1d605b0f55d5422e63df6075.scn"]
+source_file="res://assets/glbs/mortar3.glb"
+dest_files=["res://.godot/imported/mortar3.glb-7c050f95a364e11a9dfd5bf7cdaa883c.scn"]
 
 [params]
 
