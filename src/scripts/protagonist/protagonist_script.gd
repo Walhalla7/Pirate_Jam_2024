@@ -5,7 +5,6 @@ extends CharacterBody3D
 @onready var animated_sprite_3d = $AnimatedSprite3D
 @onready var sprite_3d = $Sprite3D
 @onready var climbTimer = $ClimbTimer
-
 #======================================== 	Detectors 	==================================
 @onready var floorDetectors = $Raycasts/Floor_detectors
 var is_Grounded
@@ -39,6 +38,7 @@ var WALL_JUMP_VELOCITY = Vector3(0,jump_vertical_strength,0)
 var gravityStrength = 9.8
 
 #======================================== 	Hurt & Death Functions 	==================================\
+@onready var hurt_sound = $"hurt sound"
 
 func _on_health_component_death():
 	print("Player has died")
@@ -46,6 +46,7 @@ func _on_health_component_death():
 func _on_health_component_hurt():
 	print("Player has been hurt")
 
+	hurt_sound.play()
 #======================================== 	Movement 	==================================
 #Gravity applied universally
 func _apply_gravity(delta):

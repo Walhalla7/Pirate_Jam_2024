@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://bi4h30shxghqv"]
+[gd_scene load_steps=12 format=3 uid="uid://bi4h30shxghqv"]
 
 [ext_resource type="PackedScene" uid="uid://b7i2um4a17gt3" path="res://scenes/components/player_camera.tscn" id="1_10wq6"]
 [ext_resource type="PackedScene" uid="uid://dqb6hflk04skq" path="res://scenes/protagonist/protagonist_scene.tscn" id="1_l74ou"]
 [ext_resource type="PackedScene" uid="uid://dh3joypf4x5a0" path="res://scenes/components/test_trap.tscn" id="3_hs7xj"]
 [ext_resource type="PackedScene" uid="uid://dhtq2u2ks2ly5" path="res://scenes/components/salt.tscn" id="4_45hqf"]
+[ext_resource type="AudioStream" uid="uid://bk5ek7klje0wq" path="res://sound effect & music/SLOWER-TEMPO2019-12-11_-_Retro_Platforming_-_David_Fesliyan.mp3" id="5_2ta7u"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_tb6f8"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -74,3 +75,7 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 12.4297, 1.82538, -2.16
 
 [node name="StaticBody3D2" parent="." instance=ExtResource("4_45hqf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.9338, 1.36427, -0.983192)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("5_2ta7u")
+volume_db = 10.0
