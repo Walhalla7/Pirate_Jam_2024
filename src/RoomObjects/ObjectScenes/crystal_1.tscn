@@ -1,6 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bxx1n3p44c68f"]
-
-[ext_resource type="Texture2D" uid="uid://dp7bdtclj3agm" path="res://assets/textures/window texture1-2.png" id="1_imbwy"]
+[gd_scene load_steps=6 format=3 uid="uid://bxx1n3p44c68f"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h1j2r"]
 
@@ -34,35 +32,23 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_bqpu4")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ohhgj"]
-albedo_texture = ExtResource("1_imbwy")
-uv1_scale = Vector3(1.805, 1.805, 1.805)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_axq73"]
+albedo_color = Color(0.239216, 0.427451, 0.588235, 1)
+emission = Color(0, 0.6, 0.6, 1)
+emission_energy_multiplier = 0.1
+refraction_scale = 1.0
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_tmmbf"]
-size = Vector3(1, 1.78851, 1.31128)
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1oipk"]
+radius = 0.231527
+height = 1.80183
 
-[node name="Crystal1" type="Node3D"]
+[node name="Crystal1" type="StaticBody3D"]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 
 [node name="Circle" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_jloj0")
 skeleton = NodePath("")
-surface_material_override/0 = SubResource("StandardMaterial3D_ohhgj")
+surface_material_override/0 = SubResource("StandardMaterial3D_axq73")
 
-[node name="Circle2" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.939298, 0.184702, -0.289144, 0, 0.842734, 0.53833, 0.343102, -0.505652, 0.791579, 0.0650052, 0, -0.33495)
-mesh = SubResource("ArrayMesh_jloj0")
-skeleton = NodePath("")
-surface_material_override/0 = SubResource("StandardMaterial3D_ohhgj")
-
-[node name="Circle3" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.826299, 0.418162, 0.37732, -0.285386, 0.888398, -0.359589, -0.485577, 0.189447, 0.85342, 0.05487, -0.108391, 0.145646)
-mesh = SubResource("ArrayMesh_jloj0")
-skeleton = NodePath("")
-surface_material_override/0 = SubResource("StandardMaterial3D_ohhgj")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0174255, -0.15564)
-shape = SubResource("BoxShape3D_tmmbf")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_1oipk")
