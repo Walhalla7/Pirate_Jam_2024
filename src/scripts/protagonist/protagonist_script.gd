@@ -42,6 +42,7 @@ var gravityStrength = 9.8
 
 func _on_health_component_death():
 	print("Player has died")
+	SignalBus.emit_signal("game_over")
 
 func _on_health_component_hurt():
 	print("Player has been hurt")
@@ -83,7 +84,8 @@ func wall_jump():
 		wall_jump_velocity.x = -jump_horizontal_strength
 	elif backDetector.is_colliding():
 		wall_jump_velocity.z = -jump_horizontal_strength
-		
+	can_crawl = false
+	climbTimer.stop()
 	velocity = wall_jump_velocity
 
 #function to calulcate directional inputs and movements 

@@ -16,6 +16,7 @@ size = Vector3(5.03632, 0.226746, 1)
 [node name="Shelf1" type="StaticBody3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.5, 0, 0, 0)
 mesh = SubResource("BoxMesh_jexbg")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
