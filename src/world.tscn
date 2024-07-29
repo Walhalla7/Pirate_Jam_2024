@@ -174,13 +174,13 @@ transform = Transform3D(3, 0, 0, 0, -1.31134e-07, -3, 0, 3, -1.31134e-07, -8.904
 transform = Transform3D(3, 0, 0, 0, -1.31134e-07, -3, 0, 3, -1.31134e-07, -10.0843, 21.9885, 15.8064)
 
 [node name="SaltGrain" parent="Objects" instance=ExtResource("25_ac0ov")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.2994, -0.460972, -9.2551)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.8383, -0.460972, 15.9365)
 
 [node name="SaltGrain2" parent="Objects" instance=ExtResource("25_ac0ov")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.7686, -0.460972, -8.4545)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.3075, -0.460972, 16.7371)
 
 [node name="SaltGrain3" parent="Objects" instance=ExtResource("25_ac0ov")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.5716, -0.188272, -8.6717)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.1105, -0.188272, 16.5199)
 
 [node name="Sack1" parent="Objects" instance=ExtResource("26_0ypc4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.6902, 1.6886, 16.7288)
@@ -364,7 +364,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.1971, 3.09026, 12.1338)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.0032, 3.11091, 13)
 
 [node name="poison1" parent="Objects" instance=ExtResource("49_ja6r4")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 70.3225, 42.4364, -3.79145)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 70.0753, 42.4364, -3.79145)
 
 [node name="broom1" parent="Objects" instance=ExtResource("50_0f13t")]
 transform = Transform3D(4.11382, 2.52048, -1.31289, -2.77474, 4.06152, -0.897131, 0.614225, 1.46671, 4.74041, -20.3561, 5.22754, 13.6071)
