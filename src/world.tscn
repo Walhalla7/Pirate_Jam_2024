@@ -64,7 +64,7 @@ size = Vector3(97.1499, 73.1899, 2.604)
 script = ExtResource("1_cwe8n")
 
 [node name="Protagonist" parent="." instance=ExtResource("2_yjr5n")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 18.9848, 30.0638, 14.2058)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 60.8847, 49.983, 15.0393)
 
 [node name="PlayerCamera" parent="." node_paths=PackedStringArray("camera_target") instance=ExtResource("3_beliv")]
 transform = Transform3D(-1, -9.89654e-09, 8.68608e-08, 0, 0.993572, 0.113203, -8.74228e-08, 0.113203, -0.993572, 62.8567, 4.64496, 8.4452)
@@ -198,11 +198,14 @@ transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -22.7085, 29.9725, 16.5
 billboard = 2
 texture = ExtResource("29_typtx")
 
-[node name="WallCrack1" parent="Objects" instance=ExtResource("42_j3d2p")]
+[node name="WallCrack1" parent="Objects" node_paths=PackedStringArray("endLocation") instance=ExtResource("42_j3d2p")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 75.3637, 44.4334, 7.3899)
+endLocation = NodePath("../../Interactable/Marker3D2")
 
-[node name="WallCrack2" parent="Objects" instance=ExtResource("42_j3d2p")]
+[node name="WallCrack2" parent="Objects" node_paths=PackedStringArray("endLocation", "PlayerCamera") instance=ExtResource("42_j3d2p")]
 transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 66.0421, 52.4699, 14.1585)
+endLocation = NodePath("../../Interactable/Marker3D")
+PlayerCamera = NodePath("../../PlayerCamera")
 
 [node name="WallCrack3" parent="Objects" instance=ExtResource("42_j3d2p")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 73.9426, 10.8898, 7.3899)
@@ -385,6 +388,12 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -18.338, 0.368949, 14.1
 
 [node name="DustBunny2" parent="Interactable" instance=ExtResource("24_1wpdf")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.96453, 0.368949, 13.8514)
+
+[node name="Marker3D" type="Marker3D" parent="Interactable"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 74.6598, 42.2824, 5.33484)
+
+[node name="Marker3D2" type="Marker3D" parent="Interactable"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64.2412, 50.2942, 15.5084)
 
 [node name="PlayAreaLimiters" type="Node" parent="."]
 
