@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bxx1n3p44c68f"]
+[gd_scene load_steps=7 format=3 uid="uid://bxx1n3p44c68f"]
 
 [ext_resource type="Texture2D" uid="uid://dp7bdtclj3agm" path="res://assets/textures/window texture1-2.png" id="1_imbwy"]
 
@@ -38,6 +38,9 @@ shadow_mesh = SubResource("ArrayMesh_bqpu4")
 albedo_texture = ExtResource("1_imbwy")
 uv1_scale = Vector3(1.805, 1.805, 1.805)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_tmmbf"]
+size = Vector3(1, 1.78851, 1.31128)
+
 [node name="Crystal1" type="Node3D"]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 
@@ -57,3 +60,9 @@ transform = Transform3D(0.826299, 0.418162, 0.37732, -0.285386, 0.888398, -0.359
 mesh = SubResource("ArrayMesh_jloj0")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_ohhgj")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0174255, -0.15564)
+shape = SubResource("BoxShape3D_tmmbf")
