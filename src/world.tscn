@@ -127,7 +127,7 @@ transform = Transform3D(-4.24e-08, 0, -1.94, 0, 1.94, 0, 0.97, 0, -8.48001e-08, 
 transform = Transform3D(0.97, 0, 0, 0, 1.94, 0, 0, 0, 1.94, -22.1777, 6.17295, 16.791)
 
 [node name="Shelf5" parent="Objects" instance=ExtResource("22_3oviy")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 31.5074, 36.9858, 16.0741)
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 31.5074, 39.8847, 16.0741)
 
 [node name="Shelf6" parent="Objects" instance=ExtResource("22_3oviy")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 59.5388, 48.1794, 16.0741)
@@ -290,12 +290,6 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 17.973
 [node name="Pot1" parent="Objects" instance=ExtResource("44_qlga4")]
 transform = Transform3D(-0.8, 0, -1.20797e-07, 0, 0.8, 0, 1.20797e-07, 0, -0.8, -10.8595, 0.716293, 14.7501)
 
-[node name="Vine1" parent="Objects" instance=ExtResource("47_4s8sk")]
-transform = Transform3D(-0.816138, -0.577858, 0, 0.577858, -0.816138, 0, 0, 0, 1, 51.9949, 47.2731, 16.5189)
-
-[node name="Vine2" parent="Objects" instance=ExtResource("47_4s8sk")]
-transform = Transform3D(-0.539477, -0.842001, 0, 0.842001, -0.539477, 0, 0, 0, 1, 48.808, 43.8266, 16.4115)
-
 [node name="Cobweb1" parent="Objects" instance=ExtResource("49_q85rh")]
 transform = Transform3D(0.4919, 1.18102, 1.53728, -0.988542, -1.21148, 1.24704, 1.66758, -1.06654, 0.285779, 11.3951, 25.6089, 14.6243)
 
@@ -379,6 +373,9 @@ transform = Transform3D(-5, -7.54979e-07, 3.30012e-14, 0, -2.18557e-07, -5, 7.54
 [node name="Plant2" parent="Objects" instance=ExtResource("51_vpx47")]
 transform = Transform3D(2.79481, 0, 1.09044, 0, 3, 0, -1.09044, 0, 2.79481, 26.4438, 30.4173, 12.3406)
 
+[node name="Vine1" parent="Objects" instance=ExtResource("47_4s8sk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.5861, 52.3538, 15.15)
+
 [node name="Interactable" type="Node" parent="."]
 
 [node name="DustBunny1" parent="Interactable" instance=ExtResource("24_1wpdf")]
@@ -407,13 +404,8 @@ transform = Transform3D(-1, -3.13295e-08, 8.16162e-08, 0, 0.93358, 0.358368, -8.
 
 [node name="DevTools" type="Node" parent="."]
 
-[node name="GridMap" type="GridMap" parent="DevTools"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, -1.401)
-cell_size = Vector3(2, 2, 2.1)
-
 [node name="LaneGuidelines" parent="DevTools" instance=ExtResource("51_qwm2i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.326, 15.2771, 14.322)
-visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.326, 9.58353, 14.322)
 
 [node name="ForegroundSprites" type="Node" parent="."]
 
