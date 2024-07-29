@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dva8pcdwuroqn"]
+
+[ext_resource type="PackedScene" uid="uid://e0p2tplxdide" path="res://scenes/death_screen.tscn" id="2_7j444"]
+[ext_resource type="PackedScene" uid="uid://ccufyimfedffk" path="res://scenes/StartScreen.tscn" id="3_gnmy8"]
+
+[node name="Main" type="Node"]
+
+[node name="DeathScreen" parent="." instance=ExtResource("2_7j444")]
+visible = false
+
+[node name="StartScreen" parent="." instance=ExtResource("3_gnmy8")]

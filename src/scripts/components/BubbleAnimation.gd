@@ -30,7 +30,7 @@ func move_bubbles():
 		bubble.global_position.y += .02
 		if bubble.global_position.y >= 27 + randf():
 			bubble.play("pop")
-			print("bubble pop animation started")
+			#print("bubble pop animation started")
 			bubbles_array.erase(bubble)
 			deletion_queue.append(bubble)
 
@@ -39,7 +39,7 @@ func _on_spawn_timer_timeout():
 	
 	var new_bubble = bubble_scene.instantiate()
 	add_child(new_bubble)
-	print("new bubble made")
+	#print("new bubble made")
 	new_bubble.global_position = Vector3(origin_position.x + randf_range(-3,3), origin_position.y, origin_position.z + randf_range(-3,3))
 	bubbles_array.append(new_bubble)
 
@@ -49,4 +49,4 @@ func delete_bubbles():
 		if bubble.get_frame() == 5:
 			deletion_queue.erase(bubble)
 			bubble.free()
-			print("bubble deleted")
+			#print("bubble deleted")

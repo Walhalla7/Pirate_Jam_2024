@@ -42,6 +42,7 @@ var gravityStrength = 9.8
 
 func _on_health_component_death():
 	print("Player has died")
+	SignalBus.emit_signal("game_over")
 
 func _on_health_component_hurt():
 	print("Player has been hurt")
