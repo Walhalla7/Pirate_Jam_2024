@@ -1,17 +1,17 @@
-[gd_scene load_steps=7 format=3 uid="uid://e0p2tplxdide"]
+[gd_scene load_steps=7 format=3 uid="uid://d25fyig86k1tc"]
 
-[ext_resource type="Script" path="res://scenes/death_screen.gd" id="1_wpl87"]
+[ext_resource type="Script" path="res://scripts/Screens/VictoryScreen.gd" id="1_ey4am"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_os44p"]
-bg_color = Color(0.235294, 0.235294, 0.235294, 1)
+bg_color = Color(0.75622, 0.000445113, 0.757271, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_06tb2"]
-bg_color = Color(0.368627, 0.164706, 0.435294, 1)
+bg_color = Color(0.836498, 0.716971, 0.398599, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7tyhd"]
 
 [sub_resource type="Theme" id="Theme_gpkcb"]
-Button/colors/font_color = Color(0.74902, 0.164706, 0.164706, 1)
+Button/colors/font_color = Color(0.215654, 0.483698, 0.673672, 1)
 Button/font_sizes/font_size = 50
 Button/styles/hover = SubResource("StyleBoxFlat_os44p")
 Button/styles/normal = SubResource("StyleBoxFlat_06tb2")
@@ -21,14 +21,14 @@ Panel/styles/panel = SubResource("StyleBoxEmpty_7tyhd")
 font_size = 120
 font_color = Color(0.941176, 0.917647, 0.839216, 1)
 
-[node name="DeathScreen" type="Control"]
+[node name="VictoryScreen" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_wpl87")
+script = ExtResource("1_ey4am")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -37,7 +37,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.172549, 0.172549, 0.329412, 1)
+color = Color(0.406447, 0.697933, 0.493891, 1)
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -66,11 +66,11 @@ alignment = 1
 
 [node name="ResetButton" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2
-text = "Keep on slugging"
+text = "Wanna do it again?"
 
 [node name="QuitButton" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2
-text = "Accept Your Fate"
+text = "Slug it we ball"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
@@ -85,7 +85,8 @@ offset_right = 487.0
 offset_bottom = -54.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "You Got Slugged "
+text = "You killed the Bi....
+Witch"
 label_settings = SubResource("LabelSettings_j4ecl")
 horizontal_alignment = 1
 
