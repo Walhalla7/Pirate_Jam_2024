@@ -198,14 +198,15 @@ transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -22.7085, 29.9725, 16.5
 billboard = 2
 texture = ExtResource("29_typtx")
 
-[node name="WallCrack1" parent="Objects" node_paths=PackedStringArray("endLocation") instance=ExtResource("42_j3d2p")]
+[node name="WallCrack1" parent="Objects" node_paths=PackedStringArray("endLocation", "Camera") instance=ExtResource("42_j3d2p")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 75.3637, 44.4334, 7.3899)
 endLocation = NodePath("../../Interactable/Marker3D2")
+Camera = NodePath("../../Camera3D")
 
-[node name="WallCrack2" parent="Objects" node_paths=PackedStringArray("endLocation", "PlayerCamera") instance=ExtResource("42_j3d2p")]
+[node name="WallCrack2" parent="Objects" node_paths=PackedStringArray("endLocation", "Camera") instance=ExtResource("42_j3d2p")]
 transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 66.0421, 52.4699, 14.1585)
 endLocation = NodePath("../../Interactable/Marker3D")
-PlayerCamera = NodePath("../../PlayerCamera")
+Camera = NodePath("../../Camera3D")
 
 [node name="WallCrack3" parent="Objects" instance=ExtResource("42_j3d2p")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 73.9426, 10.8898, 7.3899)
@@ -429,3 +430,6 @@ texture = ExtResource("53_6llgh")
 
 [node name="StaticBody3D" parent="." instance=ExtResource("50_jlmv7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.0761, 29.6339, 13.9355)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.400461, 0.48503, -0.777417, 1.32606e-08, 0.848418, 0.529327, 0.916314, 0.211975, -0.339758, 55.1981, 51.3755, -8.55177)
