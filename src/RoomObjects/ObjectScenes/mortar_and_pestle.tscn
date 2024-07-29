@@ -4,7 +4,8 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o3xwf"]
 albedo_texture = ExtResource("1_s6xxq")
-uv1_scale = Vector3(0.31, 0.31, 0.31)
+uv1_scale = Vector3(1.07, 0.31, 0.31)
+uv1_triplanar = true
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_ttnlj"]
 _surfaces = [{
