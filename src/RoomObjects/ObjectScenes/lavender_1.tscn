@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://dxn1gd1dxai4b"]
 
-[ext_resource type="Texture2D" uid="uid://b8dfkoiae8j11" path="res://assets/sprites/leaf5-1.png" id="1_lo8c4"]
+[ext_resource type="Texture2D" uid="uid://80sm5q26tv61" path="res://assets/sprites/leaf7-3.png" id="1_ihakq"]
 [ext_resource type="Texture2D" uid="uid://b6ri5r38dxlum" path="res://assets/sprites/lavender1-2.png" id="2_1o511"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ei72n"]
@@ -38,7 +38,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_040a2")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vjolk"]
-albedo_texture = ExtResource("1_lo8c4")
+albedo_texture = ExtResource("1_ihakq")
 uv1_scale = Vector3(-0.865, -0.865, -0.865)
 
 [node name="Lavender1" type="Node3D"]

@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://b7i2um4a17gt3" path="res://scenes/components/player_camera.tscn" id="3_beliv"]
 [ext_resource type="PackedScene" uid="uid://krtuxl5g46p6" path="res://Environment/climbable/wall.tscn" id="3_vqvni"]
 [ext_resource type="PackedScene" uid="uid://dvcbj3533beha" path="res://RoomObjects/ObjectScenes/book_1.tscn" id="18_1jb4a"]
-[ext_resource type="PackedScene" uid="uid://dmh6nsn2dxmqs" path="res://RoomObjects/ObjectScenes/plant_leaves.tscn" id="18_cqddd"]
 [ext_resource type="PackedScene" uid="uid://cxk6mj283urcb" path="res://RoomObjects/ObjectScenes/shelf_1.tscn" id="22_3oviy"]
 [ext_resource type="PackedScene" uid="uid://o8u6ymlho8lk" path="res://RoomObjects/ObjectScenes/garlic_braid.tscn" id="22_dyea0"]
 [ext_resource type="PackedScene" uid="uid://dmj4r00y1wboq" path="res://RoomObjects/ObjectScenes/unlit_candle.tscn" id="23_2bolv"]
@@ -50,6 +49,7 @@
 [ext_resource type="PackedScene" uid="uid://cn3vogr2jbw1b" path="res://RoomObjects/ObjectScenes/mortar_and_pestle.tscn" id="51_pun3u"]
 [ext_resource type="PackedScene" uid="uid://ukcsw1ir622t" path="res://scenes/lane_guidelines.tscn" id="51_qwm2i"]
 [ext_resource type="PackedScene" uid="uid://dc0f0sib8k7gs" path="res://scenes/bubbles.tscn" id="51_vlysd"]
+[ext_resource type="PackedScene" uid="uid://428ea3tfg5ps" path="res://RoomObjects/ObjectScenes/plant_2.tscn" id="51_vpx47"]
 [ext_resource type="PackedScene" uid="uid://cgehpn3t0ktgl" path="res://RoomObjects/ObjectScenes/ink_quill.tscn" id="51_xcd48"]
 [ext_resource type="PackedScene" uid="uid://dnycnew3n6m4v" path="res://RoomObjects/ObjectScenes/chain_1.tscn" id="52_atg3i"]
 [ext_resource type="Texture2D" uid="uid://dd3f68wiytb8o" path="res://assets/sprites/pumpkin1-1.png" id="53_6llgh"]
@@ -98,9 +98,6 @@ transform = Transform3D(-5, -7.54979e-07, 4.37112e-07, 7.54979e-07, -5, -1.8054e
 transform = Transform3D(-5, 0, -7.54979e-07, 0, 5, 0, 7.54979e-07, 0, -5, 22.4444, 14.7932, 20.009)
 
 [node name="Objects" type="Node" parent="."]
-
-[node name="PlantLeaves" parent="Objects" instance=ExtResource("18_cqddd")]
-transform = Transform3D(0.0324281, 0, 0.0156338, 0, 0.036, 0, -0.0156338, 0, 0.0324281, 0.0201588, 23.5978, 13.1758)
 
 [node name="Book2" parent="Objects" instance=ExtResource("18_1jb4a")]
 transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, 12.1039, 2.40539, 10.7957)
@@ -285,7 +282,7 @@ transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 73.9426, 10.8898, 7.389
 transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 66.5883, 7.49478, 14.0594)
 
 [node name="Planter1" parent="Objects" instance=ExtResource("43_86faq")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 64.3209, 15.2818, 13.2477)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 64.3209, 15.4139, 13.2477)
 
 [node name="Bookshelf1" parent="Objects" instance=ExtResource("43_rywdm")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 17.973, 8.41153, 15.0105)
@@ -298,9 +295,6 @@ transform = Transform3D(-0.816138, -0.577858, 0, 0.577858, -0.816138, 0, 0, 0, 1
 
 [node name="Vine2" parent="Objects" instance=ExtResource("47_4s8sk")]
 transform = Transform3D(-0.539477, -0.842001, 0, 0.842001, -0.539477, 0, 0, 0, 1, 48.808, 43.8266, 16.4115)
-
-[node name="Vine3" parent="Objects" instance=ExtResource("47_4s8sk")]
-transform = Transform3D(-0.839741, -0.520699, 0.153972, 0.510814, -0.853717, -0.101178, 0.184132, -0.00631216, 0.982881, 53.5472, 47.3524, 15.8549)
 
 [node name="Cobweb1" parent="Objects" instance=ExtResource("49_q85rh")]
 transform = Transform3D(0.4919, 1.18102, 1.53728, -0.988542, -1.21148, 1.24704, 1.66758, -1.06654, 0.285779, 11.3951, 25.6089, 14.6243)
@@ -374,13 +368,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.41926, 13.3829, 16.1432)
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 42.7832, 19.3472, 14.3237)
 
 [node name="hanging_planter" parent="Objects" instance=ExtResource("50_5dgf1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2183, 24.6596, 14.931)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.118822, 23.2826, 14.931)
 
 [node name="CrystalCluster1" parent="Objects" instance=ExtResource("50_wk22g")]
 transform = Transform3D(-0.0875035, 0, -0.996164, 0, 1, 0, 0.996164, 0, -0.0875035, 23, 16.0861, 13.4564)
 
 [node name="Sack4" parent="Objects" instance=ExtResource("51_d2wmx")]
 transform = Transform3D(-5, -7.54979e-07, 3.30012e-14, 0, -2.18557e-07, -5, 7.54979e-07, -5, 2.18557e-07, 42.5571, 1.66844, 16.8861)
+
+[node name="Plant2" parent="Objects" instance=ExtResource("51_vpx47")]
+transform = Transform3D(2.79481, 0, 1.09044, 0, 3, 0, -1.09044, 0, 2.79481, 26.4438, 30.4173, 12.3406)
 
 [node name="Interactable" type="Node" parent="."]
 
@@ -415,7 +412,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, -1.401)
 cell_size = Vector3(2, 2, 2.1)
 
 [node name="LaneGuidelines" parent="DevTools" instance=ExtResource("51_qwm2i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.326, -0.212654, 14.322)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.326, 15.2771, 14.322)
+visible = false
 
 [node name="ForegroundSprites" type="Node" parent="."]
 
