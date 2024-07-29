@@ -24,10 +24,10 @@ rotation = -1.5708
 scale = Vector2(0.325426, 0.279426)
 texture = ExtResource("2_76di1")
 
-[node name="PointA" type="Marker2D" parent="CanvasLayer"]
+[node name="Offscreen" type="Marker2D" parent="CanvasLayer"]
 position = Vector2(2500, 330)
 
-[node name="PointB" type="Marker2D" parent="CanvasLayer"]
-position = Vector2(650, 330)
+[node name="Onscreen" type="Marker2D" parent="CanvasLayer"]
+position = Vector2(564, 316)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
