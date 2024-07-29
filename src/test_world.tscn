@@ -43,6 +43,12 @@ player = NodePath("../Protagonist")
 
 [node name="Protagonist" parent="." instance=ExtResource("1_l74ou")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.225451, 0.731792, -0.0891062)
+move_speed = null
+JUMP_VELOCITY = null
+max_sprint_modifier = null
+wall_slowdown = null
+jump_vertical_strength = null
+jump_horizontal_strength = null
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)

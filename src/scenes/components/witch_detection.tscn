@@ -7,7 +7,7 @@ script = ExtResource("1_scw55")
 
 [node name="RayCast3D" type="RayCast3D" parent="."]
 transform = Transform3D(10, 0, 0, 0, -4.37114e-07, 10, 0, -10, -4.37114e-07, 0, 0, 0)
-collision_mask = 40
+collision_mask = 9
 debug_shape_custom_color = Color(1, 0, 1, 1)
 debug_shape_thickness = 4
 
