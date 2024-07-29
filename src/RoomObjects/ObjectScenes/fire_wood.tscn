@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://dobtc53ndxdcy"]
+
+[ext_resource type="PackedScene" uid="uid://c2liugq5vpfeb" path="res://RoomObjects/ObjectScenes/wood_2.tscn" id="1_3yp3x"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ofjc6"]
+albedo_color = Color(0.380392, 0.380392, 0.392157, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_885l7"]
+material = SubResource("StandardMaterial3D_ofjc6")
+
+[node name="FireWood" type="Node3D"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+
+[node name="Wood2" parent="." instance=ExtResource("1_3yp3x")]
+transform = Transform3D(1, 0, 0, 0, 0.584929, -0.811084, 0, 0.811084, 0.584929, 0, 0, -1.0592)
+
+[node name="Wood3" parent="." instance=ExtResource("1_3yp3x")]
+transform = Transform3D(-0.244484, 0.969503, -0.0170745, 0.216614, 0.0374437, -0.975539, -0.945149, -0.242203, -0.219162, -0.688634, 0, 0.233913)
+
+[node name="Wood6" parent="." instance=ExtResource("1_3yp3x")]
+transform = Transform3D(0.771185, 0.636382, -0.0170745, 0.126662, -0.179667, -0.975539, -0.623883, 0.750158, -0.219162, 0.636206, 0.269022, -1.06678)
+
+[node name="Wood4" parent="." instance=ExtResource("1_3yp3x")]
+transform = Transform3D(-0.829265, 0.333299, -0.448589, 0.45797, -0.0547426, -0.88728, -0.320286, -0.941231, -0.107245, -1.22805, 0, 0.233913)
+
+[node name="Wood5" parent="." instance=ExtResource("1_3yp3x")]
+transform = Transform3D(-0.537179, -0.351892, -0.766558, 0.795782, 0.08981, -0.598886, 0.279588, -0.931722, 0.231786, -0.406196, 0.532363, 0.233913)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(8.025, 0, 0, 0, 0.78, 0, 0, 0, 4.095, 0, -0.758876, -0.681131)
+mesh = SubResource("BoxMesh_885l7")
