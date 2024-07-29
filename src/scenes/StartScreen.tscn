@@ -20,17 +20,21 @@ Panel/styles/panel = SubResource("StyleBoxEmpty_7tyhd")
 
 [node name="StartScreen" type="Control"]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 1163.0
-offset_bottom = 662.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_b4w2j")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 0
-offset_left = -38.0
-offset_top = -23.0
-offset_right = 1200.0
-offset_bottom = 690.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 8
 color = Color(1, 0.701961, 0.439216, 1)
 
 [node name="Panel" type="Panel" parent="."]
@@ -40,13 +44,17 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -262.0
-offset_top = 10.0
-offset_right = 262.0
-offset_bottom = 238.0
+offset_top = 148.0
+offset_bottom = 148.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 8
 theme = SubResource("Theme_gpkcb")
+
+[node name="TitleScreen" type="Sprite2D" parent="Panel"]
+position = Vector2(-5, -264)
+scale = Vector2(0.38, 0.38)
+texture = ExtResource("1_nm2uq")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
 layout_mode = 1
@@ -67,10 +75,5 @@ alignment = 1
 [node name="StartButton" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2
 text = "Slugs away"
-
-[node name="TitleScreen" type="Sprite2D" parent="."]
-position = Vector2(571, 212)
-scale = Vector2(0.37, 0.37)
-texture = ExtResource("1_nm2uq")
 
 [connection signal="pressed" from="Panel/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
