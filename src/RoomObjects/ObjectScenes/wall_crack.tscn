@@ -1,7 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://csi1atg75it7t"]
+[gd_scene load_steps=4 format=3 uid="uid://csi1atg75it7t"]
 
 [ext_resource type="Texture2D" uid="uid://6qdpqu6xodps" path="res://assets/sprites/crack1-1.png" id="1_mqx8t"]
+[ext_resource type="Script" path="res://RoomObjects/ObjectScenes/wall_crack.gd" id="2_oah8e"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_o6qct"]
+size = Vector3(16.9468, 19.6292, 1.49756)
 
 [node name="WallCrack" type="Sprite3D"]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 texture = ExtResource("1_mqx8t")
+script = ExtResource("2_oah8e")
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 2
+collision_mask = 8
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.755768, 0.351112, 0.0578099)
+shape = SubResource("BoxShape3D_o6qct")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

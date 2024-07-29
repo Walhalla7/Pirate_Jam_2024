@@ -93,8 +93,8 @@ func _handle_move_input():
 	#we calculate movement direction based on inputs 
 	var move_direction_x = int(Input.is_action_pressed("move_left")) - int(Input.is_action_pressed("move_right"))
 	var move_direction_z = int(Input.is_action_pressed("move_back")) - int(Input.is_action_pressed("move_forward"))
-	
-	#Sprint Input / calculations
+
+	# Sprint Input / calculations
 	sprint_modifier = max_sprint_modifier if Input.is_action_pressed("sprint") else 1
 	
 	#we apply the direction to velocity 
@@ -119,9 +119,9 @@ func _handle_move_input():
 #function to calulcate directional inputs and movements on left wall
 func _handle_move_Left_input():
 	#we calculate movement direction based on inputs 
-	var move_direction_y
-	var move_direction_x
-	var move_direction_z
+	var move_direction_y = 0
+	var move_direction_x = 0
+	var move_direction_z = 0
 	
 	if is_Grounded or backDetector.is_colliding():
 		move_direction_y = int(Input.is_action_pressed("move_left"))
@@ -144,9 +144,9 @@ func _handle_move_Left_input():
 
 #function to calulcate directional inputs and movements on right wall
 func _handle_move_Right_input():
-	var move_direction_y
-	var move_direction_x
-	var move_direction_z
+	var move_direction_y = 0
+	var move_direction_x = 0
+	var move_direction_z = 0
 	
 	#we calculate movement direction based on inputs 
 	if is_Grounded or backDetector.is_colliding():
@@ -170,9 +170,9 @@ func _handle_move_Right_input():
 
 #function to calulcate directional inputs and movements on right wall
 func _handle_move_Back_input():
-	var move_direction_y
-	var move_direction_x
-	var move_direction_z
+	var move_direction_y = 0
+	var move_direction_x = 0
+	var move_direction_z = 0
 	
 	#we calculate movement direction based on inputs 
 	if is_Grounded or leftDetector.is_colliding() or rightDetector.is_colliding():
@@ -187,6 +187,7 @@ func _handle_move_Back_input():
 	
 	#Sprint Input / calculations
 	sprint_modifier = max_sprint_modifier if Input.is_action_pressed("sprint") else 1
+	
 	
 	#we apply the direction to velocity 
 	if is_Grounded:
