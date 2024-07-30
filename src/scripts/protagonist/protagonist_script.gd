@@ -106,15 +106,15 @@ func _handle_move_input():
 	#we apply animations/rotate sprite
 	if move_direction_x != 0 or move_direction_z != 0:
 		animated_sprite_3d.play("walk")	
-		if velocity.x < 0:
-			$Sprite3D.rotation.y = -PI
-		else: 
-			$Sprite3D.rotation.y = 0
-		
-		if velocity.z < 0:
-			$Sprite3D.rotation.y = -0.5
-		else:
-			$Sprite3D.rotation.y = 0.5
+		#if velocity.x < 0:
+			#$AnimatedSprite3D.rotation.y = -PI
+		#else: 
+			#$AnimatedSprite3D.rotation.y = 0
+		#
+		#if velocity.z < 0:
+			#$AnimatedSprite3D.rotation.y = -0.5
+		#else:
+			#$AnimatedSprite3D.rotation.y = 0.5
 	else:
 		animated_sprite_3d.play("idle")
 

@@ -6,4 +6,6 @@
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
+pixel_size = 0.15
+texture_filter = 0
 texture = ExtResource("1_y0exo")

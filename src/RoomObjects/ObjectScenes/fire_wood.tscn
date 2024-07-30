@@ -27,5 +27,5 @@ transform = Transform3D(-0.829265, 0.333299, -0.448589, 0.45797, -0.0547426, -0.
 transform = Transform3D(-0.537179, -0.351892, -0.766558, 0.795782, 0.08981, -0.598886, 0.279588, -0.931722, 0.231786, -0.406196, 0.532363, 0.233913)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(8.025, 0, 0, 0, 0.78, 0, 0, 0, 4.095, 0, -0.758876, -0.681131)
+transform = Transform3D(8.025, 0, 0, 0, 0.78, 0, 0, 0, 4.095, 0, -0.758876, -1.33001)
 mesh = SubResource("BoxMesh_885l7")

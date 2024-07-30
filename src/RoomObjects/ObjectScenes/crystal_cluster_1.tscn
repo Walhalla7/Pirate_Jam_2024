@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://bckxkvjqrl3an"]
+[gd_scene load_steps=3 format=3 uid="uid://bckxkvjqrl3an"]
 
 [ext_resource type="PackedScene" uid="uid://bxx1n3p44c68f" path="res://RoomObjects/ObjectScenes/crystal_1.tscn" id="1_16xbi"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n4ktw"]
+size = Vector3(2.26416, 3.24023, 1.52234)
 
 [node name="CrystalCluster1" type="Node3D"]
 
@@ -12,3 +15,15 @@ transform = Transform3D(1.66627, -1.10614, 0, 1.10614, 1.66627, 0, 0, 0, 2, -0.7
 
 [node name="Crystal3" parent="." instance=ExtResource("1_16xbi")]
 transform = Transform3D(2, 0, 0, 0, 1.86579, -0.720287, 0, 0.720287, 1.86579, 0, 0.377875, 0.583608)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.400146, 0.341797, 0.261169)
+shape = SubResource("BoxShape3D_n4ktw")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.319098, 0.188842)
+light_color = Color(0, 0.737255, 0.737255, 1)
+light_energy = 2.0
+light_size = 5.0

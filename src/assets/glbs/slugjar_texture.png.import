@@ -2,17 +2,18 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bujtc6dlglb52"
-path.s3tc="res://.godot/imported/bubble1-Sheet.png-5e62d9500ca64d8d117af7059a282977.s3tc.ctex"
+uid="uid://8yab4pp13kil"
+path.s3tc="res://.godot/imported/slugjar_texture.png-4615e49778a7ad7af2c6acc3eee0348a.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={}
 
 [deps]
 
-source_file="res://assets/SpriteSheets/bubble1-Sheet.png"
-dest_files=["res://.godot/imported/bubble1-Sheet.png-5e62d9500ca64d8d117af7059a282977.s3tc.ctex"]
+source_file="res://assets/glbs/slugjar_texture.png"
+dest_files=["res://.godot/imported/slugjar_texture.png-4615e49778a7ad7af2c6acc3eee0348a.s3tc.ctex"]
 
 [params]
 
