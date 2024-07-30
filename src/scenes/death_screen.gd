@@ -10,16 +10,16 @@ func _ready():
 #Show screen when player dies
 func GameEnd():
 	show()
+	for child in get_parent().get_children():
+		if child.name == "World":
+			child.queue_free()
+			break
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 #reset main scene
 func _on_reset_button_pressed():
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 	hide()
-	for child in get_parent().get_children():
-		if child.name == "World":
-			child.queue_free()
-			break
 	var newLevel_instance = main.instantiate()
 	get_parent().add_child(newLevel_instance)
 	
