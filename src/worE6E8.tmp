@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://dx1te2b8aasvv"]
+[gd_scene load_steps=54 format=3 uid="uid://dx1te2b8aasvv"]
 
 [ext_resource type="Script" path="res://script_main.gd" id="1_cwe8n"]
 [ext_resource type="PackedScene" uid="uid://b1tqs2mt8aiii" path="res://Environment/static/test_field.tscn" id="1_t7k6m"]
@@ -59,9 +59,6 @@ size = Vector3(3.93943, 1, 5.58313)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_me04p"]
 size = Vector3(97.1499, 73.1899, 2.604)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_jggqe"]
-size = Vector3(1.59569, 0.185181, 1.66125)
 
 [node name="World" type="Node"]
 script = ExtResource("1_cwe8n")
@@ -505,14 +502,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.0761, 29.6339, 13.9355)
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-0.837366, -0.289353, 0.463781, -1.11286e-08, 0.848418, 0.529327, -0.546643, 0.443241, -0.710436, -16.0856, 50.0135, 225.769)
-
-[node name="CauldronZone" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.961, 28.3849, 240.523)
-collision_layer = 0
-collision_mask = 8
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CauldronZone"]
-transform = Transform3D(33.105, 0, 0, 0, 33.105, 0, 0, 0, 33.105, -1.3606, -1.65889, -5.62325)
-shape = SubResource("BoxShape3D_jggqe")
-
-[connection signal="body_entered" from="CauldronZone" to="." method="_on_cauldron_zone_body_entered"]

@@ -20,3 +20,9 @@ func animate_dust_bunnies(delta):
 		bunny.global_position.x += sin(time*2+phase)/100  #sin(time*frequency+phase)/amplitude
 		bunny.global_position.z += sin(time*2+phase)/100  
 		phase += 1
+
+
+func _on_cauldron_zone_body_entered(body):
+	if body.is_in_group("Slug"):
+		print("here")
+		SignalBus.emit_signal("game_over")

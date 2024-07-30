@@ -507,9 +507,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.0761, 29.6339, 13.9355)
 transform = Transform3D(-0.837366, -0.289353, 0.463781, -1.11286e-08, 0.848418, 0.529327, -0.546643, 0.443241, -0.710436, -16.0856, 50.0135, 225.769)
 
 [node name="CauldronZone" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.961, 28.3849, 240.523)
-collision_layer = 0
-collision_mask = 8
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.6714, 28.7126, 238.076)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CauldronZone"]
 transform = Transform3D(33.105, 0, 0, 0, 33.105, 0, 0, 0, 33.105, -1.3606, -1.65889, -5.62325)
