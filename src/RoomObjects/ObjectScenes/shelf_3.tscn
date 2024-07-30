@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://dp88inud4d4fh"]
+
+[ext_resource type="Texture2D" uid="uid://moq7c20522a1" path="res://assets/textures/darkwood2_texture.png" id="1_0jcpm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e3hrm"]
+albedo_texture = ExtResource("1_0jcpm")
+uv1_scale = Vector3(-0.415, -0.415, -0.415)
+uv1_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_vhqog"]
+material = SubResource("StandardMaterial3D_e3hrm")
+size = Vector3(5, 0.225, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wx6yb"]
+size = Vector3(5.03632, 0.226746, 1.56189)
+
+[node name="Shelf3" type="StaticBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.5, 0, 0, 0)
+mesh = SubResource("BoxMesh_vhqog")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1.5, 0, 1, 0, -1, 0, -6.55671e-08, -1.74946, -0.000617862, 3.25162)
+mesh = SubResource("BoxMesh_vhqog")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0121155, 0.00393677, 0.00311279)
+shape = SubResource("BoxShape3D_wx6yb")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.77285, 0.00393677, 3.29502)
+shape = SubResource("BoxShape3D_wx6yb")

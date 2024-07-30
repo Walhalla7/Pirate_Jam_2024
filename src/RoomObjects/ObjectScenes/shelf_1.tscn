@@ -1,17 +1,18 @@
 [gd_scene load_steps=5 format=3 uid="uid://cxk6mj283urcb"]
 
-[ext_resource type="Texture2D" uid="uid://iy58cofwdx00" path="res://assets/textures/wood_texture1.png" id="1_do0wy"]
+[ext_resource type="Texture2D" uid="uid://moq7c20522a1" path="res://assets/textures/darkwood2_texture.png" id="1_hva3k"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bamad"]
-albedo_texture = ExtResource("1_do0wy")
-uv1_scale = Vector3(2.715, 2.715, 2.715)
+albedo_texture = ExtResource("1_hva3k")
+uv1_scale = Vector3(-0.415, -0.415, -0.415)
+uv1_triplanar = true
 
 [sub_resource type="BoxMesh" id="BoxMesh_jexbg"]
 material = SubResource("StandardMaterial3D_bamad")
 size = Vector3(5, 0.225, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tc8gj"]
-size = Vector3(5.03632, 0.226746, 1)
+size = Vector3(5.03632, 0.226746, 1.56189)
 
 [node name="Shelf1" type="StaticBody3D"]
 
@@ -20,5 +21,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.5, 0, 0, 0)
 mesh = SubResource("BoxMesh_jexbg")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0121155, 0.00393677, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0121155, 0.00393677, 0.00311279)
 shape = SubResource("BoxShape3D_tc8gj")
