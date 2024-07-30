@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bujtc6dlglb52"
-path.s3tc="res://.godot/imported/bubble1-Sheet.png-5e62d9500ca64d8d117af7059a282977.s3tc.ctex"
+uid="uid://bailcakassoev"
+path.s3tc="res://.godot/imported/Bubble400.png-ea948fdf7bcc7da7e12cf04260870f90.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/SpriteSheets/bubble1-Sheet.png"
-dest_files=["res://.godot/imported/bubble1-Sheet.png-5e62d9500ca64d8d117af7059a282977.s3tc.ctex"]
+source_file="res://assets/SpriteSheets/Bubble400.png"
+dest_files=["res://.godot/imported/Bubble400.png-ea948fdf7bcc7da7e12cf04260870f90.s3tc.ctex"]
 
 [params]
 

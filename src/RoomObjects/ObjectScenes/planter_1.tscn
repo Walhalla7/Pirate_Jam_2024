@@ -142,100 +142,140 @@ shape = SubResource("CylinderShape3D_5w7gc")
 
 [node name="Leaf" type="Sprite3D" parent="Leaves"]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.652763, 6.58969, -0.129711)
+pixel_size = 0.13
 billboard = 2
+texture_filter = 0
 texture = ExtResource("3_2j3tt")
 
 [node name="Leaf2" type="Sprite3D" parent="Leaves"]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -1.30628, 7.77346, 0.515416)
+pixel_size = 0.13
 billboard = 2
+texture_filter = 0
 texture = ExtResource("3_2j3tt")
 
 [node name="Leaf5" type="Sprite3D" parent="Leaves"]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 1.01428, 7.77346, -0.166313)
+pixel_size = 0.13
 billboard = 2
+texture_filter = 0
 texture = ExtResource("3_2j3tt")
 
 [node name="Leaf6" type="Sprite3D" parent="Leaves"]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.890711, 6.96786, 1.30069)
+pixel_size = 0.13
 billboard = 2
+texture_filter = 0
 texture = ExtResource("3_2j3tt")
 
 [node name="Leaf7" type="Sprite3D" parent="Leaves"]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 1.6188, 8.68375, -0.739897)
+pixel_size = 0.13
 billboard = 2
+texture_filter = 0
 texture = ExtResource("3_2j3tt")
 
 [node name="Leaf14" type="Sprite3D" parent="Leaves"]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 1.00087, 9.83792, -0.948959)
+pixel_size = 0.13
 billboard = 2
+texture_filter = 0
 texture = ExtResource("3_2j3tt")
 
 [node name="Leaf8" type="Sprite3D" parent="Leaves"]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.36146, 8.78069, 1.42565)
+pixel_size = 0.13
 billboard = 2
+texture_filter = 0
 texture = ExtResource("3_2j3tt")
 
 [node name="Leaf16" type="Sprite3D" parent="Leaves"]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.36146, 7.98252, 0.733427)
+pixel_size = 0.13
 billboard = 2
+texture_filter = 0
 texture = ExtResource("3_2j3tt")
 
 [node name="Leaf10" type="Sprite3D" parent="Leaves"]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.544741, 8.78069, 0.413188)
+pixel_size = 0.13
 billboard = 2
+texture_filter = 0
 texture = ExtResource("3_2j3tt")
 
 [node name="Leaf11" type="Sprite3D" parent="Leaves"]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.212727, 9.91974, 0.590513)
+pixel_size = 0.13
 billboard = 2
+texture_filter = 0
 texture = ExtResource("3_2j3tt")
 
 [node name="Leaf9" type="Sprite3D" parent="Leaves"]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.318197, 9.68208, -0.324671)
+pixel_size = 0.13
 billboard = 2
+texture_filter = 0
 texture = ExtResource("3_2j3tt")
 
 [node name="Leaf3" type="Sprite3D" parent="Leaves"]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -1.30628, 8.54168, -1.30474)
+pixel_size = 0.13
 billboard = 2
+texture_filter = 0
 texture = ExtResource("3_2j3tt")
 
 [node name="Leaf4" type="Sprite3D" parent="Leaves"]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -2.09736, 9.21226, -0.257931)
+pixel_size = 0.13
 billboard = 2
+texture_filter = 0
 texture = ExtResource("3_2j3tt")
 
-[node name="Leaf17" type="Sprite3D" parent="Leaves"]
+[node name="Rose2" type="Sprite3D" parent="Leaves"]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -1.47163, 10.3369, -0.253761)
+pixel_size = 0.25
 billboard = 2
+texture_filter = 0
 texture = ExtResource("4_djrjt")
 
-[node name="Leaf19" type="Sprite3D" parent="Leaves"]
+[node name="Rose1" type="Sprite3D" parent="Leaves"]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -1.47163, 8.58689, 0.0453116)
+pixel_size = 0.25
 billboard = 2
+texture_filter = 0
 texture = ExtResource("4_djrjt")
 
-[node name="Leaf18" type="Sprite3D" parent="Leaves"]
+[node name="Rose4" type="Sprite3D" parent="Leaves"]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.897688, 9.66524, -0.257931)
+pixel_size = 0.25
 billboard = 2
+texture_filter = 0
 texture = ExtResource("4_djrjt")
 
-[node name="Leaf20" type="Sprite3D" parent="Leaves"]
+[node name="Rose3" type="Sprite3D" parent="Leaves"]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.0255764, 9.928, 0.732262)
+pixel_size = 0.25
 billboard = 2
+texture_filter = 0
 texture = ExtResource("4_djrjt")
 
 [node name="Leaf15" type="Sprite3D" parent="Leaves"]
 transform = Transform3D(0.1, 0, -4.88692e-05, 0, 0.1, 0, 4.88692e-05, 0, 0.1, -1.49113, 9.40323, -2.00887)
+pixel_size = 0.13
 billboard = 2
+texture_filter = 0
 texture = ExtResource("3_2j3tt")
 
 [node name="Leaf12" type="Sprite3D" parent="Leaves"]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -1.65022, 10.2288, -1.22993)
+pixel_size = 0.13
 billboard = 2
+texture_filter = 0
 texture = ExtResource("3_2j3tt")
 
 [node name="Leaf13" type="Sprite3D" parent="Leaves"]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -1.02229, 8.30344, -0.578316)
+pixel_size = 0.13
 billboard = 2
+texture_filter = 0
 texture = ExtResource("3_2j3tt")

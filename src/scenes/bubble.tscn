@@ -1,40 +1,40 @@
 [gd_scene load_steps=10 format=3 uid="uid://bs48vet8o3qn0"]
 
-[ext_resource type="Texture2D" uid="uid://bujtc6dlglb52" path="res://assets/SpriteSheets/bubble1-Sheet.png" id="1_od0lu"]
+[ext_resource type="Texture2D" uid="uid://bailcakassoev" path="res://assets/SpriteSheets/Bubble400.png" id="2_24reb"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_a1euh"]
-atlas = ExtResource("1_od0lu")
-region = Rect2(0, 0, 1920, 1920)
+[sub_resource type="AtlasTexture" id="AtlasTexture_gji6l"]
+atlas = ExtResource("2_24reb")
+region = Rect2(0, 0, 128, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_yyotd"]
-atlas = ExtResource("1_od0lu")
-region = Rect2(0, 0, 1920, 1920)
+[sub_resource type="AtlasTexture" id="AtlasTexture_vgudx"]
+atlas = ExtResource("2_24reb")
+region = Rect2(0, 0, 128, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_c1hpm"]
-atlas = ExtResource("1_od0lu")
-region = Rect2(1920, 0, 1920, 1920)
+[sub_resource type="AtlasTexture" id="AtlasTexture_5jbwc"]
+atlas = ExtResource("2_24reb")
+region = Rect2(128, 0, 128, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_uwqnm"]
-atlas = ExtResource("1_od0lu")
-region = Rect2(3840, 0, 1920, 1920)
+[sub_resource type="AtlasTexture" id="AtlasTexture_gywjh"]
+atlas = ExtResource("2_24reb")
+region = Rect2(256, 0, 128, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_omyoo"]
-atlas = ExtResource("1_od0lu")
-region = Rect2(5760, 0, 1920, 1920)
+[sub_resource type="AtlasTexture" id="AtlasTexture_wlbrh"]
+atlas = ExtResource("2_24reb")
+region = Rect2(384, 0, 128, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jx3gr"]
-atlas = ExtResource("1_od0lu")
-region = Rect2(7680, 0, 1920, 1920)
+[sub_resource type="AtlasTexture" id="AtlasTexture_3fxr5"]
+atlas = ExtResource("2_24reb")
+region = Rect2(512, 0, 128, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0b75n"]
-atlas = ExtResource("1_od0lu")
-region = Rect2(9600, 0, 1920, 1920)
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ucls"]
+atlas = ExtResource("2_24reb")
+region = Rect2(640, 0, 128, 128)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5xkn0"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_a1euh")
+"texture": SubResource("AtlasTexture_gji6l")
 }],
 "loop": false,
 "name": &"float",
@@ -42,22 +42,22 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_yyotd")
+"texture": SubResource("AtlasTexture_vgudx")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_c1hpm")
+"texture": SubResource("AtlasTexture_5jbwc")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_uwqnm")
+"texture": SubResource("AtlasTexture_gywjh")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_omyoo")
+"texture": SubResource("AtlasTexture_wlbrh")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jx3gr")
+"texture": SubResource("AtlasTexture_3fxr5")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0b75n")
+"texture": SubResource("AtlasTexture_1ucls")
 }],
 "loop": false,
 "name": &"pop",
@@ -66,6 +66,8 @@ animations = [{
 
 [node name="Bubble1" type="AnimatedSprite3D"]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+pixel_size = 0.2
+texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_5xkn0")
 animation = &"pop"
 speed_scale = 1.5

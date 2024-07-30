@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://typ71ccn5qcm"
-path.s3tc="res://.godot/imported/Walk anim.png-62abe33df16b0a017b01cfaaffe3e69e.s3tc.ctex"
+uid="uid://fb28rbf0riie"
+path.s3tc="res://.godot/imported/Jump400.png-66253ef9c852da608432e245f781c845.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/SpriteSheets/Walk anim.png"
-dest_files=["res://.godot/imported/Walk anim.png-62abe33df16b0a017b01cfaaffe3e69e.s3tc.ctex"]
+source_file="res://assets/SpriteSheets/Jump400.png"
+dest_files=["res://.godot/imported/Jump400.png-66253ef9c852da608432e245f781c845.s3tc.ctex"]
 
 [params]
 
