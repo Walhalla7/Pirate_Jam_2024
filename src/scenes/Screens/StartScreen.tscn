@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://ccufyimfedffk"]
 
-[ext_resource type="Script" path="res://scenes/StartScreen.gd" id="1_b4w2j"]
+[ext_resource type="Script" path="res://scripts/Screens/StartScreen.gd" id="1_243di"]
 [ext_resource type="Texture2D" uid="uid://do1refmhyquic" path="res://assets/Images/titleScreen.png" id="1_nm2uq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_os44p"]
@@ -25,7 +25,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_b4w2j")
+script = ExtResource("1_243di")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1

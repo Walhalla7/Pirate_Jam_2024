@@ -1,17 +1,17 @@
-[gd_scene load_steps=56 format=3 uid="uid://dx1te2b8aasvv"]
+[gd_scene load_steps=54 format=3 uid="uid://dx1te2b8aasvv"]
 
 [ext_resource type="Script" path="res://script_main.gd" id="1_cwe8n"]
 [ext_resource type="PackedScene" uid="uid://b1tqs2mt8aiii" path="res://Environment/static/test_field.tscn" id="1_t7k6m"]
 [ext_resource type="PackedScene" uid="uid://dqb6hflk04skq" path="res://scenes/protagonist/protagonist_scene.tscn" id="2_yjr5n"]
 [ext_resource type="PackedScene" uid="uid://b7i2um4a17gt3" path="res://scenes/components/player_camera.tscn" id="3_beliv"]
 [ext_resource type="PackedScene" uid="uid://krtuxl5g46p6" path="res://Environment/climbable/wall.tscn" id="3_vqvni"]
-[ext_resource type="PackedScene" uid="uid://dek5eyfvuy7ua" path="res://scenes/components/witch_detection.tscn" id="4_mwdln"]
 [ext_resource type="PackedScene" uid="uid://dvcbj3533beha" path="res://RoomObjects/ObjectScenes/book_1.tscn" id="18_1jb4a"]
 [ext_resource type="PackedScene" uid="uid://cxk6mj283urcb" path="res://RoomObjects/ObjectScenes/shelf_1.tscn" id="22_3oviy"]
 [ext_resource type="PackedScene" uid="uid://o8u6ymlho8lk" path="res://RoomObjects/ObjectScenes/garlic_braid.tscn" id="22_dyea0"]
 [ext_resource type="PackedScene" uid="uid://dmj4r00y1wboq" path="res://RoomObjects/ObjectScenes/unlit_candle.tscn" id="23_2bolv"]
 [ext_resource type="PackedScene" uid="uid://lmq4dwuxtoft" path="res://scenes/dust_bunny.tscn" id="24_1wpdf"]
 [ext_resource type="PackedScene" uid="uid://dtab70hcy0rke" path="res://RoomObjects/ObjectScenes/lit_candle.tscn" id="24_kcbwx"]
+[ext_resource type="PackedScene" uid="uid://cxnbkj1epgh6j" path="res://RoomObjects/ObjectScenes/salt_grain.tscn" id="25_ac0ov"]
 [ext_resource type="PackedScene" uid="uid://b3yf85wyrhfp4" path="res://RoomObjects/ObjectScenes/sack_1.tscn" id="26_0ypc4"]
 [ext_resource type="PackedScene" uid="uid://cxvjeiqh3j2jr" path="res://RoomObjects/ObjectScenes/pumpkin_1.tscn" id="27_vtixk"]
 [ext_resource type="Texture2D" uid="uid://dkchx743vs01l" path="res://assets/sprites/wasp1-1.png" id="29_typtx"]
@@ -42,7 +42,7 @@
 [ext_resource type="PackedScene" uid="uid://csnlldtc6ghda" path="res://RoomObjects/ObjectScenes/Utensils.tscn" id="51_bsko0"]
 [ext_resource type="PackedScene" uid="uid://bs3twqryg8brj" path="res://RoomObjects/ObjectScenes/sack_2.tscn" id="51_d2wmx"]
 [ext_resource type="PackedScene" uid="uid://cn3vogr2jbw1b" path="res://RoomObjects/ObjectScenes/mortar_and_pestle.tscn" id="51_pun3u"]
-[ext_resource type="PackedScene" uid="uid://chekfm1d70hnv" path="res://scenes/lane_guidelines.tscn" id="51_qwm2i"]
+[ext_resource type="PackedScene" uid="uid://ukcsw1ir622t" path="res://scenes/lane_guidelines.tscn" id="51_qwm2i"]
 [ext_resource type="PackedScene" uid="uid://dc0f0sib8k7gs" path="res://scenes/bubbles.tscn" id="51_vlysd"]
 [ext_resource type="PackedScene" uid="uid://428ea3tfg5ps" path="res://RoomObjects/ObjectScenes/plant_2.tscn" id="51_vpx47"]
 [ext_resource type="PackedScene" uid="uid://cgehpn3t0ktgl" path="res://RoomObjects/ObjectScenes/ink_quill.tscn" id="51_xcd48"]
@@ -50,9 +50,6 @@
 [ext_resource type="Texture2D" uid="uid://dd3f68wiytb8o" path="res://assets/sprites/pumpkin1-1.png" id="53_6llgh"]
 [ext_resource type="PackedScene" uid="uid://c5gl7nn0at8c" path="res://RoomObjects/ObjectScenes/table_1.tscn" id="53_dgj73"]
 [ext_resource type="Texture2D" uid="uid://cyvg01crj7e6c" path="res://assets/sprites/sack1-5.png" id="53_uljdp"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_1mv1f"]
-size = Vector3(1, 18, 20.09)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xry6l"]
 size = Vector3(1, 18.3418, 6.33426)
@@ -63,24 +60,17 @@ size = Vector3(3.93943, 1, 5.58313)
 [sub_resource type="BoxShape3D" id="BoxShape3D_me04p"]
 size = Vector3(97.1499, 73.1899, 2.604)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_jggqe"]
-size = Vector3(1.59569, 0.185181, 1.66125)
-
 [node name="World" type="Node"]
 script = ExtResource("1_cwe8n")
 
 [node name="Protagonist" parent="." instance=ExtResource("2_yjr5n")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 4.46311, 0.512194, 14.9208)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 60.8847, 49.983, 15.0393)
 
 [node name="PlayerCamera" parent="." node_paths=PackedStringArray("camera_target") instance=ExtResource("3_beliv")]
 transform = Transform3D(-1, -9.89654e-09, 8.68608e-08, 0, 0.993572, 0.113203, -8.74228e-08, 0.113203, -0.993572, 62.8567, 4.64496, 8.4452)
 camera_target = NodePath("../Protagonist")
 lock_x = false
 lock_z = true
-
-[node name="WitchDectectionRay" parent="." node_paths=PackedStringArray("player") instance=ExtResource("4_mwdln")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.066, 29.919, 5)
-player = NodePath("../Protagonist")
 
 [node name="Floor" parent="." instance=ExtResource("1_t7k6m")]
 transform = Transform3D(39.68, 0, 0, 0, 39.68, 0, 0, 0, 39.68, -1.01195, -20.2157, -1.34342)
@@ -125,22 +115,6 @@ transform = Transform3D(0.0064574, 9.75041e-10, -5, 7.54979e-07, -5, 1.27323e-16
 
 [node name="Wall13" parent="Walls" instance=ExtResource("3_vqvni")]
 transform = Transform3D(0.00645697, 0, 5, 0, 5, 0, -5, 0, 0.00645697, -40.0057, 14.7932, 188.81)
-
-[node name="InvisibleCauldronWall" type="StaticBody3D" parent="Walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.01109, 49.5497, 241.418)
-collision_layer = 64
-collision_mask = 0
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Walls/InvisibleCauldronWall"]
-shape = SubResource("BoxShape3D_1mv1f")
-
-[node name="InvisibleCauldronWall2" type="StaticBody3D" parent="Walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7983, 49.813, 243.115)
-collision_layer = 64
-collision_mask = 0
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Walls/InvisibleCauldronWall2"]
-shape = SubResource("BoxShape3D_1mv1f")
 
 [node name="Objects" type="Node" parent="."]
 
@@ -212,6 +186,15 @@ transform = Transform3D(3, 0, 0, 0, -1.31134e-07, -2.445, 0, 3, -1.06874e-07, -7
 
 [node name="LitCandle2" parent="Objects" instance=ExtResource("24_kcbwx")]
 transform = Transform3D(3, 0, 0, 0, -1.31134e-07, -3, 0, 3, -1.31134e-07, -6.56852, 13.1576, 16.8749)
+
+[node name="SaltGrain" parent="Objects" instance=ExtResource("25_ac0ov")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.8383, -0.460972, 14.6107)
+
+[node name="SaltGrain2" parent="Objects" instance=ExtResource("25_ac0ov")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.3075, -0.460972, 15.1645)
+
+[node name="SaltGrain3" parent="Objects" instance=ExtResource("25_ac0ov")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.1105, -0.188272, 15.2927)
 
 [node name="Sack1" parent="Objects" instance=ExtResource("26_0ypc4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.005, 42.1245, 1.6886, 16.7288)
@@ -457,8 +440,7 @@ transform = Transform3D(4, 0, -0.00516623, 0, 4, 0, 0.00516623, 0, 4, -17.0056, 
 transform = Transform3D(-0.0012916, 0, -0.999999, 0, 1, 0, 0.999999, 0, -0.0012916, -19.9677, 0, 166.391)
 
 [node name="poison2" parent="Objects" instance=ExtResource("49_ja6r4")]
-transform = Transform3D(0.999999, 0, -0.00129156, 0, 1, 0, 0.00129156, 0, 0.999999, -16.8146, 42.4364, 236.471)
-collision_mask = 95
+transform = Transform3D(0.999999, 0, -0.00129156, 0, 1, 0, 0.00129156, 0, 0.999999, -16.2668, 42.4364, 236.471)
 
 [node name="FireWood2" parent="Objects" instance=ExtResource("45_dd2yi")]
 transform = Transform3D(-3, 0, 0.00387476, 0, 3, 0, -0.00387476, 0, -3, -16.4891, 8.07147, 238.94)
@@ -487,7 +469,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64.2412, 50.2942, 15.5084)
 
 [node name="InvisibleWall1" type="StaticBody3D" parent="PlayAreaLimiters"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.42439)
-collision_layer = 16
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="PlayAreaLimiters/InvisibleWall1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.66, 26.4925, 7.56747)
@@ -499,7 +480,7 @@ transform = Transform3D(-1, -3.13295e-08, 8.16162e-08, 0, 0.93358, 0.358368, -8.
 [node name="DevTools" type="Node" parent="."]
 
 [node name="LaneGuidelines" parent="DevTools" instance=ExtResource("51_qwm2i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.326, -2, 14.322)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.326, -1.55736, 14.322)
 
 [node name="ForegroundSprites" type="Node" parent="."]
 
@@ -516,24 +497,8 @@ transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 35.3436, 1.83549, 11.29
 billboard = 2
 texture = ExtResource("53_6llgh")
 
+[node name="StaticBody3D" parent="." instance=ExtResource("50_jlmv7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.0761, 29.6339, 13.9355)
+
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-0.837366, -0.289353, 0.463781, -1.11286e-08, 0.848418, 0.529327, -0.546643, 0.443241, -0.710436, -16.0856, 50.0135, 225.769)
-
-[node name="CauldronZone" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.961, 28.3849, 240.523)
-collision_layer = 0
-collision_mask = 40
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CauldronZone"]
-transform = Transform3D(33.105, 0, 0, 0, 33.105, 0, 0, 0, 33.105, -1.3606, -1.65889, -5.62325)
-shape = SubResource("BoxShape3D_jggqe")
-
-[connection signal="body_entered" from="CauldronZone" to="." method="_on_cauldron_zone_body_entered"]
-[node name="SaltPile" parent="." instance=ExtResource("50_jlmv7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.2895, -0.397003, 14.8851)
-
-[node name="SaltPile2" parent="." instance=ExtResource("50_jlmv7")]
-transform = Transform3D(-0.999856, 0, 0.0169638, 0, 1, 0, -0.0169638, 0, -0.999856, 40.0425, -0.397003, 14.9256)
-
-[node name="SaltPile3" parent="." instance=ExtResource("50_jlmv7")]
-transform = Transform3D(0.999994, 0, 0.00338602, 0, 1, 0, -0.00338602, 0, 0.999994, 39.8272, -0.397003, 14.3197)
