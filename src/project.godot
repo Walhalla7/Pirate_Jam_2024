@@ -71,6 +71,7 @@ Escape={
 2d_render/layer_4="Protagonist"
 3d_render/layer_4="Protagonist"
 3d_render/layer_5="Walls"
+3d_render/layer_6="Poison"
 3d_physics/layer_1="Static_Environment"
 3d_navigation/layer_1="Static_Environment"
 3d_physics/layer_2="Movable_Environment"
@@ -81,6 +82,8 @@ Escape={
 3d_navigation/layer_4="Protagonist"
 3d_physics/layer_5="Walls"
 3d_navigation/layer_5="Walls"
+3d_physics/layer_6="Poison"
+3d_navigation/layer_6="Poison"
 
 [rendering]
 

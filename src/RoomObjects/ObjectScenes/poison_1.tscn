@@ -1,7 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://d0nsyb30ncao7"]
+[gd_scene load_steps=7 format=3 uid="uid://d0nsyb30ncao7"]
 
 [ext_resource type="Texture2D" uid="uid://b7v8qipbrhed1" path="res://assets/glbs/poison1_poison1_texture.png" id="1_a2uab"]
-[ext_resource type="Script" path="res://RoomObjects/ObjectScenes/FinalPoison.gd" id="1_q5x3d"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_im8ph"]
 resource_name = "poison1-5"
@@ -70,33 +69,18 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_fatft")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_wfbtx"]
-size = Vector3(0.727036, 0.211548, 0.939453)
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_6djju"]
+points = PackedVector3Array(0.375, 0.202672, 0.249933, 0.375, 0, 0.249933, 0.375, 0.202672, 0.0311582, 0.218741, 0.202672, 0.468707, 0.375, 0, 0.0311582, 0.218741, 0, 0.468707, 0.281216, 0.202672, -0.343805, 0.187433, 0.202672, 0.5, 0.281216, 0, -0.343805, 0.187433, 0, 0.5, 0.249979, 0.202672, -0.375006, -0.187561, 0.202672, 0.5, 0.249979, 0, -0.375006, -0.187561, 0, 0.5, 0.156195, 0.202672, -0.4375, -0.218799, 0.202672, 0.468707, 0.156195, 0, -0.4375, -0.218799, 0, 0.468707, -0.156253, 0.202672, -0.4375, -0.34375, 0.202672, 0.281226, -0.156253, 0, -0.4375, -0.34375, 0, 0.281226, -0.250037, 0.202672, -0.375006, -0.34375, 0.202672, -4.28557e-05, -0.250037, 0, -0.375006, -0.34375, 0, -4.28557e-05, -0.281274, 0.202672, -0.343805, -0.281274, 0, -0.343805)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_ylsky"]
-size = Vector3(1.28278, 1, 0.939453)
-
-[node name="poison1" type="Node3D"]
-script = ExtResource("1_q5x3d")
+[node name="poison1" type="RigidBody3D" groups=["Poison"]]
+collision_layer = 32
+collision_mask = 31
 
 [node name="poison1-5" type="MeshInstance3D" parent="."]
 transform = Transform3D(3, 0, 0, 0, -1.31134e-07, -3, 0, 3, -1.31134e-07, 0, 0, 0)
 mesh = SubResource("ArrayMesh_487k1")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="poison1-5"]
-collision_layer = 2
-collision_mask = 9
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="poison1-5/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, -7.10543e-15, 0, 7.10543e-15, 1, 0.0148544, 0.102722, 0.0302734)
-shape = SubResource("BoxShape3D_wfbtx")
-
-[node name="Area3D" type="Area3D" parent="poison1-5"]
-collision_mask = 8
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="poison1-5/Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, -7.10543e-15, 0, 7.10543e-15, 1, -0.00454712, -1.11022e-16, 0.0302734)
-shape = SubResource("BoxShape3D_ylsky")
-
-[connection signal="body_entered" from="poison1-5/Area3D" to="." method="_on_area_3d_body_entered"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, -1.31134e-07, -3, 0, 3, -1.31134e-07, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_6djju")

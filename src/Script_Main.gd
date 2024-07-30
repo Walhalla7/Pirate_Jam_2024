@@ -24,5 +24,7 @@ func animate_dust_bunnies(delta):
 
 func _on_cauldron_zone_body_entered(body):
 	if body.is_in_group("Slug"):
-		print("here")
 		SignalBus.emit_signal("game_over")
+		
+	if body.is_in_group("Poison"):
+		SignalBus.emit_signal("Victory")
