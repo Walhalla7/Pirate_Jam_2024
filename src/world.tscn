@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://dx1te2b8aasvv"]
+[gd_scene load_steps=55 format=3 uid="uid://dx1te2b8aasvv"]
 
 [ext_resource type="Script" path="res://script_main.gd" id="1_cwe8n"]
 [ext_resource type="PackedScene" uid="uid://b1tqs2mt8aiii" path="res://Environment/static/test_field.tscn" id="1_t7k6m"]
@@ -16,13 +16,13 @@
 [ext_resource type="PackedScene" uid="uid://cxvjeiqh3j2jr" path="res://RoomObjects/ObjectScenes/pumpkin_1.tscn" id="27_vtixk"]
 [ext_resource type="Texture2D" uid="uid://dkchx743vs01l" path="res://assets/sprites/wasp1-1.png" id="29_typtx"]
 [ext_resource type="PackedScene" uid="uid://csi1atg75it7t" path="res://RoomObjects/ObjectScenes/wall_crack.tscn" id="42_j3d2p"]
-[ext_resource type="PackedScene" uid="uid://dln4xcy6foeuu" path="res://RoomObjects/ObjectScenes/coin.tscn" id="42_kpron"]
+[ext_resource type="PackedScene" path="res://RoomObjects/ObjectScenes/coin.tscn" id="42_kpron"]
 [ext_resource type="PackedScene" uid="uid://chw0hbaafilr2" path="res://RoomObjects/ObjectScenes/planter_1.tscn" id="43_86faq"]
 [ext_resource type="PackedScene" uid="uid://bnaqv7gn2ya0j" path="res://RoomObjects/ObjectScenes/bookshelf_1.tscn" id="43_rywdm"]
 [ext_resource type="PackedScene" uid="uid://cppn31u3h3r7m" path="res://RoomObjects/ObjectScenes/rune.tscn" id="43_yku4g"]
-[ext_resource type="PackedScene" uid="uid://bk31v6p2usxwk" path="res://RoomObjects/ObjectScenes/shard.tscn" id="44_ppti0"]
+[ext_resource type="PackedScene" path="res://RoomObjects/ObjectScenes/shard.tscn" id="44_ppti0"]
 [ext_resource type="PackedScene" uid="uid://cm3xif4e6yccv" path="res://RoomObjects/ObjectScenes/pot_1.tscn" id="44_qlga4"]
-[ext_resource type="PackedScene" uid="uid://dobtc53ndxdcy" path="res://RoomObjects/ObjectScenes/fire_wood.tscn" id="45_dd2yi"]
+[ext_resource type="PackedScene" path="res://RoomObjects/ObjectScenes/fire_wood.tscn" id="45_dd2yi"]
 [ext_resource type="PackedScene" uid="uid://cl47ep50md2hp" path="res://RoomObjects/ObjectScenes/vine_1.tscn" id="47_4s8sk"]
 [ext_resource type="PackedScene" uid="uid://b7b8fu2m4hh64" path="res://RoomObjects/ObjectScenes/book_3.tscn" id="47_ict7s"]
 [ext_resource type="PackedScene" uid="uid://bfiw2crbcotw1" path="res://RoomObjects/ObjectScenes/potion_1.tscn" id="47_mnpfp"]
@@ -36,15 +36,16 @@
 [ext_resource type="PackedScene" uid="uid://nr66xy518gg3" path="res://RoomObjects/ObjectScenes/hanging_planter.tscn" id="50_5dgf1"]
 [ext_resource type="PackedScene" uid="uid://dhtq2u2ks2ly5" path="res://scenes/components/salt.tscn" id="50_jlmv7"]
 [ext_resource type="PackedScene" uid="uid://dxn1gd1dxai4b" path="res://RoomObjects/ObjectScenes/lavender_1.tscn" id="50_mriqt"]
-[ext_resource type="PackedScene" uid="uid://bckxkvjqrl3an" path="res://RoomObjects/ObjectScenes/crystal_cluster_1.tscn" id="50_wk22g"]
+[ext_resource type="PackedScene" path="res://RoomObjects/ObjectScenes/crystal_cluster_1.tscn" id="50_wk22g"]
 [ext_resource type="PackedScene" uid="uid://bbh4akqdqpu2d" path="res://RoomObjects/ObjectScenes/cauldron_1.tscn" id="51_4fvl8"]
-[ext_resource type="PackedScene" uid="uid://bld7v1k3mhp6e" path="res://RoomObjects/ObjectScenes/apple.tscn" id="51_bschn"]
+[ext_resource type="PackedScene" path="res://RoomObjects/ObjectScenes/apple.tscn" id="51_bschn"]
 [ext_resource type="PackedScene" uid="uid://csnlldtc6ghda" path="res://RoomObjects/ObjectScenes/Utensils.tscn" id="51_bsko0"]
-[ext_resource type="PackedScene" uid="uid://bs3twqryg8brj" path="res://RoomObjects/ObjectScenes/sack_2.tscn" id="51_d2wmx"]
+[ext_resource type="PackedScene" path="res://RoomObjects/ObjectScenes/sack_2.tscn" id="51_d2wmx"]
+[ext_resource type="PackedScene" uid="uid://cjyd6y38nykw2" path="res://plateform_music.tscn" id="51_piqdn"]
 [ext_resource type="PackedScene" uid="uid://cn3vogr2jbw1b" path="res://RoomObjects/ObjectScenes/mortar_and_pestle.tscn" id="51_pun3u"]
 [ext_resource type="PackedScene" uid="uid://ukcsw1ir622t" path="res://scenes/lane_guidelines.tscn" id="51_qwm2i"]
 [ext_resource type="PackedScene" uid="uid://dc0f0sib8k7gs" path="res://scenes/bubbles.tscn" id="51_vlysd"]
-[ext_resource type="PackedScene" uid="uid://428ea3tfg5ps" path="res://RoomObjects/ObjectScenes/plant_2.tscn" id="51_vpx47"]
+[ext_resource type="PackedScene" path="res://RoomObjects/ObjectScenes/plant_2.tscn" id="51_vpx47"]
 [ext_resource type="PackedScene" uid="uid://cgehpn3t0ktgl" path="res://RoomObjects/ObjectScenes/ink_quill.tscn" id="51_xcd48"]
 [ext_resource type="PackedScene" uid="uid://dnycnew3n6m4v" path="res://RoomObjects/ObjectScenes/chain_1.tscn" id="52_atg3i"]
 [ext_resource type="Texture2D" uid="uid://dd3f68wiytb8o" path="res://assets/sprites/pumpkin1-1.png" id="53_6llgh"]
@@ -64,7 +65,11 @@ size = Vector3(97.1499, 73.1899, 2.604)
 script = ExtResource("1_cwe8n")
 
 [node name="Protagonist" parent="." instance=ExtResource("2_yjr5n")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 18.9848, 30.0638, 14.2058)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 16.3305, 30.0638, 14.5188)
+
+[node name="plateform music" parent="Protagonist" instance=ExtResource("51_piqdn")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -2.4049, 0.0564651, 14.5188)
+volume_db = 6.0
 
 [node name="PlayerCamera" parent="." node_paths=PackedStringArray("camera_target") instance=ExtResource("3_beliv")]
 transform = Transform3D(-1, -9.89654e-09, 8.68608e-08, 0, 0.993572, 0.113203, -8.74228e-08, 0.113203, -0.993572, 62.8567, 4.64496, 8.4452)
