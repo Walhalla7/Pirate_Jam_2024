@@ -12,7 +12,7 @@ material = SubResource("StandardMaterial3D_bamad")
 size = Vector3(5, 0.225, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tc8gj"]
-size = Vector3(5.03632, 0.226746, 1.56189)
+size = Vector3(5.036, 0.227, 1.565)
 
 [node name="Shelf1" type="StaticBody3D"]
 

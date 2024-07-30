@@ -20,7 +20,6 @@ func GameEnd():
 func _on_reset_button_pressed():
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 	hide()
-	
 	var newLevel_instance = main.instantiate()
 	get_parent().add_child(newLevel_instance)
 	

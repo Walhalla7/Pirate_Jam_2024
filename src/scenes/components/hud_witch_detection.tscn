@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dxd82rh16vwn2"]
+
+[ext_resource type="Texture2D" uid="uid://cbnvd4wdsgahv" path="res://assets/sprites/witch_hand1-1.png" id="1_i2lse"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1540, 311)
+rotation = -1.5708
+scale = Vector2(0.188542, 0.188542)
+texture = ExtResource("1_i2lse")
