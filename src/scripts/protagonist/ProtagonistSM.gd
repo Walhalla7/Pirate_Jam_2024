@@ -156,12 +156,10 @@ func _enter_state(new_state, old_state):
 		states.WALL_LEFT:
 			if !parent._is_timer_active():
 				parent.climbTimer.start()
-				anim.play("climb_back_up")
 
 		states.WALL_RIGHT:
 			if !parent._is_timer_active():
 				parent.climbTimer.start()
-				anim.play("climb_back_up")
 
 		states.WALL_BACK:
 			if !parent._is_timer_active():
