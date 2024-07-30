@@ -205,6 +205,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_sad0n")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.15693, -2.9996, -0.939535)
 pixel_size = 0.1
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("3_wnf85")
 
@@ -212,6 +213,7 @@ texture = ExtResource("3_wnf85")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.60098, -4.42939, -1.86252)
 pixel_size = 0.1
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("3_wnf85")
 
@@ -219,6 +221,7 @@ texture = ExtResource("3_wnf85")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6964, -8.28403, -1.86252)
 pixel_size = 0.1
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("3_wnf85")
 
@@ -226,6 +229,7 @@ texture = ExtResource("3_wnf85")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.8524, -11.2145, -1.44106)
 pixel_size = 0.1
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("3_wnf85")
 
@@ -233,6 +237,7 @@ texture = ExtResource("3_wnf85")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.8285, -10.3358, -1.86252)
 pixel_size = 0.1
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("3_wnf85")
 
@@ -240,6 +245,7 @@ texture = ExtResource("3_wnf85")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.99732, -7.49137, -0.6936)
 pixel_size = 0.1
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("3_wnf85")
 
@@ -247,6 +253,7 @@ texture = ExtResource("3_wnf85")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.81749, -5.87301, -0.608462)
 pixel_size = 0.1
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("3_wnf85")
 
@@ -254,6 +261,7 @@ texture = ExtResource("3_wnf85")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.58077, -4.91521, -3.3284)
 pixel_size = 0.1
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("3_wnf85")
 
@@ -262,6 +270,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.731222, -7.59045, -2.70134
 flip_h = true
 pixel_size = 0.1
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("3_wnf85")
 
@@ -269,6 +278,7 @@ texture = ExtResource("3_wnf85")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.03191, -7.81741, -2.57183)
 pixel_size = 0.1
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("3_wnf85")
 
@@ -276,6 +286,7 @@ texture = ExtResource("3_wnf85")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.58077, -9.30686, -3.51109)
 pixel_size = 0.1
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("3_wnf85")
 
@@ -283,6 +294,7 @@ texture = ExtResource("3_wnf85")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.5368, -9.11785, -1.86252)
 pixel_size = 0.1
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("3_wnf85")
 
@@ -290,6 +302,7 @@ texture = ExtResource("3_wnf85")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.4341, -13.0256, -1.86252)
 pixel_size = 0.1
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("3_wnf85")
 
@@ -297,6 +310,7 @@ texture = ExtResource("3_wnf85")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.3072, -14.3027, -1.75963)
 pixel_size = 0.1
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("3_wnf85")
 
@@ -304,6 +318,7 @@ texture = ExtResource("3_wnf85")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.4524, -11.2896, -1.86252)
 pixel_size = 0.1
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("3_wnf85")
 
@@ -311,6 +326,7 @@ texture = ExtResource("3_wnf85")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.2002, -6.04489, -1.86252)
 pixel_size = 0.1
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("3_wnf85")
 
@@ -318,6 +334,7 @@ texture = ExtResource("3_wnf85")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.33925, -3.29685, 1.072)
 pixel_size = 0.1
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("4_h8l7k")
 
@@ -325,6 +342,7 @@ texture = ExtResource("4_h8l7k")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.39974, -4.94108, 0.641793)
 pixel_size = 0.1
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("4_h8l7k")
 
@@ -332,6 +350,7 @@ texture = ExtResource("4_h8l7k")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5846, -6.39766, 0.744791)
 pixel_size = 0.1
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("4_h8l7k")
 
@@ -339,6 +358,7 @@ texture = ExtResource("4_h8l7k")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5846, -6.39766, 0.744791)
 pixel_size = 0.1
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("4_h8l7k")
 
@@ -346,6 +366,7 @@ texture = ExtResource("4_h8l7k")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.91513, -8.24266, 0.966229)
 pixel_size = 0.1
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("4_h8l7k")
 
@@ -353,6 +374,7 @@ texture = ExtResource("4_h8l7k")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.9011, -10.3547, 0.324603)
 pixel_size = 0.1
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("4_h8l7k")
 
@@ -360,6 +382,7 @@ texture = ExtResource("4_h8l7k")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.3773, -11.8598, 1.2875)
 pixel_size = 0.1
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("4_h8l7k")
 
@@ -367,6 +390,7 @@ texture = ExtResource("4_h8l7k")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.7476, -13.3919, -1.06783)
 pixel_size = 0.1
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("4_h8l7k")
 
@@ -374,6 +398,7 @@ texture = ExtResource("4_h8l7k")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.4068, -11.9567, -1.06783)
 pixel_size = 0.1
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("4_h8l7k")
 
@@ -381,6 +406,7 @@ texture = ExtResource("4_h8l7k")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.4194, -10.4722, -0.66263)
 pixel_size = 0.1
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("4_h8l7k")
 
@@ -388,6 +414,7 @@ texture = ExtResource("4_h8l7k")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.0775, -8.11839, 1.57104)
 pixel_size = 0.1
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("4_h8l7k")
 
@@ -395,6 +422,7 @@ texture = ExtResource("4_h8l7k")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.3795, -6.04025, 2.11472)
 pixel_size = 0.1
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("4_h8l7k")
 
@@ -402,6 +430,7 @@ texture = ExtResource("4_h8l7k")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3577, -8.92239, 0.775714)
 pixel_size = 0.1
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("4_h8l7k")
 
@@ -409,6 +438,7 @@ texture = ExtResource("4_h8l7k")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3577, -10.629, -0.502552)
 pixel_size = 0.1
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("4_h8l7k")
 
@@ -416,6 +446,7 @@ texture = ExtResource("4_h8l7k")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.7116, -8.12229, -0.126778)
 pixel_size = 0.1
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("4_h8l7k")
 
@@ -423,6 +454,7 @@ texture = ExtResource("4_h8l7k")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.7116, -6.98029, 0.781062)
 pixel_size = 0.1
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("4_h8l7k")
 
@@ -430,6 +462,7 @@ texture = ExtResource("4_h8l7k")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.52781, -9.05834, -1.30725)
 pixel_size = 0.1
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("4_h8l7k")
 
@@ -437,6 +470,7 @@ texture = ExtResource("4_h8l7k")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.62381, -5.34914, -0.0787446)
 pixel_size = 0.1
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("4_h8l7k")
 
@@ -444,6 +478,7 @@ texture = ExtResource("4_h8l7k")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.62381, -4.79542, 1.15503)
 pixel_size = 0.1
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("4_h8l7k")
 
@@ -451,6 +486,7 @@ texture = ExtResource("4_h8l7k")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.53539, -3.29029, 0.77376)
 pixel_size = 0.1
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("4_h8l7k")
 
@@ -458,6 +494,7 @@ texture = ExtResource("4_h8l7k")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.44536, -3.69694, 1.43654)
 pixel_size = 0.1
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("4_h8l7k")
 
@@ -465,6 +502,7 @@ texture = ExtResource("4_h8l7k")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.84138, -2.36779, 0.907909)
 pixel_size = 0.1
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("4_h8l7k")
 
@@ -472,6 +510,7 @@ texture = ExtResource("4_h8l7k")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.86225, -3.49897, -1.52844)
 pixel_size = 0.1
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("4_h8l7k")
 
@@ -480,6 +519,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.12953, -6.09769, -1.52844)
 flip_h = true
 pixel_size = 0.1
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("4_h8l7k")
 
@@ -488,6 +528,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.05425, -9.46208, -1.52844)
 flip_h = true
 pixel_size = 0.1
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("4_h8l7k")
 
@@ -495,5 +536,6 @@ texture = ExtResource("4_h8l7k")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.80472, -8.07492, -1.52844)
 pixel_size = 0.1
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("4_h8l7k")

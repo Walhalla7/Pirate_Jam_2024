@@ -67,6 +67,7 @@ animations = [{
 [node name="Bubble1" type="AnimatedSprite3D"]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
 pixel_size = 0.2
+shaded = true
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_5xkn0")
 animation = &"pop"

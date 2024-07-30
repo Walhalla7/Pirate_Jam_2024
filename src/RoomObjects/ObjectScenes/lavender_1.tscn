@@ -55,6 +55,7 @@ transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.289893, 2.6031, 0.23
 flip_v = true
 pixel_size = 0.15
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("2_v8u56")
 
@@ -63,6 +64,7 @@ transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.372769, 1.65523, -0.1
 flip_v = true
 pixel_size = 0.15
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("2_v8u56")
 
@@ -71,5 +73,6 @@ transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.158316, 0.957655, 0.3
 flip_v = true
 pixel_size = 0.15
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("2_v8u56")

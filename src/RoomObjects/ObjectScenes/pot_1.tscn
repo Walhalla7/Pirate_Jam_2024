@@ -59,6 +59,7 @@ uv1_triplanar = true
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, -3.06327, 2.60095, 1.06893)
 pixel_size = 0.15
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("2_hoa1j")
 
@@ -66,6 +67,7 @@ texture = ExtResource("2_hoa1j")
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0.439787, 2.60095, 2.12962)
 pixel_size = 0.15
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("2_hoa1j")
 
@@ -73,6 +75,7 @@ texture = ExtResource("2_hoa1j")
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, -1.71135, 2.60095, 2.24468)
 pixel_size = 0.15
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("2_hoa1j")
 
@@ -80,6 +83,7 @@ texture = ExtResource("2_hoa1j")
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0.00264812, 2.32005, 3.29282)
 pixel_size = 0.15
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("2_hoa1j")
 
@@ -87,6 +91,7 @@ texture = ExtResource("2_hoa1j")
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, -1.12162, 2.60095, 0.954559)
 pixel_size = 0.15
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("2_hoa1j")
 
@@ -94,6 +99,7 @@ texture = ExtResource("2_hoa1j")
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0.845069, 2.60095, 0.683949)
 pixel_size = 0.15
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("2_hoa1j")
 
@@ -101,6 +107,7 @@ texture = ExtResource("2_hoa1j")
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, -0.664593, 2.60095, -0.433668)
 pixel_size = 0.15
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("2_hoa1j")
 
@@ -108,6 +115,7 @@ texture = ExtResource("2_hoa1j")
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, -2.63699, 2.93228, -0.144364)
 pixel_size = 0.15
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("2_hoa1j")
 
@@ -115,6 +123,7 @@ texture = ExtResource("2_hoa1j")
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, -1.87362, 2.93228, -1.69354)
 pixel_size = 0.15
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("2_hoa1j")
 
@@ -122,6 +131,7 @@ texture = ExtResource("2_hoa1j")
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 2.98556, 2.60095, 0.99885)
 pixel_size = 0.15
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("2_hoa1j")
 
@@ -129,6 +139,7 @@ texture = ExtResource("2_hoa1j")
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0.453779, 2.60095, -1.22767)
 pixel_size = 0.15
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("2_hoa1j")
 
@@ -136,6 +147,7 @@ texture = ExtResource("2_hoa1j")
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 2.7603, 2.60095, -0.767751)
 pixel_size = 0.15
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("2_hoa1j")
 
@@ -143,6 +155,7 @@ texture = ExtResource("2_hoa1j")
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0.485364, 2.60095, -2.83982)
 pixel_size = 0.15
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("2_hoa1j")
 
@@ -150,6 +163,7 @@ texture = ExtResource("2_hoa1j")
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 2.23295, 2.60095, -2.3799)
 pixel_size = 0.15
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("2_hoa1j")
 
@@ -157,6 +171,7 @@ texture = ExtResource("2_hoa1j")
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 2.21032, 2.60095, 2.61493)
 pixel_size = 0.15
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("2_hoa1j")
 

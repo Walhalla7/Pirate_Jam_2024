@@ -84,6 +84,7 @@ skeleton = NodePath("")
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.138784, 0.970343, -0.263842)
 pixel_size = 0.15
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("2_pnyrm")
 
@@ -91,6 +92,7 @@ texture = ExtResource("2_pnyrm")
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.868227, 1.31628, -0.263842)
 pixel_size = 0.15
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("2_pnyrm")
 
@@ -98,6 +100,7 @@ texture = ExtResource("2_pnyrm")
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.612836, 1.31628, -0.263842)
 pixel_size = 0.15
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("2_pnyrm")
 
@@ -105,6 +108,7 @@ texture = ExtResource("2_pnyrm")
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.0242369, 0.318307, -0.605477)
 pixel_size = 0.15
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("2_pnyrm")
 
@@ -112,6 +116,7 @@ texture = ExtResource("2_pnyrm")
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.589759, 0.911042, -0.733248)
 pixel_size = 0.15
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("2_pnyrm")
 
@@ -119,6 +124,7 @@ texture = ExtResource("2_pnyrm")
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.343304, 1.89804, -0.0909574)
 pixel_size = 0.15
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("2_pnyrm")
 
@@ -126,6 +132,7 @@ texture = ExtResource("2_pnyrm")
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.196646, 2.02462, -0.295263)
 pixel_size = 0.15
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("2_pnyrm")
 
@@ -133,5 +140,6 @@ texture = ExtResource("2_pnyrm")
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.387474, 0.923395, -0.763877)
 pixel_size = 0.15
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("2_pnyrm")
