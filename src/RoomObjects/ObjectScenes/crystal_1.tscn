@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bxx1n3p44c68f"]
+[gd_scene load_steps=5 format=3 uid="uid://bxx1n3p44c68f"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h1j2r"]
 
@@ -34,21 +34,15 @@ shadow_mesh = SubResource("ArrayMesh_bqpu4")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_axq73"]
 albedo_color = Color(0.239216, 0.427451, 0.588235, 1)
+emission_enabled = true
 emission = Color(0, 0.6, 0.6, 1)
-emission_energy_multiplier = 0.1
+emission_energy_multiplier = 0.39
 refraction_scale = 1.0
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1oipk"]
-radius = 0.231527
-height = 1.80183
-
-[node name="Crystal1" type="StaticBody3D"]
+[node name="Crystal1" type="Node3D"]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 
 [node name="Circle" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_jloj0")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_axq73")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("CapsuleShape3D_1oipk")

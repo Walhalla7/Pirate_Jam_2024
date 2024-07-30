@@ -207,6 +207,7 @@ script = ExtResource("1_7xj1q")
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0.470279, 0)
 pixel_size = 0.15
+shaded = true
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_0hkjp")
 animation = &"climb"
