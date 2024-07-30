@@ -1,4 +1,5 @@
 extends StateMachine
+@onready var jump = $jump
 
 #function to handle jump input
 func _input(event):
@@ -157,6 +158,11 @@ func _enter_state(new_state, old_state):
 		states.WALL_BACK:
 			if !parent._is_timer_active():
 				parent.climbTimer.start()
+		states.JUMPING:
+			if !parent._is_timer_active():
+				parent.climbTimer.start()
+				jump.play()
+			
 
 #define behaviors while exiting out of specific state
 func _exit_state(old_state, new_state):
