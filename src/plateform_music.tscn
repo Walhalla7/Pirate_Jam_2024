@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddqsphxlj8b75"]
+
+[ext_resource type="AudioStream" uid="uid://bk5ek7klje0wq" path="res://sound effect & music/SLOWER-TEMPO2019-12-11_-_Retro_Platforming_-_David_Fesliyan.mp3" id="1_q1guw"]
+
+[node name="plateform music" type="AudioStreamPlayer3D"]
+stream = ExtResource("1_q1guw")
+volume_db = -6.0
+autoplay = true

@@ -1,4 +1,5 @@
 extends StateMachine
+@onready var jump = $jump
 
 @onready var anim = $"../AnimationPlayer"
 
@@ -164,11 +165,16 @@ func _enter_state(new_state, old_state):
 		states.WALL_BACK:
 			if !parent._is_timer_active():
 				parent.climbTimer.start()
-				print(str(parent.velocity))
 				anim.play("climb_back_up")
 		
 		states.FALLING: 
 			anim.play("fall")
+
+		states.JUMPING:
+			if !parent._is_timer_active():
+				parent.climbTimer.start()
+				jump.play()
+			
 
 #define behaviors while exiting out of specific state
 func _exit_state(old_state, new_state):
