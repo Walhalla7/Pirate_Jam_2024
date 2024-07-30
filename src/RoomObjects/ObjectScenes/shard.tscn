@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://bk31v6p2usxwk"]
 
-[ext_resource type="Texture2D" uid="uid://bwquyir22c73x" path="res://assets/glbs/shard_shard1.png" id="1_so7jo"]
+[ext_resource type="Texture2D" uid="uid://vgg2somo18kh" path="res://assets/glbs/shard_shard1.png" id="1_so7jo"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gyhvw"]
 resource_name = "shard1-1"
