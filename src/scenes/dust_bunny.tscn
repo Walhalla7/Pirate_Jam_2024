@@ -1,10 +1,28 @@
-[gd_scene load_steps=2 format=3 uid="uid://lmq4dwuxtoft"]
+[gd_scene load_steps=5 format=3 uid="uid://lmq4dwuxtoft"]
 
 [ext_resource type="Texture2D" uid="uid://1cv786f2567p" path="res://assets/sprites/dustbunny1-2.png" id="1_421hl"]
+[ext_resource type="Script" path="res://scripts/components/DustBunnies.gd" id="2_ge0y6"]
+[ext_resource type="Script" path="res://scripts/components/damage_component.gd" id="3_2hd41"]
 
-[node name="DustBunny" type="Node3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_gqw5q"]
+size = Vector3(0.255, 3.025, 3.375)
+
+[node name="DustBunny" type="StaticBody3D"]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("2_ge0y6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0.180692, 0)
+shape = SubResource("BoxShape3D_gqw5q")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+pixel_size = 0.15
 billboard = 2
+shaded = true
+texture_filter = 0
 texture = ExtResource("1_421hl")
+
+[node name="DamageComponent" type="Node3D" parent="."]
+script = ExtResource("3_2hd41")

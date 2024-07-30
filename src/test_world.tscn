@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dh3joypf4x5a0" path="res://scenes/components/test_trap.tscn" id="3_hs7xj"]
 [ext_resource type="PackedScene" uid="uid://dhtq2u2ks2ly5" path="res://scenes/components/salt.tscn" id="4_45hqf"]
 [ext_resource type="AudioStream" uid="uid://bk5ek7klje0wq" path="res://sound effect & music/SLOWER-TEMPO2019-12-11_-_Retro_Platforming_-_David_Fesliyan.mp3" id="5_2ta7u"]
+[ext_resource type="PackedScene" uid="uid://dek5eyfvuy7ua" path="res://scenes/components/witch_detection.tscn" id="5_w7qn5"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_tb6f8"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -37,8 +38,17 @@ camera_target = NodePath("../Protagonist")
 lock_x = false
 lock_z = true
 
+[node name="WitchDectectionRay" parent="." node_paths=PackedStringArray("player") instance=ExtResource("5_w7qn5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1105, -10.0904)
+player = NodePath("../Protagonist")
+
 [node name="Protagonist" parent="." instance=ExtResource("1_l74ou")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.225451, 0.731792, -0.0891062)
+move_speed = null
+JUMP_VELOCITY = null
+wall_slowdown = null
+jump_vertical_strength = null
+jump_horizontal_strength = null
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
@@ -65,8 +75,9 @@ size = Vector3(1, 30, 30)
 material = SubResource("StandardMaterial3D_b2360")
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 1)
+transform = Transform3D(-0.0861299, 0, -0.996284, 0, 1, 0, 0.996284, 0, -0.0861299, -7, 0, -2.03447)
 use_collision = true
+collision_layer = 33
 size = Vector3(1, 10, 5)
 material = SubResource("ORMMaterial3D_vwvbf")
 

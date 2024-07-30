@@ -53,23 +53,26 @@ surface_material_override/0 = SubResource("StandardMaterial3D_vjolk")
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.289893, 2.6031, 0.238138)
 flip_v = true
-pixel_size = 0.6
+pixel_size = 0.15
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("2_v8u56")
 
 [node name="Sprite3D2" type="Sprite3D" parent="."]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.372769, 1.65523, -0.15203)
 flip_v = true
-pixel_size = 0.6
+pixel_size = 0.15
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("2_v8u56")
 
 [node name="Sprite3D4" type="Sprite3D" parent="."]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.158316, 0.957655, 0.337761)
 flip_v = true
-pixel_size = 0.6
+pixel_size = 0.15
 billboard = 2
+shaded = true
 texture_filter = 0
 texture = ExtResource("2_v8u56")

@@ -1,0 +1,83 @@
+[gd_scene load_steps=12 format=3 uid="uid://bi4h30shxghqv"]
+
+[ext_resource type="PackedScene" uid="uid://b7i2um4a17gt3" path="res://scenes/components/player_camera.tscn" id="1_10wq6"]
+[ext_resource type="PackedScene" uid="uid://dqb6hflk04skq" path="res://scenes/protagonist/protagonist_scene.tscn" id="1_l74ou"]
+[ext_resource type="PackedScene" uid="uid://dh3joypf4x5a0" path="res://scenes/components/test_trap.tscn" id="3_hs7xj"]
+[ext_resource type="PackedScene" uid="uid://dhtq2u2ks2ly5" path="res://scenes/components/salt.tscn" id="4_45hqf"]
+[ext_resource type="PackedScene" uid="uid://dek5eyfvuy7ua" path="res://scenes/components/witch_detection.tscn" id="5_w7qn5"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_tb6f8"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_31k2i"]
+sky_material = SubResource("ProceduralSkyMaterial_tb6f8")
+
+[sub_resource type="Environment" id="Environment_oqqj6"]
+background_mode = 2
+sky = SubResource("Sky_31k2i")
+tonemap_mode = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0qmsg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b2360"]
+albedo_color = Color(0.564706, 0.564706, 0.564706, 1)
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_vwvbf"]
+albedo_color = Color(1, 0.294118, 1, 1)
+
+[node name="TestWorld" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_oqqj6")
+
+[node name="PlayerCamera" parent="." node_paths=PackedStringArray("camera_target") instance=ExtResource("1_10wq6")]
+transform = Transform3D(-1, -2.26267e-08, 8.44439e-08, 0, 0.965926, 0.258819, -8.74228e-08, 0.258819, -0.965926, 0, 2.24906, -5)
+camera_target = NodePath("../Protagonist")
+lock_x = false
+lock_z = true
+
+[node name="WitchDectectionRay" parent="." node_paths=PackedStringArray("player") instance=ExtResource("5_w7qn5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1105, -10.0904)
+player = NodePath("")
+lock_x = true
+lock_z = false
+
+[node name="Protagonist" parent="." instance=ExtResource("1_l74ou")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.225451, 0.731792, -0.0891062)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+use_collision = true
+size = Vector3(30, 1, 3)
+material = SubResource("StandardMaterial3D_0qmsg")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5857, 0, -14.4934)
+use_collision = true
+size = Vector3(3, 1, 30)
+material = SubResource("StandardMaterial3D_0qmsg")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+use_collision = true
+size = Vector3(30, 30, 1)
+material = SubResource("StandardMaterial3D_b2360")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.3796, 0, -13.4567)
+use_collision = true
+size = Vector3(1, 30, 30)
+material = SubResource("StandardMaterial3D_b2360")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 1)
+use_collision = true
+size = Vector3(1, 10, 5)
+material = SubResource("ORMMaterial3D_vwvbf")
+
+[node name="StaticBody3D" parent="." instance=ExtResource("3_hs7xj")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 12.4297, 1.82538, -2.1665)
+
+[node name="StaticBody3D2" parent="." instance=ExtResource("4_45hqf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.9338, 1.36427, -0.983192)

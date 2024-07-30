@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://dek5eyfvuy7ua"]
+
+[ext_resource type="Script" path="res://scripts/components/witch_detection.gd" id="1_scw55"]
+[ext_resource type="Texture2D" uid="uid://cbnvd4wdsgahv" path="res://assets/sprites/witch_hand1-1.png" id="2_76di1"]
+
+[node name="WitchDectectionRay" type="Node3D"]
+script = ExtResource("1_scw55")
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, -4.37114e-07, 10, 0, -10, -4.37114e-07, 0, 0, 0)
+collision_mask = 9
+debug_shape_custom_color = Color(1, 0, 1, 1)
+debug_shape_thickness = 4
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(2469, 330)
+rotation = -1.5708
+scale = Vector2(0.325426, 0.279426)
+texture = ExtResource("2_76di1")
+
+[node name="Offscreen" type="Marker2D" parent="CanvasLayer"]
+position = Vector2(2500, 330)
+
+[node name="Onscreen" type="Marker2D" parent="CanvasLayer"]
+position = Vector2(564, 316)
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

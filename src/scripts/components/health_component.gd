@@ -24,7 +24,6 @@ func decrement_health(damage: DamageComponent):
 	
 	if health <= 0:
 		death.emit()
-	
 	else:
 		if health == 1: 
 			skull_icon.visible = true

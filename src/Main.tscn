@@ -1,11 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://dva8pcdwuroqn"]
+[gd_scene load_steps=4 format=3 uid="uid://dva8pcdwuroqn"]
 
-[ext_resource type="PackedScene" uid="uid://e0p2tplxdide" path="res://scenes/death_screen.tscn" id="2_7j444"]
-[ext_resource type="PackedScene" uid="uid://ccufyimfedffk" path="res://scenes/StartScreen.tscn" id="3_gnmy8"]
+[ext_resource type="PackedScene" uid="uid://e0p2tplxdide" path="res://scenes/Screens/death_screen.tscn" id="2_7j444"]
+[ext_resource type="PackedScene" uid="uid://d25fyig86k1tc" path="res://scenes/Screens/VictoryScreen.tscn" id="2_cjp2v"]
+[ext_resource type="PackedScene" uid="uid://ccufyimfedffk" path="res://scenes/Screens/StartScreen.tscn" id="3_gnmy8"]
 
 [node name="Main" type="Node"]
 
 [node name="DeathScreen" parent="." instance=ExtResource("2_7j444")]
 visible = false
+
+[node name="VictoryScreen" parent="." instance=ExtResource("2_cjp2v")]
 
 [node name="StartScreen" parent="." instance=ExtResource("3_gnmy8")]

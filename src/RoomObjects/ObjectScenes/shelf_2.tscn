@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://c6dgy1eb8ywv"]
+
+[ext_resource type="Texture2D" uid="uid://moq7c20522a1" path="res://assets/textures/darkwood2_texture.png" id="1_h47c5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bamad"]
+albedo_texture = ExtResource("1_h47c5")
+uv1_scale = Vector3(-0.415, -0.415, -0.415)
+uv1_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_rancf"]
+material = SubResource("StandardMaterial3D_bamad")
+size = Vector3(5, 0.225, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7rife"]
+size = Vector3(10.0762, 0.226746, 1.56189)
+
+[node name="Shelf2" type="StaticBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 1.5, 0, 0, 0)
+mesh = SubResource("BoxMesh_rancf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0126272, 0.00393677, 0.00311279)
+shape = SubResource("BoxShape3D_7rife")
