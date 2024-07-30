@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://dx1te2b8aasvv"]
+[gd_scene load_steps=56 format=3 uid="uid://dx1te2b8aasvv"]
 
 [ext_resource type="Script" path="res://script_main.gd" id="1_cwe8n"]
 [ext_resource type="PackedScene" uid="uid://b1tqs2mt8aiii" path="res://Environment/static/test_field.tscn" id="1_t7k6m"]
@@ -50,6 +50,9 @@
 [ext_resource type="Texture2D" uid="uid://dd3f68wiytb8o" path="res://assets/sprites/pumpkin1-1.png" id="53_6llgh"]
 [ext_resource type="PackedScene" uid="uid://c5gl7nn0at8c" path="res://RoomObjects/ObjectScenes/table_1.tscn" id="53_dgj73"]
 [ext_resource type="Texture2D" uid="uid://cyvg01crj7e6c" path="res://assets/sprites/sack1-5.png" id="53_uljdp"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1mv1f"]
+size = Vector3(1, 18, 20.09)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xry6l"]
 size = Vector3(1, 18.3418, 6.33426)
@@ -118,6 +121,22 @@ transform = Transform3D(0.0064574, 9.75041e-10, -5, 7.54979e-07, -5, 1.27323e-16
 
 [node name="Wall13" parent="Walls" instance=ExtResource("3_vqvni")]
 transform = Transform3D(0.00645697, 0, 5, 0, 5, 0, -5, 0, 0.00645697, -40.0057, 14.7932, 188.81)
+
+[node name="InvisibleCauldronWall" type="StaticBody3D" parent="Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.01109, 49.5497, 241.418)
+collision_layer = 64
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Walls/InvisibleCauldronWall"]
+shape = SubResource("BoxShape3D_1mv1f")
+
+[node name="InvisibleCauldronWall2" type="StaticBody3D" parent="Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7983, 49.813, 243.115)
+collision_layer = 64
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Walls/InvisibleCauldronWall2"]
+shape = SubResource("BoxShape3D_1mv1f")
 
 [node name="Objects" type="Node" parent="."]
 
@@ -443,7 +462,8 @@ transform = Transform3D(4, 0, -0.00516623, 0, 4, 0, 0.00516623, 0, 4, -17.0056, 
 transform = Transform3D(-0.0012916, 0, -0.999999, 0, 1, 0, 0.999999, 0, -0.0012916, -19.9677, 0, 166.391)
 
 [node name="poison2" parent="Objects" instance=ExtResource("49_ja6r4")]
-transform = Transform3D(0.999999, 0, -0.00129156, 0, 1, 0, 0.00129156, 0, 0.999999, -16.2668, 42.4364, 236.471)
+transform = Transform3D(0.999999, 0, -0.00129156, 0, 1, 0, 0.00129156, 0, 0.999999, -16.8146, 42.4364, 236.471)
+collision_mask = 95
 
 [node name="FireWood2" parent="Objects" instance=ExtResource("45_dd2yi")]
 transform = Transform3D(-3, 0, 0.00387476, 0, 3, 0, -0.00387476, 0, -3, -16.4891, 8.07147, 238.94)
