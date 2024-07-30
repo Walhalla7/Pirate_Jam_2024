@@ -128,9 +128,10 @@ visible = false
 
 [node name="HealthComponent" parent="." instance=ExtResource("6_iodel")]
 
-[node name="HitboxComponent" parent="." instance=ExtResource("7_scdkf")]
+[node name="HitboxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("7_scdkf")]
 collision_layer = 8
 collision_mask = 4
+health_component = NodePath("../HealthComponent")
 
 [node name="Hitbox Collision" type="CollisionShape3D" parent="HitboxComponent"]
 shape = SubResource("ConvexPolygonShape3D_gpv27")
