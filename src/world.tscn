@@ -41,7 +41,7 @@
 [ext_resource type="PackedScene" path="res://RoomObjects/ObjectScenes/apple.tscn" id="51_bschn"]
 [ext_resource type="PackedScene" uid="uid://csnlldtc6ghda" path="res://RoomObjects/ObjectScenes/Utensils.tscn" id="51_bsko0"]
 [ext_resource type="PackedScene" path="res://RoomObjects/ObjectScenes/sack_2.tscn" id="51_d2wmx"]
-[ext_resource type="PackedScene" uid="uid://cjyd6y38nykw2" path="res://plateform_music.tscn" id="51_piqdn"]
+[ext_resource type="PackedScene" uid="uid://ddqsphxlj8b75" path="res://plateform_music.tscn" id="51_piqdn"]
 [ext_resource type="PackedScene" uid="uid://cn3vogr2jbw1b" path="res://RoomObjects/ObjectScenes/mortar_and_pestle.tscn" id="51_pun3u"]
 [ext_resource type="PackedScene" uid="uid://ukcsw1ir622t" path="res://scenes/lane_guidelines.tscn" id="51_qwm2i"]
 [ext_resource type="PackedScene" uid="uid://dc0f0sib8k7gs" path="res://scenes/bubbles.tscn" id="51_vlysd"]
@@ -70,6 +70,7 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 16.330
 [node name="plateform music" parent="Protagonist" instance=ExtResource("51_piqdn")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -2.4049, 0.0564651, 14.5188)
 volume_db = 6.0
+bus = &"Music"
 
 [node name="PlayerCamera" parent="." node_paths=PackedStringArray("camera_target") instance=ExtResource("3_beliv")]
 transform = Transform3D(-1, -9.89654e-09, 8.68608e-08, 0, 0.993572, 0.113203, -8.74228e-08, 0.113203, -0.993572, 62.8567, 4.64496, 8.4452)

@@ -1,4 +1,4 @@
-[gd_resource type="AudioBusLayout" load_steps=4 format=3 uid="uid://dxm5vaav53u2l"]
+[gd_resource type="AudioBusLayout" load_steps=4 format=3 uid="uid://bp4uexak34h5l"]
 
 [sub_resource type="AudioEffectChorus" id="AudioEffectChorus_7dor0"]
 resource_name = "Chorus"
@@ -21,7 +21,7 @@ bus/2/name = &"Music"
 bus/2/solo = false
 bus/2/mute = false
 bus/2/bypass_fx = false
-bus/2/volume_db = -9.63761
+bus/2/volume_db = -10.9863
 bus/2/send = &"Master"
 bus/2/effect/0/effect = SubResource("AudioEffectChorus_7dor0")
 bus/2/effect/0/enabled = true
