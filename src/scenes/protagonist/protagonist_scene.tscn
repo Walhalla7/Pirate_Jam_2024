@@ -104,9 +104,6 @@ animation = &"walk"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.453485, -0.00805664)
 shape = SubResource("BoxShape3D_kq2dq")
 
-[node name="CameraTarget" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.419266, 0)
-
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.00345, 0, 0, 0, 1.00345, 0, 0, 0, 1.00345, 0, 0, 0)
 visible = false

@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://dx1te2b8aasvv"]
+[gd_scene load_steps=55 format=3 uid="uid://dx1te2b8aasvv"]
 
 [ext_resource type="Script" path="res://script_main.gd" id="1_cwe8n"]
 [ext_resource type="PackedScene" uid="uid://b1tqs2mt8aiii" path="res://Environment/static/test_field.tscn" id="1_t7k6m"]
@@ -8,21 +8,22 @@
 [ext_resource type="PackedScene" uid="uid://dek5eyfvuy7ua" path="res://scenes/components/witch_detection.tscn" id="4_mwdln"]
 [ext_resource type="PackedScene" uid="uid://dvcbj3533beha" path="res://RoomObjects/ObjectScenes/book_1.tscn" id="18_1jb4a"]
 [ext_resource type="PackedScene" uid="uid://cxk6mj283urcb" path="res://RoomObjects/ObjectScenes/shelf_1.tscn" id="22_3oviy"]
-[ext_resource type="PackedScene" uid="uid://o8u6ymlho8lk" path="res://RoomObjects/ObjectScenes/garlic_braid.tscn" id="22_dyea0"]
+[ext_resource type="PackedScene" path="res://RoomObjects/ObjectScenes/garlic_braid.tscn" id="22_dyea0"]
 [ext_resource type="PackedScene" uid="uid://dmj4r00y1wboq" path="res://RoomObjects/ObjectScenes/unlit_candle.tscn" id="23_2bolv"]
 [ext_resource type="PackedScene" uid="uid://lmq4dwuxtoft" path="res://scenes/dust_bunny.tscn" id="24_1wpdf"]
 [ext_resource type="PackedScene" uid="uid://dtab70hcy0rke" path="res://RoomObjects/ObjectScenes/lit_candle.tscn" id="24_kcbwx"]
+[ext_resource type="PackedScene" uid="uid://cxnbkj1epgh6j" path="res://RoomObjects/ObjectScenes/salt_grain.tscn" id="25_ac0ov"]
 [ext_resource type="PackedScene" uid="uid://b3yf85wyrhfp4" path="res://RoomObjects/ObjectScenes/sack_1.tscn" id="26_0ypc4"]
 [ext_resource type="PackedScene" uid="uid://cxvjeiqh3j2jr" path="res://RoomObjects/ObjectScenes/pumpkin_1.tscn" id="27_vtixk"]
 [ext_resource type="Texture2D" uid="uid://dkchx743vs01l" path="res://assets/sprites/wasp1-1.png" id="29_typtx"]
 [ext_resource type="PackedScene" uid="uid://csi1atg75it7t" path="res://RoomObjects/ObjectScenes/wall_crack.tscn" id="42_j3d2p"]
-[ext_resource type="PackedScene" uid="uid://dln4xcy6foeuu" path="res://RoomObjects/ObjectScenes/coin.tscn" id="42_kpron"]
+[ext_resource type="PackedScene" path="res://RoomObjects/ObjectScenes/coin.tscn" id="42_kpron"]
 [ext_resource type="PackedScene" uid="uid://chw0hbaafilr2" path="res://RoomObjects/ObjectScenes/planter_1.tscn" id="43_86faq"]
 [ext_resource type="PackedScene" uid="uid://bnaqv7gn2ya0j" path="res://RoomObjects/ObjectScenes/bookshelf_1.tscn" id="43_rywdm"]
 [ext_resource type="PackedScene" uid="uid://cppn31u3h3r7m" path="res://RoomObjects/ObjectScenes/rune.tscn" id="43_yku4g"]
-[ext_resource type="PackedScene" uid="uid://bk31v6p2usxwk" path="res://RoomObjects/ObjectScenes/shard.tscn" id="44_ppti0"]
+[ext_resource type="PackedScene" path="res://RoomObjects/ObjectScenes/shard.tscn" id="44_ppti0"]
 [ext_resource type="PackedScene" uid="uid://cm3xif4e6yccv" path="res://RoomObjects/ObjectScenes/pot_1.tscn" id="44_qlga4"]
-[ext_resource type="PackedScene" uid="uid://dobtc53ndxdcy" path="res://RoomObjects/ObjectScenes/fire_wood.tscn" id="45_dd2yi"]
+[ext_resource type="PackedScene" path="res://RoomObjects/ObjectScenes/fire_wood.tscn" id="45_dd2yi"]
 [ext_resource type="PackedScene" uid="uid://cl47ep50md2hp" path="res://RoomObjects/ObjectScenes/vine_1.tscn" id="47_4s8sk"]
 [ext_resource type="PackedScene" uid="uid://b7b8fu2m4hh64" path="res://RoomObjects/ObjectScenes/book_3.tscn" id="47_ict7s"]
 [ext_resource type="PackedScene" uid="uid://bfiw2crbcotw1" path="res://RoomObjects/ObjectScenes/potion_1.tscn" id="47_mnpfp"]
@@ -30,29 +31,26 @@
 [ext_resource type="PackedScene" uid="uid://owkksck3k0yh" path="res://RoomObjects/ObjectScenes/book_4.tscn" id="48_45p8h"]
 [ext_resource type="PackedScene" uid="uid://0w5ww6ubbmqb" path="res://RoomObjects/wood_pile.tscn" id="49_23on2"]
 [ext_resource type="PackedScene" uid="uid://c66i63xdpgkm4" path="res://RoomObjects/ObjectScenes/book_5.tscn" id="49_eguuj"]
-[ext_resource type="PackedScene" uid="uid://d0nsyb30ncao7" path="res://RoomObjects/ObjectScenes/poison_1.tscn" id="49_ja6r4"]
+[ext_resource type="PackedScene" path="res://RoomObjects/ObjectScenes/poison_1.tscn" id="49_ja6r4"]
 [ext_resource type="PackedScene" uid="uid://bxn08bp8rct4y" path="res://RoomObjects/ObjectScenes/cobweb_1.tscn" id="49_q85rh"]
-[ext_resource type="PackedScene" uid="uid://boe33rty4cvxm" path="res://RoomObjects/ObjectScenes/broom_1.tscn" id="50_0f13t"]
-[ext_resource type="PackedScene" uid="uid://nr66xy518gg3" path="res://RoomObjects/ObjectScenes/hanging_planter.tscn" id="50_5dgf1"]
+[ext_resource type="PackedScene" path="res://RoomObjects/ObjectScenes/broom_1.tscn" id="50_0f13t"]
+[ext_resource type="PackedScene" path="res://RoomObjects/ObjectScenes/hanging_planter.tscn" id="50_5dgf1"]
 [ext_resource type="PackedScene" uid="uid://dhtq2u2ks2ly5" path="res://scenes/components/salt.tscn" id="50_jlmv7"]
 [ext_resource type="PackedScene" uid="uid://dxn1gd1dxai4b" path="res://RoomObjects/ObjectScenes/lavender_1.tscn" id="50_mriqt"]
-[ext_resource type="PackedScene" uid="uid://bckxkvjqrl3an" path="res://RoomObjects/ObjectScenes/crystal_cluster_1.tscn" id="50_wk22g"]
+[ext_resource type="PackedScene" path="res://RoomObjects/ObjectScenes/crystal_cluster_1.tscn" id="50_wk22g"]
 [ext_resource type="PackedScene" uid="uid://bbh4akqdqpu2d" path="res://RoomObjects/ObjectScenes/cauldron_1.tscn" id="51_4fvl8"]
-[ext_resource type="PackedScene" uid="uid://bld7v1k3mhp6e" path="res://RoomObjects/ObjectScenes/apple.tscn" id="51_bschn"]
-[ext_resource type="PackedScene" uid="uid://csnlldtc6ghda" path="res://RoomObjects/ObjectScenes/Utensils.tscn" id="51_bsko0"]
-[ext_resource type="PackedScene" uid="uid://bs3twqryg8brj" path="res://RoomObjects/ObjectScenes/sack_2.tscn" id="51_d2wmx"]
-[ext_resource type="PackedScene" uid="uid://cn3vogr2jbw1b" path="res://RoomObjects/ObjectScenes/mortar_and_pestle.tscn" id="51_pun3u"]
+[ext_resource type="PackedScene" path="res://RoomObjects/ObjectScenes/apple.tscn" id="51_bschn"]
+[ext_resource type="PackedScene" uid="uid://bnpn7fkfgkb3k" path="res://RoomObjects/ObjectScenes/Utensils.tscn" id="51_bsko0"]
+[ext_resource type="PackedScene" path="res://RoomObjects/ObjectScenes/sack_2.tscn" id="51_d2wmx"]
+[ext_resource type="PackedScene" path="res://RoomObjects/ObjectScenes/mortar_and_pestle.tscn" id="51_pun3u"]
 [ext_resource type="PackedScene" uid="uid://chekfm1d70hnv" path="res://scenes/lane_guidelines.tscn" id="51_qwm2i"]
 [ext_resource type="PackedScene" uid="uid://dc0f0sib8k7gs" path="res://scenes/bubbles.tscn" id="51_vlysd"]
-[ext_resource type="PackedScene" uid="uid://428ea3tfg5ps" path="res://RoomObjects/ObjectScenes/plant_2.tscn" id="51_vpx47"]
-[ext_resource type="PackedScene" uid="uid://cgehpn3t0ktgl" path="res://RoomObjects/ObjectScenes/ink_quill.tscn" id="51_xcd48"]
+[ext_resource type="PackedScene" path="res://RoomObjects/ObjectScenes/plant_2.tscn" id="51_vpx47"]
+[ext_resource type="PackedScene" path="res://RoomObjects/ObjectScenes/ink_quill.tscn" id="51_xcd48"]
 [ext_resource type="PackedScene" uid="uid://dnycnew3n6m4v" path="res://RoomObjects/ObjectScenes/chain_1.tscn" id="52_atg3i"]
 [ext_resource type="Texture2D" uid="uid://dd3f68wiytb8o" path="res://assets/sprites/pumpkin1-1.png" id="53_6llgh"]
 [ext_resource type="PackedScene" uid="uid://c5gl7nn0at8c" path="res://RoomObjects/ObjectScenes/table_1.tscn" id="53_dgj73"]
 [ext_resource type="Texture2D" uid="uid://cyvg01crj7e6c" path="res://assets/sprites/sack1-5.png" id="53_uljdp"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_1mv1f"]
-size = Vector3(1, 18, 20.09)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xry6l"]
 size = Vector3(1, 18.3418, 6.33426)
@@ -63,14 +61,11 @@ size = Vector3(3.93943, 1, 5.58313)
 [sub_resource type="BoxShape3D" id="BoxShape3D_me04p"]
 size = Vector3(97.1499, 73.1899, 2.604)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_jggqe"]
-size = Vector3(1.59569, 0.185181, 1.66125)
-
 [node name="World" type="Node"]
 script = ExtResource("1_cwe8n")
 
 [node name="Protagonist" parent="." instance=ExtResource("2_yjr5n")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 4.46311, 0.512194, 14.9208)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 18.9848, 30.0638, 14.2058)
 
 [node name="PlayerCamera" parent="." node_paths=PackedStringArray("camera_target") instance=ExtResource("3_beliv")]
 transform = Transform3D(-1, -9.89654e-09, 8.68608e-08, 0, 0.993572, 0.113203, -8.74228e-08, 0.113203, -0.993572, 62.8567, 4.64496, 8.4452)
@@ -83,7 +78,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.066, 29.919, 5)
 player = NodePath("../Protagonist")
 
 [node name="Floor" parent="." instance=ExtResource("1_t7k6m")]
-transform = Transform3D(39.68, 0, 0, 0, 39.68, 0, 0, 0, 39.68, -1.01195, -20.2157, -1.34342)
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, -1.01195, -7.77641, -1.34342)
 
 [node name="Walls" type="Node" parent="."]
 
@@ -107,40 +102,6 @@ transform = Transform3D(-5, -7.54979e-07, 4.37112e-07, 7.54979e-07, -5, -1.8054e
 
 [node name="Wall4" parent="Walls" instance=ExtResource("3_vqvni")]
 transform = Transform3D(-5, 0, -7.54979e-07, 0, 5, 0, 7.54979e-07, 0, -5, 22.4444, 14.7932, 20.009)
-
-[node name="Wall3" parent="Walls" instance=ExtResource("3_vqvni")]
-transform = Transform3D(5, 0, -0.00645779, 0, 5, 0, 0.00645779, 0, 5, 44.8867, 15.3722, 234.809)
-
-[node name="Wall9" parent="Walls" instance=ExtResource("3_vqvni")]
-transform = Transform3D(5, 0, -0.00645779, 0, 5, 0, 0.00645779, 0, 5, -77.8782, 15.3722, 235.413)
-
-[node name="Wall10" parent="Walls" instance=ExtResource("3_vqvni")]
-transform = Transform3D(5, 0, -0.00645779, 0, 5, 0, 0.00645779, 0, 5, -17.7724, 15.3722, 248.614)
-
-[node name="Wall11" parent="Walls" instance=ExtResource("3_vqvni")]
-transform = Transform3D(0.0064574, 9.75041e-10, -5, 7.54979e-07, -5, 1.27377e-16, -5, -7.54978e-07, -0.0064574, -2.83573, 15.932, 282.396)
-
-[node name="Wall12" parent="Walls" instance=ExtResource("3_vqvni")]
-transform = Transform3D(0.0064574, 9.75041e-10, -5, 7.54979e-07, -5, 1.27323e-16, -5, -7.54978e-07, -0.0064574, -30.1288, 15.932, 283.131)
-
-[node name="Wall13" parent="Walls" instance=ExtResource("3_vqvni")]
-transform = Transform3D(0.00645697, 0, 5, 0, 5, 0, -5, 0, 0.00645697, -40.0057, 14.7932, 188.81)
-
-[node name="InvisibleCauldronWall" type="StaticBody3D" parent="Walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.01109, 49.5497, 241.418)
-collision_layer = 64
-collision_mask = 0
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Walls/InvisibleCauldronWall"]
-shape = SubResource("BoxShape3D_1mv1f")
-
-[node name="InvisibleCauldronWall2" type="StaticBody3D" parent="Walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7983, 49.813, 243.115)
-collision_layer = 64
-collision_mask = 0
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Walls/InvisibleCauldronWall2"]
-shape = SubResource("BoxShape3D_1mv1f")
 
 [node name="Objects" type="Node" parent="."]
 
@@ -213,6 +174,15 @@ transform = Transform3D(3, 0, 0, 0, -1.31134e-07, -2.445, 0, 3, -1.06874e-07, -7
 [node name="LitCandle2" parent="Objects" instance=ExtResource("24_kcbwx")]
 transform = Transform3D(3, 0, 0, 0, -1.31134e-07, -3, 0, 3, -1.31134e-07, -6.56852, 13.1576, 16.8749)
 
+[node name="SaltGrain" parent="Objects" instance=ExtResource("25_ac0ov")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.8383, -0.460972, 14.6107)
+
+[node name="SaltGrain2" parent="Objects" instance=ExtResource("25_ac0ov")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.3075, -0.460972, 15.1645)
+
+[node name="SaltGrain3" parent="Objects" instance=ExtResource("25_ac0ov")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.1105, -0.188272, 15.2927)
+
 [node name="Sack1" parent="Objects" instance=ExtResource("26_0ypc4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.005, 42.1245, 1.6886, 16.7288)
 
@@ -236,10 +206,8 @@ texture = ExtResource("29_typtx")
 [node name="WallCrack1" parent="Objects" instance=ExtResource("42_j3d2p")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 75.3637, 44.4334, 7.3899)
 
-[node name="WallCrack2" parent="Objects" node_paths=PackedStringArray("endLocation", "Camera") instance=ExtResource("42_j3d2p")]
+[node name="WallCrack2" parent="Objects" instance=ExtResource("42_j3d2p")]
 transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 66.0421, 52.4699, 14.1585)
-endLocation = NodePath("../../Interactable/Marker3D")
-Camera = NodePath("../../Camera3D")
 
 [node name="WallCrack3" parent="Objects" instance=ExtResource("42_j3d2p")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 73.9426, 10.8898, 7.3899)
@@ -331,7 +299,7 @@ transform = Transform3D(0.907895, 0.419199, 0, -0.419199, 0.907895, 0, 0, 0, 1, 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.0032, 3.11091, 13)
 
 [node name="poison1" parent="Objects" instance=ExtResource("49_ja6r4")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 70.5756, 42.4852, -3.79145)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 70.0753, 42.4364, -3.79145)
 
 [node name="broom1" parent="Objects" instance=ExtResource("50_0f13t")]
 transform = Transform3D(4.11382, 2.52048, -1.31289, -2.77474, 4.06152, -0.897131, 0.614225, 1.46671, 4.74041, -20.3561, 5.22754, 13.6071)
@@ -409,60 +377,6 @@ transform = Transform3D(0.838937, 0, -0.544229, 0, 0.55, 0, 0.544229, 0, 0.83893
 [node name="FireWood" parent="Objects" instance=ExtResource("45_dd2yi")]
 transform = Transform3D(-1.31134e-07, 0, -3, 0, 3, 0, 3, 0, -1.31134e-07, 72.5442, 8.07147, -3.57223)
 
-[node name="Shelf18" parent="Objects" instance=ExtResource("22_3oviy")]
-transform = Transform3D(-0.0019374, 0, -3, 0, 3, 0, 1.5, 0, -0.0038748, -36.5422, 15.0859, 229.449)
-
-[node name="Shelf19" parent="Objects" instance=ExtResource("22_3oviy")]
-transform = Transform3D(1.5, 0, -0.00387467, 0, 3, 0, 0.00193734, 0, 3, -31.5508, 15.0859, 231.744)
-
-[node name="Shelf8" parent="Objects" instance=ExtResource("22_3oviy")]
-transform = Transform3D(-0.0038748, 0, -3, 0, 3, 0, 3, 0, -0.0038748, -36.1187, 48.1794, 225.909)
-
-[node name="Shelf20" parent="Objects" instance=ExtResource("22_3oviy")]
-transform = Transform3D(3, 0, -0.00387467, 0, 3, 0, 0.00387467, 0, 3, -35.6951, 48.1794, 231.543)
-
-[node name="Shelf21" parent="Objects" instance=ExtResource("22_3oviy")]
-transform = Transform3D(-0.0038748, 0, -3, 0, 3, 0, 3, 0, -0.0038748, -26.4678, 40.6454, 240.747)
-
-[node name="Shelf22" parent="Objects" instance=ExtResource("22_3oviy")]
-transform = Transform3D(4.31, 0, -0.00387467, 0, 3, 0, 0.00556661, 0, 3, -17.0418, 40.4729, 244.722)
-
-[node name="Shelf23" parent="Objects" instance=ExtResource("22_3oviy")]
-transform = Transform3D(4.31, 0, -0.00387467, 0, 3, 0, 0.00556661, 0, 3, -17.0329, 40.6189, 237.829)
-
-[node name="Shelf24" parent="Objects" instance=ExtResource("22_3oviy")]
-transform = Transform3D(-0.0038748, 0, -3, 0, 3, 0, 3, 0, -0.0038748, -7.3531, 40.4729, 238.88)
-
-[node name="WallCrack5" parent="Objects" node_paths=PackedStringArray("endLocation", "Camera") instance=ExtResource("42_j3d2p")]
-transform = Transform3D(-0.00038748, 0, -0.3, 0, 0.3, 0, 0.3, 0, -0.00038748, -27.4549, 44.4334, 241.745)
-endLocation = NodePath("../../Interactable/Marker3D2")
-Camera = NodePath("../../Camera3D")
-
-[node name="WallCrack6" parent="Objects" instance=ExtResource("42_j3d2p")]
-transform = Transform3D(0.3, 0, -0.000387467, 0, 0.3, 0, 0.000387467, 0, 0.3, -34.2115, 52.4699, 232.415)
-
-[node name="Planter2" parent="Objects" instance=ExtResource("43_86faq")]
-transform = Transform3D(0.00129151, 0, 0.999999, 0, 1, 0, -0.999999, 0, 0.00129151, -33.2985, 15.4139, 230.695)
-
-[node name="Cobweb4" parent="Objects" instance=ExtResource("49_q85rh")]
-transform = Transform3D(0.508905, -1.28779, -1.44313, -0.683039, 1.27644, -1.37991, 1.80955, 0.843979, -0.115013, -26.2307, 38.0781, 243.299)
-
-[node name="Cauldron2" parent="Objects" instance=ExtResource("51_4fvl8")]
-transform = Transform3D(-0.0051664, 0, -4, 0, 4, 0, 4, 0, -0.0051664, -17.0056, 11.3851, 238.027)
-
-[node name="Chain2" parent="Objects" instance=ExtResource("52_atg3i")]
-transform = Transform3D(4, 0, -0.00516623, 0, 4, 0, 0.00516623, 0, 4, -17.0056, 27.7447, 238.027)
-
-[node name="WoodPile2" parent="Objects" instance=ExtResource("49_23on2")]
-transform = Transform3D(-0.0012916, 0, -0.999999, 0, 1, 0, 0.999999, 0, -0.0012916, -19.9677, 0, 166.391)
-
-[node name="poison2" parent="Objects" instance=ExtResource("49_ja6r4")]
-transform = Transform3D(0.999999, 0, -0.00129156, 0, 1, 0, 0.00129156, 0, 0.999999, -16.8146, 42.4364, 236.471)
-collision_mask = 95
-
-[node name="FireWood2" parent="Objects" instance=ExtResource("45_dd2yi")]
-transform = Transform3D(-3, 0, 0.00387476, 0, 3, 0, -0.00387476, 0, -3, -16.4891, 8.07147, 238.94)
-
 [node name="Interactable" type="Node" parent="."]
 
 [node name="DustBunny1" parent="Interactable" instance=ExtResource("24_1wpdf")]
@@ -476,12 +390,6 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -18.338, 0.368949, 14.1
 
 [node name="DustBunny2" parent="Interactable" instance=ExtResource("24_1wpdf")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.96453, 0.368949, 13.8514)
-
-[node name="Marker3D" type="Marker3D" parent="Interactable"]
-transform = Transform3D(0.999996, 0, 0.00284488, 0, 1, 0, -0.00284488, 0, 0.999996, -25.367, 42.2824, 241.487)
-
-[node name="Marker3D2" type="Marker3D" parent="Interactable"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64.2412, 50.2942, 15.5084)
 
 [node name="PlayAreaLimiters" type="Node" parent="."]
 
@@ -516,24 +424,5 @@ transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 35.3436, 1.83549, 11.29
 billboard = 2
 texture = ExtResource("53_6llgh")
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.837366, -0.289353, 0.463781, -1.11286e-08, 0.848418, 0.529327, -0.546643, 0.443241, -0.710436, -16.0856, 50.0135, 225.769)
-
-[node name="CauldronZone" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.961, 28.3849, 240.523)
-collision_layer = 0
-collision_mask = 40
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CauldronZone"]
-transform = Transform3D(33.105, 0, 0, 0, 33.105, 0, 0, 0, 33.105, -1.3606, -1.65889, -5.62325)
-shape = SubResource("BoxShape3D_jggqe")
-
-[connection signal="body_entered" from="CauldronZone" to="." method="_on_cauldron_zone_body_entered"]
-[node name="SaltPile" parent="." instance=ExtResource("50_jlmv7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.2895, -0.397003, 14.8851)
-
-[node name="SaltPile2" parent="." instance=ExtResource("50_jlmv7")]
-transform = Transform3D(-0.999856, 0, 0.0169638, 0, 1, 0, -0.0169638, 0, -0.999856, 40.0425, -0.397003, 14.9256)
-
-[node name="SaltPile3" parent="." instance=ExtResource("50_jlmv7")]
-transform = Transform3D(0.999994, 0, 0.00338602, 0, 1, 0, -0.00338602, 0, 0.999994, 39.8272, -0.397003, 14.3197)
+[node name="StaticBody3D" parent="." instance=ExtResource("50_jlmv7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.0761, 29.6339, 13.9355)

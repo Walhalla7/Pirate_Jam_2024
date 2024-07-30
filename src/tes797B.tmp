@@ -39,16 +39,12 @@ lock_z = true
 
 [node name="WitchDectectionRay" parent="." node_paths=PackedStringArray("player") instance=ExtResource("5_w7qn5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1105, -10.0904)
-player = NodePath("../Protagonist")
+player = NodePath("")
+lock_x = true
+lock_z = false
 
 [node name="Protagonist" parent="." instance=ExtResource("1_l74ou")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.225451, 0.731792, -0.0891062)
-move_speed = null
-JUMP_VELOCITY = null
-max_sprint_modifier = null
-wall_slowdown = null
-jump_vertical_strength = null
-jump_horizontal_strength = null
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
@@ -75,9 +71,8 @@ size = Vector3(1, 30, 30)
 material = SubResource("StandardMaterial3D_b2360")
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="."]
-transform = Transform3D(-0.0861299, 0, -0.996284, 0, 1, 0, 0.996284, 0, -0.0861299, -7, 0, -2.03447)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 1)
 use_collision = true
-collision_layer = 33
 size = Vector3(1, 10, 5)
 material = SubResource("ORMMaterial3D_vwvbf")
 
