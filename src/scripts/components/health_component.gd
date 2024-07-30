@@ -24,8 +24,8 @@ func decrement_health(damage: DamageComponent):
 	
 	if health <= 0:
 		death.emit()
-	if health == 1: 
-		skull_icon.visible = true
 	else:
+		if health == 1: 
+			skull_icon.visible = true
 		print(str(get_parent().name) + "'s health is " + str(health))
 		hurt.emit()

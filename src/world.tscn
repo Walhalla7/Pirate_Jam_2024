@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://dx1te2b8aasvv"]
+[gd_scene load_steps=53 format=3 uid="uid://dx1te2b8aasvv"]
 
 [ext_resource type="Script" path="res://script_main.gd" id="1_cwe8n"]
 [ext_resource type="PackedScene" uid="uid://b1tqs2mt8aiii" path="res://Environment/static/test_field.tscn" id="1_t7k6m"]
@@ -11,7 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://dmj4r00y1wboq" path="res://RoomObjects/ObjectScenes/unlit_candle.tscn" id="23_2bolv"]
 [ext_resource type="PackedScene" uid="uid://lmq4dwuxtoft" path="res://scenes/dust_bunny.tscn" id="24_1wpdf"]
 [ext_resource type="PackedScene" uid="uid://dtab70hcy0rke" path="res://RoomObjects/ObjectScenes/lit_candle.tscn" id="24_kcbwx"]
-[ext_resource type="PackedScene" uid="uid://cxnbkj1epgh6j" path="res://RoomObjects/ObjectScenes/salt_grain.tscn" id="25_ac0ov"]
 [ext_resource type="PackedScene" uid="uid://b3yf85wyrhfp4" path="res://RoomObjects/ObjectScenes/sack_1.tscn" id="26_0ypc4"]
 [ext_resource type="PackedScene" uid="uid://cxvjeiqh3j2jr" path="res://RoomObjects/ObjectScenes/pumpkin_1.tscn" id="27_vtixk"]
 [ext_resource type="Texture2D" uid="uid://dkchx743vs01l" path="res://assets/sprites/wasp1-1.png" id="29_typtx"]
@@ -64,7 +63,7 @@ size = Vector3(97.1499, 73.1899, 2.604)
 script = ExtResource("1_cwe8n")
 
 [node name="Protagonist" parent="." instance=ExtResource("2_yjr5n")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 60.8847, 49.983, 15.0393)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 51.033, 0.273067, 15.0393)
 
 [node name="PlayerCamera" parent="." node_paths=PackedStringArray("camera_target") instance=ExtResource("3_beliv")]
 transform = Transform3D(-1, -9.89654e-09, 8.68608e-08, 0, 0.993572, 0.113203, -8.74228e-08, 0.113203, -0.993572, 62.8567, 4.64496, 8.4452)
@@ -186,15 +185,6 @@ transform = Transform3D(3, 0, 0, 0, -1.31134e-07, -2.445, 0, 3, -1.06874e-07, -7
 
 [node name="LitCandle2" parent="Objects" instance=ExtResource("24_kcbwx")]
 transform = Transform3D(3, 0, 0, 0, -1.31134e-07, -3, 0, 3, -1.31134e-07, -6.56852, 13.1576, 16.8749)
-
-[node name="SaltGrain" parent="Objects" instance=ExtResource("25_ac0ov")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.8383, -0.460972, 14.6107)
-
-[node name="SaltGrain2" parent="Objects" instance=ExtResource("25_ac0ov")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.3075, -0.460972, 15.1645)
-
-[node name="SaltGrain3" parent="Objects" instance=ExtResource("25_ac0ov")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.1105, -0.188272, 15.2927)
 
 [node name="Sack1" parent="Objects" instance=ExtResource("26_0ypc4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.005, 42.1245, 1.6886, 16.7288)
@@ -497,8 +487,14 @@ transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 35.3436, 1.83549, 11.29
 billboard = 2
 texture = ExtResource("53_6llgh")
 
-[node name="StaticBody3D" parent="." instance=ExtResource("50_jlmv7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.0761, 29.6339, 13.9355)
-
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-0.837366, -0.289353, 0.463781, -1.11286e-08, 0.848418, 0.529327, -0.546643, 0.443241, -0.710436, -16.0856, 50.0135, 225.769)
+
+[node name="SaltPile" parent="." instance=ExtResource("50_jlmv7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.2895, -0.397003, 14.8851)
+
+[node name="SaltPile2" parent="." instance=ExtResource("50_jlmv7")]
+transform = Transform3D(-0.999856, 0, 0.0169638, 0, 1, 0, -0.0169638, 0, -0.999856, 40.0425, -0.397003, 14.9256)
+
+[node name="SaltPile3" parent="." instance=ExtResource("50_jlmv7")]
+transform = Transform3D(0.999994, 0, 0.00338602, 0, 1, 0, -0.00338602, 0, 0.999994, 39.8272, -0.397003, 14.3197)
