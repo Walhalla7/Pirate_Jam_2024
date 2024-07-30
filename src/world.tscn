@@ -73,7 +73,7 @@ lock_x = false
 lock_z = true
 
 [node name="Floor" parent="." instance=ExtResource("1_t7k6m")]
-transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, -1.01195, -7.77641, -1.34342)
+transform = Transform3D(39.68, 0, 0, 0, 39.68, 0, 0, 0, 39.68, -1.01195, -20.2157, -1.34342)
 
 [node name="Walls" type="Node" parent="."]
 
@@ -97,6 +97,24 @@ transform = Transform3D(-5, -7.54979e-07, 4.37112e-07, 7.54979e-07, -5, -1.8054e
 
 [node name="Wall4" parent="Walls" instance=ExtResource("3_vqvni")]
 transform = Transform3D(-5, 0, -7.54979e-07, 0, 5, 0, 7.54979e-07, 0, -5, 22.4444, 14.7932, 20.009)
+
+[node name="Wall3" parent="Walls" instance=ExtResource("3_vqvni")]
+transform = Transform3D(5, 0, -0.00645779, 0, 5, 0, 0.00645779, 0, 5, 44.8867, 15.3722, 234.809)
+
+[node name="Wall9" parent="Walls" instance=ExtResource("3_vqvni")]
+transform = Transform3D(5, 0, -0.00645779, 0, 5, 0, 0.00645779, 0, 5, -77.8782, 15.3722, 235.413)
+
+[node name="Wall10" parent="Walls" instance=ExtResource("3_vqvni")]
+transform = Transform3D(5, 0, -0.00645779, 0, 5, 0, 0.00645779, 0, 5, -17.7724, 15.3722, 248.614)
+
+[node name="Wall11" parent="Walls" instance=ExtResource("3_vqvni")]
+transform = Transform3D(0.0064574, 9.75041e-10, -5, 7.54979e-07, -5, 1.27377e-16, -5, -7.54978e-07, -0.0064574, -2.83573, 15.932, 282.396)
+
+[node name="Wall12" parent="Walls" instance=ExtResource("3_vqvni")]
+transform = Transform3D(0.0064574, 9.75041e-10, -5, 7.54979e-07, -5, 1.27323e-16, -5, -7.54978e-07, -0.0064574, -30.1288, 15.932, 283.131)
+
+[node name="Wall13" parent="Walls" instance=ExtResource("3_vqvni")]
+transform = Transform3D(0.00645697, 0, 5, 0, 5, 0, -5, 0, 0.00645697, -40.0057, 14.7932, 188.81)
 
 [node name="Objects" type="Node" parent="."]
 
@@ -198,10 +216,8 @@ transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -22.7085, 29.9725, 16.5
 billboard = 2
 texture = ExtResource("29_typtx")
 
-[node name="WallCrack1" parent="Objects" node_paths=PackedStringArray("endLocation", "Camera") instance=ExtResource("42_j3d2p")]
+[node name="WallCrack1" parent="Objects" instance=ExtResource("42_j3d2p")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 75.3637, 44.4334, 7.3899)
-endLocation = NodePath("../../Interactable/Marker3D2")
-Camera = NodePath("../../Camera3D")
 
 [node name="WallCrack2" parent="Objects" node_paths=PackedStringArray("endLocation", "Camera") instance=ExtResource("42_j3d2p")]
 transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 66.0421, 52.4699, 14.1585)
@@ -376,6 +392,59 @@ transform = Transform3D(0.838937, 0, -0.544229, 0, 0.55, 0, 0.544229, 0, 0.83893
 [node name="FireWood" parent="Objects" instance=ExtResource("45_dd2yi")]
 transform = Transform3D(-1.31134e-07, 0, -3, 0, 3, 0, 3, 0, -1.31134e-07, 72.5442, 8.07147, -3.57223)
 
+[node name="Shelf18" parent="Objects" instance=ExtResource("22_3oviy")]
+transform = Transform3D(-0.0019374, 0, -3, 0, 3, 0, 1.5, 0, -0.0038748, -36.5422, 15.0859, 229.449)
+
+[node name="Shelf19" parent="Objects" instance=ExtResource("22_3oviy")]
+transform = Transform3D(1.5, 0, -0.00387467, 0, 3, 0, 0.00193734, 0, 3, -31.5508, 15.0859, 231.744)
+
+[node name="Shelf8" parent="Objects" instance=ExtResource("22_3oviy")]
+transform = Transform3D(-0.0038748, 0, -3, 0, 3, 0, 3, 0, -0.0038748, -36.1187, 48.1794, 225.909)
+
+[node name="Shelf20" parent="Objects" instance=ExtResource("22_3oviy")]
+transform = Transform3D(3, 0, -0.00387467, 0, 3, 0, 0.00387467, 0, 3, -35.6951, 48.1794, 231.543)
+
+[node name="Shelf21" parent="Objects" instance=ExtResource("22_3oviy")]
+transform = Transform3D(-0.0038748, 0, -3, 0, 3, 0, 3, 0, -0.0038748, -26.4678, 40.6454, 240.747)
+
+[node name="Shelf22" parent="Objects" instance=ExtResource("22_3oviy")]
+transform = Transform3D(4.31, 0, -0.00387467, 0, 3, 0, 0.00556661, 0, 3, -17.0418, 40.4729, 244.722)
+
+[node name="Shelf23" parent="Objects" instance=ExtResource("22_3oviy")]
+transform = Transform3D(4.31, 0, -0.00387467, 0, 3, 0, 0.00556661, 0, 3, -17.0329, 40.6189, 237.829)
+
+[node name="Shelf24" parent="Objects" instance=ExtResource("22_3oviy")]
+transform = Transform3D(-0.0038748, 0, -3, 0, 3, 0, 3, 0, -0.0038748, -7.3531, 40.4729, 238.88)
+
+[node name="WallCrack5" parent="Objects" node_paths=PackedStringArray("endLocation", "Camera") instance=ExtResource("42_j3d2p")]
+transform = Transform3D(-0.00038748, 0, -0.3, 0, 0.3, 0, 0.3, 0, -0.00038748, -27.4549, 44.4334, 241.745)
+endLocation = NodePath("../../Interactable/Marker3D2")
+Camera = NodePath("../../Camera3D")
+
+[node name="WallCrack6" parent="Objects" instance=ExtResource("42_j3d2p")]
+transform = Transform3D(0.3, 0, -0.000387467, 0, 0.3, 0, 0.000387467, 0, 0.3, -34.2115, 52.4699, 232.415)
+
+[node name="Planter2" parent="Objects" instance=ExtResource("43_86faq")]
+transform = Transform3D(0.00129151, 0, 0.999999, 0, 1, 0, -0.999999, 0, 0.00129151, -33.2985, 15.4139, 230.695)
+
+[node name="Cobweb4" parent="Objects" instance=ExtResource("49_q85rh")]
+transform = Transform3D(0.508905, -1.28779, -1.44313, -0.683039, 1.27644, -1.37991, 1.80955, 0.843979, -0.115013, -26.2307, 38.0781, 243.299)
+
+[node name="Cauldron2" parent="Objects" instance=ExtResource("51_4fvl8")]
+transform = Transform3D(-0.0051664, 0, -4, 0, 4, 0, 4, 0, -0.0051664, -17.0056, 11.3851, 238.027)
+
+[node name="Chain2" parent="Objects" instance=ExtResource("52_atg3i")]
+transform = Transform3D(4, 0, -0.00516623, 0, 4, 0, 0.00516623, 0, 4, -17.0056, 27.7447, 238.027)
+
+[node name="WoodPile2" parent="Objects" instance=ExtResource("49_23on2")]
+transform = Transform3D(-0.0012916, 0, -0.999999, 0, 1, 0, 0.999999, 0, -0.0012916, -19.9677, 0, 166.391)
+
+[node name="poison2" parent="Objects" instance=ExtResource("49_ja6r4")]
+transform = Transform3D(0.999999, 0, -0.00129156, 0, 1, 0, 0.00129156, 0, 0.999999, -16.2668, 42.4364, 236.471)
+
+[node name="FireWood2" parent="Objects" instance=ExtResource("45_dd2yi")]
+transform = Transform3D(-3, 0, 0.00387476, 0, 3, 0, -0.00387476, 0, -3, -16.4891, 8.07147, 238.94)
+
 [node name="Interactable" type="Node" parent="."]
 
 [node name="DustBunny1" parent="Interactable" instance=ExtResource("24_1wpdf")]
@@ -391,7 +460,7 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -18.338, 0.368949, 14.1
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.96453, 0.368949, 13.8514)
 
 [node name="Marker3D" type="Marker3D" parent="Interactable"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 74.6598, 42.2824, 5.33484)
+transform = Transform3D(0.999996, 0, 0.00284488, 0, 1, 0, -0.00284488, 0, 0.999996, -25.367, 42.2824, 241.487)
 
 [node name="Marker3D2" type="Marker3D" parent="Interactable"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64.2412, 50.2942, 15.5084)
@@ -432,4 +501,4 @@ texture = ExtResource("53_6llgh")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.0761, 29.6339, 13.9355)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.400461, 0.48503, -0.777417, 1.32606e-08, 0.848418, 0.529327, 0.916314, 0.211975, -0.339758, 58.7705, 47.1387, -8.9286)
+transform = Transform3D(-0.837366, -0.289353, 0.463781, -1.11286e-08, 0.848418, 0.529327, -0.546643, 0.443241, -0.710436, -16.0856, 50.0135, 225.769)

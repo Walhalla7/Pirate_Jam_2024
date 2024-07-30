@@ -90,24 +90,16 @@ func wall_jump():
 
 #function to calulcate directional inputs and movements 
 func _handle_move_input():
-	# Calculate movement direction based on inputs
-	var move_direction_x = -int(Input.is_action_pressed("move_left")) + int(Input.is_action_pressed("move_right"))
-	var move_direction_z = -int(Input.is_action_pressed("move_back")) + int(Input.is_action_pressed("move_forward"))
+	#we calculate movement direction based on inputs 
+	var move_direction_x = int(Input.is_action_pressed("move_left")) - int(Input.is_action_pressed("move_right"))
+	var move_direction_z = int(Input.is_action_pressed("move_back")) - int(Input.is_action_pressed("move_forward"))
 
 	# Sprint Input / calculations
 	#sprint_modifier = max_sprint_modifier if Input.is_action_pressed("sprint") else 1
 	
-	# Apply the rotation to the move direction
-	var rotation = rotation_degrees.y
-	var cos_rot = cos(deg_to_rad(rotation))
-	var sin_rot = sin(deg_to_rad(rotation))
-
-	var adjusted_move_x = move_direction_x * cos_rot - move_direction_z * sin_rot
-	var adjusted_move_z = move_direction_x * sin_rot + move_direction_z * cos_rot
-
-	# Apply the direction to velocity
-	velocity.x = lerp(velocity.x, adjusted_move_x * move_speed, _get_h_weight())
-	velocity.z = lerp(velocity.z, adjusted_move_z * move_speed, _get_h_weight())
+	#we apply the direction to velocity 
+	velocity.x = lerp(velocity.x, move_direction_x * move_speed * sprint_modifier, _get_h_weight())
+	velocity.z = lerp(velocity.z, move_direction_z * move_speed * sprint_modifier, _get_h_weight())
 	
 	#we apply animations/rotate sprite
 	if move_direction_x != 0 or move_direction_z != 0:
@@ -133,31 +125,22 @@ func _handle_move_Left_input():
 	
 	if is_Grounded or backDetector.is_colliding():
 		move_direction_y = int(Input.is_action_pressed("move_left"))
-		move_direction_x = int(Input.is_action_pressed("move_right"))
+		move_direction_x = -int(Input.is_action_pressed("move_right"))
 	else:
 		if can_crawl:
 			move_direction_y = int(Input.is_action_pressed("move_left")) - int(Input.is_action_pressed("move_right"))
 		else:
 			move_direction_y = - int(Input.is_action_pressed("move_right"))
-	move_direction_z = -int(Input.is_action_pressed("move_back")) + int(Input.is_action_pressed("move_forward"))
+	move_direction_z = int(Input.is_action_pressed("move_back")) - int(Input.is_action_pressed("move_forward"))
 	
 	#Sprint Input / calculations
 	#sprint_modifier = max_sprint_modifier if Input.is_action_pressed("sprint") else 1
 	
-	# Apply the rotation to the move direction
-	var rotation = rotation_degrees.y
-	var cos_rot = cos(deg_to_rad(rotation))
-	var sin_rot = sin(deg_to_rad(rotation))
-	
-	var adjusted_move_x = move_direction_x * cos_rot - move_direction_z * sin_rot
-	var adjusted_move_z = move_direction_x * sin_rot + move_direction_z * cos_rot
-
-	
 	#we apply the direction to velocity 
 	if is_Grounded:
-		velocity.x = lerp(velocity.x, adjusted_move_x * move_speed, _get_h_weight())
-	velocity.y = lerp(velocity.y, move_direction_y * (move_speed-wall_slowdown), _get_h_weight())
-	velocity.z = lerp(velocity.z, adjusted_move_z  * move_speed, _get_h_weight())
+		velocity.x = lerp(velocity.x, move_direction_x * move_speed * sprint_modifier, _get_h_weight())
+	velocity.y = lerp(velocity.y, move_direction_y * (move_speed-wall_slowdown) * sprint_modifier, _get_h_weight())
+	velocity.z = lerp(velocity.z, move_direction_z * move_speed * sprint_modifier, _get_h_weight())
 
 #function to calulcate directional inputs and movements on right wall
 func _handle_move_Right_input():
@@ -167,31 +150,23 @@ func _handle_move_Right_input():
 	
 	#we calculate movement direction based on inputs 
 	if is_Grounded or backDetector.is_colliding():
-		move_direction_x = -int(Input.is_action_pressed("move_left"))
+		move_direction_x = int(Input.is_action_pressed("move_left"))
 		move_direction_y = int(Input.is_action_pressed("move_right"))
 	else:
 		if can_crawl:
 			move_direction_y = -int(Input.is_action_pressed("move_left")) + int(Input.is_action_pressed("move_right"))
 		else:
 			move_direction_y = -int(Input.is_action_pressed("move_left"))
-	move_direction_z = -int(Input.is_action_pressed("move_back")) + int(Input.is_action_pressed("move_forward"))
+	move_direction_z = int(Input.is_action_pressed("move_back")) - int(Input.is_action_pressed("move_forward"))
 	
 	#Sprint Input / calculations
 	#sprint_modifier = max_sprint_modifier if Input.is_action_pressed("sprint") else 1
 	
-	# Apply the rotation to the move direction
-	var rotation = rotation_degrees.y
-	var cos_rot = cos(deg_to_rad(rotation))
-	var sin_rot = sin(deg_to_rad(rotation))
-	
-	var adjusted_move_x = move_direction_x * cos_rot - move_direction_z * sin_rot
-	var adjusted_move_z = move_direction_x * sin_rot + move_direction_z * cos_rot
-	
 	#we apply the direction to velocity 
 	if is_Grounded:
-		velocity.x = lerp(velocity.x, adjusted_move_x * move_speed, _get_h_weight())
-	velocity.y = lerp(velocity.y, move_direction_y * (move_speed-wall_slowdown), _get_h_weight())
-	velocity.z = lerp(velocity.z, adjusted_move_z * move_speed, _get_h_weight())
+		velocity.x = lerp(velocity.x, move_direction_x * move_speed * sprint_modifier, _get_h_weight())
+	velocity.y = lerp(velocity.y, move_direction_y * (move_speed-wall_slowdown) * sprint_modifier, _get_h_weight())
+	velocity.z = lerp(velocity.z, move_direction_z * move_speed * sprint_modifier, _get_h_weight())
 
 #function to calulcate directional inputs and movements on right wall
 func _handle_move_Back_input():
@@ -201,31 +176,24 @@ func _handle_move_Back_input():
 	
 	#we calculate movement direction based on inputs 
 	if is_Grounded or leftDetector.is_colliding() or rightDetector.is_colliding():
-		move_direction_z = int(Input.is_action_pressed("move_forward"))
+		move_direction_z = -int(Input.is_action_pressed("move_forward"))
 		move_direction_y = int(Input.is_action_pressed("move_back"))
 	else:
 		if can_crawl:
 			move_direction_y = int(Input.is_action_pressed("move_back")) - int(Input.is_action_pressed("move_forward"))
 		else:
 			move_direction_y = - int(Input.is_action_pressed("move_forward"))
-	move_direction_x = -int(Input.is_action_pressed("move_left")) + int(Input.is_action_pressed("move_right"))
+	move_direction_x = int(Input.is_action_pressed("move_left")) - int(Input.is_action_pressed("move_right"))
 	
 	#Sprint Input / calculations
 	#sprint_modifier = max_sprint_modifier if Input.is_action_pressed("sprint") else 1
 	
-	# Apply the rotation to the move direction
-	var rotation = rotation_degrees.y
-	var cos_rot = cos(deg_to_rad(rotation))
-	var sin_rot = sin(deg_to_rad(rotation))
-	
-	var adjusted_move_x = move_direction_x * cos_rot - move_direction_z * sin_rot
-	var adjusted_move_z = move_direction_x * sin_rot + move_direction_z * cos_rot
 	
 	#we apply the direction to velocity 
 	if is_Grounded:
-		velocity.z = lerp(velocity.z, adjusted_move_z * move_speed, _get_h_weight())
-	velocity.y = lerp(velocity.y, move_direction_y * (move_speed-wall_slowdown), _get_h_weight())
-	velocity.x = lerp(velocity.x, adjusted_move_x * move_speed, _get_h_weight())
+		velocity.z = lerp(velocity.z, move_direction_z * move_speed * sprint_modifier, _get_h_weight())
+	velocity.y = lerp(velocity.y, move_direction_y * (move_speed-wall_slowdown) * sprint_modifier, _get_h_weight())
+	velocity.x = lerp(velocity.x, move_direction_x * move_speed * sprint_modifier, _get_h_weight())
 
 #turning strength based on being on the floor
 func _get_h_weight():
