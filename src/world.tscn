@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://dx1te2b8aasvv"]
+[gd_scene load_steps=59 format=3 uid="uid://dx1te2b8aasvv"]
 
 [ext_resource type="Script" path="res://script_main.gd" id="1_cwe8n"]
 [ext_resource type="PackedScene" uid="uid://b1tqs2mt8aiii" path="res://Environment/static/test_field.tscn" id="1_t7k6m"]
@@ -333,9 +333,6 @@ transform = Transform3D(0.907895, 0.419199, 0, -0.419199, 0.907895, 0, 0, 0, 1, 
 [node name="book5" parent="Objects" instance=ExtResource("49_eguuj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.0032, 3.11091, 13)
 
-[node name="poison1" parent="Objects" instance=ExtResource("49_ja6r4")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 70.5756, 42.4852, -3.79145)
-
 [node name="broom1" parent="Objects" instance=ExtResource("50_0f13t")]
 transform = Transform3D(4.11382, 2.52048, -1.31289, -2.77474, 4.06152, -0.897131, 0.614225, 1.46671, 4.74041, -20.3561, 5.22754, 13.6071)
 
@@ -454,7 +451,7 @@ transform = Transform3D(4, 0, -0.00516623, 0, 4, 0, 0.00516623, 0, 4, -17.0056, 
 transform = Transform3D(-0.0012916, 0, -0.999999, 0, 1, 0, 0.999999, 0, -0.0012916, -19.9677, 0, 166.391)
 
 [node name="poison2" parent="Objects" instance=ExtResource("49_ja6r4")]
-transform = Transform3D(0.999999, 0, -0.00129156, 0, 1, 0, 0.00129156, 0, 0.999999, -16.8146, 42.4364, 236.471)
+transform = Transform3D(0.999999, 0, -0.00129156, 0, 1, 0, 0.00129156, 0, 0.999999, -16.8146, 41.9852, 236.471)
 collision_mask = 95
 
 [node name="FireWood2" parent="Objects" instance=ExtResource("45_dd2yi")]
@@ -543,7 +540,6 @@ collision_mask = 40
 transform = Transform3D(33.105, 0, 0, 0, 33.105, 0, 0, 0, 33.105, -1.3606, -1.65889, -5.62325)
 shape = SubResource("BoxShape3D_jggqe")
 
-[connection signal="body_entered" from="CauldronZone" to="." method="_on_cauldron_zone_body_entered"]
 [node name="SaltPile" parent="." instance=ExtResource("50_jlmv7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.2895, -0.397003, 14.8851)
 
@@ -622,3 +618,5 @@ light_energy = 21.995
 light_specular = 4.217
 shadow_enabled = true
 omni_range = 45.5443
+
+[connection signal="body_entered" from="CauldronZone" to="." method="_on_cauldron_zone_body_entered"]
