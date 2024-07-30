@@ -11,7 +11,7 @@ material = SubResource("StandardMaterial3D_bamad")
 size = Vector3(5, 0.225, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tc8gj"]
-size = Vector3(5.03632, 0.226746, 1)
+size = Vector3(5.004, 0.226746, 1.49873)
 
 [node name="Shelf1" type="StaticBody3D"]
 
@@ -20,5 +20,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.5, 0, 0, 0)
 mesh = SubResource("BoxMesh_jexbg")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0121155, 0.00393677, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00404475, 0.00393677, -0.000385284)
 shape = SubResource("BoxShape3D_tc8gj")

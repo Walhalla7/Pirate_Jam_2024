@@ -188,7 +188,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.12465, 0)
 shape = SubResource("CylinderShape3D_6ihjj")
 
 [node name="ivy_Vine2" type="MeshInstance3D" parent="StaticBody3D"]
-transform = Transform3D(2.65202, 1.42032, -1.50996e-07, 2.19098, -1.71919, 1.03545e-07, -1.7358e-07, -3.92474e-07, -1, -5.17549, -6.42779, -1.05105e-07)
+transform = Transform3D(2.65202, 1.42032, -1.50996e-07, 2.19098, -1.71919, 1.03544e-07, -1.73581e-07, -3.92474e-07, -1, -5.17549, -6.42779, -1.05105e-07)
 mesh = SubResource("ArrayMesh_y3n4b")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_h0d3d")
@@ -198,6 +198,9 @@ transform = Transform3D(-0.241887, 0.976018, 0.182373, 2.02008, 0.120891, -1.848
 mesh = SubResource("ArrayMesh_6d23g")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_sad0n")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -0.20703, 0.14477, 0)
 
 [node name="Leaves" type="Node3D" parent="."]
 
