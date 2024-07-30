@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" path="res://scripts/components/test_trap.gd" id="1_ofqag"]
 [ext_resource type="PackedScene" uid="uid://ntc40oalf7ug" path="res://scenes/components/damage_component.tscn" id="2_wgu16"]
-[ext_resource type="PackedScene" uid="uid://qfx33kvjv7qe" path="res://assets/glbs/salt_grain.glb" id="3_v36ok"]
+[ext_resource type="PackedScene" uid="uid://cxnbkj1epgh6j" path="res://RoomObjects/ObjectScenes/salt_grain.tscn" id="3_bvgy2"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pcvrn"]
-size = Vector3(0.34523, 0.368584, 0.129822)
+size = Vector3(0.77, 0.584, 0.665)
 
-[node name="StaticBody3D" type="StaticBody3D"]
+[node name="SaltPile" type="StaticBody3D"]
 collision_layer = 4
 collision_mask = 0
 script = ExtResource("1_ofqag")
@@ -15,8 +15,8 @@ script = ExtResource("1_ofqag")
 [node name="DamageComponent" parent="." instance=ExtResource("2_wgu16")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0130997, -0.149128, 0.0677795)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0130997, 0.3368, -0.0706119)
 shape = SubResource("BoxShape3D_pcvrn")
 
-[node name="salt_grain" parent="." instance=ExtResource("3_v36ok")]
-transform = Transform3D(1, 0, 0, 0, -0.00102977, -0.999999, 0, 0.999999, -0.00102977, 0, 0, 0)
+[node name="SaltGrain" parent="." instance=ExtResource("3_bvgy2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00309068, 0.263745)

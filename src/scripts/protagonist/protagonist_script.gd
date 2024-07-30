@@ -46,6 +46,8 @@ func _on_health_component_death():
 
 func _on_health_component_hurt():
 	print("Player has been hurt")
+	var wall_jump_velocity = Vector3(-2 * velocity.x ,jump_vertical_strength/2,-2 * velocity.z)
+	velocity = wall_jump_velocity
 
 #======================================== 	Movement 	==================================
 #Gravity applied universally
