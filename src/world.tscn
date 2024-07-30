@@ -532,6 +532,7 @@ omni_range = 5.39463
 
 [node name="CauldronLightCast" type="OmniLight3D" parent="Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.8942, 21.1942, 238.494)
+visible = false
 light_color = Color(0, 0.552941, 0.0823529, 1)
 light_energy = 16.745
 light_size = 5.0
@@ -556,6 +557,7 @@ light_energy = 0.1
 
 [node name="Torchlight" type="OmniLight3D" parent="Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.751995, 49.8167, 10)
+visible = false
 light_color = Color(0.713726, 0.407843, 0, 1)
 light_energy = 21.995
 light_specular = 4.217
@@ -564,6 +566,7 @@ omni_range = 45.5443
 
 [node name="Torchlight2" type="OmniLight3D" parent="Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.9749, 67.7091, -0.257811)
+visible = false
 light_color = Color(0.713726, 0.407843, 0, 1)
 light_energy = 21.995
 light_specular = 4.217
@@ -572,6 +575,7 @@ omni_range = 45.5443
 
 [node name="Torchlight3" type="OmniLight3D" parent="Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.7601, 67.7091, 226.848)
+visible = false
 light_color = Color(0.713726, 0.407843, 0, 1)
 light_energy = 21.995
 light_specular = 4.217
