@@ -1,6 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://d25fyig86k1tc"]
 
 [ext_resource type="Script" path="res://scripts/Screens/VictoryScreen.gd" id="1_ey4am"]
+[ext_resource type="Texture2D" uid="uid://dyx8whi82h8gv" path="res://assets/sprites/VictoryScreen.png" id="2_roh7b"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_os44p"]
 bg_color = Color(0.75622, 0.000445113, 0.757271, 1)
@@ -16,10 +17,6 @@ Button/font_sizes/font_size = 50
 Button/styles/hover = SubResource("StyleBoxFlat_os44p")
 Button/styles/normal = SubResource("StyleBoxFlat_06tb2")
 Panel/styles/panel = SubResource("StyleBoxEmpty_7tyhd")
-
-[sub_resource type="LabelSettings" id="LabelSettings_j4ecl"]
-font_size = 120
-font_color = Color(0.941176, 0.917647, 0.839216, 1)
 
 [node name="VictoryScreen" type="Control"]
 layout_mode = 3
@@ -37,7 +34,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.406447, 0.697933, 0.493891, 1)
+color = Color(0.933333, 0.968627, 0.509804, 1)
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -48,47 +45,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_gpkcb")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -338.0
-offset_top = 22.0
-offset_right = 338.0
-offset_bottom = 175.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 15
-alignment = 1
-
-[node name="ResetButton" type="Button" parent="Panel/VBoxContainer"]
-layout_mode = 2
-text = "Wanna do it again?"
-
-[node name="QuitButton" type="Button" parent="Panel/VBoxContainer"]
-layout_mode = 2
-text = "Slug it we ball"
-
-[node name="Label" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -486.0
-offset_top = -219.0
-offset_right = 487.0
-offset_bottom = -54.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "You killed the Bi....
-Witch"
-label_settings = SubResource("LabelSettings_j4ecl")
-horizontal_alignment = 1
-
-[connection signal="pressed" from="Panel/VBoxContainer/ResetButton" to="." method="_on_reset_button_pressed"]
-[connection signal="pressed" from="Panel/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[node name="VictoryScreen" type="Sprite2D" parent="."]
+position = Vector2(570.85, 305.385)
+scale = Vector2(1.31, 1.31)
+texture = ExtResource("2_roh7b")

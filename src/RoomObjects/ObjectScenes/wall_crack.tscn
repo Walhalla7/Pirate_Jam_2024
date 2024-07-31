@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://RoomObjects/ObjectScenes/wall_crack.gd" id="2_oah8e"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_o6qct"]
-size = Vector3(16.9468, 19.6292, 1.49756)
+size = Vector3(16.9468, 19.6292, 2.83728)
 
 [node name="WallCrack" type="Sprite3D"]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
@@ -18,7 +18,7 @@ collision_layer = 2
 collision_mask = 8
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.755768, 0.351112, 0.0578099)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.755768, 0.351112, 0.105966)
 shape = SubResource("BoxShape3D_o6qct")
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
