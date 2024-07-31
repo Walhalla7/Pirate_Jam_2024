@@ -5,6 +5,7 @@ extends CharacterBody3D
 @onready var animated_sprite_3d = $AnimatedSprite3D
 @onready var sprite_3d = $Sprite3D
 @onready var climbTimer = $ClimbTimer
+
 #======================================== 	Detectors 	==================================
 @onready var floorDetectors = $Raycasts/Floor_detectors
 var is_Grounded
@@ -20,8 +21,6 @@ func _check_is_grounded():
 @onready var rightDetector = $Raycasts/Right_detector
 @onready var leftDetector = $Raycasts/Left_detector
 @onready var backDetector = $Raycasts/Back_detector
-@onready var jump = $jump
-
 
 #======================================== 	Variables 	==================================
 #Movement variables
@@ -33,7 +32,6 @@ var can_crawl = true
 @export var wall_slowdown = 2
 @export var jump_vertical_strength = 9
 @export var jump_horizontal_strength = 7
-
 var WALL_JUMP_VELOCITY = Vector3(0,jump_vertical_strength,0)
 
 # Gravity
@@ -41,7 +39,6 @@ var WALL_JUMP_VELOCITY = Vector3(0,jump_vertical_strength,0)
 var gravityStrength = 9.8
 
 #======================================== 	Hurt & Death Functions 	==================================\
-@onready var hurt_sound = $"hurt sound"
 
 func _on_health_component_death():
 	print("Player has died")
@@ -52,7 +49,6 @@ func _on_health_component_hurt():
 	var wall_jump_velocity = Vector3(-2 * velocity.x ,jump_vertical_strength/2,-2 * velocity.z)
 	velocity = wall_jump_velocity
 
-	hurt_sound.play()
 #======================================== 	Movement 	==================================
 #Gravity applied universally
 func _apply_gravity(delta):
@@ -106,6 +102,21 @@ func _handle_move_input():
 	#we apply the direction to velocity 
 	velocity.x = lerp(velocity.x, move_direction_x * move_speed, _get_h_weight())
 	velocity.z = lerp(velocity.z, move_direction_z * move_speed, _get_h_weight())
+	
+	#we apply animations/rotate sprite
+	if move_direction_x != 0 or move_direction_z != 0:
+		animated_sprite_3d.play("walk")	
+		#if velocity.x < 0:
+			#$AnimatedSprite3D.rotation.y = -PI
+		#else: 
+			#$AnimatedSprite3D.rotation.y = 0
+		#
+		#if velocity.z < 0:
+			#$AnimatedSprite3D.rotation.y = -0.5
+		#else:
+			#$AnimatedSprite3D.rotation.y = 0.5
+	else:
+		animated_sprite_3d.play("idle")
 
 #function to calulcate directional inputs and movements on left wall
 func _handle_move_Left_input():

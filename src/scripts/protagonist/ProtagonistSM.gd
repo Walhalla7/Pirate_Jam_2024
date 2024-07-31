@@ -1,13 +1,10 @@
 extends StateMachine
-@onready var jump = $jump
-
-@onready var anim = $"../AnimationPlayer"
 
 #function to handle jump input
 func _input(event):
 	if [states.IDLE, states.WALKING].has(state):
 		if event.is_action("jump") && parent.is_Grounded:
-			anim.play("jump")
+			parent.velocity.y = parent.JUMP_VELOCITY
 	elif [states.WALL_BACK, states.WALL_LEFT, states.WALL_RIGHT].has(state):
 		if event.is_action("jump"):
 			anim.play("wall_jump")
@@ -146,21 +143,23 @@ func _enter_state(new_state, old_state):
 		states.IDLE:
 			parent.can_crawl = true
 			parent.climbTimer.stop()
-			anim.play("idle")
-
+			
 		states.WALKING:
 			parent.can_crawl = true
 			parent.climbTimer.stop()
-			anim.play("walk")
-
+		
+		states.WALKING:
+			parent.can_crawl = true
+			parent.climbTimer.stop()
+		
 		states.WALL_LEFT:
 			if !parent._is_timer_active():
 				parent.climbTimer.start()
-
+				
 		states.WALL_RIGHT:
 			if !parent._is_timer_active():
 				parent.climbTimer.start()
-
+				
 		states.WALL_BACK:
 			if !parent._is_timer_active():
 				parent.climbTimer.start()
