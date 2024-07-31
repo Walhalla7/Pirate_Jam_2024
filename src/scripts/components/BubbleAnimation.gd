@@ -28,7 +28,7 @@ func move_bubbles():
 		bubble.global_position.x += sin(time*2)/100  #sin(time*frequency+phase)/amplitude
 		bubble.global_position.z += sin(time*2)/100
 		bubble.global_position.y += .02
-		if bubble.global_position.y >= 27 + randf():
+		if bubble.global_position.y >= 37 + randf():
 			bubble.play("pop")
 			#print("bubble pop animation started")
 			bubbles_array.erase(bubble)

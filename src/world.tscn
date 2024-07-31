@@ -73,7 +73,7 @@ size = Vector3(1.59569, 0.185181, 1.66125)
 script = ExtResource("1_cwe8n")
 
 [node name="Protagonist" parent="." instance=ExtResource("2_yjr5n")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 64.5964, 6.81026, 14.9208)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 60.9494, 51.8871, 14.9208)
 
 [node name="PlayerCamera" parent="." node_paths=PackedStringArray("camera_target") instance=ExtResource("3_beliv")]
 transform = Transform3D(-1, -9.89654e-09, 8.68608e-08, 0, 0.993572, 0.113203, -8.74228e-08, 0.113203, -0.993572, 62.8567, 4.64496, 8.4452)
@@ -275,7 +275,7 @@ transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 12.435
 transform = Transform3D(-0.913787, 0.406195, 0, -0.406195, -0.913787, 0, 0, 0, 1, 12.4208, 34.9742, 15.1702)
 
 [node name="Bubbles" parent="Objects" instance=ExtResource("51_vlysd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.6319, 20.8664, -3.05459)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.6802, 20.1694, 236.172)
 
 [node name="Table1" parent="Objects" instance=ExtResource("53_dgj73")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.82688, -0.84731, 13.0524)
@@ -529,8 +529,12 @@ texture = ExtResource("53_6llgh")
 transform = Transform3D(-1, -6.18172e-08, 6.18172e-08, 0, 0.707107, 0.707107, -8.74228e-08, 0.707107, -0.707107, -17.2362, 48.5299, 226.461)
 fov = 60.0
 
+[node name="CauldronCamera2" type="Camera3D" parent="."]
+transform = Transform3D(-0.957576, -0.241563, 0.157147, 0, 0.545308, 0.838236, -0.288181, 0.802675, -0.522174, -15.812, 29.8875, 231.621)
+fov = 60.0
+
 [node name="CauldronZone" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.961, 28.3849, 240.523)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.961, 19.3427, 240.523)
 collision_layer = 0
 collision_mask = 40
 
@@ -630,6 +634,10 @@ light_specular = 4.217
 shadow_enabled = true
 omni_range = 45.5443
 
+[node name="WinTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
 [node name="LightComponent" parent="Lights/Torchlight3" instance=ExtResource("54_t5jro")]
 
 [connection signal="body_entered" from="CauldronZone" to="." method="_on_cauldron_zone_body_entered"]
+[connection signal="timeout" from="WinTimer" to="." method="_on_win_timer_timeout"]
