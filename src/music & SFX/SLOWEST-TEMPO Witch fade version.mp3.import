@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cd7j5qct48758"
+path="res://.godot/imported/SLOWEST-TEMPO Witch fade version.mp3-7b22fb830b8cf6cca71827d74c297bf5.mp3str"
+
+[deps]
+
+source_file="res://music & SFX/SLOWEST-TEMPO Witch fade version.mp3"
+dest_files=["res://.godot/imported/SLOWEST-TEMPO Witch fade version.mp3-7b22fb830b8cf6cca71827d74c297bf5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

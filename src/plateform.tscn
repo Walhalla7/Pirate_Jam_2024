@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://eq8rptcxemo8"]
+
+[ext_resource type="AudioStream" uid="uid://buhya1d687fve" path="res://music & SFX/Retro_Platforming.mp3" id="1_h3t54"]
+
+[node name="plateform" type="AudioStreamPlayer3D"]
+stream = ExtResource("1_h3t54")
+volume_db = -6.0
+autoplay = true
+bus = &"Music"

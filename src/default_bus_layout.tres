@@ -1,0 +1,31 @@
+[gd_resource type="AudioBusLayout" load_steps=3 format=3 uid="uid://bk4wj1pga5505"]
+
+[sub_resource type="AudioEffectPitchShift" id="AudioEffectPitchShift_wm0pd"]
+resource_name = "PitchShift"
+
+[sub_resource type="AudioEffectChorus" id="AudioEffectChorus_bklb1"]
+resource_name = "Chorus"
+
+[resource]
+bus/1/name = &"SFX"
+bus/1/solo = false
+bus/1/mute = false
+bus/1/bypass_fx = false
+bus/1/volume_db = -3.32444
+bus/1/send = &"Master"
+bus/2/name = &"Music"
+bus/2/solo = false
+bus/2/mute = false
+bus/2/bypass_fx = false
+bus/2/volume_db = -9.20451
+bus/2/send = &"Master"
+bus/2/effect/0/effect = SubResource("AudioEffectPitchShift_wm0pd")
+bus/2/effect/0/enabled = true
+bus/2/effect/1/effect = SubResource("AudioEffectChorus_bklb1")
+bus/2/effect/1/enabled = true
+bus/3/name = &"Witch"
+bus/3/solo = false
+bus/3/mute = false
+bus/3/bypass_fx = false
+bus/3/volume_db = -1.91699
+bus/3/send = &"Master"

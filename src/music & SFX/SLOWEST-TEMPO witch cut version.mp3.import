@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c3u0o6blqvb6h"
+path="res://.godot/imported/SLOWEST-TEMPO witch cut version.mp3-2a366927ce03ce34a4ac646ad3922e2b.mp3str"
+
+[deps]
+
+source_file="res://music & SFX/SLOWEST-TEMPO witch cut version.mp3"
+dest_files=["res://.godot/imported/SLOWEST-TEMPO witch cut version.mp3-2a366927ce03ce34a4ac646ad3922e2b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
