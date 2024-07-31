@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dek5eyfvuy7ua"]
+[gd_scene load_steps=5 format=3 uid="uid://dek5eyfvuy7ua"]
 
 [ext_resource type="Script" path="res://scripts/components/witch_detection.gd" id="1_scw55"]
 [ext_resource type="Texture2D" uid="uid://cbnvd4wdsgahv" path="res://assets/sprites/witch_hand1-1.png" id="2_76di1"]
 [ext_resource type="Shader" path="res://scripts/components/witch_detection_shader.gdshader" id="3_280d8"]
-[ext_resource type="AudioStream" uid="uid://blvdlx1llomd7" path="res://assets/Music/2019-12-11_-_Retro_Platforming_-_David_Fesliyan.mp3" id="4_q832n"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_105qa"]
 shader = ExtResource("3_280d8")
@@ -22,15 +21,6 @@ debug_shape_thickness = 4
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
-
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer2D" parent="Timer"]
-position = Vector2(2542, 330)
-rotation = -1.5708
-scale = Vector2(0.325426, 0.317447)
-stream = ExtResource("4_q832n")
-max_distance = 50.0
-attenuation = 13.9288
-bus = &"witch"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
