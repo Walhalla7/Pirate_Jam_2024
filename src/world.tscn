@@ -539,7 +539,6 @@ texture_filter = 0
 texture = ExtResource("53_6llgh")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ForegroundSprites/Pumpkin2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ForegroundSprites/Pumpkin2/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.783829, -0.567607, -0.459503)

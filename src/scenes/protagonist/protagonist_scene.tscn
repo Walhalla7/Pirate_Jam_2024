@@ -554,6 +554,7 @@ script = ExtResource("8_8y8tt")
 [node name="Jump" type="AudioStreamPlayer3D" parent="StateMachine"]
 stream = ExtResource("13_f8fhv")
 volume_db = 12.0
+bus = &"SFX"
 
 [node name="Raycasts" type="Node3D" parent="."]
 
@@ -582,12 +583,15 @@ wait_time = 3.0
 
 [node name="Background" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("13_y12ob")
-volume_db = -6.0
+volume_db = -8.0
+unit_size = 100.0
 autoplay = true
+bus = &"Music"
 
 [node name="Hurt" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("15_pkjqt")
 volume_db = 12.0
+bus = &"SFX"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
