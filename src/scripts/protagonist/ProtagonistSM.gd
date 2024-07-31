@@ -7,9 +7,11 @@ func _input(event):
 	if [states.IDLE, states.WALKING].has(state):
 		if event.is_action("jump") && parent.is_Grounded:
 			anim.play("jump")
+			$Jump.play()
 	elif [states.WALL_BACK, states.WALL_LEFT, states.WALL_RIGHT].has(state):
 		if event.is_action("jump"):
 			anim.play("wall_jump")
+			$Jump.play()
 
 func apply_jump_velocity(wall_jump: bool):
 	if wall_jump:

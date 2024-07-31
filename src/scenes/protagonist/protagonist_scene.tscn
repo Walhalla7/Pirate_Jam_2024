@@ -12,6 +12,9 @@
 [ext_resource type="PackedScene" uid="uid://bk1cv3vgmy13p" path="res://scenes/components/health_component.tscn" id="6_iodel"]
 [ext_resource type="PackedScene" uid="uid://dnsrdyx8nphea" path="res://scenes/components/hitbox_component.tscn" id="7_scdkf"]
 [ext_resource type="Script" path="res://scripts/protagonist/ProtagonistSM.gd" id="8_8y8tt"]
+[ext_resource type="AudioStream" uid="uid://b6qwk0cqsiknp" path="res://assets/Music/jump sample2.wav" id="13_f8fhv"]
+[ext_resource type="AudioStream" uid="uid://blvdlx1llomd7" path="res://assets/Music/2019-12-11_-_Retro_Platforming_-_David_Fesliyan.mp3" id="13_y12ob"]
+[ext_resource type="AudioStream" uid="uid://cxra5yu7eubox" path="res://assets/Music/hurt_sound.wav" id="15_pkjqt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bxin2"]
 atlas = ExtResource("2_c3awk")
@@ -548,6 +551,10 @@ shape = SubResource("ConvexPolygonShape3D_gpv27")
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource("8_8y8tt")
 
+[node name="Jump" type="AudioStreamPlayer3D" parent="StateMachine"]
+stream = ExtResource("13_f8fhv")
+volume_db = 12.0
+
 [node name="Raycasts" type="Node3D" parent="."]
 
 [node name="Floor_detectors" type="Node3D" parent="Raycasts"]
@@ -573,6 +580,14 @@ transform = Transform3D(1, 0, 0, 0, -1.97372e-08, -1, 0, 0.451532, -4.37114e-08,
 [node name="ClimbTimer" type="Timer" parent="."]
 wait_time = 3.0
 
+[node name="Background" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("13_y12ob")
+volume_db = -6.0
+autoplay = true
+
+[node name="Hurt" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("15_pkjqt")
+volume_db = 12.0
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_udhhf")
