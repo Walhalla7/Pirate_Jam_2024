@@ -1,7 +1,6 @@
 extends StateMachine
 
 @onready var anim = $"../AnimationPlayer"
-
 #function to handle jump input
 func _input(event):
 	if [states.IDLE, states.WALKING].has(state):
@@ -125,7 +124,7 @@ func _get_transition(delta):
 				return states.IDLE
 			elif parent.velocity.y <= 0:
 				return states.FALLING
-				
+	
 		#Leaving fall state
 		states.FALLING:
 			if parent.rightDetector.is_colliding() && parent.velocity.x < 0 && parent.can_crawl:

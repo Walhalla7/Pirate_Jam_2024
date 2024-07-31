@@ -12,7 +12,6 @@ class_name WitchDetector
 @onready var offscreen_point = $CanvasLayer/Offscreen
 @onready var onscreen_point = $CanvasLayer/Onscreen
 @onready var vin = $CanvasLayer/ColorRect
-
 var t = 0.0
 var visibilityLevel:float = 1.0
 var player_caught = false
