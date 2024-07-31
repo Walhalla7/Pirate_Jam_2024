@@ -5,3 +5,4 @@ extends Node
 
 signal game_over()
 signal Victory()
+signal intro_done()

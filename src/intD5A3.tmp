@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://ckx4km7jjlud8"]
+[gd_scene load_steps=33 format=3 uid="uid://ckx4km7jjlud8"]
 
 [ext_resource type="Script" path="res://intro.gd" id="1_65r5q"]
 [ext_resource type="PackedScene" uid="uid://krtuxl5g46p6" path="res://Environment/climbable/wall.tscn" id="1_nc4s3"]
@@ -17,7 +17,6 @@
 [ext_resource type="Texture2D" uid="uid://c0w227w8gjw8e" path="res://assets/SpriteSheets/Idle400.png" id="15_oeu1x"]
 [ext_resource type="Texture2D" uid="uid://cx5s4s01num3o" path="res://assets/SpriteSheets/NoHatIdleLookingUp400.png" id="16_unx1e"]
 [ext_resource type="Texture2D" uid="uid://cckbqwyfe3tjj" path="res://assets/SpriteSheets/NoHatIdle400t.png" id="17_urcje"]
-[ext_resource type="Texture2D" uid="uid://qtgbo74jo0vt" path="res://assets/SpriteSheets/Walk400.png" id="18_h8ypk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_swile"]
 atlas = ExtResource("15_oeu1x")
@@ -66,30 +65,6 @@ region = Rect2(280, 0, 140, 140)
 [sub_resource type="AtlasTexture" id="AtlasTexture_g36ft"]
 atlas = ExtResource("17_urcje")
 region = Rect2(420, 0, 140, 140)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qhqev"]
-atlas = ExtResource("18_h8ypk")
-region = Rect2(0, 0, 140, 140)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1fw32"]
-atlas = ExtResource("18_h8ypk")
-region = Rect2(140, 0, 140, 140)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_v5bb5"]
-atlas = ExtResource("18_h8ypk")
-region = Rect2(280, 0, 140, 140)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vaohp"]
-atlas = ExtResource("18_h8ypk")
-region = Rect2(420, 0, 140, 140)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rmrti"]
-atlas = ExtResource("18_h8ypk")
-region = Rect2(560, 0, 140, 140)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wwhan"]
-atlas = ExtResource("18_h8ypk")
-region = Rect2(700, 0, 140, 140)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kfa8e"]
 animations = [{
@@ -142,29 +117,6 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle_nohat",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qhqev")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1fw32")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_v5bb5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vaohp")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rmrti")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wwhan")
-}],
-"loop": true,
-"name": &"walk",
 "speed": 5.0
 }]
 
@@ -279,6 +231,7 @@ light_energy = 0.1
 
 [node name="CauldronLightCast" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.8942, 22.224, 236.267)
+visible = false
 light_color = Color(0, 0.552941, 0.0823529, 1)
 light_energy = 16.745
 light_size = 5.0
@@ -287,6 +240,7 @@ omni_range = 27.5482
 
 [node name="Torchlight3" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.7601, 67.7091, 226.848)
+visible = false
 light_color = Color(0.713726, 0.407843, 0, 1)
 light_energy = 21.995
 light_specular = 4.217
@@ -294,18 +248,15 @@ shadow_enabled = true
 omni_range = 45.5443
 
 [node name="Hat" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5507, 41.1468, 243.899)
-billboard = 2
-shaded = true
-texture_filter = 0
 texture = ExtResource("14_si04o")
 
 [node name="ProtagonistSprite" type="AnimatedSprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.9748, 7.57559, 239.265)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 201.197)
 flip_h = true
+pixel_size = 0.15
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_kfa8e")
-animation = &"idle"
+animation = &"idle_nohat"
 
 [node name="InviWall" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 207.319)
@@ -332,6 +283,5 @@ shape = SubResource("BoxShape3D_o8wa3")
 
 [node name="Temporary light" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -14.8078, 26.5343, 208.355)
-visible = false
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

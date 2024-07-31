@@ -9,17 +9,7 @@ var time :float
 
 #======================================== 	Initialize 	==================================
 func _ready():
-	#lock movement
-	#set camera to cauldron area
-	CauldronCamera.current = true
-	#slug jar wiggle
-	
-	
-	#WHEN READY:
-	#protag position = starting game start pos
-	#camera active = protag camera
-	#unlock movement
-
+	pass
 	
 #======================================== 	Process 	==================================
 func _physics_process(delta):
