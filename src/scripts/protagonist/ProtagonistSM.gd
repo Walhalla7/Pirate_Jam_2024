@@ -4,10 +4,12 @@ extends StateMachine
 func _input(event):
 	if [states.IDLE, states.WALKING].has(state):
 		if event.is_action("jump") && parent.is_Grounded:
+			$Jump.play()
 			parent.velocity.y = parent.JUMP_VELOCITY
 	elif [states.WALL_BACK, states.WALL_LEFT, states.WALL_RIGHT].has(state):
 		if event.is_action("jump"):
 			parent.wall_jump()
+			$Jump.play()
 
 func _ready():
 	#we add all the posible states to the list 
