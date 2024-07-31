@@ -43,7 +43,7 @@ func _process(delta):
 			if abs(position_difference) < 0.01:
 				current_step = 2
 				$Timer.stop()
-				print("step 1 complete")
+				#print("step 1 complete")
 				#when camera 1 pos = camera 2 pos, step = 2
 		2:
 			#camera look at jar
@@ -101,10 +101,10 @@ func _process(delta):
 			#when inside wall, signal main, free intro scene
 
 func slugjar_impulse(strenght_x,strenght_y):
-	print("applied impulse")
+	#print("applied impulse")
 	slugjar.apply_impulse(Vector3(strenght_x,strenght_y,0),Vector3(1,0,0))
 
 func _on_timer_timeout():
-	print("timer")
+	#print("timer")
 	if current_step == 1:
 		slugjar_impulse(1,0)
