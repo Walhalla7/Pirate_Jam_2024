@@ -52,6 +52,7 @@ func _on_timer_timeout():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	print(str(ray_cast_3d.get_collider()))
 	# Follow the player left and right
 	ray_cast_3d.global_position.x = player.global_position.x
 	# Follow the player up and down
