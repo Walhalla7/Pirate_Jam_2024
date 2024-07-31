@@ -41,7 +41,7 @@
 [ext_resource type="PackedScene" uid="uid://bckxkvjqrl3an" path="res://RoomObjects/ObjectScenes/crystal_cluster_1.tscn" id="50_wk22g"]
 [ext_resource type="PackedScene" uid="uid://bbh4akqdqpu2d" path="res://RoomObjects/ObjectScenes/cauldron_1.tscn" id="51_4fvl8"]
 [ext_resource type="PackedScene" uid="uid://bld7v1k3mhp6e" path="res://RoomObjects/ObjectScenes/apple.tscn" id="51_bschn"]
-[ext_resource type="PackedScene" uid="uid://csnlldtc6ghda" path="res://RoomObjects/ObjectScenes/Utensils.tscn" id="51_bsko0"]
+[ext_resource type="PackedScene" uid="uid://csnlldtc6ghda" path="res://RoomObjects/ObjectScenes/utensils.tscn" id="51_bsko0"]
 [ext_resource type="PackedScene" uid="uid://bs3twqryg8brj" path="res://RoomObjects/ObjectScenes/sack_2.tscn" id="51_d2wmx"]
 [ext_resource type="PackedScene" uid="uid://cn3vogr2jbw1b" path="res://RoomObjects/ObjectScenes/mortar_and_pestle.tscn" id="51_pun3u"]
 [ext_resource type="PackedScene" uid="uid://chekfm1d70hnv" path="res://scenes/lane_guidelines.tscn" id="51_qwm2i"]
@@ -246,7 +246,7 @@ texture = ExtResource("29_typtx")
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 75.3637, 44.4334, 7.3899)
 
 [node name="WallCrack2" parent="Objects" node_paths=PackedStringArray("endLocation", "Camera") instance=ExtResource("42_j3d2p")]
-transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 66.0421, 52.4699, 14.1585)
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 66.574, 52.4699, 14.1585)
 endLocation = NodePath("../../Interactable/Marker3D")
 Camera = NodePath("../../CauldronCamera")
 
@@ -254,7 +254,7 @@ Camera = NodePath("../../CauldronCamera")
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 73.9426, 10.8898, 7.3899)
 
 [node name="WallCrack4" parent="Objects" instance=ExtResource("42_j3d2p")]
-transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 66.5883, 7.49478, 14.0594)
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 66.5677, 7.49478, 14.0594)
 
 [node name="Planter1" parent="Objects" instance=ExtResource("43_86faq")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 64.3209, 15.4139, 13.2477)
@@ -772,6 +772,16 @@ omni_range = 45.5443
 
 [node name="LightComponent" parent="Lights/Torchlight2" instance=ExtResource("54_t5jro")]
 
+[node name="Torchlight4" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.8349, 9.78404, -23.0457)
+light_color = Color(0.713726, 0.407843, 0, 1)
+light_energy = 21.995
+light_specular = 4.217
+shadow_enabled = true
+omni_range = 45.5443
+
+[node name="LightComponent" parent="Lights/Torchlight4" instance=ExtResource("54_t5jro")]
+
 [node name="Torchlight3" type="OmniLight3D" parent="Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.7601, 67.7091, 226.848)
 light_color = Color(0.713726, 0.407843, 0, 1)
@@ -781,6 +791,16 @@ shadow_enabled = true
 omni_range = 45.5443
 
 [node name="LightComponent" parent="Lights/Torchlight3" instance=ExtResource("54_t5jro")]
+
+[node name="Torchlight5" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.696, 12.6344, 228.904)
+light_color = Color(0.713726, 0.407843, 0, 1)
+light_energy = 21.995
+light_specular = 4.217
+shadow_enabled = true
+omni_range = 45.5443
+
+[node name="LightComponent" parent="Lights/Torchlight5" instance=ExtResource("54_t5jro")]
 
 [node name="WinTimer" type="Timer" parent="."]
 wait_time = 2.0

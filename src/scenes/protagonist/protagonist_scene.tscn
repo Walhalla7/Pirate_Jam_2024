@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://dqb6hflk04skq"]
+[gd_scene load_steps=58 format=3 uid="uid://dqb6hflk04skq"]
 
 [ext_resource type="Script" path="res://scripts/protagonist/protagonist_script.gd" id="1_7xj1q"]
 [ext_resource type="ArrayMesh" uid="uid://bkc7w3ttjxl5w" path="res://RoomObjects/Protagonist.obj" id="2_5x464"]
@@ -6,9 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://c0w227w8gjw8e" path="res://assets/SpriteSheets/Idle400.png" id="2_vc2x0"]
 [ext_resource type="Texture2D" uid="uid://qtgbo74jo0vt" path="res://assets/SpriteSheets/Walk400.png" id="3_orukt"]
 [ext_resource type="Texture2D" uid="uid://fb28rbf0riie" path="res://assets/SpriteSheets/Jump400.png" id="3_tc05p"]
-[ext_resource type="Texture2D" path="res://assets/SpriteSheets/NoHatIdleLookingUp400.png" id="4_aucly"]
+[ext_resource type="Texture2D" uid="uid://cx5s4s01num3o" path="res://assets/SpriteSheets/NoHatIdleLookingUp400.png" id="4_aucly"]
 [ext_resource type="PackedScene" uid="uid://cvwdepeddsmd0" path="res://scenes/skull_sprite.tscn" id="5_1jgiy"]
-[ext_resource type="Texture2D" path="res://assets/SpriteSheets/NoHatIdle400t.png" id="5_h8rsl"]
+[ext_resource type="Texture2D" uid="uid://cckbqwyfe3tjj" path="res://assets/SpriteSheets/NoHatIdle400t.png" id="5_h8rsl"]
 [ext_resource type="PackedScene" uid="uid://bk1cv3vgmy13p" path="res://scenes/components/health_component.tscn" id="6_iodel"]
 [ext_resource type="PackedScene" uid="uid://dnsrdyx8nphea" path="res://scenes/components/hitbox_component.tscn" id="7_scdkf"]
 [ext_resource type="Script" path="res://scripts/protagonist/ProtagonistSM.gd" id="8_8y8tt"]
@@ -270,10 +270,8 @@ height = 0.804
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_gpv27"]
 points = PackedVector3Array(-0.291599, 0.0226715, 0.00386099, -0.0277506, 0.855882, 0.0594111, -0.0277506, 0.855882, 0.00386099, 0.444357, 0.647516, 0.0594111, -0.444357, 0.0921268, 0.0594111, 0.263761, 0.0921268, 0.00386099, 0.166591, 0.0226715, 0.0594111, 0.444357, 0.703064, 0.00386099, -0.263761, 0.661424, 0.00386099, -0.166591, 0.828151, 0.0594111, -0.444357, 0.133766, 0.00386099, 0.0971706, -0.00514436, 0.00386099, -0.194341, -0.00514436, 0.0594111, 0.41652, 0.73088, 0.0594111, 0.263761, 0.0921268, 0.0594111, -0.263761, 0.661424, 0.0594111, -0.13884, 0.855882, 0.00386099, 0.444357, 0.647516, 0.00386099, 0.41652, 0.73088, 0.00386099, 0.0971706, -0.00514436, 0.0594111, -0.194341, -0.00514436, 0.00386099, -0.444357, 0.133766, 0.0594111, -0.444357, 0.0921268, 0.00386099, -0.13884, 0.855882, 0.0594111, -0.194341, 0.786427, 0.00386099, -0.291599, 0.0226715, 0.0594111, 0.166591, 0.0226715, 0.00386099, 0.444357, 0.703064, 0.0594111, -0.388769, 0.0643109, 0.00386099, -0.194341, 0.786427, 0.0594111, -0.166591, 0.828151, 0.00386099, -0.388769, 0.0643109, 0.0594111)
 
-[sub_resource type="Animation" id="Animation_b3tgy"]
-resource_name = "idle"
-length = 0.8
-loop_mode = 1
+[sub_resource type="Animation" id="Animation_ptjkb"]
+length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -293,39 +291,10 @@ tracks/1/path = NodePath("AnimatedSprite3D:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 1,
-"values": [1, 0, 1, 2, 3]
-}
-
-[sub_resource type="Animation" id="Animation_a3rt5"]
-resource_name = "walk"
-length = 0.6
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite3D:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [&"walk"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite3D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 5]
+"values": [0]
 }
 
 [sub_resource type="Animation" id="Animation_uc0lx"]
@@ -354,6 +323,63 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="Animation" id="Animation_d5rqp"]
+resource_name = "fall"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite3D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"jump"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite3D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [4, 5]
+}
+
+[sub_resource type="Animation" id="Animation_b3tgy"]
+resource_name = "idle"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite3D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"idle"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite3D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 0, 1, 2, 3]
 }
 
 [sub_resource type="Animation" id="Animation_ejl1m"]
@@ -398,9 +424,10 @@ tracks/2/keys = {
 }]
 }
 
-[sub_resource type="Animation" id="Animation_d5rqp"]
-resource_name = "fall"
-length = 0.2
+[sub_resource type="Animation" id="Animation_a3rt5"]
+resource_name = "walk"
+length = 0.6
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -411,7 +438,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [&"jump"]
+"values": [&"walk"]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -420,37 +447,10 @@ tracks/1/path = NodePath("AnimatedSprite3D:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [4, 5]
-}
-
-[sub_resource type="Animation" id="Animation_ptjkb"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite3D:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"idle"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite3D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
+"values": [0, 1, 2, 3, 4, 5]
 }
 
 [sub_resource type="Animation" id="Animation_khuej"]
@@ -588,6 +588,7 @@ autoplay = true
 [node name="Hurt" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("15_pkjqt")
 volume_db = 12.0
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_udhhf")
