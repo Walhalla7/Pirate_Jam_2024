@@ -293,6 +293,14 @@ light_specular = 4.217
 shadow_enabled = true
 omni_range = 45.5443
 
+[node name="Torchlight4" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.9802, 11.4002, 232.988)
+light_color = Color(0.713726, 0.407843, 0, 1)
+light_energy = 21.995
+light_specular = 4.217
+shadow_enabled = true
+omni_range = 45.5443
+
 [node name="Hat" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5507, 41.1468, 243.899)
 billboard = 2
@@ -303,6 +311,7 @@ texture = ExtResource("14_si04o")
 [node name="ProtagonistSprite" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.9748, 7.57559, 239.265)
 flip_h = true
+shaded = true
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_kfa8e")
 animation = &"idle"
