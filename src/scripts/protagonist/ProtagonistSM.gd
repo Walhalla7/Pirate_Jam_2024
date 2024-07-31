@@ -7,7 +7,13 @@ func _input(event):
 			parent.velocity.y = parent.JUMP_VELOCITY
 	elif [states.WALL_BACK, states.WALL_LEFT, states.WALL_RIGHT].has(state):
 		if event.is_action("jump"):
-			parent.wall_jump()
+			anim.play("wall_jump")
+			
+func apply_jump_velocity(wall_jump: bool):
+	if wall_jump:
+		parent.wall_jump()
+	elif wall_jump == false:
+		parent.velocity.y = parent.JUMP_VELOCITY
 
 func _ready():
 	#we add all the posible states to the list 
@@ -157,6 +163,12 @@ func _enter_state(new_state, old_state):
 		states.WALL_BACK:
 			if !parent._is_timer_active():
 				parent.climbTimer.start()
+				anim.play("climb_back_up")
+		
+		states.FALLING: 
+			anim.play("fall")
+
+			
 
 #define behaviors while exiting out of specific state
 func _exit_state(old_state, new_state):
