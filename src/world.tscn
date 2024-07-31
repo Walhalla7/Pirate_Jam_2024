@@ -242,7 +242,7 @@ transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 75.3637, 44.4334, 7.389
 [node name="WallCrack2" parent="Objects" node_paths=PackedStringArray("endLocation", "Camera") instance=ExtResource("42_j3d2p")]
 transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 66.0421, 52.4699, 14.1585)
 endLocation = NodePath("../../Interactable/Marker3D")
-Camera = NodePath("../../Camera3D")
+Camera = NodePath("../../CauldronCamera")
 
 [node name="WallCrack3" parent="Objects" instance=ExtResource("42_j3d2p")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 73.9426, 10.8898, 7.3899)
@@ -430,7 +430,7 @@ transform = Transform3D(-0.00387467, 0, -3, 0, 3, 0, 3, 0, -0.00387467, -7.37833
 [node name="WallCrack5" parent="Objects" node_paths=PackedStringArray("endLocation", "Camera") instance=ExtResource("42_j3d2p")]
 transform = Transform3D(-0.00038748, 0, -0.3, 0, 0.3, 0, 0.3, 0, -0.00038748, -27.4549, 44.4334, 243.923)
 endLocation = NodePath("../../Interactable/Marker3D2")
-Camera = NodePath("../../Camera3D")
+Camera = NodePath("../../CauldronCamera")
 
 [node name="WallCrack6" parent="Objects" instance=ExtResource("42_j3d2p")]
 transform = Transform3D(0.3, 0, -0.000387467, 0, 0.3, 0, 0.000387467, 0, 0.3, -34.2115, 52.4699, 232.415)
@@ -458,7 +458,7 @@ collision_mask = 95
 transform = Transform3D(-3, 0, 0.00387476, 0, 3, 0, -0.00387476, 0, -3, -16.4891, 8.07147, 235.247)
 
 [node name="Slugjar" parent="Objects" instance=ExtResource("45_5im47")]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -22.813, 42.6489, 235.877)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -22.1482, 41.8683, 236.351)
 
 [node name="Shelf6" parent="Objects" instance=ExtResource("46_f6kpu")]
 transform = Transform3D(-3, 0, -4.52987e-07, 0, 3, 0, 4.52987e-07, 0, -3, 59.2892, 48.1794, 15.2699)
@@ -528,8 +528,9 @@ shaded = true
 texture_filter = 0
 texture = ExtResource("53_6llgh")
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.837366, -0.289353, 0.463781, -1.11286e-08, 0.848418, 0.529327, -0.546643, 0.443241, -0.710436, -16.0856, 50.0135, 225.769)
+[node name="CauldronCamera" type="Camera3D" parent="."]
+transform = Transform3D(-1, -6.18172e-08, 6.18172e-08, 0, 0.707107, 0.707107, -8.74228e-08, 0.707107, -0.707107, -17.2362, 48.5299, 226.461)
+fov = 60.0
 
 [node name="CauldronZone" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.961, 28.3849, 240.523)

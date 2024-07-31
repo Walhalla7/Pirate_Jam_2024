@@ -3,9 +3,23 @@ extends Node
 @onready var dustbunnies = [$Interactable/DustBunny1, $Interactable/DustBunny2, $Interactable/DustBunny3, $Interactable/DustBunny4]
 var time :float
 
+
+#variable declarations for intro
+@onready var CauldronCamera = $CauldronCamera
+
 #======================================== 	Initialize 	==================================
 func _ready():
-	pass
+	#lock movement
+	#set camera to cauldron area
+	CauldronCamera.current = true
+	#slug jar wiggle
+	
+	
+	#WHEN READY:
+	#protag position = starting game start pos
+	#camera active = protag camera
+	#unlock movement
+
 	
 #======================================== 	Process 	==================================
 func _physics_process(delta):
