@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://dtab70hcy0rke"]
 
 [ext_resource type="Texture2D" uid="uid://bcowm3jogxec0" path="res://assets/glbs/candle_lit1_texture.png" id="1_wmbmy"]
-[ext_resource type="PackedScene" uid="uid://8wrs4grk3qy1" path="res://scenes/components/lightComponent.tscn" id="2_5ewq1"]
+[ext_resource type="PackedScene" path="res://scenes/components/lightComponent.tscn" id="2_5ewq1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ddvr1"]
 resource_name = "candle1-2"

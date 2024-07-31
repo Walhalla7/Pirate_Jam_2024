@@ -41,7 +41,7 @@
 [ext_resource type="PackedScene" uid="uid://bckxkvjqrl3an" path="res://RoomObjects/ObjectScenes/crystal_cluster_1.tscn" id="50_wk22g"]
 [ext_resource type="PackedScene" uid="uid://bbh4akqdqpu2d" path="res://RoomObjects/ObjectScenes/cauldron_1.tscn" id="51_4fvl8"]
 [ext_resource type="PackedScene" uid="uid://bld7v1k3mhp6e" path="res://RoomObjects/ObjectScenes/apple.tscn" id="51_bschn"]
-[ext_resource type="PackedScene" uid="uid://csnlldtc6ghda" path="res://RoomObjects/ObjectScenes/utensils.tscn" id="51_bsko0"]
+[ext_resource type="PackedScene" uid="uid://csnlldtc6ghda" path="res://RoomObjects/ObjectScenes/Utensils.tscn" id="51_bsko0"]
 [ext_resource type="PackedScene" uid="uid://bs3twqryg8brj" path="res://RoomObjects/ObjectScenes/sack_2.tscn" id="51_d2wmx"]
 [ext_resource type="PackedScene" uid="uid://cn3vogr2jbw1b" path="res://RoomObjects/ObjectScenes/mortar_and_pestle.tscn" id="51_pun3u"]
 [ext_resource type="PackedScene" uid="uid://chekfm1d70hnv" path="res://scenes/lane_guidelines.tscn" id="51_qwm2i"]
@@ -79,7 +79,7 @@ size = Vector3(1.59569, 0.185181, 1.66125)
 script = ExtResource("1_cwe8n")
 
 [node name="Protagonist" parent="." instance=ExtResource("2_yjr5n")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 63.5613, 7.01138, 14.9208)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 63.6371, 6.28557, 14.9208)
 
 [node name="PlayerCamera" parent="." node_paths=PackedStringArray("camera_target") instance=ExtResource("3_beliv")]
 transform = Transform3D(-1, -9.89654e-09, 8.68608e-08, 0, 0.993572, 0.113203, -8.74228e-08, 0.113203, -0.993572, 62.8567, 4.64496, 8.4452)
@@ -539,7 +539,6 @@ texture_filter = 0
 texture = ExtResource("53_6llgh")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ForegroundSprites/Pumpkin2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ForegroundSprites/Pumpkin2/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.783829, -0.567607, -0.459503)
@@ -696,6 +695,69 @@ transform = Transform3D(-0.999856, 0, 0.0169638, 0, 1, 0, -0.0169638, 0, -0.9998
 
 [node name="SaltPile3" parent="." instance=ExtResource("50_jlmv7")]
 transform = Transform3D(0.999994, 0, 0.00338602, 0, 1, 0, -0.00338602, 0, 0.999994, 39.8272, -0.397003, 14.3197)
+
+[node name="SaltPile4" parent="." instance=ExtResource("50_jlmv7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.00787, 11.8932, 11.949)
+
+[node name="SaltPile5" parent="." instance=ExtResource("50_jlmv7")]
+transform = Transform3D(-0.999856, 0, 0.0169638, 0, 1, 0, -0.0169638, 0, -0.999856, -6.25487, 11.8932, 11.9895)
+
+[node name="SaltPile6" parent="." instance=ExtResource("50_jlmv7")]
+transform = Transform3D(0.999994, 0, 0.00338602, 0, 1, 0, -0.00338602, 0, 0.999994, -6.47017, 11.8932, 11.3836)
+
+[node name="SaltPile7" parent="." instance=ExtResource("50_jlmv7")]
+transform = Transform3D(0.976069, 0, 0.217462, 0, 1, 0, -0.217462, 0, 0.976069, -4.99791, 11.8932, 10.0947)
+
+[node name="SaltPile8" parent="." instance=ExtResource("50_jlmv7")]
+transform = Transform3D(-0.979617, 0, -0.200873, 0, 1, 0, 0.200873, 0, -0.979617, -4.25413, 11.8932, 9.97045)
+
+[node name="SaltPile9" parent="." instance=ExtResource("50_jlmv7")]
+transform = Transform3D(0.975327, 0, 0.220766, 0, 1, 0, -0.220766, 0, 0.975327, -4.59603, 11.8932, 9.42587)
+
+[node name="SaltPile10" parent="." instance=ExtResource("50_jlmv7")]
+transform = Transform3D(0.976069, 0, 0.217462, 0, 1, 0, -0.217462, 0, 0.976069, -13.2033, 11.8932, 10.0947)
+
+[node name="SaltPile11" parent="." instance=ExtResource("50_jlmv7")]
+transform = Transform3D(-0.979617, 0, -0.200873, 0, 1, 0, 0.200873, 0, -0.979617, -12.4595, 11.8932, 9.97045)
+
+[node name="SaltPile12" parent="." instance=ExtResource("50_jlmv7")]
+transform = Transform3D(0.975327, 0, 0.220766, 0, 1, 0, -0.220766, 0, 0.975327, -12.8014, 11.8932, 9.42587)
+
+[node name="SaltPile13" parent="." instance=ExtResource("50_jlmv7")]
+transform = Transform3D(0.976069, 0, 0.217462, 0, 1, 0, -0.217462, 0, 0.976069, 14.1595, 28.964, 12.5275)
+
+[node name="SaltPile14" parent="." instance=ExtResource("50_jlmv7")]
+transform = Transform3D(-0.979617, 0, -0.200873, 0, 1, 0, 0.200873, 0, -0.979617, 14.9032, 28.964, 12.4033)
+
+[node name="SaltPile15" parent="." instance=ExtResource("50_jlmv7")]
+transform = Transform3D(0.975327, 0, 0.220766, 0, 1, 0, -0.220766, 0, 0.975327, 14.5613, 28.964, 11.8587)
+
+[node name="SaltPile16" parent="." instance=ExtResource("50_jlmv7")]
+transform = Transform3D(0.976069, 0, 0.217462, 0, 1, 0, -0.217462, 0, 0.976069, 9.44294, 28.964, 15.6707)
+
+[node name="SaltPile17" parent="." instance=ExtResource("50_jlmv7")]
+transform = Transform3D(-0.979617, 0, -0.200873, 0, 1, 0, 0.200873, 0, -0.979617, 10.1867, 28.964, 15.5465)
+
+[node name="SaltPile18" parent="." instance=ExtResource("50_jlmv7")]
+transform = Transform3D(0.975327, 0, 0.220766, 0, 1, 0, -0.220766, 0, 0.975327, 9.84482, 28.964, 15.0019)
+
+[node name="SaltPile19" parent="." instance=ExtResource("50_jlmv7")]
+transform = Transform3D(0.976069, 0, 0.217462, 0, 1, 0, -0.217462, 0, 0.976069, 22.499, 28.964, 15.6707)
+
+[node name="SaltPile20" parent="." instance=ExtResource("50_jlmv7")]
+transform = Transform3D(-0.979617, 0, -0.200873, 0, 1, 0, 0.200873, 0, -0.979617, 23.2427, 28.964, 15.5465)
+
+[node name="SaltPile21" parent="." instance=ExtResource("50_jlmv7")]
+transform = Transform3D(0.975327, 0, 0.220766, 0, 1, 0, -0.220766, 0, 0.975327, 22.9008, 28.964, 15.0019)
+
+[node name="SaltPile22" parent="." instance=ExtResource("50_jlmv7")]
+transform = Transform3D(0.976069, 0, 0.217462, 0, 1, 0, -0.217462, 0, 0.976069, 29.8622, 40.1609, 15.6707)
+
+[node name="SaltPile23" parent="." instance=ExtResource("50_jlmv7")]
+transform = Transform3D(-0.979617, 0, -0.200873, 0, 1, 0, 0.200873, 0, -0.979617, 30.606, 40.1609, 15.5465)
+
+[node name="SaltPile24" parent="." instance=ExtResource("50_jlmv7")]
+transform = Transform3D(0.975327, 0, 0.220766, 0, 1, 0, -0.220766, 0, 0.975327, 30.2641, 40.1609, 15.0019)
 
 [node name="Lights" type="Node" parent="."]
 
