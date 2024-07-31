@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://dqb6hflk04skq"]
+[gd_scene load_steps=50 format=3 uid="uid://dqb6hflk04skq"]
 
 [ext_resource type="Script" path="res://scripts/protagonist/protagonist_script.gd" id="1_7xj1q"]
 [ext_resource type="ArrayMesh" uid="uid://bkc7w3ttjxl5w" path="res://RoomObjects/Protagonist.obj" id="2_5x464"]
@@ -12,7 +12,9 @@
 [ext_resource type="PackedScene" uid="uid://bk1cv3vgmy13p" path="res://scenes/components/health_component.tscn" id="6_iodel"]
 [ext_resource type="PackedScene" uid="uid://dnsrdyx8nphea" path="res://scenes/components/hitbox_component.tscn" id="7_scdkf"]
 [ext_resource type="Script" path="res://scripts/protagonist/ProtagonistSM.gd" id="8_8y8tt"]
+[ext_resource type="AudioStream" uid="uid://b6qwk0cqsiknp" path="res://assets/Music/jump sample2.wav" id="13_f8fhv"]
 [ext_resource type="AudioStream" uid="uid://blvdlx1llomd7" path="res://assets/Music/2019-12-11_-_Retro_Platforming_-_David_Fesliyan.mp3" id="13_y12ob"]
+[ext_resource type="AudioStream" uid="uid://cxra5yu7eubox" path="res://assets/Music/hurt_sound.wav" id="15_pkjqt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bxin2"]
 atlas = ExtResource("2_c3awk")
@@ -313,6 +315,9 @@ shape = SubResource("ConvexPolygonShape3D_gpv27")
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource("8_8y8tt")
 
+[node name="Jump" type="AudioStreamPlayer3D" parent="StateMachine"]
+stream = ExtResource("13_f8fhv")
+
 [node name="Raycasts" type="Node3D" parent="."]
 
 [node name="Floor_detectors" type="Node3D" parent="Raycasts"]
@@ -341,6 +346,9 @@ wait_time = 3.0
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("13_y12ob")
 autoplay = true
+
+[node name="Hurt" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("15_pkjqt")
 
 [connection signal="death" from="HealthComponent" to="." method="_on_health_component_death"]
 [connection signal="hurt" from="HealthComponent" to="." method="_on_health_component_hurt"]
