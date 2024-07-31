@@ -16,7 +16,6 @@ func apply_jump_velocity(wall_jump: bool):
 	if wall_jump:
 		parent.wall_jump()
 	elif wall_jump == false:
-		print("anim jump")
 		parent.velocity.y = parent.JUMP_VELOCITY
 
 func _ready():
@@ -170,10 +169,6 @@ func _enter_state(new_state, old_state):
 		states.FALLING: 
 			anim.play("fall")
 
-		states.JUMPING:
-			if !parent._is_timer_active():
-				parent.climbTimer.start()
-				jump.play()
 			
 
 #define behaviors while exiting out of specific state
