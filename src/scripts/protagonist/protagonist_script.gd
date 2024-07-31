@@ -21,8 +21,6 @@ func _check_is_grounded():
 @onready var leftDetector = $Raycasts/Left_detector
 @onready var backDetector = $Raycasts/Back_detector
 @onready var jump = $jump
-
-
 #======================================== 	Variables 	==================================
 #Movement variables
 @export var move_speed = 5.0
@@ -93,6 +91,7 @@ func wall_jump():
 	can_crawl = false
 	climbTimer.stop()
 	velocity = wall_jump_velocity
+	jump.play()
 
 #function to calulcate directional inputs and movements 
 func _handle_move_input():

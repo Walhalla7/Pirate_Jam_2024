@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dnsrdyx8nphea" path="res://scenes/components/hitbox_component.tscn" id="7_scdkf"]
 [ext_resource type="Script" path="res://scripts/protagonist/ProtagonistSM.gd" id="8_8y8tt"]
 [ext_resource type="AudioStream" uid="uid://cytu4rfx3t5sq" path="res://sound effect & music/hurt_sound.wav" id="9_f3pun"]
-[ext_resource type="PackedScene" uid="uid://dhthui5i77uvo" path="res://jump.tscn" id="11_hm2wl"]
+[ext_resource type="PackedScene" uid="uid://bmxvoxww72afw" path="res://jump.tscn" id="11_hm2wl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bxin2"]
 atlas = ExtResource("2_c3awk")
@@ -246,8 +246,6 @@ shape = SubResource("ConvexPolygonShape3D_gpv27")
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource("8_8y8tt")
 
-[node name="jump" parent="StateMachine" instance=ExtResource("11_hm2wl")]
-
 [node name="Raycasts" type="Node3D" parent="."]
 
 [node name="Floor_detectors" type="Node3D" parent="Raycasts"]
@@ -276,6 +274,8 @@ wait_time = 3.0
 [node name="hurt sound" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("9_f3pun")
 bus = &"SFX"
+
+[node name="jump" parent="." instance=ExtResource("11_hm2wl")]
 
 [connection signal="death" from="HealthComponent" to="." method="_on_health_component_death"]
 [connection signal="hurt" from="HealthComponent" to="." method="_on_health_component_hurt"]
