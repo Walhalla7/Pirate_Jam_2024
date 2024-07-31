@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://dtab70hcy0rke"]
+[gd_scene load_steps=10 format=3 uid="uid://dtab70hcy0rke"]
 
 [ext_resource type="Texture2D" uid="uid://bcowm3jogxec0" path="res://assets/glbs/candle_lit1_texture.png" id="1_wmbmy"]
+[ext_resource type="PackedScene" uid="uid://8wrs4grk3qy1" path="res://scenes/components/lightComponent.tscn" id="2_5ewq1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ddvr1"]
 resource_name = "candle1-2"
@@ -146,3 +147,5 @@ light_energy = 5.0
 light_size = 0.24
 shadow_enabled = true
 omni_range = 50.0
+
+[node name="LightComponent" parent="OmniLight3D" instance=ExtResource("2_5ewq1")]

@@ -13,7 +13,6 @@ debug_shape_custom_color = Color(1, 0, 1, 1)
 debug_shape_thickness = 4
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 2.0
 autostart = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]

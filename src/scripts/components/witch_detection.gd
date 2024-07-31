@@ -24,7 +24,7 @@ var return_hand = false
 func _ready():
 	ray_cast_3d.global_position = player.global_position
 	ray_cast_3d.global_position.z = 5
-	visibilityLevel = 0 
+	visibilityLevel = 1 
 	return_hand = false
 	player_caught = false
 
@@ -34,11 +34,14 @@ func _is_visible():
 func _on_timer_timeout():
 	if _is_visible():
 		visibilityLevel += 1
+		SignalBus.emit_signal("changeVisibility", visibilityLevel)
 		if visibilityLevel >= 10:
 			player_caught = true
+			SignalBus.emit_signal("changeLightColor")
 			timer.stop()
 	else:
-		if visibilityLevel > 0:
+		if visibilityLevel > 1:
+			SignalBus.emit_signal("changeVisibility", visibilityLevel)
 			visibilityLevel -= 1
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -51,7 +54,7 @@ func _process(delta):
 	print(visibilityLevel)
 	
 	if player_caught:
-		t += delta * 0.1
+		t += delta * 0.01
 		if !return_hand:
 			hand.position = hand.position.lerp(onscreen_point.position, t)
 			if hand.position.distance_to(onscreen_point.position) < 0.5:

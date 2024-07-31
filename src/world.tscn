@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://dx1te2b8aasvv"]
+[gd_scene load_steps=60 format=3 uid="uid://dx1te2b8aasvv"]
 
 [ext_resource type="Script" path="res://script_main.gd" id="1_cwe8n"]
 [ext_resource type="PackedScene" uid="uid://b1tqs2mt8aiii" path="res://Environment/static/test_field.tscn" id="1_t7k6m"]
@@ -53,6 +53,7 @@
 [ext_resource type="Texture2D" uid="uid://dd3f68wiytb8o" path="res://assets/sprites/pumpkin1-1.png" id="53_6llgh"]
 [ext_resource type="PackedScene" uid="uid://c5gl7nn0at8c" path="res://RoomObjects/ObjectScenes/table_1.tscn" id="53_dgj73"]
 [ext_resource type="Texture2D" uid="uid://cyvg01crj7e6c" path="res://assets/sprites/sack1-5.png" id="53_uljdp"]
+[ext_resource type="PackedScene" uid="uid://8wrs4grk3qy1" path="res://scenes/components/lightComponent.tscn" id="54_t5jro"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1mv1f"]
 size = Vector3(1, 18, 20.09)
@@ -73,7 +74,7 @@ size = Vector3(1.59569, 0.185181, 1.66125)
 script = ExtResource("1_cwe8n")
 
 [node name="Protagonist" parent="." instance=ExtResource("2_yjr5n")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -5.14334, 12.7637, 14.9208)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 61.1727, 49.2889, 14.9208)
 
 [node name="PlayerCamera" parent="." node_paths=PackedStringArray("camera_target") instance=ExtResource("3_beliv")]
 transform = Transform3D(-1, -9.89654e-09, 8.68608e-08, 0, 0.993572, 0.113203, -8.74228e-08, 0.113203, -0.993572, 62.8567, 4.64496, 8.4452)
@@ -558,65 +559,80 @@ light_energy = 15.222
 light_size = 5.0
 omni_range = 5.39463
 
+[node name="LightComponent" parent="Lights/CauldronLightInside" instance=ExtResource("54_t5jro")]
+
 [node name="CauldronLightCast" type="OmniLight3D" parent="Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.8942, 21.1942, 238.494)
-visible = false
 light_color = Color(0, 0.552941, 0.0823529, 1)
 light_energy = 16.745
 light_size = 5.0
 shadow_enabled = true
 omni_range = 27.5482
 
+[node name="LightComponent" parent="Lights/CauldronLightCast" instance=ExtResource("54_t5jro")]
+
 [node name="CauldronLightCast2" type="OmniLight3D" parent="Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 61.0607, 21.1942, 0.16299)
-visible = false
 light_color = Color(0, 0.552941, 0.0823529, 1)
 light_energy = 16.745
 light_size = 5.0
 shadow_enabled = true
 omni_range = 27.5482
+
+[node name="LightComponent" parent="Lights/CauldronLightCast2" instance=ExtResource("54_t5jro")]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lights"]
 transform = Transform3D(-1, -3.13295e-08, 8.16162e-08, 0, 0.93358, 0.358368, -8.74228e-08, 0.358368, -0.93358, 18.1111, 42.0379, -44.5838)
 light_energy = 0.25
 
+[node name="LightComponent" parent="Lights/DirectionalLight3D" instance=ExtResource("54_t5jro")]
+
 [node name="DirectionalLight3D2" type="DirectionalLight3D" parent="Lights"]
 transform = Transform3D(-0.725687, 0.246566, -0.642327, -8.29046e-16, 0.93358, 0.358368, 0.688025, 0.260063, -0.677487, -20.5799, 45.2312, -20.2313)
 light_energy = 0.1
+
+[node name="LightComponent" parent="Lights/DirectionalLight3D2" instance=ExtResource("54_t5jro")]
 
 [node name="DirectionalLight3D3" type="DirectionalLight3D" parent="Lights"]
 transform = Transform3D(-0.725374, -0.246684, 0.642634, 0, 0.93358, 0.358368, -0.688354, 0.259951, -0.677195, 76.2434, 56.8178, -9.38166)
 light_energy = 0.1
 
+[node name="LightComponent" parent="Lights/DirectionalLight3D3" instance=ExtResource("54_t5jro")]
+
 [node name="DirectionalLight3D4" type="DirectionalLight3D" parent="Lights"]
 transform = Transform3D(0.700909, -0.255606, 0.665877, 0, 0.93358, 0.358368, -0.71325, -0.251183, 0.654355, -6.67846, 56.8178, 245.244)
 light_energy = 0.1
 
+[node name="LightComponent" parent="Lights/DirectionalLight3D4" instance=ExtResource("54_t5jro")]
+
 [node name="Torchlight" type="OmniLight3D" parent="Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.751995, 49.8167, 10)
-visible = false
 light_color = Color(0.713726, 0.407843, 0, 1)
 light_energy = 21.995
 light_specular = 4.217
 shadow_enabled = true
 omni_range = 45.5443
+
+[node name="LightComponent" parent="Lights/Torchlight" instance=ExtResource("54_t5jro")]
 
 [node name="Torchlight2" type="OmniLight3D" parent="Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.9749, 67.7091, -0.257811)
-visible = false
 light_color = Color(0.713726, 0.407843, 0, 1)
 light_energy = 21.995
 light_specular = 4.217
 shadow_enabled = true
 omni_range = 45.5443
 
+[node name="LightComponent" parent="Lights/Torchlight2" instance=ExtResource("54_t5jro")]
+
 [node name="Torchlight3" type="OmniLight3D" parent="Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.7601, 67.7091, 226.848)
-visible = false
 light_color = Color(0.713726, 0.407843, 0, 1)
 light_energy = 21.995
 light_specular = 4.217
 shadow_enabled = true
 omni_range = 45.5443
+
+[node name="LightComponent" parent="Lights/Torchlight3" instance=ExtResource("54_t5jro")]
 
 [connection signal="body_entered" from="CauldronZone" to="." method="_on_cauldron_zone_body_entered"]
