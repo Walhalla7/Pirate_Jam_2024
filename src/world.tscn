@@ -46,10 +46,14 @@
 [ext_resource type="PackedScene" uid="uid://csnlldtc6ghda" path="res://RoomObjects/ObjectScenes/Utensils.tscn" id="51_bsko0"]
 [ext_resource type="PackedScene" path="res://RoomObjects/ObjectScenes/sack_2.tscn" id="51_d2wmx"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://ddqsphxlj8b75" path="res://plateform_music.tscn" id="51_piqdn"]
 [ext_resource type="PackedScene" uid="uid://bld7v1k3mhp6e" path="res://RoomObjects/ObjectScenes/apple.tscn" id="51_bschn"]
 [ext_resource type="PackedScene" uid="uid://csnlldtc6ghda" path="res://RoomObjects/ObjectScenes/utensils.tscn" id="51_bsko0"]
 [ext_resource type="PackedScene" uid="uid://bs3twqryg8brj" path="res://RoomObjects/ObjectScenes/sack_2.tscn" id="51_d2wmx"]
+=======
+[ext_resource type="PackedScene" uid="uid://cjyd6y38nykw2" path="res://plateform_music.tscn" id="51_piqdn"]
+>>>>>>> parent of 26ec71d (sound adjust and jump sound)
 =======
 [ext_resource type="PackedScene" uid="uid://cjyd6y38nykw2" path="res://plateform_music.tscn" id="51_piqdn"]
 >>>>>>> parent of 26ec71d (sound adjust and jump sound)
@@ -90,6 +94,9 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 16.330
 [node name="plateform music" parent="Protagonist" instance=ExtResource("51_piqdn")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -2.4049, 0.0564651, 14.5188)
 volume_db = 6.0
+<<<<<<< HEAD
+>>>>>>> parent of 26ec71d (sound adjust and jump sound)
+=======
 >>>>>>> parent of 26ec71d (sound adjust and jump sound)
 
 [node name="PlayerCamera" parent="." node_paths=PackedStringArray("camera_target") instance=ExtResource("3_beliv")]
