@@ -1,7 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://dek5eyfvuy7ua"]
+[gd_scene load_steps=5 format=3 uid="uid://dek5eyfvuy7ua"]
 
 [ext_resource type="Script" path="res://scripts/components/witch_detection.gd" id="1_scw55"]
 [ext_resource type="Texture2D" uid="uid://cbnvd4wdsgahv" path="res://assets/sprites/witch_hand1-1.png" id="2_76di1"]
+[ext_resource type="Shader" path="res://scripts/components/witch_detection_shader.gdshader" id="3_280d8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_105qa"]
+shader = ExtResource("3_280d8")
+shader_parameter/color = Color(0.37002, 0.120267, 0.120547, 1)
+shader_parameter/multiplier = 0.9
+shader_parameter/softness = 0.9
 
 [node name="WitchDectectionRay" type="Node3D"]
 script = ExtResource("1_scw55")
@@ -28,5 +35,13 @@ position = Vector2(2500, 330)
 
 [node name="Onscreen" type="Marker2D" parent="CanvasLayer"]
 position = Vector2(564, 316)
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_105qa")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

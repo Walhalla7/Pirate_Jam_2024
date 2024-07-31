@@ -11,9 +11,10 @@ class_name WitchDetector
 @onready var hand = $CanvasLayer/Sprite2D
 @onready var offscreen_point = $CanvasLayer/Offscreen
 @onready var onscreen_point = $CanvasLayer/Onscreen
+@onready var vin = $CanvasLayer/ColorRect
 
 var t = 0.0
-var visibilityLevel = 0 
+var visibilityLevel:float = 1.0
 var player_caught = false
 var return_hand = false
 
@@ -31,18 +32,23 @@ func _ready():
 func _is_visible():
 	return ray_cast_3d.is_colliding() && ray_cast_3d.get_collider().is_in_group("Slug")
 
+func set_vin():
+	var math:float = 1.0 - (visibilityLevel/10.0)
+	print("math: ", math)
+	vin.material.set_shader_parameter("multiplier", math)
+
 func _on_timer_timeout():
 	if _is_visible():
 		visibilityLevel += 1
 		SignalBus.emit_signal("changeVisibility", visibilityLevel)
 		if visibilityLevel >= 10:
 			player_caught = true
-			SignalBus.emit_signal("changeLightColor")
 			timer.stop()
 	else:
 		if visibilityLevel > 1:
 			SignalBus.emit_signal("changeVisibility", visibilityLevel)
 			visibilityLevel -= 1
+	set_vin()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -51,7 +57,7 @@ func _process(delta):
 	# Follow the player up and down
 	ray_cast_3d.global_position.y = player.global_position.y
 	
-	print(visibilityLevel)
+	#print(visibilityLevel)
 	
 	if player_caught:
 		t += delta * 0.01
