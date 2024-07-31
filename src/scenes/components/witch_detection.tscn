@@ -13,14 +13,15 @@ debug_shape_custom_color = Color(1, 0, 1, 1)
 debug_shape_thickness = 4
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 5.0
+wait_time = 2.0
+autostart = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(2469, 330)
+position = Vector2(2542, 330)
 rotation = -1.5708
-scale = Vector2(0.325426, 0.279426)
+scale = Vector2(0.325426, 0.317447)
 texture = ExtResource("2_76di1")
 
 [node name="Offscreen" type="Marker2D" parent="CanvasLayer"]

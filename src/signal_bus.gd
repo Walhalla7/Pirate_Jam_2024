@@ -5,3 +5,5 @@ extends Node
 
 signal game_over()
 signal Victory()
+signal changeVisibility(visLevel)
+signal changeLightColor()

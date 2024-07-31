@@ -13,6 +13,7 @@ class_name WitchDetector
 @onready var onscreen_point = $CanvasLayer/Onscreen
 
 var t = 0.0
+var visibilityLevel = 0 
 var player_caught = false
 var return_hand = false
 
@@ -23,19 +24,22 @@ var return_hand = false
 func _ready():
 	ray_cast_3d.global_position = player.global_position
 	ray_cast_3d.global_position.z = 5
+	visibilityLevel = 0 
+	return_hand = false
+	player_caught = false
 
-func _player_spotted():
-	timer.start()
+func _is_visible():
+	return ray_cast_3d.is_colliding() && ray_cast_3d.get_collider().is_in_group("Slug")
 
-func _player_lost():
-	timer.stop()
-
-#checking if snail is currently climbing
-func _is_timer_active():
-	if (timer.time_left > 0):
-		return true
+func _on_timer_timeout():
+	if _is_visible():
+		visibilityLevel += 1
+		if visibilityLevel >= 10:
+			player_caught = true
+			timer.stop()
 	else:
-		return false
+		if visibilityLevel > 0:
+			visibilityLevel -= 1
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -43,15 +47,10 @@ func _process(delta):
 	ray_cast_3d.global_position.x = player.global_position.x
 	# Follow the player up and down
 	ray_cast_3d.global_position.y = player.global_position.y
-
-	if !player_caught:
-		#catching functionality
-		if  ray_cast_3d.is_colliding() && ray_cast_3d.get_collider().is_in_group("Slug"):
-			if !_is_timer_active():
-				_player_spotted()
-		else:
-			_player_lost()
-	else:
+	
+	print(visibilityLevel)
+	
+	if player_caught:
 		t += delta * 0.1
 		if !return_hand:
 			hand.position = hand.position.lerp(onscreen_point.position, t)
@@ -64,6 +63,5 @@ func _process(delta):
 				SignalBus.emit_signal("game_over")
 	
 	
-func _on_timer_timeout():
-	player_caught = true
+
 	

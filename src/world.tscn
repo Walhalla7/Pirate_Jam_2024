@@ -42,7 +42,7 @@
 [ext_resource type="PackedScene" uid="uid://bckxkvjqrl3an" path="res://RoomObjects/ObjectScenes/crystal_cluster_1.tscn" id="50_wk22g"]
 [ext_resource type="PackedScene" uid="uid://bbh4akqdqpu2d" path="res://RoomObjects/ObjectScenes/cauldron_1.tscn" id="51_4fvl8"]
 [ext_resource type="PackedScene" uid="uid://bld7v1k3mhp6e" path="res://RoomObjects/ObjectScenes/apple.tscn" id="51_bschn"]
-[ext_resource type="PackedScene" uid="uid://csnlldtc6ghda" path="res://RoomObjects/ObjectScenes/utensils.tscn" id="51_bsko0"]
+[ext_resource type="PackedScene" uid="uid://csnlldtc6ghda" path="res://RoomObjects/ObjectScenes/Utensils.tscn" id="51_bsko0"]
 [ext_resource type="PackedScene" uid="uid://bs3twqryg8brj" path="res://RoomObjects/ObjectScenes/sack_2.tscn" id="51_d2wmx"]
 [ext_resource type="PackedScene" uid="uid://cn3vogr2jbw1b" path="res://RoomObjects/ObjectScenes/mortar_and_pestle.tscn" id="51_pun3u"]
 [ext_resource type="PackedScene" uid="uid://chekfm1d70hnv" path="res://scenes/lane_guidelines.tscn" id="51_qwm2i"]
@@ -73,7 +73,7 @@ size = Vector3(1.59569, 0.185181, 1.66125)
 script = ExtResource("1_cwe8n")
 
 [node name="Protagonist" parent="." instance=ExtResource("2_yjr5n")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 59.4177, 50.3903, 14.9208)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -5.14334, 12.7637, 14.9208)
 
 [node name="PlayerCamera" parent="." node_paths=PackedStringArray("camera_target") instance=ExtResource("3_beliv")]
 transform = Transform3D(-1, -9.89654e-09, 8.68608e-08, 0, 0.993572, 0.113203, -8.74228e-08, 0.113203, -0.993572, 62.8567, 4.64496, 8.4452)
