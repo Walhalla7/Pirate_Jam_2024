@@ -1,10 +1,9 @@
 extends CharacterBody3D
 
 #Camera managment
-@onready var camera_target = $CameraTarget
 @onready var animated_sprite_3d = $AnimatedSprite3D
-@onready var sprite_3d = $Sprite3D
 @onready var climbTimer = $ClimbTimer
+@onready var animation_player = $AnimationPlayer
 
 #======================================== 	Detectors 	==================================
 @onready var floorDetectors = $Raycasts/Floor_detectors
@@ -102,21 +101,6 @@ func _handle_move_input():
 	#we apply the direction to velocity 
 	velocity.x = lerp(velocity.x, move_direction_x * move_speed, _get_h_weight())
 	velocity.z = lerp(velocity.z, move_direction_z * move_speed, _get_h_weight())
-	
-	#we apply animations/rotate sprite
-	if move_direction_x != 0 or move_direction_z != 0:
-		animated_sprite_3d.play("walk")	
-		#if velocity.x < 0:
-			#$AnimatedSprite3D.rotation.y = -PI
-		#else: 
-			#$AnimatedSprite3D.rotation.y = 0
-		#
-		#if velocity.z < 0:
-			#$AnimatedSprite3D.rotation.y = -0.5
-		#else:
-			#$AnimatedSprite3D.rotation.y = 0.5
-	else:
-		animated_sprite_3d.play("idle")
 
 #function to calulcate directional inputs and movements on left wall
 func _handle_move_Left_input():
